@@ -1,0 +1,110 @@
+Areaal,source,target,mapping,
+GRVERH,Inrichtend/ad.vegetatieObject_p,/Boom,,
+GRVERH,Inrichtend/ad.weginrichtingselement_l,/Meerpaal, typespec = meerpaal,
+GRVERH,Inrichtend/ad.weginrichtingselement_l,/Meerpaal, typespec = dukdalf,
+GRVERH,Inrichtend/ad.weginrichtingselement_l,/Baken, typespec = baken,
+GRVERH,Inrichtend/ad.weginrichtingselement_l,/Baken, typespec = Betonning: onbekend,
+GRVERH,Opdelend/ad.begroeidTerreindeelKruin_l,/Boom,,
+GRVERH,Inrichtend/ad.vegetatieObject_p,/Boom,,
+GRVERH,Inrichtend/ad.weginrichtingselement_l,/Meerpaal, typespec = meerpaal,
+GRVERH,Inrichtend/ad.weginrichtingselement_l,/Meerpaal, typespec = dukdalf,
+GRVERH,Inrichtend/ad.weginrichtingselement_l,/Baken, typespec = baken,
+GRVERH,Inrichtend/ad.weginrichtingselement_l,/Baken, typespec = Betonning: onbekend,
+GRVERH,Opdelend/ad.begroeidTerreindeelKruin_l,/Boom,,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Duin, fysiekvoorkomen = duin,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Berm, fysiekvoorkomen = groenvoorziening:gras- en kruidachtigen,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Berm, fysiekvoorkomen = groenvoorziening: gras- en kruidachtigen,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Houtige beplanting, fysiekvoorkomen = groenvoorziening:bosplantsoen,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Beplanting, fysiekvoorkomen = groenvoorziening:heesters,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Beplanting, fysiekvoorkomen = groenvoorziening:planten,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Beplanting,,
+GRVERH,/ad.Functioneel/ad.faunavoorziening_v,/Vleermuiskelder,,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Bermverharding,/fysiekvoorkomen = erf,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Asfaltverharding,/fysiekvoorkomen = gesloten verharding,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Betonverharding,/fysiekvoorkomen = gesloten verharding:cementbeton,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Bermverharding,/fysiekvoorkomen = half verhard,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Bermverharding,/fysiekvoorkomen = open verharding,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Elementenverharding,/fysiekvoorkomen = open verharding:beton element,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Transitie,/fysiekvoorkomen = transitie,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Bermverharding,/fysiekvoorkomen = zand,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Elementenverharding,/fysiekvoorkomen = open verharding:tegels,
+GRVERH,Opdelend/ad.begroeidterreindeel_v,/Overigeverharding,,
+GRVERH,Opdelend/ad.ondersteunendWaterdeel_v,/Slootkant,,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Bermverharding, fysiekvoorkomen=gesloten verharding,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Asfaltverharding, fysiekvoorkomen=gesloten verharding:asfalt,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Betonverharding, fysiekvoorkomen=gesloten verharding:cementbeton,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Berm, fysiekvoorkomen=groenvoorziening,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Gazon, fysiekvoorkomen=groenvoorziening:gras- en kruidachtigen,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Bermverharding, fysiekvoorkomen=half verhard,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Elementenverharding, fysiekvoorkomen=half verhard:grasklinkers,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Bermverharding, fysiekvoorkomen=onverhard,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Bermverharding, fysiekvoorkomen=open verharding,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Elementenverharding, fysiekvoorkomen=open verharding:beton element,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Elementenverharding, fysiekvoorkomen=open verharding:betonstraatstenen,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Elementenverharding, fysiekvoorkomen=open verharding:gebakken klinkers,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Elementenverharding, fysiekvoorkomen=open verharding:tegels,
+GRVERH,Opdelend/ad.ondersteunendWegdeel_v,/Bermverharding, fysiekvoorkomen=transitie,
+GRVERH,Opdelend/ad.ondersteunendWegdeelPlantvak_v,/Berm, fysiekvoorkomen=groenvoorziening,
+GRVERH,Opdelend/ad.ondersteunendWegdeelPlantvak_v,/Gazon, fysiekvoorkomen=groenvoorziening:gras- en kruidachtigen,
+GRVERH,Opdelend/ad.ondersteunendWegdeelPlantvak_v,/Beplanting, fysiekvoorkomen=groenvoorziening:planten,
+GRVERH,Opdelend/ad.wegdeelPerron_v,/Elementenverharding, fysiekvoorkomen=transitie,
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen =gesloten verharding: asfalt, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen = gesloten verharding:cementbeton: asfalt, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen =gesloten verharding, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen =half verhard, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen =onverhard, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen =open verharding:gebakken klinkers, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen =open verharding:tegels, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen =open verharding:betonstraatstenen, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, fysiekvoorkomen =transitie, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Fietspad, wegtype=Fietspaden,
+GRVERH,Opdelend/ad.wegdeel_v,/Asfaltverharding, fysiekvoorkomen =gesloten verharding: asfalt, wegtype=Gemiddeld belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Betonverharding, fysiekvoorkomen =gesloten verharding:cementbeton, wegtype=Gemiddeld belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =half verhard, wegtype=Gemiddeld belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:gebakken klinkers, wegtype=Gemiddeld belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:tegels, wegtype=Gemiddeld belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =transitie, wegtype=Gemiddeld belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, wegtype=Gemiddeld belaste weg,
+GRVERH,Opdelend/ad.wegdeel_v,/Asfaltverharding, fysiekvoorkomen =gesloten verharding: asfalt, wegtype=Hoofdwegennet
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =transitie, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Betonverharding, fysiekvoorkomen =gesloten verharding:cementbeton, wegtype=Hoofdwegennet
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =gesloten verharding, wegtype=Licht belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Asfaltverharding, fysiekvoorkomen =gesloten verharding: asfalt, wegtype=Licht belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Betonverharding, fysiekvoorkomen =gesloten verharding:cementbeton, wegtype=Licht belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =half verhard, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =half verhard:grasklinkers, wegtype=Licht belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =half verhard:grind, wegtype=Licht belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:gebakken klinkers, wegtype=Licht belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:tegels, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =transitie, wegtype=Licht belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, wegtype=Licht belaste weg,
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =gesloten verharding: asfalt, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Asfaltverharding, fysiekvoorkomen =gesloten verharding: asfalt, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Betonverharding, fysiekvoorkomen =gesloten verharding:cementbeton, wegtype=Fietspaden
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =gesloten verharding: asfalt, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =half verhard:grasklinkers, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =half verhard:puin, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =onverhard, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding fysiekvoorkomen =open verharding:gebakken klinkers, wegtype=Zwaar belaste weg,
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:tegels, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:betonstraatstenen, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =transitie, wegtype=Zwaar belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, wegtype=Zwaar belaste weg,
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =gesloten verharding,
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =gesloten verharding: asfalt,
+GRVERH,Opdelend/ad.wegdeel_v,/Betonverharding, fysiekvoorkomen =gesloten verharding:cementbeton,
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =half verhard,
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =half verhard:grasklinkers,
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =half verhard:grind,
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =half verhard:puin,
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =onverhard,
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =onverhard:zand,
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =open verharding,
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:beton element,
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:gebakken klinkers,
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:sierbestrating,
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:tegels,
+GRVERH,Opdelend/ad.wegdeel_v,/Elementenverharding, fysiekvoorkomen =open verharding:betonstraatstenen,
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding, fysiekvoorkomen =transitie,
+GRVERH,Opdelend/ad.wegdeel_v,/Bermverharding, fysiekvoorkomen =onverhard, wegtype=Gemiddeld belaste weg
+GRVERH,Opdelend/ad.wegdeel_v,/Overigeverharding,,
