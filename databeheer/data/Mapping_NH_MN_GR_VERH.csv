@@ -18,7 +18,7 @@ GRVERH,Opdelend/ad.begroeidterreindeel_v,/Houtige beplanting, fysiekvoorkomen = 
 GRVERH,Opdelend/ad.begroeidterreindeel_v,/Beplanting, fysiekvoorkomen = groenvoorziening:heesters,
 GRVERH,Opdelend/ad.begroeidterreindeel_v,/Beplanting, fysiekvoorkomen = groenvoorziening:planten,
 GRVERH,Opdelend/ad.begroeidterreindeel_v,/Beplanting,,
-GRVERH,/ad.Functioneel/ad.faunavoorziening_v,/Vleermuiskelder,,
+GRVERH,Functioneel/ad.faunavoorziening_v,/Vleermuiskelder,,
 GRVERH,Opdelend/ad.begroeidterreindeel_v,/Bermverharding,/fysiekvoorkomen = erf,
 GRVERH,Opdelend/ad.begroeidterreindeel_v,/Asfaltverharding,/fysiekvoorkomen = gesloten verharding,
 GRVERH,Opdelend/ad.begroeidterreindeel_v,/Betonverharding,/fysiekvoorkomen = gesloten verharding:cementbeton,
