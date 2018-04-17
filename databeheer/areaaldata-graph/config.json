@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "Niels Hoffmann"
+  },
+  "text": {
+    "more": "Een visualisatie van het Areaaldata model. \n\nDeze visualisatie is tot stand gekomen door het Areaaldata gedeelte uit de OTL\nte exporteren via Graphml naar Gephi. In Gephi is de layout opgemaakt en van daar uit geexporteerd naar Sigma.js\n\nDe rode nodes zijn objecttypen, de blauwe nodes zijn eigenschappen.\nDe rode lijnen laten zien welke objecttypen er allemaal voorkomen in Areaaldata, de blauwe lijnen geven de relaties tussen \nobjecttypen onderling aan, de witte lijnen geven aan welke eigenschappen er voorkomen bij een objecttype.",
+    "intro": "Een visualisatie van het Areaaldata model",
+    "title": "Areaaldata OTL"
+  },
+  "legend": {
+    "edgeLabel": "relaties tussen objecttypen en tussen objecttypen en eigenschappen",
+    "colorLabel": "De verschillende soorten relaties",
+    "nodeLabel": "objecttypen en eigenschappen"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "node_type",
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": true,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 8,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
