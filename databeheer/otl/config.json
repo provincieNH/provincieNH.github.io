@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "Niels Hoffmann"
+  },
+  "text": {
+    "more": "Dit is een visualisatie van de OTL van Provincie Noord-Holland.\nDe Visualisatie is gemaakt met Sigma.js via een export uit Gephi.\n\nDe rode nodes zijn objecttypen uit het Areaaldata model, de paarse nodes zijn eigenschappen uit het Areaaldata model. \nDe blauwe nodes zijn objecttypen uit de Relatics OTB structuur. De oranje nodes zijn de geosparql objecttypen.\n\nEr zijn verschillende relaties weergegeven. Welke areaaldata objecttypen in welke Featuredataset vallen, welke eigenschappen de areaaldata objecttypen\nhebben en welke relaties de areaaldata objecttypen onderling hebben.\nVerder zijn de relaties tussen de OTB objecttypen weergegeven en de mapping tussen de OTB en areaaldata.",
+    "intro": "Visualisatie van de OTL van Provincie Noord-Holland",
+    "title": "OTL Noord-Holland"
+  },
+  "legend": {
+    "edgeLabel": "relaties",
+    "colorLabel": "",
+    "nodeLabel": "objecten"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "type",
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": true,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 8,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
