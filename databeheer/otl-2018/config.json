@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "Niels Hoffmann"
+  },
+  "text": {
+    "more": "Dit is een visualisatie van de OTL van Provincie Noord-Holland.\nDe Visualisatie is gemaakt met Sigma.js via een export uit Gephi.\n\nDe grijze nodes zijn de CB-NL conceptenl, de groene nodes zijn objecttypen uit de Objecttype boom van Relatics (eisenstructuur)\nDe blauwe nodes zijn objecttypen uit IMBOR. De oranje nodes zijn Areaalata objecttypen.\n\nDe relaties zijn de relaties tussen objecttypen onderling (binnen een namespace) en de mapping tussen de verschillende namespaces.",
+    "intro": "Visualisatie van de OTL van Provincie Noord-Holland",
+    "title": "OTL Noord-Holland"
+  },
+  "legend": {
+    "edgeLabel": "relaties",
+    "colorLabel": "namespaces",
+    "nodeLabel": "objecten"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": false,
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": true,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#666363",
+      "labelThreshold": 4,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 10
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
