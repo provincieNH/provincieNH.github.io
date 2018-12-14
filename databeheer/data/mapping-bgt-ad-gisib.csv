@@ -39,7 +39,7 @@ GRVERH,Functioneel/ad.wegvak_v,/gisib.Wegvak,
 GRVERH,/ad.x,/gisib.Beschoeiing LM reparatie,
 GRVERH,/ad.x,/gisib.Nweg foto,
 GRVERH,/ad.x,/gisib.Planten soort verdeling,
-GRVERH,/bgt.begroeidTerreindeel_v,Opdelend/ad.begroeidterreindeel_v,
+GRVERH,/bgt.begroeidTerreindeel_v,Opdelend/ad.begroeidterreindeel_v, fysiekvoorkomen = gemengd bos | naaldbos | heide | houtwal | duin | grasland overig | moeras | rietland | kwelder | fruitteelt | boomteelt | bouwland | grasland agrarisch
 GRVERH,/bgt.begroeidTerreindeel_v,Opdelend/ad.begroeidTerreindeelBerm_v,fysiekvoorkomen = groenvoorziening:gras- en kruidachtigen
 GRVERH,/bgt.begroeidTerreindeel_v,Opdelend/ad.begroeidTerreindeelPlantvak_v,fysiekvoorkomen = loofbos | groenvoorziening:struikrozen | planten | heesters | bosplantsoen | bodembedekkers
 GRVERH,/bgt.begroeidTerreindeelKruin_l,Opdelend/ad.begroeidTerreindeelKruin_l,
