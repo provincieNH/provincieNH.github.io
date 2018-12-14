@@ -1,5 +1,5 @@
 Areaal,source,target,mapping
-GRVERH,Opdelend/ad.begroeidterreindeel_v,/gisib.x,
+GRVERH,Opdelend/ad.begroeidTerreindeel_v,/gisib.x,
 GRVERH,Opdelend/ad.begroeidTerreindeelBerm_v,/gisib.Berm,
 GRVERH,Opdelend/ad.begroeidTerreindeelBermKr_l,/gisib.x,
 GRVERH,Opdelend/ad.begroeidTerreindeelKruin_l,/gisib.x,
