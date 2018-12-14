@@ -1,10 +1,10 @@
 Areaal,source,target,mapping
 GRVERH,Opdelend/ad.begroeidterreindeel_v,/gisib.x,
 GRVERH,Opdelend/ad.begroeidTerreindeelBerm_v,/gisib.Berm,
-GRVERH,Opdelend/ad.begroeidTerreindeelBermKruin_l,/gisib.x,
+GRVERH,Opdelend/ad.begroeidTerreindeelBermKr_l,/gisib.x,
 GRVERH,Opdelend/ad.begroeidTerreindeelKruin_l,/gisib.x,
 GRVERH,Opdelend/ad.begroeidTerreindeelPlantvak_v,/gisib.Plantvak,
-GRVERH,Opdelend/ad.begroeidTerreindeelPvKr_l,/gisib.x,
+GRVERH,Opdelend/ad.begroeidTerreindeelPlKr_l,/gisib.x,
 GRVERH,buitenFds/ad.beschoeiingInspectie_tbl,/gisib.Inspectie beschoeiing LM,
 GRVERH,buitenFds/ad.crowInspectie_tbl,/gisib.CROW Weginspectie,
 GRVERH,buitenFds/ad.crowInspectieresultaat_tbl,/gisib.CROW Weginspectie,
@@ -39,12 +39,12 @@ GRVERH,Functioneel/ad.wegvak_v,/gisib.Wegvak,
 GRVERH,/ad.x,/gisib.Beschoeiing LM reparatie,
 GRVERH,/ad.x,/gisib.Nweg foto,
 GRVERH,/ad.x,/gisib.Planten soort verdeling,
-GRVERH,/bgt.begroeidTerreindeel_v,Opdelend/ad.begroeidterreindeel_v, fysiekvoorkomen = gemengd bos | naaldbos | heide | houtwal | duin | grasland overig | moeras | rietland | kwelder | fruitteelt | boomteelt | bouwland | grasland agrarisch
+GRVERH,/bgt.begroeidTerreindeel_v,Opdelend/ad.begroeidTerreindeel_v, fysiekvoorkomen = gemengd bos | naaldbos | heide | houtwal | duin | grasland overig | moeras | rietland | kwelder | fruitteelt | boomteelt | bouwland | grasland agrarisch
 GRVERH,/bgt.begroeidTerreindeel_v,Opdelend/ad.begroeidTerreindeelBerm_v,fysiekvoorkomen = groenvoorziening:gras- en kruidachtigen
 GRVERH,/bgt.begroeidTerreindeel_v,Opdelend/ad.begroeidTerreindeelPlantvak_v,fysiekvoorkomen = loofbos | groenvoorziening:struikrozen | planten | heesters | bosplantsoen | bodembedekkers
 GRVERH,/bgt.begroeidTerreindeelKruin_l,Opdelend/ad.begroeidTerreindeelKruin_l,
-GRVERH,/bgt.begroeidTerreindeelKruin_l,Opdelend/ad.begroeidTerreindeelBermKruin_l,
-GRVERH,/bgt.begroeidTerreindeelKruin_l,Opdelend/ad.begroeidTerreindeelPvKr_l,
+GRVERH,/bgt.begroeidTerreindeelKruin_l,Opdelend/ad.begroeidTerreindeelBermKr_l,
+GRVERH,/bgt.begroeidTerreindeelKruin_l,Opdelend/ad.begroeidTerreindeelPlKr_l,
 GRVERH,/bgt.onbegroeidTerreindeel_v,Opdelend/ad.onbegroeidTerreindeel_v,
 GRVERH,/bgt.onbegroeidTerreindeelKruin_l,Opdelend/ad.onbegroeidTerreindeelKruin_l,
 GRVERH,/bgt.ondersteunendWaterdeel_v,Opdelend/ad.ondersteunendWaterdeel_v,
