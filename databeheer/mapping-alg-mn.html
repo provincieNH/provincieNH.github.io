@@ -216,7 +216,7 @@ d3.csv("data/Mapping_NH_MN_algkunstwvw.csv", function(error, data) {
       .attr("transform", function(d) { 
 		  return "translate(" + d.x + "," + d.y + ")"; })
       .on("click",function(d){
-        var adurl="https://github.com/provincieNH/ILS/blob/master/4.1_d1/Objectbladen/"
+        var adurl="https://github.com/provincieNH/Leveren_Geoinformatie/blob/master/4.1_d1/Objectbladen/"
         var fds = d.name.split("/")[0]
         var prefix = d.name.split("/")[1].split(".")[0]
         var objname = d.name.split(".")[1]

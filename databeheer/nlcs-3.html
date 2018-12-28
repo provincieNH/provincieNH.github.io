@@ -215,7 +215,7 @@ d3.csv("data/mapping-bgt-ad-nlcs-3.csv", function(error, data) {
 		  return "translate(" + d.x + "," + d.y + ")"; })
       .on("click",function(d){
         var bgturl="http://imgeo.geostandaarden.nl/def/imgeo-object/"
-        var adurl="https://github.com/provincieNH/ILS/blob/master/4.1_d1/Objectbladen/"
+        var adurl="https://github.com/provincieNH/Leveren_Geoinformatie/blob/master/4.1_d1/Objectbladen/"
         var fds = d.name.split("/")[0]
         var prefix = d.name.split("/")[1].split(".")[0]
         var objname = d.name.split(".")[1]
