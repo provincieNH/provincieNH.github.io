@@ -1,4 +1,5 @@
 Areaal,source,target,mapping,,
+ALG,/bgt.wegdeel_vv,/ad.Verharding,,,
 ALG,/bgt.x,buitenFds/ad.adres_tbl,,,
 ALG,buitenFds/ad.adres_tbl,/gisib.Adres,,,
 ALG,Functioneel/ad.functioneelGebied_v,/gisib.x,,,
