@@ -1,4 +1,4 @@
-Areaal,source,target,mapping,,
+Areaal,source,target,mapping
 ALG,/ad4.wegdeel_v,/ad5.Verharding,/gisib.x,
 ALG,/ad4.traject_v,/ad5.Traject,/gisib.x,
 ALG,/ad4.crowMeting_tbl,/ad5.VerhardingInspectie,/gisib.x,
