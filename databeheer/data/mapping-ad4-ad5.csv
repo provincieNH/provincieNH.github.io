@@ -1,5 +1,7 @@
 Areaal,source,target,mapping
-ALG,/ad4.wegdeel_v,/ad5.Verharding,/gisib.x,
-ALG,/ad4.traject_v,/ad5.Traject,/gisib.x,
-ALG,/ad4.crowMeting_tbl,/ad5.VerhardingInspectie,/gisib.x,
-ALG,/ad4.vtaInspectie_tbl,/ad5.GroenInspectie,/gisib.x
+ALG,/ad4.wegdeel_v,/ad5.Verharding[Asfaltverharding],/???,
+ALG,/ad4.wegdeel_v,/ad5.Verharding[Elementenverharding],/???,
+ALG,/ad4.wegdeel_v,/ad5.Verharding[Betonverharding],/???,
+ALG,/ad4.traject_v,/ad5.Traject,/???,
+ALG,/ad4.crowMeting_tbl,/ad5.VerhardingInspectie,/???,
+ALG,/ad4.vtaInspectie_tbl,/ad5.GroenInspectie,/???
