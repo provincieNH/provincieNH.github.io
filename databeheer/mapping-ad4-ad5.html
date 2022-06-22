@@ -98,31 +98,31 @@
 <body>
 
 
-<div class="tab">
-  <button class="tablinks" id="intro">Intro</button>
-  <button class="tablinks" id="alg">Algemeen / Kunstwerken / Vaarwegen</button>
-  <button class="tablinks" id="grvh">Groen / Verhardingen</button>
-  <button class="tablinks" id="meub">Meubilair / HOV / OVL/VRI / Kabels en Leidingen</button>
-</div>
+<!--<div class="tab">-->
+<!--  <button class="tablinks" id="intro">Intro</button>-->
+<!--  <button class="tablinks" id="alg">Algemeen / Kunstwerken / Vaarwegen</button>-->
+<!--  <button class="tablinks" id="grvh">Groen / Verhardingen</button>-->
+<!--  <button class="tablinks" id="meub">Meubilair / HOV / OVL/VRI / Kabels en Leidingen</button>-->
+<!--</div>-->
 
-<div id="algkwvw" class="tabcontent">
-  <h3>Areaaldata 4.3 naar Areaaldata 5 (IMBOR)</h3>
-  <p id="chart">
-</div>
+<!--<div id="algkwvw" class="tabcontent">-->
+<!--  <h3>Areaaldata 4.3 naar Areaaldata 5 (IMBOR)</h3>-->
+<!--  <p id="chart">-->
+<!--</div>-->
 
 
-</body>
-<script type="text/javascript">
-    document.getElementById("intro").onclick = function () {
-        location.href = "mapping-mn.html";
-    };
-    document.getElementById("grvh").onclick = function () {
-        location.href = "mapping-grvh-mn.html";
-    };
-    document.getElementById("meub").onclick = function () {
-        location.href = "mapping-meub-mn.html";
-    };
-</script>
+<!--</body>-->
+<!--<script type="text/javascript">-->
+<!--    document.getElementById("intro").onclick = function () {-->
+<!--        location.href = "mapping-mn.html";-->
+<!--    };-->
+<!--    document.getElementById("grvh").onclick = function () {-->
+<!--        location.href = "mapping-grvh-mn.html";-->
+<!--    };-->
+<!--    document.getElementById("meub").onclick = function () {-->
+<!--        location.href = "mapping-meub-mn.html";-->
+<!--    };-->
+<!--</script>-->
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="lib/sankey.js"></script>
 <script>
@@ -153,7 +153,7 @@ var sankey = d3.sankey()
 
 var path = sankey.link();
 
-// load the data (using the timelyportfolio csv method)  -- Algemeen, Kunstwerken, Vaarwegen
+// load the data (using the timelyportfolio csv method)  -- AD4 naar AD5
 d3.csv("data/mapping-ad4-ad5.csv", function(error, data) {
 
   //set up graph in same style as original example but empty
