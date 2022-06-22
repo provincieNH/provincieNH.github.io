@@ -1,5 +1,5 @@
 Areaal,source,target,mapping
-ALG,/ad4.wegdeel_v,/ad5.Verharding[Asfaltverharding],/???,
+ALG,/ad4.wegdeel_v,/ad5.Verharding[Asfaltverharding],/TypeSpec=Iets,
 ALG,/ad4.wegdeel_v,/ad5.Verharding[Elementenverharding],/???,
 ALG,/ad4.wegdeel_v,/ad5.Verharding[Betonverharding],/???,
 ALG,/ad4.traject_v,/ad5.Traject,/???,
