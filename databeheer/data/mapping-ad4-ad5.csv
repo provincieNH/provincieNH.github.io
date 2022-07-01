@@ -1,7 +1,4 @@
 Subset en categorie,source,target,mapping
-Vast:Verharding,/ad4.wegdeel_v,/ad5.Verharding[Asfaltverharding],/TypeSpec=Iets,
-Vast:Verharding,/ad4.wegdeel_v,/ad5.Verharding[Elementenverharding],/???,
-Vast:Verharding,/ad4.wegdeel_v,/ad5.Verharding[Betonverharding],/???,
-Functioneel,/ad4.traject_v,/ad5.Traject,/???,
-Inspectie,/ad4.crowMeting_tbl,/ad5.VerhardingInspectie,/???,
-Inspectie,/ad4.vtaInspectie_tbl,/ad5.GroenInspectie,/???
+Vast:Verharding,/ad4.wegdeel_v,/ad5.Verharding,/???
+Vast:Verharding,/ad4.wegvak_v,/ad5.Verharding,/???
+Vast:verfharding,/ad4.wegdeel_v,/ad5.verfharding,/???
