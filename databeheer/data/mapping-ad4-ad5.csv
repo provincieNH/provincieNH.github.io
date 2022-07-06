@@ -1,4 +1,4 @@
-source_table,target_table:subtype,mapping
+source,target,mapping
 /ad4.wegdeel_v,/ad5.verharding_v:asfaltverharding,/def query asfaltverharding
 /ad4.wegdeel_v,/ad5.verharding_v:elementenverharding,/def query elementenverharding
 /ad4.wegdeel_v,/ad5.verharding_v:betonverharding,/def query betonverharding
