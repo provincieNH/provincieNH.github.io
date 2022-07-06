@@ -1,8 +1,8 @@
 source,target,mapping
-/ad4.wegdeel_v,/ad5.verharding_v:asfaltverharding,def query asfaltverharding
-/ad4.wegdeel_v,/ad5.verharding_v:elementenverharding,def query elementenverharding
-/ad4.wegdeel_v,/ad5.verharding_v:betonverharding,def query betonverharding
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v,???
+/ad4.wegdeel_v,/ad5.verharding_v:asfaltverharding,def query asfaltverharding voor wegdeel_v
+/ad4.wegdeel_v,/ad5.verharding_v:elementenverharding,def query elementenverharding voor wegdeel_v
+/ad4.wegdeel_v,/ad5.verharding_v:betonverharding,def query betonverharding voor wegdeel_v
+/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:asfaltverharding,def query asfaltverharding van ondersteunendWegdeel_v
 /ad4.onbegroeidTerreindeel_v,/ad5.verharding_v,/??
 /ad4.wegvak_v,/ad5.wegvak_v,???
 /ad4.crowMeting_tbl,/ad5.verhardingsInspectie_tbl,???
