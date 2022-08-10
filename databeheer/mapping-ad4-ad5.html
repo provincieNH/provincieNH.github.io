@@ -191,6 +191,8 @@ d3.csv("data/mapping-ad4-ad5.csv", function(error, data) {
     .links(graph.links)
     .layout(10); //node sorting iterations (default 32, 0 is alphabetical)
 
+  g.attr("href", "https://www.google.com/")
+
 // add in the links
   var link = svg.append("g").selectAll(".link")
       .data(graph.links)
@@ -200,8 +202,8 @@ d3.csv("data/mapping-ad4-ad5.csv", function(error, data) {
       .style("stroke-width", function(d) { return Math.max(1, d.dy); })
       .sort(function(a, b) { return b.dy - a.dy; });
 
-  link.append("a")
-      .attr("href", "https://www.google.com/")
+  // link.append("a")
+      // .attr("href", "https://www.google.com/")
 
 // add the link titles
   link.append("title")
