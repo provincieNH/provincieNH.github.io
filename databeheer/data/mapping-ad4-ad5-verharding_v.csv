@@ -1,0 +1,8 @@
+MOET ANDERS
+
+source,target,mapping
+/ad4.wegdeel_v.ad_id,/ad5.verharding_v:ad_id,???
+/ad4.wegdeel_v.x,/ad5.verharding_v:wel_iets,???
+/ad4.wegdeel_v,/ad5.verharding_v:Asfaltverharding,???
+/ad4.wegdeel_v,/ad5.verharding_v:Betonverharding,???
+/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Halfverharding,???
