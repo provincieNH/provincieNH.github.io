@@ -1,0 +1,5 @@
+source,target,mapping
+/ad4.wegvak_v.BEHEERDER,/ad5.wegvak_v.beheerder,/hm
+/ad4.wegvak_v.TRAJECT,/ad5.wegvak_v.traject,/hm
+/ad4.wegvak_v.AFSTANDTOT,/ad5.wegvak_v.wegvak_tot,/hm
+/ad4.wegvak_v.AFSTANDVAN,/ad5.wegvak_v.wegvak_tot,/hm
