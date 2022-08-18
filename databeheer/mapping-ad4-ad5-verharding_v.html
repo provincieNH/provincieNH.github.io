@@ -113,7 +113,7 @@ var units = "Widgets";
 
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
     width = 1000 - margin.left - margin.right,
-    height = 750 - margin.top - margin.bottom;
+    height = 2560 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(",.0f"),    // zero decimal places
     format = function(d) { return formatNumber(d) + " " + units; },
@@ -171,7 +171,7 @@ d3.csv("data/mapping-ad4-ad5-verharding_v.csv", function(error, data) {
   sankey
     .nodes(graph.nodes)
     .links(graph.links)
-    .layout(0); //node sorting iterations (default 32, 0 is alphabetical)
+    .layout(10); //node sorting iterations (default 32, 0 is alphabetical)
 
   // g.attr("href", "https://www.google.com/")
 
