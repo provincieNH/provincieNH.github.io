@@ -1,0 +1,16 @@
+source,target,mapping
+/ad4.crowMeting_tbl.AD_ID,/ad5.verhardingsInspectie_tbl.ad_id,/hm
+/ad4.crowMeting_tbl.CREATED_DATE,/ad5.verhardingsInspectie_tbl.created_date,/hm
+/ad4.crowMeting_tbl.CREATED_USER,/ad5.verhardingsInspectie_tbl.created_user,/hm
+/ad4.crowMeting_tbl.DATALEVERANCIER,/ad5.verhardingsInspectie_tbl.dataleverancier,/hm
+/ad4.crowMeting_tbl.INSPECTEUR,/ad5.verhardingsInspectie_tbl.inspecteur,/hm
+/ad4.crowMeting_tbl.LAST_EDITED_DATE,/ad5.verhardingsInspectie_tbl.last_edited_date,/hm
+/ad4.crowMeting_tbl.LAST_EDITED_USER,/ad5.verhardingsInspectie_tbl.last_edited_user,/hm
+/ad4.crowMeting_tbl.METING_DATUM,/ad5.verhardingsInspectie_tbl.meting_datum,/hm
+/ad4.crowMeting_tbl.METING_TYPE,/ad5.verhardingsInspectie_tbl.meting_type,/hm
+/ad4.crowMeting_tbl.METING_WAARDE,/ad5.verhardingsInspectie_tbl.meting_waarde,/hm
+/ad4.crowMeting_tbl.OBJECTBEGINTIJD,/ad5.verhardingsInspectie_tbl.objectbegintijd,/hm
+/ad4.crowMeting_tbl.OBJECTEINDTIJD,/ad5.verhardingsInspectie_tbl.objecteindtijd,/hm
+/ad4.crowMeting_tbl.OPMERKING,/ad5.verhardingsInspectie_tbl.opmerking,/hm
+/ad4.crowMeting_tbl.WEGDEEL,/ad5.verhardingsInspectie_tbl.verharding,/hm
+/ad4.crowMeting_tbl.VERWERKINGSSTATUS,/ad5.verhardingsInspectie_tbl.verwerkingsstatus,/hm
