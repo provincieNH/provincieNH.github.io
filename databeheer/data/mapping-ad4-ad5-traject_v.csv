@@ -1,0 +1,15 @@
+source,target,mapping
+/ad4.traject_v.AD_ID,/ad5.traject_v.ad_id,/hm
+/ad4.traject_v.CODE,/ad5.traject_v.code,/hm
+/ad4.traject_v.CREATED_DATE,/ad5.traject_v.created_date,/hm
+/ad4.traject_v.CREATED_USER,/ad5.traject_v.created_user,/hm
+/ad4.traject_v.DATALEVERANCIER,/ad5.traject_v.dataleverancier,/hm
+/ad4.traject_v.GEBIEDSCONTRACTREGIO,/ad5.traject_v.gebiedscontractregio,/hm
+/ad4.traject_v.GEBRUIKSFUNCTIE,/ad5.traject_v.gebruiksfunctie,/hm
+/ad4.traject_v.LAST_EDITED_DATE,/ad5.traject_v.last_edited_date,/hm
+/ad4.traject_v.LAST_EDITED_USER,/ad5.traject_v.last_edited_user,/hm
+/ad4.traject_v.OBJECTBEGINTIJD,/ad5.traject_v.objectbegintijd,/hm
+/ad4.traject_v.OBJECTEINDTIJD,/ad5.traject_v.objecteindtijd,/hm
+/ad4.traject_v.OPMERKING,/ad5.traject_v.opmerking,/hm
+/ad4.traject_v.TYPESPEC,/ad5.traject_v.type,/hm
+/ad4.traject_v.VERWERKINGSSTATUS,/ad5.traject_v.verwerkingsstatus,/hm
