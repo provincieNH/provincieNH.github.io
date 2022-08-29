@@ -94,7 +94,7 @@
       }
     </style>
   </head>
-  
+
 <body>
 
 
@@ -126,12 +126,12 @@
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="lib/sankey.js"></script>
 <script>
-	
+
 var units = "Widgets";
 
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
     width = 1000 - margin.left - margin.right,
-    height = 1500 - margin.top - margin.bottom;
+    height = SAN_HEIGHT - margin.top - margin.bottom;
 
 var formatNumber = d3.format(",.0f"),    // zero decimal places
     format = function(d) { return formatNumber(d) + " " + units; },
@@ -142,7 +142,7 @@ var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform", 
+    .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Set the sankey diagram properties
@@ -154,7 +154,7 @@ var sankey = d3.sankey()
 var path = sankey.link();
 
 // load the data (using the timelyportfolio csv method)  -- AD4 naar AD5
-d3.csv("data/mapping-ad4-ad5.csv", function(error, data) {
+d3.csv("data/SAN_CSV", function(error, data) {
 
   //set up graph in same style as original example but empty
   graph = {"nodes" : [], "links" : []};
@@ -218,7 +218,7 @@ d3.csv("data/mapping-ad4-ad5.csv", function(error, data) {
       .data(graph.nodes)
     .enter().append("g")
       .attr("class", "node")
-      .attr("transform", function(d) { 
+      .attr("transform", function(d) {
 		  return "translate(" + d.x + "," + d.y + ")"; })
       .on("click",function(d){
         var adurl="https://github.com/provincieNH/Leveren_Geoinformatie/blob/master/4.1_d1/Objectbladen/"
@@ -231,7 +231,7 @@ d3.csv("data/mapping-ad4-ad5.csv", function(error, data) {
         })
     //.call(d3.behavior.drag()
       //.origin(function(d) { return d; })
-      //.on("dragstart", function() { 
+      //.on("dragstart", function() {
 		  //this.parentNode.appendChild(this); })
       //.on("drag", dragmove)
       //)
@@ -241,12 +241,12 @@ d3.csv("data/mapping-ad4-ad5.csv", function(error, data) {
   node.append("rect")
       .attr("height", function(d) { return d.dy; })
       .attr("width", sankey.nodeWidth())
-      .style("fill", function(d) { 
+      .style("fill", function(d) {
 		  return d.color = color(d.name.replace(/ .*/, "")); })
-      .style("stroke", function(d) { 
+      .style("stroke", function(d) {
 		  return d3.rgb(d.color).darker(2); })
     .append("title")
-      .text(function(d) { 
+      .text(function(d) {
 		  //return d.name + "\n" + format(d.value); });
 		  return d.name + "\n" + d.value; });
 
@@ -264,7 +264,7 @@ d3.csv("data/mapping-ad4-ad5.csv", function(error, data) {
 
 // the function for moving the nodes
   function dragmove(d) {
-    d3.select(this).attr("transform", 
+    d3.select(this).attr("transform",
         "translate(" + d.x + "," + (
                 d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
             ) + ")");
