@@ -154,7 +154,7 @@ var sankey = d3.sankey()
 var path = sankey.link();
 
 // load the data (using the timelyportfolio csv method)  -- AD4 naar AD5
-d3.csv("data/SAN_CSV", function(error, data) {
+d3.csv("mapping-ad4-ad5.csv", function(error, data) {
 
   //set up graph in same style as original example but empty
   graph = {"nodes" : [], "links" : []};
