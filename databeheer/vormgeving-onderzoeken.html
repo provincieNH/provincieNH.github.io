@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <style>
+      /* Style the tab */
+      /* Remove default bullets */
+      ul, #myUL {
+        list-style-type: none;
+      }
+
+      /* Remove margins and padding from the parent ul */
+      .myUL {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Style the caret/arrow */
+      .caret {
+        cursor: pointer;
+        user-select: none; /* Prevent text selection */
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Create the caret/arrow with a unicode, and style it */
+      .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+      }
+
+      /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+      .caret-down::before {
+        transform: rotate(90deg);
+      }
+
+      /* Hide the nested list */
+      .nested {
+        display: none;
+      }
+
+      /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+      .active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+  <!--<div class="tab">-->
+  <!--  <button class="tablinks" id="intro">Intro</button>-->
+  <!--  <button class="tablinks" id="alg">Algemeen / Kunstwerken / Vaarwegen</button>-->
+  <!--  <button class="tablinks" id="grvh">Groen / Verhardingen</button>-->
+  <!--  <button class="tablinks" id="meub">Meubilair / HOV / OVL/VRI / Kabels en Leidingen</button>-->
+  <!--</div>-->
+
+  <div id="algkwvw" class="tabcontent">
+    <h2>Onderzoeken</h2>
+    <p id="chart">
+  </div>
+  <ul class="myUL">
+    <li><h3 class="caret">Quickscan flora and fauna</h3>
+      <ul class="nested">
+        <li><h4 class="caret">Bomeninventarisatie</h4>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li>ID</li>
+            <li>Dikte</li>
+            <li>Vitaliteit</li>
+            <li>Soort</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+          </ul>
+        </li>
+        <li><h4 class="caret">Beschermde soorten wet natuurbescherming</h4>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li><span class="caret">STATUS</span>
+              <ul class="nested">
+                <li>Niet aangetroffen</li>
+                <li>Beschermde soorten aangetroffen</li>
+              </ul>
+            </li>
+            <li>STAT_Datum</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+            <li>SHAPE_Length</li>
+            <li>SHAPE_Area</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Ongesprongen explosieven onderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Ongesprongen_explosieven_onderzoek</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li><span class="caret">STATUS</span>
+              <ul class="nested">
+                <li>Verdacht</li>
+                <li>Onverdacht</li>
+              </ul>
+            </li>
+            <li>STAT_Datum</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+            <li>SHAPE_Length</li>
+            <li>SHAPE_Area</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Archeologisch onderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Ongesprongen_explosieven_onderzoek</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li><span class="caret">STATUS</span>
+              <ul class="nested">
+                <li>Behoudenswaardig</li>
+                <li>Niet behoudenswaardig</li>
+              </ul>
+            </li>
+            <li>STAT_Datum</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+            <li>SHAPE_Length</li>
+            <li>SHAPE_Area</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Waterbodemonderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Milieukundige_boringen</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li>Naam</li>
+            <li>Traject (M -mv)</li>
+            <li>Diepte (M)</li>
+            <li>X-RD</li>
+            <li>Y-RD</li>
+            <li>Soort</li>
+            <li>Mengmonstercode</li>
+            <li>Rapportnaam</li>
+            <li>Asbest</li>
+            <li>Verontreinigende stoffen</li>
+            <li>Toetsingsniveau</li>
+            <li>Opmerking</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Bodemonderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Geotechnische_boringen</span>
+          <ul class="nested">
+            <li>Shape</li>
+            <li>OBJECTID</li>
+            <li>Naam</li>
+            <li>X-RD</li>
+            <li>Y-RD</li>
+            <li>Rapportnaam</li>
+            <li>Soort</li>
+            <li>Maaiveld (M NAP)</li>
+            <li>Diepte (M NAP)</li>
+            <li>Opmerking</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Verhardingsonderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Verhardingsboringen</span>
+          <ul class="nested">
+            <li>Shape</li>
+            <li>OBJECTID</li>
+            <li>Naam</li>
+            <li>X-RD</li>
+            <li>Y-RD</li>
+            <li>Diepte (M NAP)</li>
+            <li>Rapportnaam</li>
+            <li>Soort</li>
+            <li>Opmerking</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Asbestonderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Milieukundige_boringen</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li>Naam</li>
+            <li>Traject (M -mv)</li>
+            <li>Diepte (M)</li>
+            <li>X-RD</li>
+            <li>Y-RD</li>
+            <li>Soort</li>
+            <li>Mengmonstercode</li>
+            <li>Rapportnaam</li>
+            <li>Asbest</li>
+            <li>Verontreinigende stoffen</li>
+            <li>Toetsingsniveau</li>
+            <li>Opmerking</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Geodesieonderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Geodesie_boringen</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>SHAPE</li>
+            <li>Layer</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+            <li>Shape_Length</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Geotechnisch onderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Geotechnische_boringen</span>
+          <ul class="nested">
+            <li>Shape</li>
+            <li>OBJECTID</li>
+            <li>Naam</li>
+            <li>X-RD</li>
+            <li>Y-RD</li>
+            <li>Rapportnaam</li>
+            <li>Soort</li>
+            <li>Maaiveld (M NAP)</li>
+            <li>Diepte (M NAP)</li>
+            <li>Opmerking</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Grondwater onderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Grondwater_monitoring</span>
+          <ul class="nested">
+            <li>Shape</li>
+            <li>OBJECTID</li>
+            <li>Naam</li>
+            <li>X-RD</li>
+            <li>Y-RD</li>
+            <li>Diepte (M NAP)</li>
+            <li>Rapportnaam</li>
+            <li>Soort</li>
+            <li>Maaiveld (M NAP)</li>
+            <li>Filterstelling (M -mv)</li>
+            <li>Opmerking</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="myUL">
+    <li><h3 class="caret">Geluidsonderzoek</h3>
+      <ul class="nested">
+        <li><span class="caret">Geluidsonderzoek</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li>Toetspunt</li>
+            <li>Waarneemhoogte (M)</li>
+            <li>Grenswaarde (DB)</li>
+            <li>Geluidsbelasting (DB)</li>
+            <li>Toename geluidsbelasting (DB)</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+<!--  Eigenlijk een group layer, maar daar heb ik nu even geen idee van-->
+  <ul class="myUL">
+    <li><h3 class="caret">Trillingsonderzoek (GROUP LAYER)</h3>
+      <ul class="nested">
+        <li><span class="caret">Belendigen_trillingsonderzoek</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li>Kans op schade</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+            <li>Shape_Length</li>
+            <li>Shape_Area</li>
+          </ul>
+        </li>
+        <li><span class="caret">Risicocontour_1_8M_trillingsonderzoek</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li>Grootte buffer</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+            <li>Shape_Length</li>
+            <li>Shape_Area</li>
+          </ul>
+        </li>
+        <li><span class="caret">Risicocontour_2_100M_trillingsonderzoek</span>
+          <ul class="nested">
+            <li>OBJECTID</li>
+            <li>Shape</li>
+            <li>Grootte buffer</li>
+            <li>Rapportnaam</li>
+            <li>Opmerking</li>
+            <li>Shape_Length</li>
+            <li>Shape_Area</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  </body>
+  <script>
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
+  </script>
+</html>
