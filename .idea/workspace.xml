@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="DID-136 #comment Overzicht van htmls gegenereerd">
+      <change afterPath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v_bart.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-traject_v.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v-Asfaltverharding.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v-Betonverharding.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v-Elementenverharding.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v-Halfverharding.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verhardingsInspectie_tbl.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-wegvak_v.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-traject_v.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Asfaltverharding.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Asfaltverharding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Betonverharding.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Betonverharding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Elementenverharding.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Elementenverharding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Halfverharding.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Halfverharding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verhardingsInspectie_tbl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-wegvak_v.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/vormgeving-onderzoeken.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/vormgeving-onderzoeken.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2BKoJfwgVcBrUqjbwyRRD5k2nsi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/databeheer" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git\provincieNH.github.io\databeheer" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="" />
+      <created>1656664066537</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656664066537</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Commit met geautomatiseerde aanpassing van mapping csv">
+      <created>1656690134628</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656690134628</updated>
+    </task>
+    <task id="LOCAL-00002" summary="DID-136 #comment Test voor toevoeging url aan links">
+      <created>1660053031840</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660053031840</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Test, nu door het toevoegen van een a class zodat er hopelijk geklikt kan worden">
+      <created>1660055527924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660055527924</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Test middels appenden aan g">
+      <created>1660129480639</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660129480639</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix van test middels appenden aan g">
+      <created>1660130384990</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660130384990</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Voorbeeld van csv voor attributen">
+      <created>1660665966928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660665966928</updated>
+    </task>
+    <task id="LOCAL-00007" summary="toevoeging van csv voor verharding">
+      <created>1660738489420</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660738489420</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit">
+      <created>1660739313486</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660739313486</updated>
+    </task>
+    <task id="LOCAL-00009" summary="nieuwe html voor wegvak">
+      <created>1660829309509</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1660829309509</updated>
+    </task>
+    <task id="LOCAL-00010" summary="nieuwe hoogte diagram">
+      <created>1660832819103</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660832819103</updated>
+    </task>
+    <task id="LOCAL-00011" summary="nieuwe hoogte diagram verharding_v">
+      <created>1660834902166</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660834902166</updated>
+    </task>
+    <task id="LOCAL-00012" summary="nieuwe hoogte diagram verharding_v">
+      <created>1660835599253</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660835599253</updated>
+    </task>
+    <task id="LOCAL-00013" summary="nieuwe hoogte diagram verharding_v">
+      <created>1660835771258</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660835771258</updated>
+    </task>
+    <task id="LOCAL-00014" summary="nieuwe hoogte diagram verharding_v">
+      <created>1660836190256</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660836190256</updated>
+    </task>
+    <task id="LOCAL-00015" summary="csv zonder duplicaten">
+      <created>1660836775816</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660836775816</updated>
+    </task>
+    <task id="LOCAL-00016" summary="andere layout waarde voor verharding html">
+      <created>1660909275064</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1660909275064</updated>
+    </task>
+    <task id="LOCAL-00017" summary="toevoegen bestanden voor verhardingsInspectie_tbl">
+      <created>1660911578008</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1660911578008</updated>
+    </task>
+    <task id="LOCAL-00018" summary="toevoegen bestanden voor traject_v">
+      <created>1660912079209</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1660912079209</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Bijstellen hoogte traject_v.html">
+      <created>1660912922144</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1660912922144</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Extra csvs en htmls voor verhardingen adhv subtypes">
+      <created>1661246906941</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1661246906941</updated>
+    </task>
+    <task id="LOCAL-00021" summary="opnieuw geschreven csv voor algemene mapping">
+      <created>1661441476031</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1661441476031</updated>
+    </task>
+    <task id="LOCAL-00022" summary="poging tot sorteren mapping csv">
+      <created>1661510158533</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1661510158533</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Gegenereerde htmls">
+      <created>1661774618844</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1661774618844</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix algemene html">
+      <created>1661778323683</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1661778323683</updated>
+    </task>
+    <task id="LOCAL-00025" summary="automatisch gegenereerde htmls, dit keer goed">
+      <created>1661779472057</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1661779472057</updated>
+    </task>
+    <task id="LOCAL-00026" summary="gefixte algemene html">
+      <created>1661780221775</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1661780221775</updated>
+    </task>
+    <task id="LOCAL-00027" summary="dynamische hoogte algemene html">
+      <created>1661847231732</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1661847231732</updated>
+    </task>
+    <task id="LOCAL-00028" summary="nieuwe dynamische hoogte algemene html">
+      <created>1661848091301</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1661848091301</updated>
+    </task>
+    <task id="LOCAL-00029" summary="nieuwe dynamische hoogten htmls">
+      <created>1661848326961</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1661848326961</updated>
+    </task>
+    <task id="LOCAL-00030" summary="nieuwe dynamische hoogten htmls (48px per regel)">
+      <created>1661848591649</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1661848591649</updated>
+    </task>
+    <task id="LOCAL-00031" summary="DID-136 #comment Overzicht van htmls gegenereerd">
+      <created>1663081597432</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1663081597432</updated>
+    </task>
+    <task id="LOCAL-00032" summary="GD-8547 #comment pagina onderzoeken toegevoegd">
+      <created>1664366716613</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1664366716613</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix van test middels appenden aan g" />
+    <MESSAGE value="Voorbeeld van csv voor attributen" />
+    <MESSAGE value="toevoeging van csv voor verharding" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="nieuwe html voor wegvak" />
+    <MESSAGE value="nieuwe hoogte diagram" />
+    <MESSAGE value="nieuwe hoogte diagram verharding_v" />
+    <MESSAGE value="csv zonder duplicaten" />
+    <MESSAGE value="andere layout waarde voor verharding html" />
+    <MESSAGE value="toevoegen bestanden voor verhardingsInspectie_tbl" />
+    <MESSAGE value="toevoegen bestanden voor traject_v" />
+    <MESSAGE value="Bijstellen hoogte traject_v.html" />
+    <MESSAGE value="Extra csvs en htmls voor verhardingen adhv subtypes" />
+    <MESSAGE value="opnieuw geschreven csv voor algemene mapping" />
+    <MESSAGE value="poging tot sorteren mapping csv" />
+    <MESSAGE value="Gegenereerde htmls" />
+    <MESSAGE value="fix algemene html" />
+    <MESSAGE value="automatisch gegenereerde htmls, dit keer goed" />
+    <MESSAGE value="gefixte algemene html" />
+    <MESSAGE value="dynamische hoogte algemene html" />
+    <MESSAGE value="nieuwe dynamische hoogte algemene html" />
+    <MESSAGE value="nieuwe dynamische hoogten htmls" />
+    <MESSAGE value="nieuwe dynamische hoogten htmls (48px per regel)" />
+    <MESSAGE value="DID-136 #comment Overzicht van htmls gegenereerd" />
+    <MESSAGE value="GD-8547 #comment pagina onderzoeken toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="GD-8547 #comment pagina onderzoeken toegevoegd" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="138" y="167" width="1644" height="738" key="DiffContextDialog" timestamp="1664437954380">
+      <screen x="0" y="0" width="1920" height="1071" />
+    </state>
+    <state x="92" y="92" width="1094" height="407" key="DiffContextDialog/0.0.1278.591@0.0.1278.591" timestamp="1662135499968" />
+    <state x="138" y="167" width="1644" height="738" key="DiffContextDialog/0.0.1920.1071@0.0.1920.1071" timestamp="1664437954380" />
+    <state x="754" y="210" key="RollbackChangesDialog" timestamp="1662378027123">
+      <screen x="0" y="0" width="1920" height="951" />
+    </state>
+    <state x="502" y="0" key="RollbackChangesDialog/0.0.1278.591@0.0.1278.591" timestamp="1662136380355" />
+    <state x="754" y="237" key="RollbackChangesDialog/0.0.1920.1071@0.0.1920.1071" timestamp="1661441442756" />
+    <state x="754" y="210" key="RollbackChangesDialog/0.0.1920.951@0.0.1920.951" timestamp="1662378027123" />
+    <state x="461" y="180" key="SettingsEditor" timestamp="1657206938734">
+      <screen x="0" y="0" width="1920" height="1071" />
+    </state>
+    <state x="461" y="180" key="SettingsEditor/0.0.1920.1071@0.0.1920.1071" timestamp="1657206938734" />
+    <state x="552" y="238" key="Vcs.Push.Dialog.v2" timestamp="1664366719895">
+      <screen x="0" y="0" width="1920" height="951" />
+    </state>
+    <state x="367" y="56" key="Vcs.Push.Dialog.v2/0.0.1278.591@0.0.1278.591" timestamp="1661848597121" />
+    <state x="552" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1071@0.0.1920.1071" timestamp="1663081599638" />
+    <state x="552" y="238" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1664366719895" />
+    <state x="644" y="323" key="git4idea.merge.GitPullDialog" timestamp="1660660532313">
+      <screen x="0" y="0" width="1920" height="1071" />
+    </state>
+    <state x="644" y="323" key="git4idea.merge.GitPullDialog/0.0.1920.1071@0.0.1920.1071" timestamp="1660660532313" />
+    <state x="644" y="287" key="git4idea.merge.GitPullDialog/0.0.1920.951@0.0.1920.951" timestamp="1660551245403" />
+    <state x="616" y="188" width="672" height="676" key="search.everywhere.popup" timestamp="1664286264612">
+      <screen x="0" y="0" width="1920" height="1071" />
+    </state>
+    <state x="616" y="188" width="672" height="676" key="search.everywhere.popup/0.0.1920.1071@0.0.1920.1071" timestamp="1664286264612" />
+  </component>
+</project>
