@@ -5,14 +5,37 @@
     <style>
       /* Style the tab */
       /* Remove default bullets */
+
+      * {
+        font-family: Arial;
+       }
+
       ul, #myUL {
         list-style-type: none;
+      }
+
+      h3 {
+        background-color:rgb(250, 175, 0);
+        border-radius: 16px;
+      }
+
+      h4 {
+        background-color:rgb(40, 145, 225);
+        border-radius: 12px;
+      }
+
+      .attr {
+        color:White;
+        background-color:rgb(0, 50, 95);
+        border-radius: 8px;
       }
 
       /* Remove margins and padding from the parent ul */
       .myUL {
         margin: 0;
         padding: 0;
+        width: 50%;
+        text-align: left;
       }
 
       /* Style the caret/arrow */
@@ -20,13 +43,13 @@
         cursor: pointer;
         user-select: none; /* Prevent text selection */
         margin: 0;
-        padding: 0;
+        padding: 0px 8px;
       }
 
       /* Create the caret/arrow with a unicode, and style it */
       .caret::before {
         content: "\25B6";
-        color: black;
+        /*color: black; */
         display: inline-block;
         margin-right: 6px;
       }
@@ -64,7 +87,7 @@
     <li><h3 class="caret">Quickscan flora and fauna</h3>
       <ul class="nested">
         <li><h4 class="caret">Bomeninventarisatie</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li>ID</li>
@@ -76,7 +99,7 @@
           </ul>
         </li>
         <li><h4 class="caret">Beschermde soorten wet natuurbescherming</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li><span class="caret">STATUS</span>
@@ -99,7 +122,7 @@
     <li><h3 class="caret">Ongesprongen explosieven onderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Ongesprongen_explosieven_onderzoek</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li><span class="caret">STATUS</span>
@@ -122,7 +145,7 @@
     <li><h3 class="caret">Archeologisch onderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Archeologie_onderzoek</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li><span class="caret">STATUS</span>
@@ -145,7 +168,7 @@
     <li><h3 class="caret">Waterbodemonderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Milieukundige_boringen</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li>Naam</li>
@@ -169,7 +192,7 @@
     <li><h3 class="caret">Bodemonderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Geotechnische_boringen</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>Shape</li>
             <li>OBJECTID</li>
             <li>Naam</li>
@@ -189,7 +212,7 @@
     <li><h3 class="caret">Verhardingsonderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Verhardingsboringen</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>Shape</li>
             <li>OBJECTID</li>
             <li>Naam</li>
@@ -208,7 +231,7 @@
     <li><h3 class="caret">Asbestonderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Milieukundige_boringen</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li>Naam</li>
@@ -232,7 +255,7 @@
     <li><h3 class="caret">Geodesieonderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Geodesie_boringen</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>SHAPE</li>
             <li>Layer</li>
@@ -248,7 +271,7 @@
     <li><h3 class="caret">Geotechnisch onderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Geotechnische_boringen</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>Shape</li>
             <li>OBJECTID</li>
             <li>Naam</li>
@@ -268,7 +291,7 @@
     <li><h3 class="caret">Grondwater onderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Grondwater_monitoring</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>Shape</li>
             <li>OBJECTID</li>
             <li>Naam</li>
@@ -289,7 +312,7 @@
     <li><h3 class="caret">Geluidsonderzoek</h3>
       <ul class="nested">
         <li><h4 class="caret">Geluidsonderzoek</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li>Toetspunt</li>
@@ -309,7 +332,7 @@
     <li><h3 class="caret">Trillingsonderzoek (GROUP LAYER)</h3>
       <ul class="nested">
         <li><h4 class="caret">Belendigen_trillingsonderzoek</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li>Kans op schade</li>
@@ -320,7 +343,7 @@
           </ul>
         </li>
         <li><h4 class="caret">Risicocontour_1_8M_trillingsonderzoek</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li>Grootte buffer</li>
@@ -331,7 +354,7 @@
           </ul>
         </li>
         <li><h4 class="caret">Risicocontour_2_100M_trillingsonderzoek</h4>
-          <ul class="nested">
+          <ul class="nested attr">
             <li>OBJECTID</li>
             <li>Shape</li>
             <li>Grootte buffer</li>
