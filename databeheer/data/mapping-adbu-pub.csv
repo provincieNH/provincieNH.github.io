@@ -1,19 +1,5 @@
 source,target,mapping
-/ad.*(fcls),/av_p*(fcls),alleen publieke velden & foreign keys trajecten begrijpelijke waarde uit bron ipv AD_ID
-/ad.*(fcls),/adi_p*(fcls),alles & alles foreign keys als begrijpelijke waarde uit bron uit ipv AD_ID
-/ad.*_tbl,/adi_*_tbl,alles & alles foreign keys als begrijpelijke waarde uit bron uit ipv AD_ID
-/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Asfaltverharding,/???
-/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Betonverharding,/???
-/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Elementenverharding,/???
-/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Halfverharding,/???
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Betonverharding,/???
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Halfverharding,/???
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Elementenverharding,/???
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Asfaltverharding,/???
-/ad4.traject_v,/ad5.traject_v:x,/???
-/ad4.wegdeel_v,/ad5.verharding_v:Betonverharding,/???
-/ad4.wegdeel_v,/ad5.verharding_v:Elementenverharding,/???
-/ad4.wegdeel_v,/ad5.verharding_v:Asfaltverharding,/???
-/ad4.wegdeel_v,/ad5.verharding_v:Halfverharding,/???
-/ad4.wegvak_v,/ad5.verharding_v:Halfverharding,/???
-/ad4.wegvak_v,/ad5.wegvak_v:x,/???
+/gpbuapp.areaaldata.*(fcls),/g*bupub.bupub.av_p*(fcls),alleen publieke velden & foreign keys trajecten begrijpelijke waarde uit bron ipv AD_ID
+/gpbuapp.areaaldata.*(fcls),/g*bupub.bupub.adi_p*(fcls),alles & alles foreign keys als begrijpelijke waarde uit bron uit ipv AD_ID
+/gpbuapp.areaaldata.*_tbl,/g*bupub.bupub.adi_*_tbl,alles & alles foreign keys als begrijpelijke waarde uit bron uit ipv AD_ID
+/gbu.budata.*/,g*bupub.bupub.*,???
