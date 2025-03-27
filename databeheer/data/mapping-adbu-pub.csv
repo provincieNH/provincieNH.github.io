@@ -1,0 +1,18 @@
+source,target,mapping
+/ad.*,/av_*,alleen publieke velden & trajecten als description ipv code
+/ad4.crowMeting_tbl,/ad5.verhardingsInspectie_tbl:x,/???
+/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Asfaltverharding,/???
+/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Betonverharding,/???
+/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Elementenverharding,/???
+/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Halfverharding,/???
+/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Betonverharding,/???
+/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Halfverharding,/???
+/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Elementenverharding,/???
+/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Asfaltverharding,/???
+/ad4.traject_v,/ad5.traject_v:x,/???
+/ad4.wegdeel_v,/ad5.verharding_v:Betonverharding,/???
+/ad4.wegdeel_v,/ad5.verharding_v:Elementenverharding,/???
+/ad4.wegdeel_v,/ad5.verharding_v:Asfaltverharding,/???
+/ad4.wegdeel_v,/ad5.verharding_v:Halfverharding,/???
+/ad4.wegvak_v,/ad5.verharding_v:Halfverharding,/???
+/ad4.wegvak_v,/ad5.wegvak_v:x,/???
