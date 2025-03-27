@@ -60,7 +60,7 @@
       .node text {
         pointer-events: none;
         text-shadow: 0 1px 0 #fff;
-        font: cambria
+        font-family: cambria
       }
 
       .link {
@@ -148,7 +148,7 @@ var svg = d3.select("#chart").append("svg")
 
 // Set the sankey diagram properties
 var sankey = d3.sankey()
-    .nodeWidth(46)
+    .nodeWidth(30)
     .nodePadding(20)
     .size([width, height]);
 
