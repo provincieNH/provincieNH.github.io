@@ -184,13 +184,19 @@ d3.csv("data/mapping-adbu-pub.csv", function(error, data) {
   // g.attr("href", "https://www.google.com/")
 
 // add in the links
-  var link = svg.append("g").selectAll(".link")
-      .data(graph.links)
-    .enter().append("path")
-      .attr("class", "link")
-      .attr("d", path)
-      .style("stroke-width", function(d) { return Math.max(1, d.dy); })
-      .sort(function(a, b) { return b.dy - a.dy; });
+var link = svg.append("g").selectAll(".link")
+    .data(graph.links)
+  .enter().append("path")
+    .attr("class", "link")
+    .attr("d", path)
+    .style("stroke-width", function(d) { return Math.max(1, d.dy); })
+    .style("stroke", function(d) {
+        return d.mapping === "orange" ? "orange" :
+               d.mapping === "blue" ? "blue" :
+               d.mapping === "yellow" ? "yellow" : "#000"; // Default black
+    })
+    .sort(function(a, b) { return b.dy - a.dy; });
+
 
   // link.append("a")
       // .attr("href", "https://www.google.com/")
