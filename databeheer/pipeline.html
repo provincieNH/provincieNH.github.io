@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <style>
+      /* Style the tab */
+      div.tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+      }
+
+      /* Style the buttons inside the tab */
+      div.tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+      }
+
+      /* Change background color of buttons on hover */
+      div.tab button:hover {
+          background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      div.tab button.active {
+          background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+          -webkit-animation: fadeEffect 2s;
+          animation: fadeEffect 2s; /* Fading effect takes 1 second */
+      }
+        @-webkit-keyframes fadeEffect {
+          from {opacity: 0;}
+          to {opacity: 1;}
+      }
+
+      @keyframes fadeEffect {
+          from {opacity: 0;}
+          to {opacity: 1;}
+      }
+
+      .node rect {
+        cursor: move;
+        fill-opacity: .9;
+        shape-rendering: crispEdges;
+      }
+
+      .node text {
+        pointer-events: none;
+        text-shadow: 0 1px 0 #fff;
+      }
+
+      .link {
+        fill: none;
+        stroke: #000;
+        stroke-opacity: .2;
+      }
+
+      .link:hover {
+        stroke-opacity: .5;
+      }
+
+      .node2 rect {
+        cursor: move;
+        fill-opacity: .9;
+        shape-rendering: crispEdges;
+      }
+
+      .node2 text {
+        pointer-events: none;
+        text-shadow: 0 1px 0 #fff;
+      }
+
+      .link2 {
+        fill: none;
+        stroke: #000;
+        stroke-opacity: .2;
+      }
+
+      .link2:hover {
+        stroke-opacity: .5;
+      }
+    </style>
+  </head>
+  
+<body>
+
+
+<div class="tab">
+  <button class="tablinks" id="intro">Intro</button>
+  <button class="tablinks" id="alg">Areaaldata en Budata naar de publicatiedatabase</button>
+</div>
+
+<div id="intro" class="tabcontent">
+  <h3>Mapping BGT / Areaaldata / Gisib</h3>
+  <p>Deze site visualiseert de mapping tussen de verschillende databases met Geo- en Areaalinformatie</p>
+  <p>
+    De visualisatie maakt gebruik van <a href="https://d3js.org">D3.js</a> met de <a href="https://github.com/d3/d3-sankey">Sankey plugin.</a> </br>
+    De mapping staat nu nog in een datafile die handmatig gegenereerd is, de bedoeling is om de mapping uit de .md files af te leiden.</br>
+    De <b>.x objecten</b> laten zien dat deze objecten niet voorkomen in de betreffende database.</br>
+    Er zijn <b>tooltips</b> bij sommige 'lijntjes' om aan te geven op basis van welke attribuutwaarde de splitsing in objecttypen gemaakt wordt.</br>
+    Om het overzicht te bewaren is het complete areaal gesplitst in 3 delen.</br>
+    Voor de BGT en Areaaldata objecten kun je <b>klikken op de node</b> om naar de documentatie van het betreffende objecttype te gaan.
+  </p>
+  <img src="uitleg.png">
+</div>
+
+</body>
+<script type="text/javascript">
+    document.getElementById("alg").onclick = function () {
+        location.href = "pipeline-pipeline_adbudatapub.html";
+    };
+
+</script>
+</html>
