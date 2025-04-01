@@ -3,6 +3,5 @@ source,target,mapping
 /gpbuapp.areaaldata.*(tabellen),/kopie selectie gesloten areaaldata met foreign keys begrijpelijk gemaakt, ETL bron, orange
 /gpbuapp.areaaldata.*(fcls),/kopie selectie alle areaaldata met foreign keys begrijpelijk gemaakt, ETL bron, blue
 /kopie selectie open areaaldata met foreign keys begrijpelijk gemaakt,/g*bupub.bupub.av_p*, ETL doel, orange
-/kopie selectie gesloten areaaldata met foreign keys begrijpelijk gemaakt, /g*bupub.bupub.adi_*, ETL doel, orange
-/kopie selectie alle areaaldata met foreign keys begrijpelijk gemaakt,/g*bupub.bupub.adi_p*(fcls), ETL doel, orange
+/kopie selectie alle areaaldata met foreign keys begrijpelijk gemaakt,/g*bupub.bupub.adi_p*, ETL doel, orange
 /gpbu.budata.*,/g*bupub.bupub.*,???, yellow
