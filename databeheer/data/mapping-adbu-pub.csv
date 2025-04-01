@@ -2,5 +2,5 @@ source,target,mapping
 /gpbuapp.areaaldata.*(fcls),/kopie selectie open areaaldata met foreign keys trajecten begrijpelijke waarde uit bron, ETL bron, orange
 /gpbuapp.areaaldata.*(fcls),/kopie selectie open areaaldata met foreign keys trajecten begrijpelijke waarde uit bron, ETL bron, blue
 /kopie selectie open areaaldata met foreign keys trajecten begrijpelijke waarde uit bron,/g*bupub.bupub.av_p*(fcls), ETL doel, orange
-/kopie selectie open areaaldata met foreign keys trajecten begrijpelijke waarde uit bron,/g*bupub.bupub.adi_p*(fcls),ETL doel, orange
+/kopie selectie open areaaldata met foreign keys trajecten begrijpelijke waarde uit bron,/g*bupub.bupub.adi_p*(fcls), ETL doel, orange
 /gpbu.budata.*,/g*bupub.bupub.*,???, yellow
