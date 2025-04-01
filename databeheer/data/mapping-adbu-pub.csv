@@ -1,5 +1,5 @@
 source,target,mapping
-/gpbuapp.areaaldata.* (DI-Databeheer),/kopie selectie open areaaldata met waarde ipv fk, ETL bron, orange
+/gpbuapp.areaaldata.* (DI-Databeheer),/kopie open areaaldata met waarde ipv fk, ETL bron, orange
 /gpbuapp.areaaldata.* (DI-Databeheer),/kopie alle areaaldata met waarde ipv fk, ETL bron, blue
 /kopie alle areaaldata met waarde ipv fk,/g*bupub.bupub.adi_*(fcls), ETL doel, orange
 /kopie alle areaaldata met waarde ipv fk,/g*bupub.bupub.adi_*(tabellen), ETL doel, orange
