@@ -1,9 +1,9 @@
 source,target,mapping
 /gpbuapp.areaaldata.* (DI-Databeheer),/kopie selectie open areaaldata met waarde ipv fk, ETL bron, orange
 /gpbuapp.areaaldata.* (DI-Databeheer),/kopie alle areaaldata met waarde ipv fk, ETL bron, blue
-/kopie selectie alle areaaldata met foreign keys begrijpelijk gemaakt,/g*bupub.bupub.adi_*(fcls), ETL doel, orange
-/kopie selectie alle areaaldata met foreign keys begrijpelijk gemaakt,/g*bupub.bupub.adi_*(tabellen), ETL doel, orange
-/kopie selectie open areaaldata met foreign keys begrijpelijk gemaakt,/g*bupub.bupub.av_*, ETL doel, orange
+/kopie alle areaaldata met waarde ipv fk,/g*bupub.bupub.adi_*(fcls), ETL doel, orange
+/kopie alle areaaldata met waarde ipv fk,/g*bupub.bupub.adi_*(tabellen), ETL doel, orange
+/kopie open areaaldata met waarde ipv fk,/g*bupub.bupub.av_*, ETL doel, orange
 /gpbu.budata.bu_bim_scope_v (DI-Advies),/g*bupub.bupub.bu_bim_scope_v, ETL, yellow
 /gpbu.budata.bu_prj_overzichtGeodata (???),/g*bupub.bupub.bu_prj_overzichtGeodata,???, yellow
 /gpbu.budata.*,/g*bupub.bupub.*,???, yellow
