@@ -1,0 +1,2 @@
+source,target,mapping
+/ad4.bouwland_v.begroeidTerreindeel_v,/ad5.Terreindeel in gebruik als akker, met gewassen die in een teelt roulatieschema zijn opgenomen. Kan tijdelijk zonder gewas zijn of braak liggen. (Bron: definities.geostandaarden.nl).FYSIEKVOORKOMEN,/bouwland,bouwland:bollenteelt,bouwland:akkerbouw,bouwland:vollegrondsteelt,bouwland:braakliggend

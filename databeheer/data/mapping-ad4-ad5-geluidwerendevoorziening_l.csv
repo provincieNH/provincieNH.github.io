@@ -1,0 +1,2 @@
+source,target,mapping
+/ad4.geluidwerendevoorziening_l.geluidwerendeVoorziening_l,/ad5.Onderdeel van een civiel-technisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen. De NEN 2767-4 decompositie wordt gevolgd, waarbij geluidwerendevoorziening als beheerobject is aangemaakt om het element ‘geluidwerende constructie’ van een bovenliggend beheerobject te voorzien. Geluidwerende voorzieningen worden als zelfstandige objecten beheerd en niet als element van bijvoorbeeld bruggen of wegen (zoals in de NEN 2767-4 beschreven).x,/x

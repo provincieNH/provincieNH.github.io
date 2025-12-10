@@ -1,0 +1,2 @@
+source,target,mapping
+/ad4.wegas_l.weg_l,/ad5.Wegverkeerruimte die de verkeerskundige inrichting van een weg beschrijft tussen twee knopen. De hartlijn van een weg. De ‘as’ van de verschillende wegen zoals tot standgekomen in de iNHi(richtingonafhankelijke trajecten), en volgen de rechter rijbaan. De lijn wordt in de richting van de oplopende hectometrering getekend. Het startpunt is altijd bij de laagste hectometerwaarde. Het eindpunt altijd bij de hoogste. Measure values zijn van toepassing, en zijn gedefinieerd in meters..x,/x

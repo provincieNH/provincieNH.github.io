@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,24 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="DID-136 #comment Overzicht van htmls gegenereerd">
-      <change afterPath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v_bart.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-traject_v.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v-Asfaltverharding.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v-Betonverharding.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v-Elementenverharding.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verharding_v-Halfverharding.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-verhardingsInspectie_tbl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-wegvak_v.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-wegvak_v.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-wegvak_v.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-main.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-traject_v.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Asfaltverharding.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Asfaltverharding.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Betonverharding.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Betonverharding.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Elementenverharding.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Elementenverharding.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Halfverharding.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Halfverharding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Asfaltverharding.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Betonverharding.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Elementenverharding.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Halfverharding.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verhardingsInspectie_tbl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-wegvak_v.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/vormgeving-onderzoeken.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/vormgeving-onderzoeken.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-wegvak_v.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-wegvak_v.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,22 +43,44 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "bmonne"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/provincieNH/provincieNH.github.io.git",
+    "accountId": "7cbb8d91-03b9-4404-a2a1-3ba39954cc7e"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2BKoJfwgVcBrUqjbwyRRD5k2nsi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/databeheer" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\git\provincieNH.github.io\databeheer" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -298,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1664366716613</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="DID-136 #comment Overzicht van htmls gegenereerd">
+      <option name="closed" value="true" />
+      <created>1765372235063</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1765372235063</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,7 +337,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix van test middels appenden aan g" />
@@ -337,9 +362,9 @@
     <MESSAGE value="nieuwe dynamische hoogte algemene html" />
     <MESSAGE value="nieuwe dynamische hoogten htmls" />
     <MESSAGE value="nieuwe dynamische hoogten htmls (48px per regel)" />
-    <MESSAGE value="DID-136 #comment Overzicht van htmls gegenereerd" />
     <MESSAGE value="GD-8547 #comment pagina onderzoeken toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="GD-8547 #comment pagina onderzoeken toegevoegd" />
+    <MESSAGE value="DID-136 #comment Overzicht van htmls gegenereerd" />
+    <option name="LAST_COMMIT_MESSAGE" value="DID-136 #comment Overzicht van htmls gegenereerd" />
   </component>
   <component name="WindowStateProjectService">
     <state x="138" y="167" width="1644" height="738" key="DiffContextDialog" timestamp="1664437954380">
