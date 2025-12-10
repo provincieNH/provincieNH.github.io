@@ -1,18 +1,214 @@
 source,target,mapping
-/ad4.crowMeting_tbl,/ad5.verharding_v:Halfverharding,/???
-/ad4.crowMeting_tbl,/ad5.verhardingsInspectie_tbl:x,/???
-/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Asfaltverharding,/???
-/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Betonverharding,/???
-/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Elementenverharding,/???
-/ad4.onbegroeidTerreindeel_v,/ad5.verharding_v:Halfverharding,/???
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Betonverharding,/???
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Halfverharding,/???
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Elementenverharding,/???
-/ad4.ondersteunendWegdeel_v,/ad5.verharding_v:Asfaltverharding,/???
-/ad4.traject_v,/ad5.traject_v:x,/???
-/ad4.wegdeel_v,/ad5.verharding_v:Betonverharding,/???
-/ad4.wegdeel_v,/ad5.verharding_v:Elementenverharding,/???
-/ad4.wegdeel_v,/ad5.verharding_v:Asfaltverharding,/???
-/ad4.wegdeel_v,/ad5.verharding_v:Halfverharding,/???
-/ad4.wegvak_v,/ad5.verharding_v:Halfverharding,/???
-/ad4.wegvak_v,/ad5.wegvak_v:x,/???
+/ad4.adres_tbl,/ad5.Tabel met adresgegevens om naar te verwijzen vanuit beweegbare kunstwerken, OVL-kasten en VRI-kasten:x,/x
+/ad4.afvalbak_p,/ad5.Inzamelobject voor afval in de openbare ruimte dat handmatig kan worden leeggemaakt.:niet-bgt:afvalbak,niet-bgt: afval apartplaats,/niet-bgt:afvalbak,niet-bgt: afval apartplaats
+/ad4.opslagbak_p,/ad5.Een bak in de openbare ruimte bedoeld voor het opslaan van materialen, bijvoorbeeld zand of zout.:niet-bgt:zand- / zoutbak,/niet-bgt:zand- / zoutbak
+/ad4.duin_v,/ad5.Verhoging of heuvel van zand of fijne losse aarde en verpulverd gesteente opgeworpen door wind of door stromend water. (Bron: definities.geostandaarden.nl):duin,duin:gesloten duinvegetatie,duin:open duinvegetatie,/duin,duin:gesloten duinvegetatie,duin:open duinvegetatie
+/ad4.groenobject_v,/ad5.Objecten uit BGT Begroeid Terreindeel en Ondersteunend Wegdeel met fysiek voorkomen groenvoorziening, maar zonder plusclassificatie:groenvoorziening,/groenvoorziening
+/ad4.bos_v,/ad5.Begroeiing die een dusdanige aantal bomen betreft dat deze een min of meer gesloten geheel vormen of, na volgroeiing van de bomen, zullen vormen.:gemengd bos,loofbos,loofbos:griend en hakhout,naaldbos,/gemengd bos,loofbos,loofbos:griend en hakhout,naaldbos
+/ad4.bosplantsoen_v,/ad5.Houtachtige beplanting met een natuurlijk karakter bestaande uit voornamelijk inheemse struikvormers en/of boomvormers, die extensief wordt beheerd, inclusief bosachtige groenobjecten in stedelijk gebied.:groenvoorziening:bosplantsoen,/groenvoorziening:bosplantsoen
+/ad4.heide_v,/ad5.Terreindeel overwegend begroeid met heide en heideachtige vegetaties. (Bron: definities.geostandaarden.nl):heide,/heide
+/ad4.planten_v,/ad5.Groenobject bestaande uit één-, tweejarige planten en/of vaste planten.:groenvoorziening:planten,/groenvoorziening:planten
+/ad4.rietland_v,/ad5.Terreindeel overwegend begroeid met rietvegetatie. (Bron: definities.geostandaarden.nl):rietland,/rietland
+/ad4.struiken_v,/ad5.Houtachtige, overblijvende planten gekenmerkt door verschillende vertakkingen dicht bij de wortel en afwezigheid van opvallende stammen.:groenvoorziening:bodembedekkers,groenvoorziening:heesters,groenvoorziening:struikrozen,struiken,/groenvoorziening:bodembedekkers,groenvoorziening:heesters,groenvoorziening:struikrozen,struiken
+/ad4.bouwland_v,/ad5.Terreindeel in gebruik als akker, met gewassen die in een teelt roulatieschema zijn opgenomen. Kan tijdelijk zonder gewas zijn of braak liggen. (Bron: definities.geostandaarden.nl):bouwland,bouwland:bollenteelt,bouwland:akkerbouw,bouwland:vollegrondsteelt,bouwland:braakliggend,/bouwland,bouwland:bollenteelt,bouwland:akkerbouw,bouwland:vollegrondsteelt,bouwland:braakliggend
+/ad4.fruit_of_kweekbomen_v,/ad5.Begroeiing die het kweken van meerjarige siergewassen en bomen betreft ten behoeve van een later gebruik elders of voor het kweken van fruit.:fruitteelt,boomteelt,fruitteelt:hoogstam boomgaarden,fruitteelt:laagstam boomgaarden,fruitteelt:wijngaarden,fruitteelt:klein fruit,/fruitteelt,boomteelt,fruitteelt:hoogstam boomgaarden,fruitteelt:laagstam boomgaarden,fruitteelt:wijngaarden,fruitteelt:klein fruit
+/ad4.gras_en_kruidachtigen_v,/ad5.Gras: terrein met grasvegetatie, niet primair in gebruik voor grasproductie. Kruidachtige: Door inheemse kruidensoorten bepaalde grasachtige vegetatie. Grond met) een laagblijvende, aaneengesloten kruidachtige vegetatie. (Bron: definities.geostandaarden.n:grasland agrarisch,grasland overig,groenvoorziening:gras- en kruidachtigen,/grasland agrarisch,grasland overig,groenvoorziening:gras- en kruidachtigen
+/ad4.houtwal_v,/ad5.Terreindeel zijnde een afscheiding met beperkte breedte en beplant met bomen of struiken. (Bron: definities.geostandaarden.nl):houtwal,/houtwal
+/ad4.moeras_v,/ad5.Terreindeel met moerasvegetatie in stilstaand water van geringe diepte zonder merkbare toe- of afvloeiing. (Bron: definities.geostandaarden.nl):moeras,/moeras
+/ad4.beheervak_v,/ad5.De beheergrens bakent de publiekrechtelijke zeggenschap en verantwoordelijkheid van de provincie over het areaal af. Zo wordt duidelijk tot hoever de provincie krachtens de Omgevingswet, de Waterwet en de Wegenverkeerswet 1994 beheerder is van de provinciale (vaar)wegen. Ook regelt de beheergrens tot hoever de provinciale bevoegdheid reikt bij het treffen van maatregelen, het al dan niet toestaan van handelingen van derden, of juist het gedogen van situaties die van invloed zijn op de toestand of het gebruik van de (vaar)weg. Daarnaast geeft de beheergrens aan tot hoever de provincie met haar Omgevingsverordening, Waterverordening en Wegenverordening de publiekrechtelijke nadere regels voor de provinciale (vaar)wegen voor kan schrijven. Daarmee regelt de beheergrens eenduidigheid en transparantie over het beheer. Dit om te behoeden voor nadelige gevolgen voor beheerbaarheid, doorstroming en veiligheid van activiteiten op of rond de infrastructuur. :x,/x
+/ad4.informatiepaneel_p,/ad5.Paneel met daarop specifieke actuele informatie zoals plattegronden, vertrektijden, rijrichting, storingen, etc.:x,/x
+/ad4.reclamebord_p,/ad5.Bord waarop rondom of aan één of meer zijden reclame-uitingen kunnen worden (of zijn) geplakt.:niet-bgt:reclamebord,/niet-bgt:reclamebord
+/ad4.scheepvaartbord_p,/ad5.Bord waarop een scheepvaartteken is aangebracht en waarvan de uitvoering als richtlijn is voorgeschreven volgens Richtlijnen Scheepvaarttekens RST 2008.:niet-bgt:scheepvaartbord,/niet-bgt:scheepvaartbord
+/ad4.informatiebord_p,/ad5.Informatiedrager: onderdeel van een wegwijzer waarop informatie over de te volgen richting is aangebracht.:x,/x
+/ad4.kabels_en_leidingenbord_p,/ad5.Borden welke gebruikt worden voor de aanduiding van kabels en leidingen.:niet-bgt:verklikker transportleiding,/niet-bgt:verklikker transportleiding
+/ad4.verkeersbord_p,/ad5.Verkeersteken: Wettelijk vastgesteld teken ter regeling, waarschuwing, geleiding of informering van het verkeer.:niet-bgt:plaatsnaambord,niet-bgt:straatnaambord,niet-bgt:verkeersbord,niet-bgt:waarschuwingshek,niet-bgt:wegwijzer,niet-bgt,/niet-bgt:plaatsnaambord,niet-bgt:straatnaambord,niet-bgt:verkeersbord,niet-bgt:waarschuwingshek,niet-bgt:wegwijzer,niet-bgt
+/ad4.kunstwerkbouwdeel_tbl,/ad5.Laagste niveau van de decompositie van niet-geometrische objecten behorende bij een kunstwerk :x,/x
+/ad4.neninspectie_tbl,/ad5.Een NEN 2767-inspectie is een gestandaardiseerde methode voor het objectief vastleggen van de technische conditie van gebouwen en installaties. Het doel is om gebreken in kaart te brengen en een eenduidige conditiescore te bepalen, zodat beheerders inzicht krijgen in de staat van het onderhoud en de benodigde prioriteiten voor herstel.:x,/x
+/ad4.aansluitleiding_l,/ad5.Leiding tussen een gebouw of een kolk en een knooppunt of leiding voor de aanvoer van afvalwater.:aansluitleiding,/aansluitleiding
+/ad4.drain_l,/ad5.Een leiding met doorlatende wanden bestemd voor het op peil houden van het grondwater. Kan ook beschouwd worden als een soort drainagevoorziening.:drainagebuis,/drainagebuis
+/ad4.vrijvervalrioolleiding_l,/ad5.Een rioolleiding die licht hellend is aangebracht, waardoor het afvalwater door de zwaartekracht door de leiding wordt getransporteerd.:hemelwaterriool,overstortleiding,stuwrioolleiding, vuilwaterriool,doorlatendeleiding,zinker,/hemelwaterriool,overstortleiding,stuwrioolleiding, vuilwaterriool,doorlatendeleiding,zinker
+/ad4.vrijvervaltransportleiding_l,/ad5.Een transportleiding die licht hellend is aangebracht, waardoor de materie door de zwaartekracht door de leiding heen wordt verplaatst.:transportrioolleiding,/transportrioolleiding
+/ad4.concessieverlener_tbl,/ad5.Operator die het recht heeft om bepaalde (vervoers)diensten uit te voeren.:x,/x
+/ad4.crowinspectie_tbl,/ad5.Een inspectie die wordt uitgevoerd volgens de richtlijnen van het CROW. Het doel is om de kwaliteit, conditie en veiligheid van wegen te beoordelen en vast te leggen, met het oog op onderhoud, reparatie of vervanging. Het object 'crowinspectie' is bedoelt om de algemene gegevens van een inspectieronde vast te leggen.:x,/x
+/ad4.crowinspectieresultaat_tbl,/ad5.Een visuele inspectie is een systematische beoordeling waarbij zichtbare schades aan bijvoorbeeld wegen worden herkend, beoordeeld op ernst en omvang, en eenduidig worden vastgelegd. Het doel is om de technische conditie van het wegennet in kaart te brengen, zodat onderhoudsplannen, begrotingen en beleidsplannen hierop kunnen worden gebaseerd.:x,/x
+/ad4.crowmeting_tbl,/ad5.Een gestandaardiseerde werkwijze om de conditie van wegen te beoordelen, met als doel de verkeersveiligheid en kwaliteit te waarborgen, zoals stroefheid, zetting, spoorvorming en comfortindex:x,/x
+/ad4.faunameubilair_l,/ad5.Meubilair ten behoeve van de bescherming van fauna en faunageleiding.:Loopplank onder brug,/Loopplank onder brug
+/ad4.faunaverblijfplaats_p,/ad5.Voorzieningen die geschikt zijn als verblijfplaats of als nestgelegenheid om diersoorten te beschermen.:Vleermuisbunker,/Vleermuisbunker
+/ad4.faunavoorziening_l,/ad5.Voorzieningen die geschikt zijn om diersoorten te beschermen. Denk hierbij aan faunatunnels, -goten, -duikers, etc.:Amfibieëntunnel,Boombrug,brug of viaduct met faunavoorziening,Duiker, Looprichel,ecoduiker / duiker met faunavoorziening,kleine faunatunnel,Looprichel,Onduidelijk,Overig,Overige faunatunnel,tunnel / viaduct met medegebruik fauna,/Amfibieëntunnel,Boombrug,brug of viaduct met faunavoorziening,Duiker, Looprichel,ecoduiker / duiker met faunavoorziening,kleine faunatunnel,Looprichel,Onduidelijk,Overig,Overige faunatunnel,tunnel / viaduct met medegebruik fauna
+/ad4.combikabel_l,/ad5.Kabel of stelsel van kabels, inclusief hulpaders, onder of boven de grond, die elektriciteit met een spanning lager dan 500 V kan transporteren.:ADD,/ADD
+/ad4.datakabel_l,/ad5.Kabel voor de voortgeleiding van een signaal.:DAT,/DAT
+/ad4.voedingskabel_l,/ad5.Kabel voor geleiding van energie.:ENE,/ENE
+/ad4.faunameubilair_v,/ad5.Meubilair ten behoeve van de bescherming van fauna en faunageleiding.:loopplank onder brug,/loopplank onder brug
+/ad4.faunaverblijfplaats_v,/ad5.Voorzieningen die geschikt zijn als verblijfplaats of als nestgelegenheid om diersoorten te beschermen.:vleermuisbunker,/vleermuisbunker
+/ad4.faunavoorziening_v,/ad5.Voorzieningen die geschikt zijn om diersoorten te beschermen. Denk hierbij aan faunatunnels, -goten, -duikers, etc.:Amfibieëntunnel,betonnen duiker,betonnen faunapassage,dassentunnel,Dassentunnel,Ecoduikers,Faunatunnel,Looprichel,null,OV,Overig,/Amfibieëntunnel,betonnen duiker,betonnen faunapassage,dassentunnel,Dassentunnel,Ecoduikers,Faunatunnel,Looprichel,null,OV,Overig
+/ad4.fietsparkeervoorziening_l,/ad5.Een duurzaam verankerd rek in de openbare ruimte voor het stallen van fietsen of andere voorzieningen voor het parkeren van fietsen.:x,/x
+/ad4.werkgebied_v,/ad5.Gebied waarop panden of overige gebouwen staan, en/of niet bebouwde oppervlakte, voornamelijk gebruikt voor economische activiteiten en non-profit activiteiten.:x,/x
+/ad4.beheergebied_v,/ad5.Aanduiding van het beheergebied waarbinnen het beheerobject ligt. Indeling in beheergebieden is organisatiespecifiek.:x,/x
+/ad4.bordes_v,/ad5.Een verhard oppervlak, eventueel verhoogd en/of uitgevoerd met treden, grenzend aan een pand en primair bedoeld voor gebruik door voetgangers.:niet-bgt:bordes,/niet-bgt:bordes
+/ad4.luifel_v,/ad5.Een luifel is een element uit de architectuur bestaande uit een dak, dat met de ene horizontale kant aan de buitenzijde van een gebouw is bevestigd, terwijl de daar tegenoverliggende zijde vrij dragend is.:niet-bgt:luifel,/niet-bgt:luifel
+/ad4.toegangstrap_v,/ad5.Trap welke toegang geeft tot een deel van het bouwwerk.:niet-bgt:toegangstrap,/niet-bgt:toegangstrap
+/ad4.geluidwerendevoorziening_l,/ad5.Onderdeel van een civiel-technisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen. De NEN 2767-4 decompositie wordt gevolgd, waarbij geluidwerendevoorziening als beheerobject is aangemaakt om het element ‘geluidwerende constructie’ van een bovenliggend beheerobject te voorzien. Geluidwerende voorzieningen worden als zelfstandige objecten beheerd en niet als element van bijvoorbeeld bruggen of wegen (zoals in de NEN 2767-4 beschreven):x,/x
+/ad4.halteplaats_v,/ad5.Het geheel van objecten behorende bij een stopplaats van een autobus of veerpont of watertaxi. STOPPLACE in NDOV terminologie: ofwel eenvoudige stopplaats voor voertuigen van het openbaar vervoer.:x,/x
+/ad4.pomp_p,/ad5.Een technische installatie die het (afval)water onder druk transporteert.:niet-bgt:pomp,/niet-bgt:pomp
+/ad4.zonnepaneel_p,/ad5.Een zonnepaneel is een paneel dat zonne-energie omzet in elektriciteit.:niet-bgt:zonnepaneel,/niet-bgt:zonnepaneel
+/ad4.telecomkast_p,/ad5.Kast ten behoeve van de regeling van het transport van telecommunicatie.:x,/x
+/ad4.ovl_kast_p,/ad5.Kast langs de kant van de weg waarin een kWh meter van het energieleverend bedrijf en diverse schakel- en beveiligingscomponenten in zijn ondergebracht.:x,/x
+/ad4.vri_kast_p,/ad5.Kast ten behoeve van de regeling van het verkeer.:x,/x
+/ad4.besturingskast_p,/ad5.Een voedingskast die de aanvoer van elektriciteit naar een pomp regelt. Een toestel dat door middel van elektrische signalen de werking van een mechanische regelvoorziening regelt.:Rioolpompkast,/Rioolpompkast
+/ad4.cai_kast_p,/ad5.Kast ten behoeve van de regeling van radio- en televisiesignalen.:CAI,/CAI
+/ad4.elektriciteitskast_p,/ad5.Kast ten behoeve van de regeling van het transport van elektriciteit.:Elec,/Elec
+/ad4.gaskast_p,/ad5.Kast ten behoeve van de regeling van het transport van gas.:Gaskast,/Gaskast
+/ad4.gms_kast_p,/ad5.Kast ten behoeve van het meten van weers- en wegdekomstandigheden.:GMS-kast,/GMS-kast
+/ad4.kast_p,/ad5.Objecten uit BGT Kast zonder plusclassificatie:Kast: onbekend,OV,/Kast: onbekend,OV
+/ad4.telkast_p,/ad5.Kast ten behoeve van het meten van permanente verkeertellingen.:Telkast: onbekend,/Telkast: onbekend
+/ad4.kruispunt_p,/ad5.Ontmoeting van wegen waar het verkeer van weg mag wisselen. Dit geldt zowel voor het gemotoriseerd verkeer als voor het langzaam verkeer. Voorbeelden zijn: een gelijkwaardig kruispunt, een voorrangskruispunt, een geregeld ruispunt en een (turbo)rotonde.:x,/x
+/ad4.aquaduct_p,/ad5.Kunstwerk waarmee een watergang door een bakvormige constructie over een weg, een spoorweg, een andere watergang, een leiding of een terrein wordt geleid.:Aquaducten,/Aquaducten
+/ad4.beweegbarebrug_p,/ad5.Kunstwerk over een waterweg, watergang of waterloop, tenminste bestaande uit een brugdek, dat (op afstand) in staat is zich te openen of van stand te veranderen.:Bruggen beweegbaar,/Bruggen beweegbaar
+/ad4.duiker_p,/ad5.Kunstwerk voor de waterhuishouding, bestaande uit een kokervormige constructie aangebracht onder een weg of spoorweg of in een dam.:Duikers,Overkluizingen,Sifons,/Duikers,Overkluizingen,Sifons
+/ad4.ecoduct_p,/ad5.Wildwissel in de vorm van een viaduct voor passages van dieren over een weg of spoorweg.:Ecoducten,/Ecoducten
+/ad4.flyover_p,/ad5.Een fly-over of flyover is een verbindingsweg, aangelegd als viaduct over andere wegen heen, teneinde een aansluiting ongelijkvloers te maken, waarbij vaak de boogstraal groot wordt gehouden voor de doorstroming. Flyovers worden onderscheiden van reguliere viaducten en zijn doorgaans voor snelverkeer. Op drukke knooppunten zijn vaak flyovers voorhanden.:Fly-over,/Fly-over
+/ad4.gemaalcomplex_p,/ad5.Een constructie ten behoeve van het verplaatsen van water.:Gemalen,/Gemalen
+/ad4.onderdoorgang_p,/ad5.Een onderdoorgang is in feite een tunnel met geringe afmetingen in lengte en breedte. In tegenstelling tot de gangbare definitie van een tunnel, wordt een onderdoorgang meestal niet onder een watergang, maar onder een spoor- of verkeersweg aangelegd. Korte ongelijkvloerse verbinding die bestemd is voor wegverkeer onder een weg of spoorweg door. De lengte van de onderdoorgang is korter dan 300 meter.:Onderdoorgangen,/Onderdoorgangen
+/ad4.overigkunstwerk_p,/ad5.Een kunstwerk wordt gedefinieerd als een door mensen gemaakte constructie met een specifieke functie in de spoor-, weg- of waterbouw. Dit bevat hier objecten zoals spooroverwegen, grondkeringen en faunatunnels.:Spoorwegen,Grondkeringen,Faunatunnel,Onbekend,Wateren en watergangen niet lijnvormig, overig,/Spoorwegen,Grondkeringen,Faunatunnel,Onbekend,Wateren en watergangen niet lijnvormig, overig
+/ad4.sluiscomplex_p,/ad5.Kunstwerk met een beweegbare waterkering, dat de verbinding vormt tussen twee wateren.:Schutsluizen,/Schutsluizen
+/ad4.tunnel_p,/ad5.Een tunnel is een kunstmatig aangelegde onderdoorgang om tussen twee punten transport, passage of communicatie mogelijk te maken. Doorgaans is de tunnel langer dan 300 meter.:Tunnels,/Tunnels
+/ad4.vastebrug_p,/ad5.Een overbruggingselement dat onverplaatsbaar verankerd is.:Bruggen vast,/Bruggen vast
+/ad4.veerverbinding_p,/ad5.Geregelde verbinding per vaartuig bestemd voor (on)bepaald hoofdverkeersgebruik. Plaats om met een veerpont het water over te steken.:Recreatieve gebieden,/Recreatieve gebieden
+/ad4.viaduct_p,/ad5.Een viaduct is een onderdeel van een ongelijkvloerse kruising van twee (geplande) (spoor)wegen of een kruising van een weg met ondergrondse leidingen. Een viaduct is feitelijk niet veel anders dan een vaste brug, hoewel met een viaduct geen waterweg wordt gekruist. De ruimte onder een viaduct is in geval van aanwezigheid van pijlers verdeeld in zogenaamde velden. Elke ruimte tussen pijlers, c.q. tussen een landhoofd en een pijler, is gedefinieerd als een veld.:HA,VD,/HA,VD
+/ad4.duiker_l,/ad5.Kunstwerk voor de waterhuishouding, bestaande uit een kokervormige constructie aangebracht onder een weg of spoorweg of in een dam.:niet-bgt, niet-bgt:duiker,/niet-bgt, niet-bgt:duiker
+/ad4.kunstwerkdeel_l,/ad5.Objecten uit BGT Kunstwerkdeel zonder plusclassificatie:niet-bgt,/niet-bgt
+/ad4.stuw_l,/ad5.Vaste of beweegbare waterkering voor het stuwen van water tot een gewenst peil.:stuw,/stuw
+/ad4.hoogspanningsmast_mp,/ad5.Metalen mast of stellage ter ondersteuning van geleidedraden voor het transport van elektriciteit met een hoog voltage.:hoogspanningsmast,/hoogspanningsmast
+/ad4.coupure_v,/ad5.Onderbreking in een waterkering, dam, dijk, kade of muur voor de doorvoer van een weg of spoorweg, die bij extreem hoge waterstanden wordt afgesloten met een of meer deuren of schotbalken.:niet-bgt:coupure,/niet-bgt:coupure
+/ad4.duiker_v,/ad5.Kunstwerk voor de waterhuishouding, bestaande uit een kokervormige constructie aangebracht onder een weg of spoorweg of in een dam.:niet-bgt:duiker,/niet-bgt:duiker
+/ad4.gemaal_v,/ad5.Een constructie ten behoeve van het verplaatsen van water.:gemaal,/gemaal
+/ad4.hoogspanningsmast_v,/ad5.Metalen mast of stellage ter ondersteuning van geleidedraden voor het transport van elektriciteit met een hoog voltage.:hoogspanningsmast,/hoogspanningsmast
+/ad4.kunstwerkdeel_v,/ad5.Objecten uit BGT Kunstwerkdeel zonder plusclassificatie:niet-bgt,/niet-bgt
+/ad4.ponton_v,/ad5.Drijvende, dichte bak, waarover soms een dek is gelegd.:niet-bgt:ponton,/niet-bgt:ponton
+/ad4.sluisdeur_v,/ad5.Beweegbare deur die toegepast wordt bij (hoog)waterkeringen en sluizen om het niveauverschil aan beide zijden in stand te houden.:sluis,/sluis
+/ad4.steiger_v,/ad5.Vaste (niet drijvende) waterbouwkundige constructie voor het aanleggen van schepen en bedoeld om deze schepen vanaf de wal te laden en te lossen.:steiger,/steiger
+/ad4.stuw_v,/ad5.Vaste of beweegbare waterkering voor het stuwen van water tot een gewenst peil.:stuw,/stuw
+/ad4.voorde_v,/ad5.Een doorwaadbare, doorgaans verharde, plaats in de waterloop, die dient voor de oversteek van die waterloop.:niet-bgt:voorde,/niet-bgt:voorde
+/ad4.kunstwerkelement_tbl,/ad5.Een element is gedefinieerd als een samenstel van bouwdelen die tezamen een afzonderlijk herkenbaar component van een gedecomponeerd beheerobject vormen.:x,/x
+/ad4.lichtbron_p,/ad5.Kunstmatige lichtbron bedoeld om ruimten en/of voorwerpen te verlichten, in combinatie met een armatuur.:x,/x
+/ad4.verkeerslantaarn_p,/ad5.Behuizing voor één of meer lichtbronnen in het verkeer inclusief alle elektronische componenten voor het juist richten en het beschermen van de lamp.:x,/x
+/ad4.aansluitput_p,/ad5.Een toestel waarin ten gevolge van het verschil in dichtheid en het vertragen van de vloeistofstroom het zand door bezinking grotendeels van het afvalwater wordt gescheiden.:Zandvang,/Zandvang
+/ad4.drainageput_p,/ad5.Put welke toegang geeft tot een poreuze of geperforeerde buisleiding, aangebracht onder de grond om de afwatering van de grond te verbeteren.:Drainageput,/Drainageput
+/ad4.leidingelement_p,/ad5.Objecten uit leidingenelementen zonder duidelijke classificatie:aarding,/aarding
+/ad4.rioolafsluiter_p,/ad5.Een statische constructie waarmee de doorstroomopening van een rioolleiding geheel of gedeeltelijk wordt afgesloten. Bij gedeeltelijke afsluiting (bijvoorbeeld als vloeistof via een uitsparing kan doorstromen) als deel een Opening In Wand toevoegen.:cleanOut,/cleanOut
+/ad4.verbindingsstuk_p,/ad5.Een constructieonderdeel dat delen van een (ondergronds) transportnetwerk aan elkaar verbindt.:DEM,mof,/DEM,mof
+/ad4.ligplaatsstrook_v,/ad5.Gebied of strook waar ligplaatsen toegestaan zijn.:x,/x
+/ad4.mantelbuis_v,/ad5.Buis voor bescherming van kabels, buizen en HDPE buizen.:x,/x
+/ad4.oeverzone_v,/ad5.Gebied op de grens van water en land waar het dynamisch samenspel van land en water plaatsvindt, lopend van waterpeil tot insteek.:x,/x
+/ad4.kunststofverharding_v,/ad5.Synthetisch vervaardigd materiaal dat als verharding dient, zoals kunstgras of kunststof toplagen.:gesloten verharding:kunststof,/gesloten verharding:kunststof
+/ad4.zandvlakte_v,/ad5.Onverhard, onbegroeid terreindeel met als deklaag zand. (Bron: definities.geostandaarden.nl):zand,zand:zandverstuiving,zand:strand en strandwal,/zand,zand:zandverstuiving,zand:strand en strandwal
+/ad4.getijdengebied_v,/ad5.Geheel of gedeeltelijk droogvallende gronden die buitendijks gelegen zijn.:slik,/slik
+/ad4.betonverharding_v,/ad5.Gesloten verharding bestaande uit cementbeton of andere met beton gebonden materialen.:gesloten verharding:cementbeton,/gesloten verharding:cementbeton
+/ad4.elementenverharding_v,/ad5.De bestrating is in tegenstelling tot een gesloten verharding opgebouwd uit losse elementen die in meer of mindere mate met elkaar verbonden zijn.:open verharding,open verharding:beton element,open verharding:betonstraatstenen,open verharding:gebakken klinkers,open verharding:sierbestrating,open verharding:tegels,half verhard:grasklinkers,/open verharding,open verharding:beton element,open verharding:betonstraatstenen,open verharding:gebakken klinkers,open verharding:sierbestrating,open verharding:tegels,half verhard:grasklinkers
+/ad4.halfverharding_v,/ad5.Type van verhardingsobject: een halfverharding bestaat uit onsamenhangend materiaal dat meer draagkracht levert dan de originele grond.:half verhard,half verhard:gravel,half verhard:grind,half verhard:puin,half verhard:schelpen,/half verhard,half verhard:gravel,half verhard:grind,half verhard:puin,half verhard:schelpen
+/ad4.onverhard_v,/ad5.Type van verhardingsobject: een object zonder specifieke verharding, bestaande uit natuurlijke materialen:onverhard,onverhard:boomschors,onverhard:zand,/onverhard,onverhard:boomschors,onverhard:zand
+/ad4.dek_v,/ad5.Direct door het verkeer belast deel van de bovenbouw van de brug.:dek,/dek
+/ad4.landhoofd_v,/ad5.Ondersteuningsconstructie ter plaatse van een overgang van de aardebaan naar een kunstwerk.:landhoofd,/landhoofd
+/ad4.overbruggingsdeel_v,/ad5.Onderdeel van een beweegbare of vaste verbinding tussen twee punten, die door water, een weg of anderszins gescheiden zijn, dat essentieel is voor de constructie en niet geclassificeerd is als een bepaald type.:Null,/Null
+/ad4.pijler_v,/ad5.Ondersteuningsconstructie van bruggen en soortgelijke kunstwerken.:pijler,/pijler
+/ad4.pyloon_v,/ad5.Boven de bovenbouw uitstekende draagconstructie voor tuien.:pyloon,/pyloon
+/ad4.sloof_v,/ad5.Deel van de pijler voor de overdracht van krachten naar de ondergrond of de fundering.:sloof,/sloof
+/ad4.bergbezinkbassin_v,/ad5.Een gesloten reservoir waarin het afvalwater tijdelijk wordt opgevangen met een slib reinigende voorziening.:bezinkbak,/bezinkbak
+/ad4.dok_v,/ad5.Constructie bedoeld om schepen uit het water te halen en vervolgens weer in het water te laten.:bassin,/bassin
+/ad4.open_loods_v,/ad5.Niet verplaatsbaar licht gebouw met een open gevel, bestemd als berg- of werkplaats of als tijdelijk onderdak voor andere doeleinden.:open loods,/open loods
+/ad4.opslagtank_v,/ad5.Tanks voor opslag van vloeistoffen en gassen zijn opslagtanks. Er zijn horizontale opslagtanks en verticale opslagtanks. Deze tanks zijn vervaardigd uit verschillende materialen zoals metaal, polyester of andere kunststoffen.:opslagtank,/opslagtank
+/ad4.overig_bouwwerk_v,/ad5.Objecten uit BGT Overig bouwwerk zonder classificatie:niet-bgt,/niet-bgt
+/ad4.overkapping_v,/ad5.Een afzonderlijk staande overdekking rustend op kolommen.:overkapping,/overkapping
+/ad4.windturbine_v,/ad5.Bebouwing ten behoeve van het opwekken van elektrische energie, waarvoor de energie geleverd wordt door wind en opgewekt wordt door middel van wieken.:windturbine,/windturbine
+/ad4.afsluitpaal_p,/ad5.Al dan niet verwijderbare paal in de grond om de weg of een gedeelte hiervan af te sluiten.:niet-bgt:afsluitpaal,/niet-bgt:afsluitpaal
+/ad4.markeringspaal_p,/ad5.Paal om een specifiek gebied of specifieke locatie te markeren.:niet-bgt:dijkpaal,/niet-bgt:dijkpaal
+/ad4.meldpaal_p,/ad5.Paal met daarin een installatie bedoeld om op afstand te kunnen communiceren met een centrale locatie.:niet-bgt:drukknoppaal,niet-bgt:praatpaal,/niet-bgt:drukknoppaal,niet-bgt:praatpaal
+/ad4.paal_p,/ad5.Langwerpig stuk hout, ijzer, steen enz., dat in de grond staat.:niet-bgt:haltepaal,niet-bgt:lichtmast,niet-bgt:verkeersbordpaal,niet-bgt:verkeersregelinstallatiepaal,niet-bgt:portaal,niet-bgt,/niet-bgt:haltepaal,niet-bgt:lichtmast,niet-bgt:verkeersbordpaal,niet-bgt:verkeersregelinstallatiepaal,niet-bgt:portaal,niet-bgt
+/ad4.poller_p,/ad5.Paal die door een elektrische of hydraulische aandrijving uit een wegdek omhoog wordt gestuurd en die dient om het autoverkeer te reguleren.:niet-bgt:poller,/niet-bgt:poller
+/ad4.sirene_p,/ad5.Apparaat dat geluiden van variabele toonhoogte kan voortbrengen met als functie waarschuwingsdoeleinden.:niet-bgt:sirene,/niet-bgt:sirene
+/ad4.telpaal_p,/ad5.Langwerpig voorwerp van bijvoorbeeld hout, ijzer, steen dat in de grond staat behorend bij een telpunt.:niet-bgt:telpaal,/niet-bgt:telpaal
+/ad4.vlaggenmast_p,/ad5.Paal waaraan een vlag bevestigd kan worden.:niet-bgt:vlaggenmast,/niet-bgt:vlaggenmast
+/ad4.gebouw_v,/ad5.Overdekte en geheel of gedeeltelijk met wanden omsloten constructief zelfstandige eenheid bedoeld voor het in een afgeschermde omgeving onderbrengen van mensen, dieren of voorwerpen of voor de productie van goederen.:x,/x
+/ad4.peilbuis_p,/ad5.Buis, eventueel met een filter, die in de grond wordt gebracht om het grondwaterpeil te bepalen.:x,/x
+/ad4.perron_v,/ad5.Een perron is een platform bij een halte, een metrostation of een spoorwegstation dat het reizigers makkelijker maakt om in een bus, tram, metro of trein te stappen.:x,/x
+/ad4.plantensoortlocatie_p,/ad5.Locatie waar invasieve exoten of beschermde flora voorkomen.:x,/x
+/ad4.brandkraan_p,/ad5.Op de drinkwaterleiding aangesloten kraan of een put voor het plaatsen van een brandkraan op of nabij de openbare weg voor brandbestrijding.:niet-bgt:brandkraan / -put,/niet-bgt:brandkraan / -put
+/ad4.gasput_p,/ad5.Put met afsluitkraan ten behoeve van het ondergrondse leidingenstelsel voor gastransport.:niet-bgt:gasput,/niet-bgt:gasput
+/ad4.kolk_p,/ad5.Een reservoir bestemd voor de opvang van hemelwater afkomstig uit daarop aangesloten oppervlakken, het laten bezinken van in dit water meegevoerde bezinkbare stoffen en de afvoer van dit water naar een rioolstelsel of naar de ondergrond.:niet-bgt:kolk,/niet-bgt:kolk
+/ad4.rioolput_p,/ad5.Constructie toegang gevend tot het rioolstelsel.:niet-bgt:inspectie- / rioolput,/niet-bgt:inspectie- / rioolput
+/ad4.waterleidingput_p,/ad5.Put met afsluitkraan ten behoeve van het ondergrondse leidingenstelsel voor watertransport.:niet-bgt:waterleidingput,/niet-bgt:waterleidingput
+/ad4.geluidsscherm_l,/ad5.Een scheiding bedoeld om geluidshinder in de buitenlucht te verminderen.:x,/x
+/ad4.hek_l,/ad5.Een hekwerk of schutting, typisch ten behoeve van erfafscheiding.:hek,niet-bgt:draadraster,niet-bgt,/hek,niet-bgt:draadraster,niet-bgt
+/ad4.muur_l,/ad5.Een scheiding gemaakt van steen.:muur,/muur
+/ad4.beschoeiing_l,/ad5.Een nagenoeg verticale wand tot kering van grond om afkalving van water te voorkomen, geen kademuur.:walbescherming,/walbescherming
+/ad4.damwand_l,/ad5.Grondkerende of waterkerende constructie bestaande uit nagenoeg verticaal in de grond aangebrachte elementen die door middel van een langsprofiel in elkaar grijpen.:damwand,/damwand
+/ad4.kademuur_l,/ad5.Verticale wand ter scheiding van land en water, opgebouwd uit een muur van gemetselde stenen of gestort beton.:kademuur,/kademuur
+/ad4.kademuur_v,/ad5.Verticale wand ter scheiding van land en water, opgebouwd uit een muur van gemetselde stenen of gestort beton.:kademuur,/kademuur
+/ad4.muur_v,/ad5.Een scheiding gemaakt van steen.:muur,/muur
+/ad4.tunnelwand_v,/ad5.Wand als deel van een bouwwerk dat een afscheiding vormt van een kunstmatig aangelegde onderdoorgang om tussen twee punten transport, passage of communicatie mogelijk te maken. :muur,/muur
+/ad4.detector_l,/ad5.Meetinstrument waarmee een voorwerp of een bepaalde toestand in een bepaalde omgeving kan worden aangetoond.:x,/x
+/ad4.antenne_p,/ad5.Een constructie voor de transmissie en de ontvangst van signalen, zoals radiogolven.:Kar antenne,/Kar antenne
+/ad4.camera_p,/ad5.Installatie waarmee een bepaald gebied van een afstand visueel kan worden geobserveerd en opgeslagen.:Detectie: camera overig,ObservatieCamera,Straatmeubilair: camera,/Detectie: camera overig,ObservatieCamera,Straatmeubilair: camera
+/ad4.detector_p,/ad5.Meetinstrument waarmee een voorwerp of een bepaalde toestand in een bepaalde omgeving kan worden aangetoond.:Radar detector,/Radar detector
+/ad4.drukknop_p,/ad5.Onderdeel van detectiesysteem om verkeersdeelnemers veilig te laten oversteken of om aan te geven dat een verkeersdeelnemer gearriveerd is.:Drukknopsensor,/Drukknopsensor
+/ad4.gms_sensor_p,/ad5.Gladheidsmeldsysteem (GMS) waarmee de kans op gladheid wordt voorspeld aan de hand van metingen en interpretatie van de parameters die een rol spelen bij het ontstaan van gladheid.:niet-bgt:GMS sensor,/niet-bgt:GMS sensor
+/ad4.handhavingssysteem_p,/ad5.Geautomatiseerde handhavingssystemen: sensoren gekoppeld aan handhaving.:Detectie: flitspaal,/Detectie: flitspaal
+/ad4.lichtsensor_p,/ad5.Apparaat waarmee het lichtniveau gemeten kan worden.:Schemerschakelaar,/Schemerschakelaar
+/ad4.rateltikker_p,/ad5.Een apparaat dat slechtzienden helpt bij het gebruiken van oversteekplaatsen die zijn uitgerust met stoplichten. De rateltikker tikt als men niet mag oversteken (rood) en ratelt als men mag oversteken (groen).:Rateltikker,/Rateltikker
+/ad4.weerstation_p,/ad5.Een weerstation is een verzameling instrumenten die het weer kunnen meten.:Weerstation,/Weerstation
+/ad4.windmeter_p,/ad5.Instrument dat de windsnelheid en de windrichting meet.:Windmeter,/Windmeter
+/ad4.abri_p,/ad5.Een abri is een kleine, niet afgesloten wachtruimte voor het openbaar vervoer, zoals bij een bushalte, bus-, metro- of treinstation.:x,/x
+/ad4.armatuur_p,/ad5.Behuizing voor één of meer lichtbronnen inclusief alle elektronische componenten voor het juist richten en het beschermen van de lamp.:x,/x
+/ad4.betaalautomaat_p,/ad5.Apparaat dat betaalkaarten en/of contant geld accepteert om betalingen uit te voeren.:Betaalautomaat,/Betaalautomaat
+/ad4.bolder_p,/ad5.Een vaak cilindrisch constructiedeel van een waterbouwkundige constructie voor het bevestigen van scheepstrossen.:Bolder,/Bolder
+/ad4.brievenbus_p,/ad5.Uitpandige kast waar post ter bezorging in kan worden gedeponeerd.:Brievenbus,/Brievenbus
+/ad4.fietsparkeervoorziening_p,/ad5.Een duurzaam verankerd rek in de openbare ruimte voor het stallen van fietsen of andere voorzieningen voor het parkeren van fietsen.:fietsenrek,/fietsenrek
+/ad4.fontein_p,/ad5.Een fontein is een natuurlijke of kunstmatige installatie die water spuit.:Fontein,/Fontein
+/ad4.herdenkingsmonument_p,/ad5.Langs de weg of elders in het terrein aangelegd object ter herdenking van personen of gebeurtenissen.:Herdenkingsmonument,/Herdenkingsmonument
+/ad4.kunstobject_p,/ad5.Object dat het product is van creatieve menselijke uitingen en dat zich onderscheidt van 'gewone' objecten doordat er een hogere esthetische waarde aan wordt toegeschreven.:kunstobject,/kunstobject
+/ad4.slagboominstallatie_p,/ad5.Boom of balk om de weg of een gedeelte daarvan af te sluiten inclusief de bijbehorende installatie om de boom te bedienen.:Slagboom,/Slagboom
+/ad4.straatmeubilair_p,/ad5.Objecten uit BGT Straatmeubilair zonder plusclassificatie:niet-bgt,/niet-bgt
+/ad4.tafel_p,/ad5.Tafel (vaak een picknicktafel) als los object in de openbare ruimte.:Picknick tafel,/Picknick tafel
+/ad4.veiligheidsvoorziening_p,/ad5.Voorziening ter bevordering van de veiligheid van personen in de openbare ruimte. Het gaat hier om zelfstandige objecten en niet om onderdelen van objecten.:Meubilair: lier,Meubilair: reddingsboei,Nooduitgangtrap, Reddingsboei,Inspringvoorziening,/Meubilair: lier,Meubilair: reddingsboei,Nooduitgangtrap, Reddingsboei,Inspringvoorziening
+/ad4.verkeersspiegel_p,/ad5.Een verkeersspiegel is een bolle spiegel die gebruikt wordt om onoverzichtelijke verkeerssituaties te verduidelijken.:verkeersspiegel,/verkeersspiegel
+/ad4.zitelement_p,/ad5.Zit- of steunplaats voor één of meerdere personen, bedoeld voor openbaar gebruik en geplaatst in de openbare ruimte (vnl. in parken, plantsoenen, bossen en langs wegen).:zitbank,/zitbank
+/ad4.theoretische_hectometrering_p,/ad5.Theoretische plaatsbepaling van hectometers:x,/x
+/ad4.weg_v,/ad5.Gebaand gedeelte van het terrein ten behoeve van het verkeer te land, in lengte- en dwarsrichting begrensd door weggrenzen. IMBOR zegt weg (traject)  en water (vaarwegdeeltraject):Busbaan,Fietspad,Weg,/Busbaan,Fietspad,Weg
+/ad4.tunnelbuis_v,/ad5.Opening in een tunnel, die ruimte biedt voor een transportlink.:x,/x
+/ad4.uithouder_p,/ad5.Een uithouder bevestigd aan een paal maakt het mogelijk om een daarvoor geschikt armatuur or een ander object excentrisch van de mast te plaatsen.:x,/x
+/ad4.portaal_l,/ad5.Geheel van twee of meer ondersteuningsconstructies die door een ligger zijn verbonden, bedoeld voor het aanbrengen van verkeersaanduidingen.:x,/x
+/ad4.utiliteitsNet_tbl,/ad5.Een verzameling van netwerkelementen die tot één type nutsvoorzieningennet behoren.:x,/x
+/ad4.vaarwegas_l,/ad5.Hulpmiddel voor bepalen lengte van aaneengesloten stuk oppervlaktewater, dat als vaarweg in de Wegwijzer voor de binnenscheepvaart is gedefinieerd.:x,/x
+/ad4.vaarweg_v,/ad5.Aaneengesloten stuk oppervlaktewater, dat als vaarweg in de Wegwijzer voor de binnenscheepvaart is gedefinieerd.:x,/x
+/ad4.vaarwegdeeltrajectas_l,/ad5.Hulpmiddel voor bepalen lengte van deel van aaneengesloten stuk oppervlaktewater, dat als vaarweg in de Wegwijzer voor de binnenscheepvaart is gedefinieerd.:x,/x
+/ad4.haag_l,/ad5.Gesloten lijnvormige beplanting, waarvan de hoogte en breedte door middel van knippen in stand wordt gehouden.:niet-bgt:haag,/niet-bgt:haag
+/ad4.boom_p,/ad5.Een houtachtig gewas (loofboom of conifeer) met een wortelgestel en een enkele, stevige en houtige stam, die zich boven de grond vertakt.:x,/x
+/ad4.haag_v,/ad5.Gesloten lijnvormige beplanting, waarvan de hoogte en breedte door middel van knippen in stand wordt gehouden.:niet-bgt:haag,/niet-bgt:haag
+/ad4.bvc_inspectie_tbl,/ad5.Boomveiligheidscontrole inspectie voor bomen:x,/x
+/ad4.watergang_v,/ad5.Een voor de waterbeheersing bestemde geul met een vlakke bodem die meestal permanent water bevat.:greppel, droge sloot,waterloop,waterloop:sloot,waterloop:kanaal,waterloop:rivier,waterloop:gracht,/greppel, droge sloot,waterloop,waterloop:sloot,waterloop:kanaal,waterloop:rivier,waterloop:gracht
+/ad4.watervlakte_v,/ad5.Een aan het oppervlak gelegen, niet lijnvormige, natuurlijke dan wel kunstmatige verdieping van de bodem die, eventueel periodiek, gevuld is met water.:watervlakte,watervlakte:haven,watervlakte:meer, plas, ven, vijver,zee,/watervlakte,watervlakte:haven,watervlakte:meer, plas, ven, vijver,zee
+/ad4.geleidewerk_l,/ad5.Fuikvormige constructie aansluitend aan het hoofd van een kunstwerk voor het geven van mechanische en visuele geleiding tijdens het invaren van dat kunstwerk.:niet-bgt:geleidewerk,/niet-bgt:geleidewerk
+/ad4.remmingswerk_l,/ad5.Constructie langs de opstelruimte en wachtruimte bedoeld voor het afmeren van schepen.:niet-bgt:remmingswerk,/niet-bgt:remmingswerk
+/ad4.vuilvang_l,/ad5.Een constructie om de waterloop dan wel duiker te vrijwaren van drijvend vuil en dergelijke.:niet-bgt:vuilvang,/niet-bgt:vuilvang
+/ad4.betonning_p,/ad5.Een systeem van boeien en bakens waarmee in open zee of in een vaarwater ondiepten of de aanwezigheid van gevaarlijke objecten worden aangegeven.:Baken,/Baken
+/ad4.hoogtemerk_p,/ad5.Relatief permanent merk, natuurlijk of kunstmatig, met daarin een punt met een bekende hoogte ten opzichte van een bepaald referentievlak.:Hoogtemerk,/Hoogtemerk
+/ad4.meerpaal_p,/ad5.Paal voor een kade of in een haven waaraan een schip kan worden afgemeerd.:Dukdalf,Meerpaal,/Dukdalf,Meerpaal
+/ad4.watergang_l,/ad5.Hulpobject voor het berekenen van de lengte van een waterloop (sloot).:x,/x
+/ad4.wegas_l,/ad5.Wegverkeerruimte die de verkeerskundige inrichting van een weg beschrijft tussen twee knopen. De hartlijn van een weg. De ‘as’ van de verschillende wegen zoals tot standgekomen in de iNHi(richtingonafhankelijke trajecten), en volgen de rechter rijbaan. De lijn wordt in de richting van de oplopende hectometrering getekend. Het startpunt is altijd bij de laagste hectometerwaarde. Het eindpunt altijd bij de hoogste. Measure values zijn van toepassing, en zijn gedefinieerd in meters.:x,/x
+/ad4.profiellijn_l,/ad5.Hulplijn voor het vastleggen van contouren, profielen of andere lijnen in het landschap:x,/x
+/ad4.asfaltverharding_v,/ad5.Gesloten verharding bestaande uit asfaltbeton of andere met bitumen gebonden materialen.:gesloten verharding:asfalt,/gesloten verharding:asfalt
+/ad4.verharding_v,/ad5.Oppervlak, dat door egaliseren, verstevigen en/of verruwen voor het beoogde gebruik geschikt gemaakt is, bestaande uit in één of meer lagen over een ondergrond of onderliggende constructie aangelegd materiaal. Verharding is niet nader gespecificeerd in fysieke voorkomen:gesloten verharding,/gesloten verharding
+/ad4.balustrade_l,/ad5.Een balustrade is een open hekwerk of afzetting aan de rand van een overbrugging. Een balustrade beveiligt tegen het vallen.:niet-bgt:balustrade,/niet-bgt:balustrade
+/ad4.band_l,/ad5.Element dat de scheiding verzorgt tussen een rijbaan en het meestal hoger gelegen object. Maakt deel uit van een wegconstructie en voorkomt dat water en vuil van de weg in de bermen, tuinen of huizen terechtkomen. Voorkomt tevens dat motorvoertuigen het hoger gelegen object op rijden.:OPS,/OPS
+/ad4.geleideconstructie_l,/ad5.Constructie ter afscherming van een gevarenzone of ter beperking van de risico’s daarin.:GR,VC,MSB,/GR,VC,MSB
+/ad4.lijngoot_l,/ad5.Goot in de lengterichting van de verharding, geheel voorzien van een rooster als afdekking.:Lijnafwatering,/Lijnafwatering
+/ad4.molgoot_l,/ad5.Een molgoot is een verdiept gedeelte aan de rand van de weg ten behoeve van de afwatering.:Molgoot,/Molgoot
+/ad4.rijstrookscheiding_l,/ad5.Het object wordt gebruikt als scheiding van twee parallelle rijstroken.:VRBS,/VRBS
+/ad4.verblindingswering_l,/ad5.Constructie bedoeld om verblinding van weggebruikers door tegenlicht te voorkomen.:niet-bgt:verblindingswering,/niet-bgt:verblindingswering
+/ad4.voegovergang_l,/ad5.Constructie die een continu (weg)oppervlak vormt tussen aangrenzende hoofdconstructiedelen (bijv. brugdelen/landhoofden) en die de continuïteit van de rijbaan garandeert. Voeg (tussenstuk) in een brugdek, viaduct of weg met als doel een begaanbare overgang te vormen. Andere definities: Een voegovergang is een constructie in het wegdek, die zorgt dat de werking in de aansluiting tussen het wegdek en een kunstwerk als een viaduct, brug, duiker of fly-over kan worden opgevangen. Het zijn veelal rubberprofielen aangebracht tussen stalen randprofielen. Het is een constructie ter overbrugging en al dan niet waterdichte afsluiting van een voeg tussen de verharding op een kunstwerk en op een aardebaan, of tussen de verharding op twee kunstwerkdelen. Voegovergangen vormen de schakel tussen wegen, viaducten en bruggen. Ze moeten het verkeer dragen, bewegingen van viaducten en bruggen opnemen, de omgeving van voegovergangen beschermen tegen gevolgschade van lekkage en geen geluidhinder veroorzaken.:Voegovergang,/Voegovergang
+/ad4.blok_p,/ad5.Blokvormig element, meestal van beton of steen, bedoeld om een openbare ruimte te verfraaien, achterliggende gebieden te beschermen of te dienen als zit- of speelelement.:schampblok,/schampblok
+/ad4.geleideconstructie_v,/ad5.Constructie ter afscherming van een gevarenzone of ter beperking van de risico’s daarin.:Barrier,/Barrier
+/ad4.rooster_v,/ad5.Een rooster of horizontaal raamwerk dat dient om wild, vee en honden de doorgang te beletten, of voor beluchting.:Wildrooster,/Wildrooster
+/ad4.zonnepaneel_v,/ad5.Een zonnepaneel is een paneel dat zonne-energie omzet in elektriciteit.:Zonnefietspad,/Zonnefietspad
+/ad4.wegvak_v,/ad5.Administratief afgebakend gedeelte van een weg waarbinnen de inspectiemetingen uitgevoerd worden. Een wegvak is doorgaands 100 meter en loopt in de meeste gevallen gelijk aan de wegindexering (hectometerpalen). In de breedte dient een wegvak alle wegdelen en ondersteunende wegdelen te omvatten.:x,/x
+/ad4.wegmarkering_tbl,/ad5.Wegmarkering is het geheel aan tekens die op het wegdek staan aangegeven en het verkeer door middel van de visuele informatie geleiden. Wegmarkering omvat onder meer pijlen, strepen, doorgetrokken en onderbroken lijnen, haaientanden.:x,/x
