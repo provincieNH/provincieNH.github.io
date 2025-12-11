@@ -24,16 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="DID-136 #comment Overzicht van htmls gegenereerd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-wegvak_v.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5-wegvak_v.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-traject_v.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Asfaltverharding.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Betonverharding.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Elementenverharding.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v-Halfverharding.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verharding_v.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-verhardingsInspectie_tbl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-wegvak_v.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-wegvak_v.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,37 +355,5 @@
     <MESSAGE value="GD-8547 #comment pagina onderzoeken toegevoegd" />
     <MESSAGE value="DID-136 #comment Overzicht van htmls gegenereerd" />
     <option name="LAST_COMMIT_MESSAGE" value="DID-136 #comment Overzicht van htmls gegenereerd" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="138" y="167" width="1644" height="738" key="DiffContextDialog" timestamp="1664437954380">
-      <screen x="0" y="0" width="1920" height="1071" />
-    </state>
-    <state x="92" y="92" width="1094" height="407" key="DiffContextDialog/0.0.1278.591@0.0.1278.591" timestamp="1662135499968" />
-    <state x="138" y="167" width="1644" height="738" key="DiffContextDialog/0.0.1920.1071@0.0.1920.1071" timestamp="1664437954380" />
-    <state x="754" y="210" key="RollbackChangesDialog" timestamp="1662378027123">
-      <screen x="0" y="0" width="1920" height="951" />
-    </state>
-    <state x="502" y="0" key="RollbackChangesDialog/0.0.1278.591@0.0.1278.591" timestamp="1662136380355" />
-    <state x="754" y="237" key="RollbackChangesDialog/0.0.1920.1071@0.0.1920.1071" timestamp="1661441442756" />
-    <state x="754" y="210" key="RollbackChangesDialog/0.0.1920.951@0.0.1920.951" timestamp="1662378027123" />
-    <state x="461" y="180" key="SettingsEditor" timestamp="1657206938734">
-      <screen x="0" y="0" width="1920" height="1071" />
-    </state>
-    <state x="461" y="180" key="SettingsEditor/0.0.1920.1071@0.0.1920.1071" timestamp="1657206938734" />
-    <state x="552" y="238" key="Vcs.Push.Dialog.v2" timestamp="1664366719895">
-      <screen x="0" y="0" width="1920" height="951" />
-    </state>
-    <state x="367" y="56" key="Vcs.Push.Dialog.v2/0.0.1278.591@0.0.1278.591" timestamp="1661848597121" />
-    <state x="552" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1071@0.0.1920.1071" timestamp="1663081599638" />
-    <state x="552" y="238" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1664366719895" />
-    <state x="644" y="323" key="git4idea.merge.GitPullDialog" timestamp="1660660532313">
-      <screen x="0" y="0" width="1920" height="1071" />
-    </state>
-    <state x="644" y="323" key="git4idea.merge.GitPullDialog/0.0.1920.1071@0.0.1920.1071" timestamp="1660660532313" />
-    <state x="644" y="287" key="git4idea.merge.GitPullDialog/0.0.1920.951@0.0.1920.951" timestamp="1660551245403" />
-    <state x="616" y="188" width="672" height="676" key="search.everywhere.popup" timestamp="1664286264612">
-      <screen x="0" y="0" width="1920" height="1071" />
-    </state>
-    <state x="616" y="188" width="672" height="676" key="search.everywhere.popup/0.0.1920.1071@0.0.1920.1071" timestamp="1664286264612" />
   </component>
 </project>
