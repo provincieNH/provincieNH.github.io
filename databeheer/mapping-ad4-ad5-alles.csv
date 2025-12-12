@@ -1,36 +1,36 @@
 source,target,mapping
 /ad4.adres_tbl.x,/ad5.adres_tbl.x,/x
 /ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.aquaduct_p.Aquaducten,/Aquaducten
-/ad4.wegdeel_v.FYSIEKVOORKOMEN,/ad5.asfaltverharding_v.gesloten verharding:asfalt,/gesloten verharding:asfalt
+/ad4.wegdeel_v.FYSIEKVOORKOMEN,/ad5.asfaltverharding_v.gesloten_verharding_asfalt,/gesloten_verharding_asfalt
 /ad4.weginrichtingselement_l.TYPESPEC,/ad5.band_l.OPS,/OPS
 /ad4.beheergrenzen_v.x,/ad5.beheervak_v.x,/x
-/ad4.ondersteunendWegdeel_v.FYSIEKVOORKOMEN,/ad5.betonverharding_v.gesloten verharding:cementbeton,/gesloten verharding:cementbeton
-/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.beweegbarebrug_p.Bruggen beweegbaar,/Bruggen beweegbaar
+/ad4.ondersteunendWegdeel_v.FYSIEKVOORKOMEN,/ad5.betonverharding_v.gesloten_verharding_cementbeton,/gesloten_verharding_cementbeton
+/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.beweegbarebrug_p.Bruggen_beweegbaar,/Bruggen_beweegbaar
 /ad4.weginrichtingselement_p.TYPESPEC,/ad5.blok_p.schampblok,/schampblok
-/ad4.gebouwInstallatie_v.BGTPLUSTYPE,/ad5.bordes_v.niet-bgt:bordes,/niet-bgt:bordes
-/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.coupure_v.niet-bgt:coupure,/niet-bgt:coupure
+/ad4.gebouwInstallatie_v.BGTPLUSTYPE,/ad5.bordes_v.niet-bgt_bordes,/niet-bgt_bordes
+/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.coupure_v.niet-bgt_coupure,/niet-bgt_coupure
 /ad4.crowInspectie_tbl.x,/ad5.crowinspectie_tbl.x,/x
 /ad4.crowInspectieresultaat_tbl.x,/ad5.crowinspectieresultaat_tbl.x,/x
 /ad4.crowMeting_tbl.x,/ad5.crowmeting_tbl.x,/x
 /ad4.scheidingWater_l.BGTPLUSTYPE,/ad5.damwand_l.damwand,/damwand
 /ad4.overbruggingsdeel_v.TYPEOVERBRUGGINGSDEEL,/ad5.dek_v.dek,/dek
-/ad4.kunstwerkdeel_l.BGTPLUSTYPE,/ad5.duiker_l.niet-bgt; niet-bgt:duiker,/niet-bgt; niet-bgt:duiker
-/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.duiker_p.Duikers;Overkluizingen;Sifons,/Duikers;Overkluizingen;Sifons
-/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.duiker_v.niet-bgt:duiker,/niet-bgt:duiker
+/ad4.kunstwerkdeel_l.BGTPLUSTYPE,/ad5.duiker_l.niet-bgt_niet-bgt_duiker,/niet-bgt_niet-bgt_duiker
+/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.duiker_p.Duikers_Overkluizingen_Sifons,/Duikers_Overkluizingen_Sifons
+/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.duiker_v.niet-bgt_duiker,/niet-bgt_duiker
 /ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.ecoduct_p.Ecoducten,/Ecoducten
-/ad4.ondersteunendWegdeel_v.FYSIEKVOORKOMEN,/ad5.elementenverharding_v.open verharding;open verharding:beton element;open verharding:betonstraatstenen;open verharding:gebakken klinkers;open verharding:sierbestrating;open verharding:tegels;half verhard:grasklinkers,/open verharding;open verharding:beton element;open verharding:betonstraatstenen;open verharding:gebakken klinkers;open verharding:sierbestrating;open verharding:tegels;half verhard:grasklinkers
+/ad4.ondersteunendWegdeel_v.FYSIEKVOORKOMEN,/ad5.elementenverharding_v.open_verharding_open_verharding_beton_element_open_verharding_betonstraatstenen_open_verharding_gebakken_klinkers_open_verharding_sierbestrating_open_verharding_tegels_half_verhard_grasklinkers,/open_verharding_open_verharding_beton_element_open_verharding_betonstraatstenen_open_verharding_gebakken_klinkers_open_verharding_sierbestrating_open_verharding_tegels_half_verhard_grasklinkers
 /ad4.kunstwerk_p.BEHEEROBJECTSUBTYP,/ad5.flyover_p.Fly-over,/Fly-over
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.fontein_p.Fontein,/Fontein
 /ad4.scheidingGeluidsscherm_l.x,/ad5.geluidsscherm_l.x,/x
 /ad4.geluidwerendeVoorziening_l.x,/ad5.geluidwerendevoorziening_l.x,/x
 /ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.gemaal_v.gemaal,/gemaal
 /ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.gemaalcomplex_p.Gemalen,/Gemalen
-/ad4.ondersteunendWegdeel_v.FYSIEKVOORKOMEN,/ad5.halfverharding_v.half verhard;half verhard:gravel;half verhard:grind;half verhard:puin;half verhard:schelpen,/half verhard;half verhard:gravel;half verhard:grind;half verhard:puin;half verhard:schelpen
+/ad4.ondersteunendWegdeel_v.FYSIEKVOORKOMEN,/ad5.halfverharding_v.half_verhard_half_verhard_gravel_half_verhard_grind_half_verhard_puin_half_verhard_schelpen,/half_verhard_half_verhard_gravel_half_verhard_grind_half_verhard_puin_half_verhard_schelpen
 /ad4.halte_v.x,/ad5.halteplaats_v.x,/x
 /ad4.scheidingWater_l.BGTPLUSTYPE,/ad5.kademuur_l.kademuur,/kademuur
 /ad4.scheiding_v.BGTPLUSTYPE,/ad5.kademuur_v.kademuur,/kademuur
 /ad4.kruispunt_p.x,/ad5.kruispunt_p.x,/x
-/ad4.onbegroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.kunststofverharding_v.gesloten verharding:kunststof,/gesloten verharding:kunststof
+/ad4.onbegroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.kunststofverharding_v.gesloten_verharding_kunststof,/gesloten_verharding_kunststof
 /ad4.kwElement_tbl.x,/ad5.kunstwerkelement_tbl.x,/x
 /ad4.overbruggingsdeel_v.TYPEOVERBRUGGINGSDEEL,/ad5.landhoofd_v.landhoofd,/landhoofd
 /ad4.weginrichtingselement_l.TYPESPEC,/ad5.lijngoot_l.Lijnafwatering,/Lijnafwatering
@@ -39,9 +39,9 @@ source,target,mapping
 /ad4.scheiding_v.BGTPLUSTYPE,/ad5.muur_v.muur,/muur
 /ad4.bouwdeelKunstwerk_tbl.x,/ad5.neninspectie_tbl.x,/x
 /ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.onderdoorgang_p.Onderdoorgangen,/Onderdoorgangen
-/ad4.ondersteunendWegdeel_v.FYSIEKVOORKOMEN,/ad5.onverhard_v.onverhard;onverhard:boomschors;onverhard:zand,/onverhard;onverhard:boomschors;onverhard:zand
+/ad4.ondersteunendWegdeel_v.FYSIEKVOORKOMEN,/ad5.onverhard_v.onverhard_onverhard_boomschors_onverhard_zand,/onverhard_onverhard_boomschors_onverhard_zand
 /ad4.overbruggingsdeel_v.TYPEOVERBRUGGINGSDEEL,/ad5.overbruggingsdeel_v.Null,/Null
-/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.overigkunstwerk_p.Spoorwegen;Grondkeringen;Faunatunnel;Onbekend;Wateren en watergangen niet lijnvormig; overig,/Spoorwegen;Grondkeringen;Faunatunnel;Onbekend;Wateren en watergangen niet lijnvormig; overig
+/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.overigkunstwerk_p.Spoorwegen_Grondkeringen_Faunatunnel_Onbekend_Wateren_en_watergangen_niet_lijnvormig_overig,/Spoorwegen_Grondkeringen_Faunatunnel_Onbekend_Wateren_en_watergangen_niet_lijnvormig_overig
 /ad4.overbruggingsdeel_v.TYPEOVERBRUGGINGSDEEL,/ad5.pijler_v.pijler,/pijler
 /ad4.wegdeelKruin_l.x,/ad5.profiellijn_l.x,/x
 /ad4.overbruggingsdeel_v.TYPEOVERBRUGGINGSDEEL,/ad5.pyloon_v.pyloon,/pyloon
@@ -55,24 +55,24 @@ source,target,mapping
 /ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.tunnel_p.Tunnels,/Tunnels
 /ad4.tunneldeel_v.x,/ad5.tunnelbuis_v.x,/x
 /ad4.scheiding_v.BGTPLUSTYPE,/ad5.tunnelwand_v.muur,/muur
-/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.vastebrug_p.Bruggen vast,/Bruggen vast
-/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.veerverbinding_p.Recreatieve gebieden,/Recreatieve gebieden
-/ad4.wegdeel_v.FYSIEKVOORKOMEN,/ad5.verharding_v.gesloten verharding,/gesloten verharding
-/ad4.kunstwerk_p.BEHEEROBJECTSUBTYP,/ad5.viaduct_p.HA;VD,/HA;VD
+/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.vastebrug_p.Bruggen_vast,/Bruggen_vast
+/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.veerverbinding_p.Recreatieve_gebieden,/Recreatieve_gebieden
+/ad4.wegdeel_v.FYSIEKVOORKOMEN,/ad5.verharding_v.gesloten_verharding,/gesloten_verharding
+/ad4.kunstwerk_p.BEHEEROBJECTSUBTYP,/ad5.viaduct_p.HA_VD,/HA_VD
 /ad4.weginrichtingselement_l.TYPESPEC,/ad5.voegovergang_l.Voegovergang,/Voegovergang
-/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.voorde_v.niet-bgt:voorde,/niet-bgt:voorde
-/ad4.waterinrichtingselement_l.BGTPLUSTYPE,/ad5.vuilvang_l.niet-bgt:vuilvang,/niet-bgt:vuilvang
-/ad4.traject_v.TYPESPEC,/ad5.weg_v.Busbaan;Fietspad;Weg,/Busbaan;Fietspad;Weg
+/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.voorde_v.niet-bgt_voorde,/niet-bgt_voorde
+/ad4.waterinrichtingselement_l.BGTPLUSTYPE,/ad5.vuilvang_l.niet-bgt_vuilvang,/niet-bgt_vuilvang
+/ad4.traject_v.TYPESPEC,/ad5.weg_v.Busbaan_Fietspad_Weg,/Busbaan_Fietspad_Weg
 /ad4.weg_l.x,/ad5.wegas_l.x,/x
 /ad4.wegvak_v.x,/ad5.wegvak_v.x,/x
 /ad4.x.x,/ad5.wegmarkering_tbl.x,/x
 /ad4.buis_l.TYPESPEC,/ad5.aansluitleiding_l.aansluitleiding,/aansluitleiding
 /ad4.straatmeubilairAbri_p.x,/ad5.abri_p.x,/x
-/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.afsluitpaal_p.niet-bgt:afsluitpaal,/niet-bgt:afsluitpaal
-/ad4.bak_p.BGTPLUSTYPE,/ad5.afvalbak_p.niet-bgt:afvalbak;niet-bgt: afval apartplaats,/niet-bgt:afvalbak;niet-bgt: afval apartplaats
-/ad4.sensor_p.TYPESPEC,/ad5.antenne_p.Kar antenne,/Kar antenne
+/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.afsluitpaal_p.niet-bgt_afsluitpaal,/niet-bgt_afsluitpaal
+/ad4.bak_p.BGTPLUSTYPE,/ad5.afvalbak_p.niet-bgt_afvalbak_niet-bgt_afval_apartplaats,/niet-bgt_afvalbak_niet-bgt_afval_apartplaats
+/ad4.sensor_p.TYPESPEC,/ad5.antenne_p.Kar_antenne,/Kar_antenne
 /ad4.straatmeubilairLichtpunt_p.x,/ad5.armatuur_p.x,/x
-/ad4.weginrichtingselement_l.BGTPLUSTYPE,/ad5.balustrade_l.niet-bgt:balustrade,/niet-bgt:balustrade
+/ad4.weginrichtingselement_l.BGTPLUSTYPE,/ad5.balustrade_l.niet-bgt_balustrade,/niet-bgt_balustrade
 /ad4.gebiedscontractregio_v.x,/ad5.beheergebied_v.x,/x
 /ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.bergbezinkbassin_v.bezinkbak,/bezinkbak
 /ad4.scheidingWater_l.BGTPLUSTYPE,/ad5.beschoeiing_l.walbescherming,/walbescherming
@@ -81,50 +81,50 @@ source,target,mapping
 /ad4.waterinrichtingselement_p.TYPESPEC,/ad5.betonning_p.Baken,/Baken
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.bolder_p.Bolder,/Bolder
 /ad4.vegetatieObject_p.x,/ad5.boom_p.x,/x
-/ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.bos_v.gemengd bos;loofbos;loofbos:griend en hakhout;naaldbos,/gemengd bos;loofbos;loofbos:griend en hakhout;naaldbos
-/ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.bosplantsoen_v.groenvoorziening:bosplantsoen,/groenvoorziening:bosplantsoen
-/ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.bouwland_v.bouwland;bouwland:bollenteelt;bouwland:akkerbouw;bouwland:vollegrondsteelt;bouwland:braakliggend,/bouwland;bouwland:bollenteelt;bouwland:akkerbouw;bouwland:vollegrondsteelt;bouwland:braakliggend
-/ad4.put_p.BGTPLUSTYPE,/ad5.brandkraan_p.niet-bgt:brandkraan / -put,/niet-bgt:brandkraan / -put
+/ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.bos_v.gemengd_bos_loofbos_loofbos_griend_en_hakhout_naaldbos,/gemengd_bos_loofbos_loofbos_griend_en_hakhout_naaldbos
+/ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.bosplantsoen_v.groenvoorziening_bosplantsoen,/groenvoorziening_bosplantsoen
+/ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.bouwland_v.bouwland_bouwland_bollenteelt_bouwland_akkerbouw_bouwland_vollegrondsteelt_bouwland_braakliggend,/bouwland_bouwland_bollenteelt_bouwland_akkerbouw_bouwland_vollegrondsteelt_bouwland_braakliggend
+/ad4.put_p.BGTPLUSTYPE,/ad5.brandkraan_p.niet-bgt_brandkraan_-put,/niet-bgt_brandkraan_-put
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.brievenbus_p.Brievenbus,/Brievenbus
 /ad4.vtaInspectie_tbl.x,/ad5.bvc_inspectie_tbl.x,/x
 /ad4.kast_p.TYPESPEC,/ad5.cai_kast_p.CAI,/CAI
-/ad4.sensor_p.TYPESPEC,/ad5.camera_p.Detectie: camera overig;ObservatieCamera;Straatmeubilair: camera,/Detectie: camera overig;ObservatieCamera;Straatmeubilair: camera
+/ad4.sensor_p.TYPESPEC,/ad5.camera_p.Detectie_camera_overig_ObservatieCamera_Straatmeubilair_camera,/Detectie_camera_overig_ObservatieCamera_Straatmeubilair_camera
 /ad4.elektriciteitskabel_l.TYPESPEC,/ad5.combikabel_l.ADD,/ADD
 /ad4.concessieverlener_tbl.x,/ad5.concessieverlener_tbl.x,/x
 /ad4.elektriciteitskabel_l.TYPESPEC,/ad5.datakabel_l.DAT,/DAT
 /ad4.sensor_l.x,/ad5.detector_l.x,/x
-/ad4.sensor_p.TYPESPEC,/ad5.detector_p.Radar detector,/Radar detector
+/ad4.sensor_p.TYPESPEC,/ad5.detector_p.Radar_detector,/Radar_detector
 /ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.dok_v.bassin,/bassin
 /ad4.buis_l.TYPESPEC,/ad5.drain_l.drainagebuis,/drainagebuis
 /ad4.leidingelement_p.TYPESPEC,/ad5.drainageput_p.Drainageput,/Drainageput
 /ad4.sensor_p.TYPESPEC,/ad5.drukknop_p.Drukknopsensor,/Drukknopsensor
-/ad4.begroeidTerreindeelBerm_v.FYSIEKVOORKOMEN,/ad5.duin_v.duin;duin:gesloten duinvegetatie;duin:open duinvegetatie,/duin;duin:gesloten duinvegetatie;duin:open duinvegetatie
+/ad4.begroeidTerreindeelBerm_v.FYSIEKVOORKOMEN,/ad5.duin_v.duin_duin_gesloten_duinvegetatie_duin_open_duinvegetatie,/duin_duin_gesloten_duinvegetatie_duin_open_duinvegetatie
 /ad4.kast_p.TYPESPEC,/ad5.elektriciteitskast_p.Elec,/Elec
-/ad4.ecopassage_l.TYPESPEC,/ad5.faunameubilair_l.Loopplank onder brug,/Loopplank onder brug
-/ad4.faunavoorziening_v.TYPESPEC,/ad5.faunameubilair_v.loopplank onder brug,/loopplank onder brug
+/ad4.ecopassage_l.TYPESPEC,/ad5.faunameubilair_l.Loopplank_onder_brug,/Loopplank_onder_brug
+/ad4.faunavoorziening_v.TYPESPEC,/ad5.faunameubilair_v.loopplank_onder_brug,/loopplank_onder_brug
 /ad4.ecopassage_l.TYPESPEC,/ad5.faunaverblijfplaats_p.Vleermuisbunker,/Vleermuisbunker
 /ad4.faunavoorziening_v.TYPESPEC,/ad5.faunaverblijfplaats_v.vleermuisbunker,/vleermuisbunker
-/ad4.ecopassage_l.TYPESPEC,/ad5.faunavoorziening_l.Amfibieëntunnel;Boombrug;brug of viaduct met faunavoorziening;Duiker; Looprichel;ecoduiker / duiker met faunavoorziening;kleine faunatunnel;Looprichel;Onduidelijk;Overig;Overige faunatunnel;tunnel / viaduct met medegebruik fauna,/Amfibieëntunnel;Boombrug;brug of viaduct met faunavoorziening;Duiker; Looprichel;ecoduiker / duiker met faunavoorziening;kleine faunatunnel;Looprichel;Onduidelijk;Overig;Overige faunatunnel;tunnel / viaduct met medegebruik fauna
-/ad4.faunavoorziening_v.TYPESPEC,/ad5.faunavoorziening_v.Amfibieëntunnel;betonnen duiker;betonnen faunapassage;dassentunnel;Dassentunnel;Ecoduikers;Faunatunnel;Looprichel;null;OV;Overig,/Amfibieëntunnel;betonnen duiker;betonnen faunapassage;dassentunnel;Dassentunnel;Ecoduikers;Faunatunnel;Looprichel;null;OV;Overig
+/ad4.ecopassage_l.TYPESPEC,/ad5.faunavoorziening_l.Amfibie_ntunnel_Boombrug_brug_of_viaduct_met_faunavoorziening_Duiker_Looprichel_ecoduiker_duiker_met_faunavoorziening_kleine_faunatunnel_Looprichel_Onduidelijk_Overig_Overige_faunatunnel_tunnel_viaduct_met_medegebruik_fauna,/Amfibie_ntunnel_Boombrug_brug_of_viaduct_met_faunavoorziening_Duiker_Looprichel_ecoduiker_duiker_met_faunavoorziening_kleine_faunatunnel_Looprichel_Onduidelijk_Overig_Overige_faunatunnel_tunnel_viaduct_met_medegebruik_fauna
+/ad4.faunavoorziening_v.TYPESPEC,/ad5.faunavoorziening_v.Amfibie_ntunnel_betonnen_duiker_betonnen_faunapassage_dassentunnel_Dassentunnel_Ecoduikers_Faunatunnel_Looprichel_null_OV_Overig,/Amfibie_ntunnel_betonnen_duiker_betonnen_faunapassage_dassentunnel_Dassentunnel_Ecoduikers_Faunatunnel_Looprichel_null_OV_Overig
 /ad4.fietsparkeervoorziening_l.x,/ad5.fietsparkeervoorziening_l.x,/x
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.fietsparkeervoorziening_p.fietsenrek,/fietsenrek
-/ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.fruit_of_kweekbomen_v.fruitteelt;boomteelt;fruitteelt:hoogstam boomgaarden;fruitteelt:laagstam boomgaarden;fruitteelt:wijngaarden;fruitteelt:klein fruit,/fruitteelt;boomteelt;fruitteelt:hoogstam boomgaarden;fruitteelt:laagstam boomgaarden;fruitteelt:wijngaarden;fruitteelt:klein fruit
+/ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.fruit_of_kweekbomen_v.fruitteelt_boomteelt_fruitteelt_hoogstam_boomgaarden_fruitteelt_laagstam_boomgaarden_fruitteelt_wijngaarden_fruitteelt_klein_fruit,/fruitteelt_boomteelt_fruitteelt_hoogstam_boomgaarden_fruitteelt_laagstam_boomgaarden_fruitteelt_wijngaarden_fruitteelt_klein_fruit
 /ad4.kast_p.TYPESPEC,/ad5.gaskast_p.Gaskast,/Gaskast
-/ad4.put_p.BGTPLUSTYPE,/ad5.gasput_p.niet-bgt:gasput,/niet-bgt:gasput
+/ad4.put_p.BGTPLUSTYPE,/ad5.gasput_p.niet-bgt_gasput,/niet-bgt_gasput
 /ad4.pand_v.x,/ad5.gebouw_v.x,/x
-/ad4.weginrichtingselement_l.TYPESPEC,/ad5.geleideconstructie_l.GR;VC;MSB,/GR;VC;MSB
+/ad4.weginrichtingselement_l.TYPESPEC,/ad5.geleideconstructie_l.GR_VC_MSB,/GR_VC_MSB
 /ad4.weginrichtingselement_v.TYPESPEC,/ad5.geleideconstructie_v.Barrier,/Barrier
-/ad4.waterinrichtingselement_l.BGTPLUSTYPE,/ad5.geleidewerk_l.niet-bgt:geleidewerk,/niet-bgt:geleidewerk
+/ad4.waterinrichtingselement_l.BGTPLUSTYPE,/ad5.geleidewerk_l.niet-bgt_geleidewerk,/niet-bgt_geleidewerk
 /ad4.ondersteunendWaterdeel_v.BGTPLUSTYPE,/ad5.getijdengebied_v.slik,/slik
 /ad4.kast_p.TYPESPEC,/ad5.gms_kast_p.GMS-kast,/GMS-kast
-/ad4.sensor_p.BGTPLUSTYPE,/ad5.gms_sensor_p.niet-bgt:GMS sensor,/niet-bgt:GMS sensor
-/ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.gras_en_kruidachtigen_v.grasland agrarisch;grasland overig;groenvoorziening:gras- en kruidachtigen,/grasland agrarisch;grasland overig;groenvoorziening:gras- en kruidachtigen
+/ad4.sensor_p.BGTPLUSTYPE,/ad5.gms_sensor_p.niet-bgt_GMS_sensor,/niet-bgt_GMS_sensor
+/ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.gras_en_kruidachtigen_v.grasland_agrarisch_grasland_overig_groenvoorziening_gras-_en_kruidachtigen,/grasland_agrarisch_grasland_overig_groenvoorziening_gras-_en_kruidachtigen
 /ad4.begroeidTerreindeelBerm_v.FYSIEKVOORKOMEN,/ad5.groenobject_v.groenvoorziening,/groenvoorziening
-/ad4.vegetatieObject_l.BGTPLUSTYPE,/ad5.haag_l.niet-bgt:haag,/niet-bgt:haag
-/ad4.vegetatieObject_v.BGTPLUSTYPE,/ad5.haag_v.niet-bgt:haag,/niet-bgt:haag
-/ad4.sensor_p.TYPESPEC,/ad5.handhavingssysteem_p.Detectie: flitspaal,/Detectie: flitspaal
+/ad4.vegetatieObject_l.BGTPLUSTYPE,/ad5.haag_l.niet-bgt_haag,/niet-bgt_haag
+/ad4.vegetatieObject_v.BGTPLUSTYPE,/ad5.haag_v.niet-bgt_haag,/niet-bgt_haag
+/ad4.sensor_p.TYPESPEC,/ad5.handhavingssysteem_p.Detectie_flitspaal,/Detectie_flitspaal
 /ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.heide_v.heide,/heide
-/ad4.scheidingLand_l.BGTPLUSTYPE,/ad5.hek_l.hek;niet-bgt:draadraster;niet-bgt,/hek;niet-bgt:draadraster;niet-bgt
+/ad4.scheidingLand_l.BGTPLUSTYPE,/ad5.hek_l.hek_niet-bgt_draadraster_niet-bgt,/hek_niet-bgt_draadraster_niet-bgt
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.herdenkingsmonument_p.Herdenkingsmonument,/Herdenkingsmonument
 /ad4.kunstwerkdeel_mp.BGTPLUSTYPE,/ad5.hoogspanningsmast_mp.hoogspanningsmast,/hoogspanningsmast
 /ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.hoogspanningsmast_v.hoogspanningsmast,/hoogspanningsmast
@@ -132,9 +132,9 @@ source,target,mapping
 /ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.houtwal_v.houtwal,/houtwal
 /ad4.bordZwemwater_p.x,/ad5.informatiebord_p.x,/x
 /ad4.bordDRIS_p.x,/ad5.informatiepaneel_p.x,/x
-/ad4.bord_p.BGTPLUSTYPE,/ad5.kabels_en_leidingenbord_p.niet-bgt:verklikker transportleiding,/niet-bgt:verklikker transportleiding
-/ad4.kast_p.TYPESPEC,/ad5.kast_p.Kast: onbekend;OV,/Kast: onbekend;OV
-/ad4.put_p.BGTPLUSTYPE,/ad5.kolk_p.niet-bgt:kolk,/niet-bgt:kolk
+/ad4.bord_p.BGTPLUSTYPE,/ad5.kabels_en_leidingenbord_p.niet-bgt_verklikker_transportleiding,/niet-bgt_verklikker_transportleiding
+/ad4.kast_p.TYPESPEC,/ad5.kast_p.Kast_onbekend_OV,/Kast_onbekend_OV
+/ad4.put_p.BGTPLUSTYPE,/ad5.kolk_p.niet-bgt_kolk,/niet-bgt_kolk
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.kunstobject_p.kunstobject,/kunstobject
 /ad4.kunstwerkdeel_l.BGTPLUSTYPE,/ad5.kunstwerkdeel_l.niet-bgt,/niet-bgt
 /ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.kunstwerkdeel_v.niet-bgt,/niet-bgt
@@ -142,73 +142,73 @@ source,target,mapping
 /ad4.lamp_p.x,/ad5.lichtbron_p.x,/x
 /ad4.sensor_p.TYPESPEC,/ad5.lichtsensor_p.Schemerschakelaar,/Schemerschakelaar
 /ad4.ligplaatsstrook_v.x,/ad5.ligplaatsstrook_v.x,/x
-/ad4.gebouwInstallatie_v.BGTPLUSTYPE,/ad5.luifel_v.niet-bgt:luifel,/niet-bgt:luifel
+/ad4.gebouwInstallatie_v.BGTPLUSTYPE,/ad5.luifel_v.niet-bgt_luifel,/niet-bgt_luifel
 /ad4.mantelbuis_v.x,/ad5.mantelbuis_v.x,/x
-/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.markeringspaal_p.niet-bgt:dijkpaal,/niet-bgt:dijkpaal
-/ad4.waterinrichtingselement_p.TYPESPEC,/ad5.meerpaal_p.Dukdalf;Meerpaal,/Dukdalf;Meerpaal
-/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.meldpaal_p.niet-bgt:drukknoppaal;niet-bgt:praatpaal,/niet-bgt:drukknoppaal;niet-bgt:praatpaal
+/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.markeringspaal_p.niet-bgt_dijkpaal,/niet-bgt_dijkpaal
+/ad4.waterinrichtingselement_p.TYPESPEC,/ad5.meerpaal_p.Dukdalf_Meerpaal,/Dukdalf_Meerpaal
+/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.meldpaal_p.niet-bgt_drukknoppaal_niet-bgt_praatpaal,/niet-bgt_drukknoppaal_niet-bgt_praatpaal
 /ad4.straatmeubilair_p.BGTPLUSTYPE,/ad5.straatmeubilair_p.niet-bgt,/niet-bgt
 /ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.moeras_v.moeras,/moeras
 /ad4.oevervak_v.x,/ad5.oeverzone_v.x,/x
-/ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.open_loods_v.open loods,/open loods
-/ad4.bak_p.BGTPLUSTYPE,/ad5.opslagbak_p.niet-bgt:zand- / zoutbak,/niet-bgt:zand- / zoutbak
+/ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.open_loods_v.open_loods,/open_loods
+/ad4.bak_p.BGTPLUSTYPE,/ad5.opslagbak_p.niet-bgt_zand-_zoutbak,/niet-bgt_zand-_zoutbak
 /ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.opslagtank_v.opslagtank,/opslagtank
 /ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.overig_bouwwerk_v.niet-bgt,/niet-bgt
 /ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.overkapping_v.overkapping,/overkapping
 /ad4.kastOvl_p.x,/ad5.ovl_kast_p.x,/x
-/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.paal_p.niet-bgt:haltepaal;niet-bgt:lichtmast;niet-bgt:verkeersbordpaal;niet-bgt:verkeersregelinstallatiepaal;niet-bgt:portaal;niet-bgt,/niet-bgt:haltepaal;niet-bgt:lichtmast;niet-bgt:verkeersbordpaal;niet-bgt:verkeersregelinstallatiepaal;niet-bgt:portaal;niet-bgt
+/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.paal_p.niet-bgt_haltepaal_niet-bgt_lichtmast_niet-bgt_verkeersbordpaal_niet-bgt_verkeersregelinstallatiepaal_niet-bgt_portaal_niet-bgt,/niet-bgt_haltepaal_niet-bgt_lichtmast_niet-bgt_verkeersbordpaal_niet-bgt_verkeersregelinstallatiepaal_niet-bgt_portaal_niet-bgt
 /ad4.peilbuis_p.x,/ad5.peilbuis_p.x,/x
 /ad4.perron_v.x,/ad5.perron_v.x,/x
-/ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.planten_v.groenvoorziening:planten,/groenvoorziening:planten
+/ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.planten_v.groenvoorziening_planten,/groenvoorziening_planten
 /ad4.plaaginvasiesoortInspectie_p.x,/ad5.plantensoortlocatie_p.x,/x
-/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.poller_p.niet-bgt:poller,/niet-bgt:poller
-/ad4.installatie_p.BGTPLUSTYPE,/ad5.pomp_p.niet-bgt:pomp,/niet-bgt:pomp
-/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.ponton_v.niet-bgt:ponton,/niet-bgt:ponton
+/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.poller_p.niet-bgt_poller,/niet-bgt_poller
+/ad4.installatie_p.BGTPLUSTYPE,/ad5.pomp_p.niet-bgt_pomp,/niet-bgt_pomp
+/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.ponton_v.niet-bgt_ponton,/niet-bgt_ponton
 /ad4.uitleggerPortaal_l.x,/ad5.portaal_l.x,/x
 /ad4.sensor_p.TYPESPEC,/ad5.rateltikker_p.Rateltikker,/Rateltikker
-/ad4.bordScheepvaart_p.BGTPLUSTYPE,/ad5.reclamebord_p.niet-bgt:reclamebord,/niet-bgt:reclamebord
-/ad4.waterinrichtingselement_l.BGTPLUSTYPE,/ad5.remmingswerk_l.niet-bgt:remmingswerk,/niet-bgt:remmingswerk
+/ad4.bordScheepvaart_p.BGTPLUSTYPE,/ad5.reclamebord_p.niet-bgt_reclamebord,/niet-bgt_reclamebord
+/ad4.waterinrichtingselement_l.BGTPLUSTYPE,/ad5.remmingswerk_l.niet-bgt_remmingswerk,/niet-bgt_remmingswerk
 /ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.rietland_v.rietland,/rietland
 /ad4.weginrichtingselement_l.TYPESPEC,/ad5.rijstrookscheiding_l.VRBS,/VRBS
 /ad4.leidingelement_p.TYPESPEC,/ad5.rioolafsluiter_p.cleanOut,/cleanOut
-/ad4.put_p.BGTPLUSTYPE,/ad5.rioolput_p.niet-bgt:inspectie- / rioolput,/niet-bgt:inspectie- / rioolput
-/ad4.bordScheepvaart_p.BGTPLUSTYPE,/ad5.scheepvaartbord_p.niet-bgt:scheepvaartbord,/niet-bgt:scheepvaartbord
-/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.sirene_p.niet-bgt:sirene,/niet-bgt:sirene
+/ad4.put_p.BGTPLUSTYPE,/ad5.rioolput_p.niet-bgt_inspectie-_rioolput,/niet-bgt_inspectie-_rioolput
+/ad4.bordScheepvaart_p.BGTPLUSTYPE,/ad5.scheepvaartbord_p.niet-bgt_scheepvaartbord,/niet-bgt_scheepvaartbord
+/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.sirene_p.niet-bgt_sirene,/niet-bgt_sirene
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.slagboominstallatie_p.Slagboom,/Slagboom
-/ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.struiken_v.groenvoorziening:bodembedekkers;groenvoorziening:heesters;groenvoorziening:struikrozen;struiken,/groenvoorziening:bodembedekkers;groenvoorziening:heesters;groenvoorziening:struikrozen;struiken
-/ad4.straatmeubilair_p.TYPESPEC,/ad5.tafel_p.Picknick tafel,/Picknick tafel
+/ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.struiken_v.groenvoorziening_bodembedekkers_groenvoorziening_heesters_groenvoorziening_struikrozen_struiken,/groenvoorziening_bodembedekkers_groenvoorziening_heesters_groenvoorziening_struikrozen_struiken
+/ad4.straatmeubilair_p.TYPESPEC,/ad5.tafel_p.Picknick_tafel,/Picknick_tafel
 /ad4.kastDRIS_p.x,/ad5.telecomkast_p.x,/x
-/ad4.kast_p.TYPESPEC,/ad5.telkast_p.Telkast: onbekend,/Telkast: onbekend
-/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.telpaal_p.niet-bgt:telpaal,/niet-bgt:telpaal
+/ad4.kast_p.TYPESPEC,/ad5.telkast_p.Telkast_onbekend,/Telkast_onbekend
+/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.telpaal_p.niet-bgt_telpaal,/niet-bgt_telpaal
 /ad4.theorHectometrering_p.x,/ad5.theoretische_hectometrering_p.x,/x
-/ad4.gebouwInstallatie_v.BGTPLUSTYPE,/ad5.toegangstrap_v.niet-bgt:toegangstrap,/niet-bgt:toegangstrap
+/ad4.gebouwInstallatie_v.BGTPLUSTYPE,/ad5.toegangstrap_v.niet-bgt_toegangstrap,/niet-bgt_toegangstrap
 /ad4.uithouder_p.x,/ad5.uithouder_p.x,/x
 /ad4.utiliteitsNet_tbl.x,/ad5.utiliteitsNet_tbl.x,/x
 /ad4.vaarwegdeeltraject_v.x,/ad5.vaarweg_v.x,/x
 /ad4.vaarweg_l.x,/ad5.vaarwegas_l.x,/x
 /ad4.vaarwegdeeltrajectas_l.x,/ad5.vaarwegdeeltrajectas_l.x,/x
-/ad4.straatmeubilair_p.TYPESPEC,/ad5.veiligheidsvoorziening_p.Meubilair: lier;Meubilair: reddingsboei;Nooduitgangtrap; Reddingsboei;Inspringvoorziening,/Meubilair: lier;Meubilair: reddingsboei;Nooduitgangtrap; Reddingsboei;Inspringvoorziening
-/ad4.leidingelement_p.TYPESPEC,/ad5.verbindingsstuk_p.DEM;mof,/DEM;mof
-/ad4.weginrichtingselement_l.BGTPLUSTYPE,/ad5.verblindingswering_l.niet-bgt:verblindingswering,/niet-bgt:verblindingswering
-/ad4.bord_p.BGTPLUSTYPE,/ad5.verkeersbord_p.niet-bgt:plaatsnaambord;niet-bgt:straatnaambord;niet-bgt:verkeersbord;niet-bgt:waarschuwingshek;niet-bgt:wegwijzer;niet-bgt,/niet-bgt:plaatsnaambord;niet-bgt:straatnaambord;niet-bgt:verkeersbord;niet-bgt:waarschuwingshek;niet-bgt:wegwijzer;niet-bgt
+/ad4.straatmeubilair_p.TYPESPEC,/ad5.veiligheidsvoorziening_p.Meubilair_lier_Meubilair_reddingsboei_Nooduitgangtrap_Reddingsboei_Inspringvoorziening,/Meubilair_lier_Meubilair_reddingsboei_Nooduitgangtrap_Reddingsboei_Inspringvoorziening
+/ad4.leidingelement_p.TYPESPEC,/ad5.verbindingsstuk_p.DEM_mof,/DEM_mof
+/ad4.weginrichtingselement_l.BGTPLUSTYPE,/ad5.verblindingswering_l.niet-bgt_verblindingswering,/niet-bgt_verblindingswering
+/ad4.bord_p.BGTPLUSTYPE,/ad5.verkeersbord_p.niet-bgt_plaatsnaambord_niet-bgt_straatnaambord_niet-bgt_verkeersbord_niet-bgt_waarschuwingshek_niet-bgt_wegwijzer_niet-bgt,/niet-bgt_plaatsnaambord_niet-bgt_straatnaambord_niet-bgt_verkeersbord_niet-bgt_waarschuwingshek_niet-bgt_wegwijzer_niet-bgt
 /ad4.lantaarn_p.x,/ad5.verkeerslantaarn_p.x,/x
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.verkeersspiegel_p.verkeersspiegel,/verkeersspiegel
-/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.vlaggenmast_p.niet-bgt:vlaggenmast,/niet-bgt:vlaggenmast
+/ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.vlaggenmast_p.niet-bgt_vlaggenmast,/niet-bgt_vlaggenmast
 /ad4.elektriciteitskabel_l.TYPESPEC,/ad5.voedingskabel_l.ENE,/ENE
 /ad4.kastVri_p.x,/ad5.vri_kast_p.x,/x
-/ad4.buis_l.TYPESPEC,/ad5.vrijvervalrioolleiding_l.hemelwaterriool;overstortleiding;stuwrioolleiding; vuilwaterriool;doorlatendeleiding;zinker,/hemelwaterriool;overstortleiding;stuwrioolleiding; vuilwaterriool;doorlatendeleiding;zinker
+/ad4.buis_l.TYPESPEC,/ad5.vrijvervalrioolleiding_l.hemelwaterriool_overstortleiding_stuwrioolleiding_vuilwaterriool_doorlatendeleiding_zinker,/hemelwaterriool_overstortleiding_stuwrioolleiding_vuilwaterriool_doorlatendeleiding_zinker
 /ad4.buis_l.TYPESPEC,/ad5.vrijvervaltransportleiding_l.transportrioolleiding,/transportrioolleiding
-/ad4.waterdeel_v.BGTPLUSTYPE,/ad5.watergang_v.greppel; droge sloot;waterloop;waterloop:sloot;waterloop:kanaal;waterloop:rivier;waterloop:gracht,/greppel; droge sloot;waterloop;waterloop:sloot;waterloop:kanaal;waterloop:rivier;waterloop:gracht
-/ad4.put_p.BGTPLUSTYPE,/ad5.waterleidingput_p.niet-bgt:waterleidingput,/niet-bgt:waterleidingput
+/ad4.waterdeel_v.BGTPLUSTYPE,/ad5.watergang_v.greppel_droge_sloot_waterloop_waterloop_sloot_waterloop_kanaal_waterloop_rivier_waterloop_gracht,/greppel_droge_sloot_waterloop_waterloop_sloot_waterloop_kanaal_waterloop_rivier_waterloop_gracht
+/ad4.put_p.BGTPLUSTYPE,/ad5.waterleidingput_p.niet-bgt_waterleidingput,/niet-bgt_waterleidingput
 /ad4.waterloop_l.x,/ad5.watergang_l.x,/x
-/ad4.waterdeel_v.BGTPLUSTYPE,/ad5.watervlakte_v.watervlakte;watervlakte:haven;watervlakte:meer; plas; ven; vijver;zee,/watervlakte;watervlakte:haven;watervlakte:meer; plas; ven; vijver;zee
+/ad4.waterdeel_v.BGTPLUSTYPE,/ad5.watervlakte_v.watervlakte_watervlakte_haven_watervlakte_meer_plas_ven_vijver_zee,/watervlakte_watervlakte_haven_watervlakte_meer_plas_ven_vijver_zee
 /ad4.sensor_p.TYPESPEC,/ad5.weerstation_p.Weerstation,/Weerstation
 /ad4.functioneelGebied_v.x,/ad5.werkgebied_v.x,/x
 /ad4.sensor_p.TYPESPEC,/ad5.windmeter_p.Windmeter,/Windmeter
 /ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.windturbine_v.windturbine,/windturbine
-/ad4.onbegroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.zandvlakte_v.zand;zand:zandverstuiving;zand:strand en strandwal,/zand;zand:zandverstuiving;zand:strand en strandwal
+/ad4.onbegroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.zandvlakte_v.zand_zand_zandverstuiving_zand_strand_en_strandwal,/zand_zand_zandverstuiving_zand_strand_en_strandwal
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.zitelement_p.zitbank,/zitbank
 /ad4.leidingelement_p.TYPESPEC,/ad5.aansluitput_p.Zandvang,/Zandvang
-/ad4.installatie_p.BGTPLUSTYPE,/ad5.zonnepaneel_p.niet-bgt:zonnepaneel,/niet-bgt:zonnepaneel
+/ad4.installatie_p.BGTPLUSTYPE,/ad5.zonnepaneel_p.niet-bgt_zonnepaneel,/niet-bgt_zonnepaneel
 /ad4.weginrichtingselement_v.TYPESPEC,/ad5.zonnepaneel_v.Zonnefietspad,/Zonnefietspad
 /ad4.bouwdeelGeluidsscherm_tbl.x,/ad5.kunstwerkbouwdeel_tbl.x,/x
