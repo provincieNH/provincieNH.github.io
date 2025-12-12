@@ -1,109 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
 <meta charset="utf-8" />
 
+<!-- Inter (lijkt sterk op Fedra Sans, vrij webfont) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-/* HIER KOMT JE PNH-STYLING — gewoon precies zoals eerder gegeven */
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #f8f8f8;
+    }
+
+    #topbar {
+        background: #003b6c;      /* PNH blauw */
+        height: 8px;
+        width: 100%;
+    }
+
+    #header {
+        background: white;
+        padding: 25px 40px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header h1 {
+        margin: 0;
+        font-size: 26px;
+        font-weight: 600;
+        color: #003b6c;
+    }
+
+    #header p {
+        margin: 4px 0 0 0;
+        font-size: 16px;
+        color: #555;
+    }
+
+    #filterbox {
+        padding: 15px 40px;
+        background: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    #filterbox input {
+        width: 350px;
+        padding: 8px 12px;
+        font-size: 15px;
+        border-radius: 6px;
+        border: 1px solid #bbb;
+    }
+
+    #chart {
+        padding: 20px;
+    }
+
+    .node rect {
+        cursor: move;
+        fill-opacity: 0.9;
+        shape-rendering: crispEdges;
+    }
+
+    .node text {
+        pointer-events: none;
+        font-size: 13px;
+        fill: #111;
+    }
+
+    .link {
+        fill: none;
+        stroke-opacity: .3;
+    }
+
+    .link:hover {
+        stroke-opacity: .6;
+    }
 </style>
 
 </head>
 <body>
 
-<div id="top_bar"></div>
+<div id="topbar"></div>
 
-<div id="header_wrap">
-  <div class="inner">
-    <h1 id="project_title">Areaaldata 4.3 naar Areaaldata 5 (IMBOR)</h1>
-    <div id="project_tagline">Volledige Sankey-weergave</div>
-  </div>
+<div id="header">
+    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) - Volledige Mapping</h1>
+    <p>Interactieve Sankey-weergave met filtering, zoom en panning</p>
 </div>
 
-<div id="main_content_wrap">
-  <div id="chart"></div>
+<div id="filterbox">
+    <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
 </div>
 
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="lib/sankey.js"></script>
+<div id="chart">
+    <svg id="sankey_svg"></svg>
+</div>
+
+<!-- Libraries -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/build/d3-sankey.js"></script>
 
 <script>
-var width  = 1600;
-var height = 2000;
 
-d3.csv("data/mapping-ad4-ad5-alles.csv", function(error, data) {
+// Dynamische configuratie (ingevuld door Python)
+var CSV_NAME = "mapping-ad4-ad5-alles.csv";
+var DIAG_SORTING = 10;
+var DIAG_HEIGHT = 1720;
 
-    var sorting = 10;
+// Canvas
+var margin = {top: 20, right: 50, bottom: 20, left: 50};
+var width = 1600 - margin.left - margin.right;
+var height = DIAG_HEIGHT;
 
-    var graph = {"nodes" : [], "links" : []};
+// SVG
+var svg = d3.select("#sankey_svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
-    data.forEach(function (d) {
-        graph.nodes.push({ "name": d.source });
-        graph.nodes.push({ "name": d.target });
+// Zoom & pan
+var zoom = d3.zoom().on("zoom", function(event) {
+    svg.attr("transform", event.transform);
+});
+d3.select("#sankey_svg").call(zoom);
+
+// Sankey
+var sankey = d3.sankey()
+    .nodeWidth(22)
+    .nodePadding(18)
+    .size([width, height]);
+
+var path = sankey.links();
+
+// Kleur op basis van AD5-tabel
+var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+d3.csv("data/" + CSV_NAME).then(function(data) {
+
+    // Maak nodes + links
+    var graph = {nodes: [], links: []};
+
+    data.forEach(function(d) {
+        graph.nodes.push({ name: d.source });
+        graph.nodes.push({ name: d.target });
+
         graph.links.push({
-            "source": d.source,
-            "target": d.target,
-            "value": 1,
-            "mapping": d.mapping
+            source: d.source,
+            target: d.target,
+            value: 1,
+            mapping: d.mapping
         });
     });
 
-    graph.nodes = d3.keys(d3.nest()
-        .key(function (d) { return d.name; })
-        .map(graph.nodes));
+    // Maak uniek
+    graph.nodes = Array.from(
+        d3.group(graph.nodes, d => d.name).keys()
+    );
 
-    graph.links.forEach(function (d, i) {
-        graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
-        graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+    graph.nodes = graph.nodes.map(d => ({name: d}));
+
+    graph.links.forEach(function(l) {
+        l.source = graph.nodes.findIndex(n => n.name === l.source);
+        l.target = graph.nodes.findIndex(n => n.name === l.target);
     });
 
-    graph.nodes = graph.nodes.map(function(d) { return { "name": d }; });
+    sankey(graph);
 
-    var svg = d3.select("#chart").append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .append("g");
-
-    var sankey = d3.sankey()
-        .size([width, height])
-        .nodeWidth(30)
-        .nodePadding(20);
-
-    sankey.nodes(graph.nodes)
-          .links(graph.links)
-          .layout(sorting);
-
-    var path = sankey.link();
-
-    var link = svg.append("g").selectAll(".link")
+    // Links
+    svg.append("g")
+        .selectAll(".link")
         .data(graph.links)
-        .enter().append("path")
-        .attr("class", "link")
-        .attr("d", path)
-        .style("stroke-width", function(d) { return Math.max(1, d.dy); });
+        .enter()
+        .append("path")
+        .attr("class","link")
+        .attr("d", d3.sankeyLinkHorizontal())
+        .style("stroke", function(d) {
+            var name = graph.nodes[d.target].name;
+            return color(name.split(".")[1]);
+        })
+        .style("stroke-width", d => Math.max(1, d.width))
+        .append("title")
+        .text(d => d.mapping);
 
-    link.append("title")
-        .text(function(d) { return d.mapping; });
-
-    var node = svg.append("g").selectAll(".node")
-        .data(graph.nodes)
-        .enter().append("g")
-        .attr("class", "node")
-        .attr("transform", function(d) {
-            return "translate(" + d.x + "," + d.y + ")";
-        });
+    // Nodes
+    var node = svg.append("g")
+      .selectAll(".node")
+      .data(graph.nodes)
+      .enter()
+      .append("g")
+      .attr("class","node")
+      .attr("transform", d => "translate(" + d.x0 + "," + d.y0 + ")");
 
     node.append("rect")
-        .attr("height", function(d) { return d.dy; })
-        .attr("width", 30)
+        .attr("height", d => Math.max(4, (d.y1 - d.y0)))
+        .attr("width", sankey.nodeWidth())
+        .style("fill", function(d){
+            return color(d.name.split(".")[1]);
+        })
         .append("title")
-        .text(function(d) { return d.name; });
+        .text(d => d.name);
 
     node.append("text")
         .attr("x", -6)
-        .attr("y", function(d) { return d.dy / 2; })
-        .attr("dy", ".35em")
-        .attr("text-anchor", "end")
-        .text(function(d) { return d.name; });
+        .attr("y", d => (d.y1 - d.y0) / 2 )
+        .attr("dy", "0.35em")
+        .attr("text-anchor","end")
+        .text(d => d.name);
+
+    // Filterfunctie
+    document.getElementById("filterInput").addEventListener("input", function(e){
+        var q = e.target.value.toLowerCase();
+        node.style("opacity", d => d.name.toLowerCase().includes(q) ? 1 : 0.15);
+        svg.selectAll(".link").style("opacity", l =>
+            graph.nodes[l.source].name.toLowerCase().includes(q) ||
+            graph.nodes[l.target].name.toLowerCase().includes(q)
+            ? 0.5
+            : 0.05
+        );
+    });
+
 });
 </script>
 
