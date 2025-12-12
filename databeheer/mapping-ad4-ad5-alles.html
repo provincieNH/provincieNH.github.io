@@ -42,10 +42,10 @@
     <svg id="sankey_svg"></svg>
 </div>
 
-<!-- D3 V5: werkt betrouwbaar via CDN -->
+<!-- D3 V5 -->
 <script src="https://d3js.org/d3.v5.min.js"></script>
 
-<!-- LOKALE versie van d3-sankey, 100% tracking-proof -->
+<!-- LOKAAL: d3-sankey.min.js -->
 <script src="lib/d3-sankey.min.js"></script>
 
 <script>
@@ -58,20 +58,19 @@ var margin = {top: 20, right: 50, bottom: 20, left: 50};
 var width = 1600 - margin.left - margin.right;
 var height = DIAG_HEIGHT;
 
-// SVG
+// SVG + zoom
 var svg = d3.select("#sankey_svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
-// Zoom/pan
 var zoom = d3.zoom().on("zoom", function(event) {
     svg.attr("transform", event.transform);
 });
 d3.select("#sankey_svg").call(zoom);
 
-// Sankey layout
+// Sankey object
 var sankey = d3.sankey()
     .nodeWidth(22)
     .nodePadding(18)
@@ -82,23 +81,21 @@ var color = d3.scaleOrdinal(d3.schemeCategory10);
 // CSV laden
 d3.csv(CSV_NAME).then(function(data) {
 
-    var graph = {nodes: [], links: []};
+    // ---- NIEUWE ROBUUSTE NODE/INDEX OPBOUW ----
+    const nodeNames = Array.from(new Set(
+        data.flatMap(d => [d.source, d.target])
+    ));
 
-    data.forEach(function(d) {
-        graph.nodes.push({ name: d.source });
-        graph.nodes.push({ name: d.target });
-        graph.links.push({ source: d.source, target: d.target, value: 1, mapping: d.mapping });
-    });
-
-    // Unieke nodes
-    graph.nodes = Array.from(new Set(graph.nodes.map(n => n.name)))
-                       .map(d => ({ name: d }));
-
-    // Source/target → indexen
-    graph.links.forEach(function(l) {
-        l.source = graph.nodes.findIndex(n => n.name === l.source);
-        l.target = graph.nodes.findIndex(n => n.name === l.target);
-    });
+    const graph = {
+        nodes: nodeNames.map(n => ({ name: n })),
+        links: data.map(d => ({
+            source: nodeNames.indexOf(d.source),
+            target: nodeNames.indexOf(d.target),
+            value: 1,
+            mapping: d.mapping
+        }))
+    };
+    // ---------------------------------------------
 
     sankey(graph);
 
@@ -109,7 +106,10 @@ d3.csv(CSV_NAME).then(function(data) {
         .append("path")
         .attr("class","link")
         .attr("d", d3.sankeyLinkHorizontal())
-        .style("stroke", d => color(graph.nodes[d.target].name.split(".")[1]))
+        .style("stroke", d => {
+            let node = graph.nodes[d.target];
+            return color(node.name.split(".")[1] || "default");
+        })
         .style("stroke-width", d => Math.max(1, d.width))
         .append("title")
         .text(d => d.mapping);
@@ -126,7 +126,7 @@ d3.csv(CSV_NAME).then(function(data) {
     node.append("rect")
         .attr("height", d => Math.max(4, d.y1 - d.y0))
         .attr("width", sankey.nodeWidth())
-        .style("fill", d => color(d.name.split(".")[1]))
+        .style("fill", d => color(d.name.split(".")[1] || "default"))
         .append("title")
         .text(d => d.name);
 
