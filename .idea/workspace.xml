@@ -22,8 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="DID-136 #comment Overzicht van htmls gegenereerd">
-      <change beforePath="$PROJECT_DIR$/databeheer/data/mapping-ad4-ad5.csv" beforeDir="false" />
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="DID-136 #comment terug naar origineel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +315,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765372235063</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="DID-136 #comment Overzicht van htmls gegenereerd">
+      <option name="closed" value="true" />
+      <created>1765537824501</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1765537824501</updated>
+    </task>
+    <task id="LOCAL-00035" summary="DID-136 #comment terug naar origineel">
+      <option name="closed" value="true" />
+      <created>1765538012679</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1765538012679</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,7 +346,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix van test middels appenden aan g" />
     <MESSAGE value="Voorbeeld van csv voor attributen" />
     <MESSAGE value="toevoeging van csv voor verharding" />
     <MESSAGE value="commit" />
@@ -354,6 +370,7 @@
     <MESSAGE value="nieuwe dynamische hoogten htmls (48px per regel)" />
     <MESSAGE value="GD-8547 #comment pagina onderzoeken toegevoegd" />
     <MESSAGE value="DID-136 #comment Overzicht van htmls gegenereerd" />
-    <option name="LAST_COMMIT_MESSAGE" value="DID-136 #comment Overzicht van htmls gegenereerd" />
+    <MESSAGE value="DID-136 #comment terug naar origineel" />
+    <option name="LAST_COMMIT_MESSAGE" value="DID-136 #comment terug naar origineel" />
   </component>
 </project>
