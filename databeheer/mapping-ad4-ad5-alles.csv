@@ -71,7 +71,7 @@ source,target,mapping
 /ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.afsluitpaal_p.niet-bgt:afsluitpaal,/niet-bgt:afsluitpaal
 /ad4.bak_p.BGTPLUSTYPE,/ad5.afvalbak_p.niet-bgt:afvalbak,niet-bgt: afval apartplaats,/niet-bgt:afvalbak,niet-bgt: afval apartplaats
 /ad4.sensor_p.TYPESPEC,/ad5.antenne_p.Kar antenne,/Kar antenne
-/ad4.straatmeubilairLichtpunt_p.x,/ad5.armatuur_p.x,/x
+/ad4.straatmeubilairLichtpunt_p.TYPESPEC,/ad5.armatuur_p.ARM,MU,/ARM,MU
 /ad4.weginrichtingselement_l.BGTPLUSTYPE,/ad5.balustrade_l.niet-bgt:balustrade,/niet-bgt:balustrade
 /ad4.gebiedscontractregio_v.x,/ad5.beheergebied_v.x,/x
 /ad4.overigBouwwerk_v.BGTPLUSTYPE,/ad5.bergbezinkbassin_v.bezinkbak,/bezinkbak
@@ -90,7 +90,6 @@ source,target,mapping
 /ad4.kast_p.TYPESPEC,/ad5.cai_kast_p.CAI,/CAI
 /ad4.sensor_p.TYPESPEC,/ad5.camera_p.Detectie: camera overig,ObservatieCamera,Straatmeubilair: camera,/Detectie: camera overig,ObservatieCamera,Straatmeubilair: camera
 /ad4.elektriciteitskabel_l.TYPESPEC,/ad5.combikabel_l.ADD,/ADD
-/ad4.concessieverlener_tbl.x,/ad5.concessieverlener_tbl.x,/x
 /ad4.elektriciteitskabel_l.TYPESPEC,/ad5.datakabel_l.DAT,/DAT
 /ad4.sensor_l.x,/ad5.detector_l.x,/x
 /ad4.sensor_p.TYPESPEC,/ad5.detector_p.Radar detector,/Radar detector
@@ -101,11 +100,9 @@ source,target,mapping
 /ad4.begroeidTerreindeelBerm_v.FYSIEKVOORKOMEN,/ad5.duin_v.duin,duin:gesloten duinvegetatie,duin:open duinvegetatie,/duin,duin:gesloten duinvegetatie,duin:open duinvegetatie
 /ad4.kast_p.TYPESPEC,/ad5.elektriciteitskast_p.Elec,/Elec
 /ad4.ecopassage_l.TYPESPEC,/ad5.faunameubilair_l.Loopplank onder brug,/Loopplank onder brug
-/ad4.faunavoorziening_v.TYPESPEC,/ad5.faunameubilair_v.loopplank onder brug,/loopplank onder brug
 /ad4.ecopassage_l.TYPESPEC,/ad5.faunaverblijfplaats_p.Vleermuisbunker,/Vleermuisbunker
-/ad4.faunavoorziening_v.TYPESPEC,/ad5.faunaverblijfplaats_v.vleermuisbunker,/vleermuisbunker
 /ad4.ecopassage_l.TYPESPEC,/ad5.faunavoorziening_l.Amfibieëntunnel,Boombrug,brug of viaduct met faunavoorziening,Duiker, Looprichel,ecoduiker / duiker met faunavoorziening,kleine faunatunnel,Looprichel,Onduidelijk,Overig,Overige faunatunnel,tunnel / viaduct met medegebruik fauna,/Amfibieëntunnel,Boombrug,brug of viaduct met faunavoorziening,Duiker, Looprichel,ecoduiker / duiker met faunavoorziening,kleine faunatunnel,Looprichel,Onduidelijk,Overig,Overige faunatunnel,tunnel / viaduct met medegebruik fauna
-/ad4.faunavoorziening_v.TYPESPEC,/ad5.faunavoorziening_v.Amfibieëntunnel,betonnen duiker,betonnen faunapassage,dassentunnel,Dassentunnel,Ecoduikers,Faunatunnel,Looprichel,null,OV,Overig,/Amfibieëntunnel,betonnen duiker,betonnen faunapassage,dassentunnel,Dassentunnel,Ecoduikers,Faunatunnel,Looprichel,null,OV,Overig
+/ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.faunavoorziening_v.niet-bgt:faunavoorziening,/niet-bgt:faunavoorziening
 /ad4.fietsparkeervoorziening_l.x,/ad5.fietsparkeervoorziening_l.x,/x
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.fietsparkeervoorziening_p.fietsenrek,/fietsenrek
 /ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.fruit_of_kweekbomen_v.fruitteelt,boomteelt,fruitteelt:hoogstam boomgaarden,fruitteelt:laagstam boomgaarden,fruitteelt:wijngaarden,fruitteelt:klein fruit,/fruitteelt,boomteelt,fruitteelt:hoogstam boomgaarden,fruitteelt:laagstam boomgaarden,fruitteelt:wijngaarden,fruitteelt:klein fruit
@@ -121,7 +118,7 @@ source,target,mapping
 /ad4.begroeidTerreindeel_v.FYSIEKVOORKOMEN,/ad5.gras_en_kruidachtigen_v.grasland agrarisch,grasland overig,groenvoorziening:gras- en kruidachtigen,/grasland agrarisch,grasland overig,groenvoorziening:gras- en kruidachtigen
 /ad4.begroeidTerreindeelBerm_v.FYSIEKVOORKOMEN,/ad5.groenobject_v.groenvoorziening,/groenvoorziening
 /ad4.vegetatieObject_l.BGTPLUSTYPE,/ad5.haag_l.niet-bgt:haag,/niet-bgt:haag
-/ad4.vegetatieObject_v.BGTPLUSTYPE,/ad5.haag_v.niet-bgt:haag,/niet-bgt:haag
+/ad4.vegetatieObject_v.TYPESPEC,/ad5.haag_v.Haag,/Haag
 /ad4.sensor_p.TYPESPEC,/ad5.handhavingssysteem_p.Detectie: flitspaal,/Detectie: flitspaal
 /ad4.begroeidTerreindeelPlantvak_v.FYSIEKVOORKOMEN,/ad5.heide_v.heide,/heide
 /ad4.scheidingLand_l.BGTPLUSTYPE,/ad5.hek_l.hek,niet-bgt:draadraster,niet-bgt,/hek,niet-bgt:draadraster,niet-bgt
@@ -138,7 +135,7 @@ source,target,mapping
 /ad4.straatmeubilair_p.TYPESPEC,/ad5.kunstobject_p.kunstobject,/kunstobject
 /ad4.kunstwerkdeel_l.BGTPLUSTYPE,/ad5.kunstwerkdeel_l.niet-bgt,/niet-bgt
 /ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.kunstwerkdeel_v.niet-bgt,/niet-bgt
-/ad4.leidingelement_p.TYPESPEC,/ad5.leidingelement_p.aarding,/aarding
+/ad4.leidingelement_p.TYPESPEC,/ad5.aardelektrode_p.aarding,/aarding
 /ad4.lamp_p.x,/ad5.lichtbron_p.x,/x
 /ad4.sensor_p.TYPESPEC,/ad5.lichtsensor_p.Schemerschakelaar,/Schemerschakelaar
 /ad4.ligplaatsstrook_v.x,/ad5.ligplaatsstrook_v.x,/x
@@ -164,7 +161,7 @@ source,target,mapping
 /ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.poller_p.niet-bgt:poller,/niet-bgt:poller
 /ad4.installatie_p.BGTPLUSTYPE,/ad5.pomp_p.niet-bgt:pomp,/niet-bgt:pomp
 /ad4.kunstwerkdeel_v.BGTPLUSTYPE,/ad5.ponton_v.niet-bgt:ponton,/niet-bgt:ponton
-/ad4.uitleggerPortaal_l.x,/ad5.portaal_l.x,/x
+/ad4.uitleggerPortaal_l.TYPESPEC,/ad5.portaal_l.Portaal,/Portaal
 /ad4.sensor_p.TYPESPEC,/ad5.rateltikker_p.Rateltikker,/Rateltikker
 /ad4.bordScheepvaart_p.BGTPLUSTYPE,/ad5.reclamebord_p.niet-bgt:reclamebord,/niet-bgt:reclamebord
 /ad4.waterinrichtingselement_l.BGTPLUSTYPE,/ad5.remmingswerk_l.niet-bgt:remmingswerk,/niet-bgt:remmingswerk
@@ -196,8 +193,7 @@ source,target,mapping
 /ad4.paalDraagconstructie_p.BGTPLUSTYPE,/ad5.vlaggenmast_p.niet-bgt:vlaggenmast,/niet-bgt:vlaggenmast
 /ad4.elektriciteitskabel_l.TYPESPEC,/ad5.voedingskabel_l.ENE,/ENE
 /ad4.kastVri_p.x,/ad5.vri_kast_p.x,/x
-/ad4.buis_l.TYPESPEC,/ad5.vrijvervalrioolleiding_l.hemelwaterriool,overstortleiding,stuwrioolleiding, vuilwaterriool,doorlatendeleiding,zinker,/hemelwaterriool,overstortleiding,stuwrioolleiding, vuilwaterriool,doorlatendeleiding,zinker
-/ad4.buis_l.TYPESPEC,/ad5.vrijvervaltransportleiding_l.transportrioolleiding,/transportrioolleiding
+/ad4.buis_l.TYPESPEC,/ad5.vrijvervalrioolleiding_l.hemelwaterriool,overstortleiding,stuwrioolleiding, vuilwaterriool,doorlatendeleiding,zinker,transportrioolleiding,/hemelwaterriool,overstortleiding,stuwrioolleiding, vuilwaterriool,doorlatendeleiding,zinker,transportrioolleiding
 /ad4.waterdeel_v.BGTPLUSTYPE,/ad5.watergang_v.greppel, droge sloot,waterloop,waterloop:sloot,waterloop:kanaal,waterloop:rivier,waterloop:gracht,/greppel, droge sloot,waterloop,waterloop:sloot,waterloop:kanaal,waterloop:rivier,waterloop:gracht
 /ad4.put_p.BGTPLUSTYPE,/ad5.waterleidingput_p.niet-bgt:waterleidingput,/niet-bgt:waterleidingput
 /ad4.waterloop_l.x,/ad5.watergang_l.x,/x
@@ -212,3 +208,13 @@ source,target,mapping
 /ad4.installatie_p.BGTPLUSTYPE,/ad5.zonnepaneel_p.niet-bgt:zonnepaneel,/niet-bgt:zonnepaneel
 /ad4.weginrichtingselement_v.TYPESPEC,/ad5.zonnepaneel_v.Zonnefietspad,/Zonnefietspad
 /ad4.bouwdeelGeluidsscherm_tbl.x,/ad5.kunstwerkbouwdeel_tbl.x,/x
+/ad4.elementOevervak_tbl.x,/ad5.oevervakelement_tbl.x,/x
+/ad4.straatmeubilairLichtpunt_p.TYPESPEC,/ad5.actievewegmarkering_p.AM,/AM
+/ad4.vegetatieobject_v.TYPESPEC,/ad5.boomspiegel_v.Boomspiegel,/Boomspiegel
+/ad4.vegetatieobject_v.TYPESPEC,/ad5.groeiplaats_v.Groeiplaatsinrichting,/Groeiplaatsinrichting
+/ad4.straatmeubilair_p.TYPESPEC,/ad5.luidspreker_p.Luidspreker,/Luidspreker
+/ad4.straatmeubilair_p.TYPESPEC,/ad5.rookpaal_p.Peukenpaal,/Peukenpaal
+/ad4.straatmeubilair_p.TYPESPEC,/ad5.wegdekreflector_p.Reflector,/Reflector
+/ad4.faunavoorziening_v.x,/ad5.gebied_faunavoorziening_v.x,/x
+/ad4.ondersteunendWaterdeel_v.BGTPLUSTYPE,/ad5.oever_of_slootkant_v.oever, slootkant,/oever, slootkant
+/ad4.uitleggerPortaal_l.TYPESPEC,/ad5.zweepmast_l.Uitlegger,/Uitlegger
