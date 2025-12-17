@@ -125,7 +125,7 @@ d3.csv(CSV_PATH).then(function(data) {
         .attr("class", "link")
         .attr("d", d3.sankeyLinkHorizontal())
         .style("stroke", d => {
-            const nodeName = graph.nodes[d.target].name;
+            const nodeName = d.target.name;
             const parts = nodeName.split(".");
             return color(parts.length > 1 ? parts[1] : "default");
         })
