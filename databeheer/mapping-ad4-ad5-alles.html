@@ -93,15 +93,26 @@ d3.csv(CSV_PATH).then(function(data) {
         data.flatMap(d => [d.source, d.target])
     ));
 
-    // Mapping data naar node indices
+    // Optionele debug: waarschuwingen voor ongeldige nodes in links
+    data.forEach(d => {
+        let s = nodeNames.indexOf(d.source);
+        let t = nodeNames.indexOf(d.target);
+        if (s < 0 || t < 0) {
+            console.warn("Link verwijst naar onbekende node:", d.source, d.target);
+        }
+    });
+
+    // Mapping data naar node indices, alleen geldige links mee nemen
     const graph = {
         nodes: nodeNames.map(n => ({ name: n })),
-        links: data.map(d => ({
-            source: nodeNames.indexOf(d.source),
-            target: nodeNames.indexOf(d.target),
-            value: +d.value || 1,
-            mapping: d.mapping || ""
-        }))
+        links: data
+            .map(d => ({
+                source: nodeNames.indexOf(d.source),
+                target: nodeNames.indexOf(d.target),
+                value: +d.value || 1,
+                mapping: d.mapping || ""
+            }))
+            .filter(link => link.source >= 0 && link.target >= 0)
     };
 
     sankey(graph);
@@ -114,7 +125,6 @@ d3.csv(CSV_PATH).then(function(data) {
         .attr("class", "link")
         .attr("d", d3.sankeyLinkHorizontal())
         .style("stroke", d => {
-            // Kleur op basis van target node naam (na punt)
             const nodeName = graph.nodes[d.target].name;
             const parts = nodeName.split(".");
             return color(parts.length > 1 ? parts[1] : "default");
