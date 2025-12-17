@@ -89,12 +89,36 @@ var sankey = d3.sankey()
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 d3.csv(CSV_PATH).then(function(data) {
-    // Bouw graph ...
-    // (zelfde als eerder)
+    // Nodes afleiden uit bron en doel
+    const nodeNames = Array.from(new Set(
+        data.flatMap(d => [d.source, d.target])
+    ));
+
+    // Optionele controle van data: warn als source of target ontbreekt in nodeNames
+    data.forEach(d => {
+        let s = nodeNames.indexOf(d.source);
+        let t = nodeNames.indexOf(d.target);
+        if (s < 0 || t < 0) {
+            console.warn("Link verwijst naar onbekende node:", d.source, d.target);
+        }
+    });
+
+    // Graph construeren met nodes array en links met indices
+    const graph = {
+        nodes: nodeNames.map(n => ({ name: n })),
+        links: data
+            .map(d => ({
+                source: nodeNames.indexOf(d.source),
+                target: nodeNames.indexOf(d.target),
+                value: +d.value || 1,
+                mapping: d.mapping || ""
+            }))
+            .filter(link => link.source >= 0 && link.target >= 0)
+    };
 
     sankey(graph);
 
-    // LINKS tekenen op container ipv svg
+    // Links tekenen op container
     container.append("g").selectAll(".link")
         .data(graph.links)
         .enter()
@@ -110,7 +134,7 @@ d3.csv(CSV_PATH).then(function(data) {
         .append("title")
         .text(d => d.mapping);
 
-    // NODES tekenen op container
+    // Nodes tekenen op container
     const node = container.append("g")
         .selectAll(".node")
         .data(graph.nodes)
@@ -137,7 +161,7 @@ d3.csv(CSV_PATH).then(function(data) {
         .style("font-size", "12px")
         .text(d => d.name);
 
-    // Zoom en pan functie: transformatie op container toepassen
+    // Zoom en pan functie: transform op container toepassen
     var zoom = d3.zoom()
         .scaleExtent([0.5, 5])
         .on("zoom", function(event) {
@@ -147,7 +171,7 @@ d3.csv(CSV_PATH).then(function(data) {
     // Zoom event op svg koppelen
     svg.call(zoom);
 
-    // Filter functionaliteit blijft hetzelfde
+    // Filter functionaliteit
     document.getElementById("filterInput").addEventListener("input", function(e) {
         var q = e.target.value.toLowerCase();
         node.style("opacity", d => (d.name || "").toLowerCase().includes(q) ? 1 : 0.15);
