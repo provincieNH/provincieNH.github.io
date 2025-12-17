@@ -80,7 +80,7 @@ var svg = d3.select("#sankey_svg")
     .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
 var sankey = d3.sankey()
-    .nodeWidth(70)          // Brede nodes voor leesbare labels
+    .nodeWidth(70)
     .nodePadding(18)
     .size([width, height]);
 
@@ -125,6 +125,7 @@ d3.csv(CSV_PATH).then(function(data) {
         .attr("class", "link")
         .attr("d", d3.sankeyLinkHorizontal())
         .style("stroke", d => {
+            // d.target is nu een node object
             const nodeName = d.target.name;
             const parts = nodeName.split(".");
             return color(parts.length > 1 ? parts[1] : "default");
@@ -176,8 +177,8 @@ d3.csv(CSV_PATH).then(function(data) {
         var q = e.target.value.toLowerCase();
         node.style("opacity", d => (d.name || "").toLowerCase().includes(q) ? 1 : 0.15);
         svg.selectAll(".link").style("opacity", l =>
-            ((graph.nodes[l.source] && graph.nodes[l.source].name || "").toLowerCase().includes(q)) ||
-            ((graph.nodes[l.target] && graph.nodes[l.target].name || "").toLowerCase().includes(q))
+            ((l.source && l.source.name || "").toLowerCase().includes(q)) ||
+            ((l.target && l.target.name || "").toLowerCase().includes(q))
             ? 0.5 : 0.05
         );
     });

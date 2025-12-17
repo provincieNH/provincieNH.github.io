@@ -23,8 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +372,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765970894822</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+      <option name="closed" value="true" />
+      <created>1765971315545</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1765971315545</updated>
+    </task>
+    <task id="LOCAL-00042" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+      <option name="closed" value="true" />
+      <created>1765971438893</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1765971438893</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
