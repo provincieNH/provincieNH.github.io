@@ -22,7 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12251 #comment layout test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -388,7 +389,39 @@
       <option name="project" value="LOCAL" />
       <updated>1765971438893</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+      <option name="closed" value="true" />
+      <created>1765975016275</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1765975016275</updated>
+    </task>
+    <task id="LOCAL-00044" summary="gd-12251 #comment layout test">
+      <option name="closed" value="true" />
+      <created>1765975272319</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1765975272319</updated>
+    </task>
+    <task id="LOCAL-00045" summary="gd-12251 #comment layout test">
+      <option name="closed" value="true" />
+      <created>1765975412974</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1765975412974</updated>
+    </task>
+    <task id="LOCAL-00046" summary="gd-12251 #comment layout test">
+      <option name="closed" value="true" />
+      <created>1765975515290</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1765975515290</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -403,7 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit" />
     <MESSAGE value="nieuwe html voor wegvak" />
     <MESSAGE value="nieuwe hoogte diagram" />
     <MESSAGE value="nieuwe hoogte diagram verharding_v" />
@@ -428,6 +460,7 @@
     <MESSAGE value="DID-136 #comment terug naar origineel" />
     <MESSAGE value="gd-12251 #comment sankey js toegevoegd." />
     <MESSAGE value="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen" />
-    <option name="LAST_COMMIT_MESSAGE" value="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen" />
+    <MESSAGE value="gd-12251 #comment layout test" />
+    <option name="LAST_COMMIT_MESSAGE" value="gd-12251 #comment layout test" />
   </component>
 </project>
