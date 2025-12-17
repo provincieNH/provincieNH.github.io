@@ -1,4 +1,4 @@
 source,target,value,mapping
-/ad4.adres_tbl.x,/ad5.adres_tbl.x,/x
-/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.aquaduct_p.Aquaducten,/Aquaducten
-/ad4.wegdeel_v.FYSIEKVOORKOMEN,/ad5.asfaltverharding_v.gesloten_verharding_asfalt,/gesloten_verharding_asfalt
+/ad4.adres_tbl.x,/ad5.adres_tbl.x,/x,x
+/ad4.kunstwerk_p.NENBEHEEROBJECT,/ad5.aquaduct_p.Aquaducten,/Aquaducten,x
+/ad4.wegdeel_v.FYSIEKVOORKOMEN,/ad5.asfaltverharding_v.gesloten_verharding_asfalt,/gesloten_verharding_asfalt,x
