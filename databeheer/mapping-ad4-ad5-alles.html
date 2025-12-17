@@ -19,7 +19,7 @@
     #filterbox input { width: 350px; padding: 8px 12px; border-radius: 6px; border: 1px solid #bbb; }
     #chart { padding: 20px; }
     .node rect { cursor: move; fill-opacity: .9; }
-    .node text { pointer-events: none; font-size: 13px; }
+    .node text { pointer-events: none; font-size: 13px; fill: #333; }
     .link { fill: none; stroke-opacity: .3; }
     .link:hover { stroke-opacity: .6; }
 </style>
@@ -66,7 +66,7 @@ var svg = d3.select("#sankey_svg")
     .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
 var sankey = d3.sankey()
-    .nodeWidth(22)
+    .nodeWidth(40)    // vergrootte nodebreedte voor betere tekstweergave
     .nodePadding(18)
     .size([width, height]);
 
@@ -126,10 +126,11 @@ d3.csv(CSV_NAME).then(function(data) {
         .text(d => d.name);
 
     node.append("text")
-        .attr("x", -6)
+        .attr("x", -10)   // tekst staat links buiten de node, ruim zichtbaarder
         .attr("y", d => ((d.y1 || 0) - (d.y0 || 0)) / 2)
         .attr("dy", "0.35em")
         .attr("text-anchor", "end")
+        .style("font-size", "12px")
         .text(d => d.name);
 
     // Zoom functie toepassen op <g> in svg

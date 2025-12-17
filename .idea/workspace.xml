@@ -22,7 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12251 #comment sankey js toegevoegd.">
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -340,7 +341,39 @@
       <option name="project" value="LOCAL" />
       <updated>1765539141215</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+      <option name="closed" value="true" />
+      <created>1765970327425</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1765970327425</updated>
+    </task>
+    <task id="LOCAL-00038" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+      <option name="closed" value="true" />
+      <created>1765970393611</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1765970393611</updated>
+    </task>
+    <task id="LOCAL-00039" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+      <option name="closed" value="true" />
+      <created>1765970470516</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1765970470516</updated>
+    </task>
+    <task id="LOCAL-00040" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+      <option name="closed" value="true" />
+      <created>1765970894822</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1765970894822</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -355,7 +388,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="toevoeging van csv voor verharding" />
     <MESSAGE value="commit" />
     <MESSAGE value="nieuwe html voor wegvak" />
     <MESSAGE value="nieuwe hoogte diagram" />
@@ -380,6 +412,7 @@
     <MESSAGE value="DID-136 #comment Overzicht van htmls gegenereerd" />
     <MESSAGE value="DID-136 #comment terug naar origineel" />
     <MESSAGE value="gd-12251 #comment sankey js toegevoegd." />
-    <option name="LAST_COMMIT_MESSAGE" value="gd-12251 #comment sankey js toegevoegd." />
+    <MESSAGE value="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen" />
+    <option name="LAST_COMMIT_MESSAGE" value="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen" />
   </component>
 </project>
