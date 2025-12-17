@@ -2,31 +2,52 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8" />
+<title>Sankey AD4 → AD5 Mapping</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
     body {
-        margin: 0;
+        margin:0;
         font-family: "Inter", sans-serif;
-        background: #f8f8f8;
+        background:#f8f8f8;
     }
-    #topbar { background: #003b6c; height: 8px; width: 100%; }
-    #header { background: white; padding: 25px 40px; border-bottom: 1px solid #ddd; }
-    #header h1 { margin: 0; font-size: 26px; font-weight: 600; color: #003b6c; }
-    #header p { margin: 4px 0 0; color: #555; }
-    #filterbox { padding: 15px 40px; background: white; border-bottom: 1px solid #e0e0e0; }
-    #filterbox input { width: 350px; padding: 8px 12px; border-radius: 6px; border: 1px solid #bbb; }
-    #chart { padding: 20px; }
-    .node rect { cursor: move; fill-opacity: .9; }
-    .node text { pointer-events: none; font-size: 13px; fill: #333; }
-    .link { fill: none; stroke-opacity: .3; }
-    .link:hover { stroke-opacity: .6; }
+    #topbar { background:#003b6c; height:8px; width:100%; }
+    #header {
+        background:white; padding:25px 40px;
+        border-bottom:1px solid #ddd;
+    }
+    #header h1 { margin:0; font-size:26px; font-weight:600; color:#003b6c; }
+    #header p { margin:4px 0 0; color:#555; }
+    #filterbox { padding:15px 40px; background:white; border-bottom:1px solid #e0e0e0; }
+    #filterbox input {
+        width:350px; padding:8px 12px;
+        border-radius:6px; border:1px solid #bbb;
+    }
+    #chart { padding:20px; }
+
+    .node rect {
+        cursor: move;
+        fill-opacity: 0.9;
+        shape-rendering: crispEdges;
+    }
+    .node text {
+        pointer-events:none;
+        font-size:13px;
+        fill:#333;
+        font-weight: 600;
+    }
+    .link {
+        fill: none;
+        stroke-opacity: 0.3;
+    }
+    .link:hover {
+        stroke-opacity: 0.6;
+    }
 </style>
-
 </head>
-<body>
 
+<body>
 <div id="topbar"></div>
 
 <div id="header">
@@ -42,23 +63,16 @@
     <svg id="sankey_svg"></svg>
 </div>
 
-<!-- D3 V5 -->
 <script src="https://d3js.org/d3.v5.min.js"></script>
-
-<!-- LOKAAL: d3-sankey.min.js -->
 <script src="lib/d3-sankey.min.js"></script>
 
 <script>
-var CSV_NAME = "mapping-ad4-ad5-alles.csv";
-var DIAG_HEIGHT = 1720;
-var DIAG_SORTING = 10;
+var CSV_PATH = "mapping-ad4-ad5-alles.csv";   // Wordt vervangen door python script
+var width = 1600;
+var height = 3440;    // Wordt vervangen door python script
 
-// Afmetingen
-var margin = {top: 20, right: 50, bottom: 20, left: 50};
-var width = 1600 - margin.left - margin.right;
-var height = DIAG_HEIGHT;
+var margin = {top:20, right:50, bottom:20, left:50};
 
-// SVG + groep voor inhoud + zoom
 var svg = d3.select("#sankey_svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -66,18 +80,20 @@ var svg = d3.select("#sankey_svg")
     .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
 var sankey = d3.sankey()
-    .nodeWidth(40)    // vergrootte nodebreedte voor betere tekstweergave
+    .nodeWidth(70)          // Brede nodes voor leesbare labels
     .nodePadding(18)
     .size([width, height]);
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-d3.csv(CSV_NAME).then(function(data) {
+d3.csv(CSV_PATH).then(function(data) {
 
+    // Nodes uit data afleiden
     const nodeNames = Array.from(new Set(
         data.flatMap(d => [d.source, d.target])
     ));
 
+    // Mapping data naar node indices
     const graph = {
         nodes: nodeNames.map(n => ({ name: n })),
         links: data.map(d => ({
@@ -98,8 +114,9 @@ d3.csv(CSV_NAME).then(function(data) {
         .attr("class", "link")
         .attr("d", d3.sankeyLinkHorizontal())
         .style("stroke", d => {
-            const node = (d.target && d.target.name) ? d.target : graph.nodes[d.target] || {};
-            const parts = (node.name || "").split(".");
+            // Kleur op basis van target node naam (na punt)
+            const nodeName = graph.nodes[d.target].name;
+            const parts = nodeName.split(".");
             return color(parts.length > 1 ? parts[1] : "default");
         })
         .style("stroke-width", d => Math.max(1, d.width || d.dy || 1))
@@ -107,7 +124,7 @@ d3.csv(CSV_NAME).then(function(data) {
         .text(d => d.mapping);
 
     // Nodes tekenen
-    var node = svg.append("g")
+    const node = svg.append("g")
         .selectAll(".node")
         .data(graph.nodes)
         .enter()
@@ -119,31 +136,32 @@ d3.csv(CSV_NAME).then(function(data) {
         .attr("height", d => Math.max(4, (d.y1 || 0) - (d.y0 || 0)))
         .attr("width", sankey.nodeWidth())
         .style("fill", d => {
-            const parts = (d.name || "").split(".");
+            const parts = d.name.split(".");
             return color(parts.length > 1 ? parts[1] : "default");
         })
         .append("title")
         .text(d => d.name);
 
+    // Tekst linkse labels buiten de node voor beter leesbaarheid
     node.append("text")
-        .attr("x", -10)   // tekst staat links buiten de node, ruim zichtbaarder
+        .attr("x", -15)
         .attr("y", d => ((d.y1 || 0) - (d.y0 || 0)) / 2)
         .attr("dy", "0.35em")
         .attr("text-anchor", "end")
         .style("font-size", "12px")
         .text(d => d.name);
 
-    // Zoom functie toepassen op <g> in svg
+    // Zoom en pan op svg g groep
     var zoom = d3.zoom()
         .scaleExtent([0.5, 5])
-        .on("zoom", function(event) {
+        .on("zoom", function(event){
             svg.attr("transform", event.transform);
         });
 
     d3.select("#sankey_svg")
         .call(zoom);
 
-    // Filtering
+    // Filter functionaliteit
     document.getElementById("filterInput").addEventListener("input", function(e) {
         var q = e.target.value.toLowerCase();
         node.style("opacity", d => (d.name || "").toLowerCase().includes(q) ? 1 : 0.15);
@@ -154,8 +172,8 @@ d3.csv(CSV_NAME).then(function(data) {
         );
     });
 
-}).catch(error => {
-    console.error("CSV laden mislukt:", error);
+}).catch(err => {
+    console.error("Fout bij laden CSV:", err);
 });
 </script>
 
