@@ -182,7 +182,7 @@ d3.csv(CSV_PATH).then(function(data) {
     var zoom = d3.zoom()
         .scaleExtent([0.5, 4])
         .on("zoom", function(event) {
-            container.attr("transform", event.transform);
+            container.attr("transform", d3.event.transform);
         });
 
     svg.call(zoom).on("dblclick.zoom", null);
