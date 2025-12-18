@@ -19,44 +19,71 @@
     }
     #header h1 { margin:0; font-size:26px; font-weight:600; color:#003b6c; }
     #header p { margin:4px 0 0; color:#555; }
-    #filterbox { padding:15px 40px; background:white; border-bottom:1px solid #e0e0e0; }
-    #filterbox input {
-        width:350px; padding:8px 12px;
-        border-radius:6px; border:1px solid #bbb;
+
+    #filterbox {
+        padding:15px 40px;
+        background:white;
+        border-bottom:1px solid #e0e0e0;
+        display:flex;
+        gap:10px;
+        align-items:center;
     }
+    #filterbox input {
+        width:350px;
+        padding:8px 12px;
+        border-radius:6px;
+        border:1px solid #bbb;
+    }
+    #filterbox button {
+        padding:8px 14px;
+        border-radius:6px;
+        border:1px solid #bbb;
+        background:#f2f2f2;
+        cursor:pointer;
+    }
+    #filterbox button:hover {
+        background:#e6e6e6;
+    }
+
     #chart { padding:20px; }
 
-    .node rect {
+    svg {
         cursor: move;
+        background:white;
+    }
+
+    .node rect {
         fill-opacity: 0.9;
         shape-rendering: crispEdges;
     }
     .node text {
         pointer-events:none;
-        font-size:13px;
+        font-size:12px;
         fill:#333;
-        font-weight: 600;
+        font-weight:600;
     }
     .link {
-        fill: none;
-        stroke-opacity: 0.3;
+        fill:none;
+        stroke-opacity:0.3;
     }
     .link:hover {
-        stroke-opacity: 0.6;
+        stroke-opacity:0.6;
     }
 </style>
 </head>
 
 <body>
+
 <div id="topbar"></div>
 
 <div id="header">
-    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) - Volledige Mapping v2.1</h1>
-    <p>Interactieve Sankey-weergave met filtering, zoom en panning</p>
+    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR)</h1>
+    <p>Interactieve Sankey-weergave met filter, zoom en panning</p>
 </div>
 
 <div id="filterbox">
     <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
+    <button id="resetZoom">Reset zoom</button>
 </div>
 
 <div id="chart">
@@ -67,9 +94,9 @@
 <script src="lib/d3-sankey.min.js"></script>
 
 <script>
-var CSV_PATH = "mapping-ad4-ad5-alles.csv";   // Wordt vervangen door python script
+var CSV_PATH = "mapping-ad4-ad5-alles.csv";
 var width = 1600;
-var height = 7190;    // Wordt vervangen door python script
+var height = 7190;
 
 var margin = {top:20, right:50, bottom:20, left:200};
 
@@ -77,114 +104,143 @@ var svg = d3.select("#sankey_svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom);
 
-// Maak aparte containergroep voor het diagram
-var container = svg.append("g")
+// vaste marge-container
+var outer = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// zoombare container
+var container = outer.append("g");
 
 var sankey = d3.sankey()
     .nodeWidth(70)
     .nodePadding(18)
-    .size([width, height]);
+    .extent([[0, 0], [width, height]]);
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 d3.csv(CSV_PATH).then(function(data) {
-    // Nodes afleiden uit bron en doel
+
     const nodeNames = Array.from(new Set(
         data.flatMap(d => [d.source, d.target])
     ));
 
-    // Optionele controle van data: warn als source of target ontbreekt in nodeNames
-    data.forEach(d => {
-        let s = nodeNames.indexOf(d.source);
-        let t = nodeNames.indexOf(d.target);
-        if (s < 0 || t < 0) {
-            console.warn("Link verwijst naar onbekende node:", d.source, d.target);
-        }
-    });
-
-    // Graph construeren met nodes array en links met indices
     const graph = {
         nodes: nodeNames.map(n => ({ name: n })),
-        links: data
-            .map(d => ({
-                source: nodeNames.indexOf(d.source),
-                target: nodeNames.indexOf(d.target),
-                value: +d.value || 1,
-                mapping: d.mapping || ""
-            }))
-            .filter(link => link.source >= 0 && link.target >= 0)
+        links: data.map(d => ({
+            source: nodeNames.indexOf(d.source),
+            target: nodeNames.indexOf(d.target),
+            value: +d.value || 1,
+            mapping: d.mapping || ""
+        })).filter(d => d.source >= 0 && d.target >= 0)
     };
 
     sankey(graph);
 
-    // Links tekenen op container
-    container.append("g").selectAll(".link")
+    // links
+    container.append("g")
+        .selectAll(".link")
         .data(graph.links)
         .enter()
         .append("path")
         .attr("class", "link")
         .attr("d", d3.sankeyLinkHorizontal())
+        .style("stroke-width", d => Math.max(1, d.width))
         .style("stroke", d => {
-            const nodeName = d.target.name;
-            const parts = nodeName.split(".");
-            return color(parts.length > 1 ? parts[1] : "default");
+            const p = d.target.name.split(".");
+            return color(p[1] || "default");
         })
-        .style("stroke-width", d => Math.max(1, d.width || d.dy || 1))
         .append("title")
         .text(d => d.mapping);
 
-    // Nodes tekenen op container
-    const node = container.append("g")
+    // nodes
+    var node = container.append("g")
         .selectAll(".node")
         .data(graph.nodes)
         .enter()
         .append("g")
         .attr("class", "node")
-        .attr("transform", d => "translate(" + (d.x0 || 0) + "," + (d.y0 || 0) + ")");
+        .attr("transform", d => "translate(" + d.x0 + "," + d.y0 + ")");
 
     node.append("rect")
-        .attr("height", d => Math.max(4, (d.y1 || 0) - (d.y0 || 0)))
+        .attr("height", d => d.y1 - d.y0)
         .attr("width", sankey.nodeWidth())
         .style("fill", d => {
-            const parts = d.name.split(".");
-            return color(parts.length > 1 ? parts[1] : "default");
+            const p = d.name.split(".");
+            return color(p[1] || "default");
         })
         .append("title")
         .text(d => d.name);
 
     node.append("text")
         .attr("x", -15)
-        .attr("y", d => ((d.y1 || 0) - (d.y0 || 0)) / 2)
+        .attr("y", d => (d.y1 - d.y0) / 2)
         .attr("dy", "0.35em")
         .attr("text-anchor", "end")
-        .style("font-size", "12px")
         .text(d => d.name);
 
-    // Zoom en pan functie: transform op container toepassen
+    // zoom & pan
     var zoom = d3.zoom()
-        .scaleExtent([0.5, 5])
+        .scaleExtent([0.5, 4])
         .on("zoom", function(event) {
             container.attr("transform", event.transform);
         });
 
-    // Zoom event op svg koppelen
-    svg.call(zoom);
+    svg.call(zoom).on("dblclick.zoom", null);
 
-    // Filter functionaliteit
-    document.getElementById("filterInput").addEventListener("input", function(e) {
+    // reset zoom
+    document.getElementById("resetZoom")
+        .addEventListener("click", function() {
+            svg.transition().duration(700)
+               .call(zoom.transform, d3.zoomIdentity);
+        });
+
+    // filter + autozoom
+    document.getElementById("filterInput")
+        .addEventListener("input", function(e) {
+
         var q = e.target.value.toLowerCase();
-        node.style("opacity", d => (d.name || "").toLowerCase().includes(q) ? 1 : 0.15);
+
+        node.style("opacity", d =>
+            d.name.toLowerCase().includes(q) ? 1 : 0.15
+        );
+
         container.selectAll(".link").style("opacity", l =>
-            ((l.source && l.source.name || "").toLowerCase().includes(q)) ||
-            ((l.target && l.target.name || "").toLowerCase().includes(q))
-            ? 0.5 : 0.05
+            l.source.name.toLowerCase().includes(q) ||
+            l.target.name.toLowerCase().includes(q)
+                ? 0.5 : 0.05
+        );
+
+        if (q.length === 0) return;
+
+        var visible = graph.nodes.filter(d =>
+            d.name.toLowerCase().includes(q)
+        );
+
+        if (!visible.length) return;
+
+        var minX = d3.min(visible, d => d.x0);
+        var minY = d3.min(visible, d => d.y0);
+        var maxX = d3.max(visible, d => d.x1);
+        var maxY = d3.max(visible, d => d.y1);
+
+        var scale = Math.min(
+            width / (maxX - minX + 120),
+            height / (maxY - minY + 120),
+            4
+        );
+
+        svg.transition().duration(600).call(
+            zoom.transform,
+            d3.zoomIdentity
+              .translate(
+                  (width - scale * (minX + maxX)) / 2,
+                  (height - scale * (minY + maxY)) / 2
+              )
+              .scale(scale)
         );
     });
 
-}).catch(err => {
-    console.error("Fout bij laden CSV:", err);
-});
+}).catch(err => console.error(err));
 </script>
 
 </body>
