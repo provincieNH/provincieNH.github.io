@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="utf-8" />
-<title>Sankey AD4 → AD5 Mapping</title>
+<meta charset="utf-8"/>
+<title>Sankey AD4 → AD5</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin:0;
-    font-family: "Inter", sans-serif;
+    font-family:"Inter",sans-serif;
     background:#f8f8f8;
 }
-#topbar { background:#003b6c; height:8px; width:100%; }
+
+#topbar { background:#003b6c; height:8px; }
 
 #header {
-    background:white; padding:25px 40px;
+    background:white;
+    padding:25px 40px;
     border-bottom:1px solid #ddd;
 }
-#header h1 { margin:0; font-size:26px; font-weight:600; color:#003b6c; }
-#header p { margin:4px 0 0; color:#555; }
+#header h1 {
+    margin:0;
+    font-size:26px;
+    font-weight:600;
+    color:#003b6c;
+}
+#header p {
+    margin:4px 0 0;
+    color:#555;
+}
 
 #filterbox {
     padding:15px 40px;
@@ -69,16 +79,31 @@ body {
 
 svg { cursor:move; background:white; }
 
-.node rect { fill-opacity:0.9; shape-rendering:crispEdges; }
-.node text { pointer-events:none; font-size:12px; fill:#333; font-weight:600; }
+.node rect {
+    fill-opacity:0.9;
+    shape-rendering:crispEdges;
+}
+.node text {
+    pointer-events:none;
+    font-size:12px;
+    fill:#333;
+    font-weight:600;
+}
 
-.link { fill:none; stroke-opacity:0.35; }
+.link {
+    fill:none;
+    stroke-opacity:0.35;
+}
 
 @media print {
-    @page { size: landscape; margin:10mm; }
+    @page { size:landscape; margin:10mm; }
     body * { visibility:hidden; }
     #chart, #chart * { visibility:visible; }
-    #chart { position:absolute; left:0; top:0; width:100%; }
+    #chart {
+        position:absolute;
+        left:0; top:0;
+        width:100%;
+    }
     #filterbox button, #tabs { display:none; }
     svg { width:100%!important; height:auto!important; }
 }
@@ -90,13 +115,12 @@ svg { cursor:move; background:white; }
 <div id="topbar"></div>
 
 <div id="header">
-    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – gesorteerd op AD5-object – gesorteerd overzicht</h1>
-    <p>Sankey-weergave met clustering en kleur per assetgroep</p>
+    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – gesorteerd op AD5-object</h1>
+    <p>Gesorteerd overzicht met clustering en kleurschakering per assetgroep</p>
 </div>
 
 <div id="filterbox">
-    <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
-    <button id="resetZoom">Reset zoom</button>
+    <input id="filterInput" placeholder="Zoek in AD4 of AD5…"/>
     <button onclick="window.print()">Exporteer als PDF</button>
 </div>
 
@@ -120,11 +144,36 @@ svg { cursor:move; background:white; }
 <script>
 var width = 1600;
 var height = 7430;
-var margin = {top:20, right:50, bottom:20, left:200};
+var margin = {top:20, right:70, bottom:20, left:200};
 
-var assetColor = d3.scaleOrdinal(d3.schemeTableau10);
+/* ================= Assetgroep kleuren ================= */
 
-/* tabs */
+var assetColorMap = {
+    "Bodem": "#8B5A2B",
+    "Groen": "#2E8B57",
+    "Wegkantsystemen": "#7A3EB1",
+    "OVL/VRI": "#F28C28",
+    "Integraal": "#E377C2",
+    "Wegen": "#7F7F7F",
+    "Vaarwegen": "#1F77B4",
+    "Kunstwerken": "#D62728",
+    "Onbekend": "#BBBBBB"
+};
+
+function assetColor(assetgroep) {
+    return assetColorMap[assetgroep] || assetColorMap["Onbekend"];
+}
+
+function shadeColor(baseColor, factor) {
+    const c = d3.color(baseColor);
+    if (!c) return baseColor;
+    return factor >= 0
+        ? c.brighter(1 + factor)
+        : c.darker(1 - factor);
+}
+
+/* ================= Tabs ================= */
+
 document.querySelectorAll(".tabbtn").forEach(btn => {
     btn.addEventListener("click", () => {
         document.querySelectorAll(".tabbtn").forEach(b => b.classList.remove("active"));
@@ -134,8 +183,9 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
     });
 });
 
-/* generieke sankey */
-function drawSankey(svgId, csvPath) {
+/* ================= Sankey ================= */
+
+function drawSankey(svgId, csvPath, labelSide) {
 
     var svg = d3.select(svgId)
         .attr("width", width + margin.left + margin.right)
@@ -151,19 +201,11 @@ function drawSankey(svgId, csvPath) {
     var sankey = d3.sankey()
         .nodeWidth(70)
         .nodePadding(18)
-        .extent([[0, 0], [width, height]]);
-
-    var zoom = d3.zoom()
-        .scaleExtent([0.5, 4])
-        .on("zoom", function() {
-            container.attr("transform", d3.event.transform);
-        });
-
-    svg.call(zoom).on("dblclick.zoom", null);
+        .extent([[0,0],[width,height]]);
 
     d3.csv(csvPath).then(function(data) {
 
-        /* nodes met assetgroep */
+        /* nodes + assetgroep */
         const nodeMap = {};
         data.forEach(d => {
             if (!nodeMap[d.source]) nodeMap[d.source] = { name:d.source, assetgroep:d.assetgroep };
@@ -176,7 +218,7 @@ function drawSankey(svgId, csvPath) {
                 source:d.source,
                 target:d.target,
                 value:+d.value || 1,
-                mapping:d.mapping || ""
+                mapping:d.mapping
             }))
         };
 
@@ -185,32 +227,53 @@ function drawSankey(svgId, csvPath) {
             l.target = graph.nodes.findIndex(n => n.name === l.target);
         });
 
-        /* sorteer op assetgroep */
-        graph.nodes.sort((a,b)=> {
-            if (a.assetgroep === b.assetgroep) return a.name.localeCompare(b.name);
-            return (a.assetgroep||"").localeCompare(b.assetgroep||"");
+        /* sortering: assetgroep → asset */
+        graph.nodes.sort((a,b)=>{
+            if (a.assetgroep !== b.assetgroep) {
+                return (a.assetgroep||"").localeCompare(b.assetgroep||"","nl");
+            }
+            return a.name.localeCompare(b.name,"nl");
+        });
+
+        /* tint‑index per assetgroep */
+        const byGroup = {};
+        graph.nodes.forEach(n=>{
+            if(!byGroup[n.assetgroep]) byGroup[n.assetgroep]=[];
+            byGroup[n.assetgroep].push(n);
+        });
+
+        Object.values(byGroup).forEach(nodes=>{
+            const cnt = nodes.length;
+            nodes.forEach((n,i)=>{
+                n.shadeFactor = cnt>1 ? (i/(cnt-1)-0.5)*0.8 : 0;
+            });
         });
 
         sankey(graph);
 
-        /* assetgroep separators */
-        let last = null;
-        graph.nodes.forEach(n => {
-            if (n.assetgroep !== last) {
+        /* assetgroep labels */
+        let last=null;
+        graph.nodes.forEach(n=>{
+            if(n.assetgroep!==last){
+                const isLeft = labelSide==="left";
+                const y=n.y0;
+
                 container.append("line")
-                    .attr("x1",-180).attr("x2",width)
-                    .attr("y1",n.y0).attr("y2",n.y0)
+                    .attr("x1",isLeft?-190:0)
+                    .attr("x2",isLeft?width:width+190)
+                    .attr("y1",y).attr("y2",y)
                     .style("stroke","#ccc")
                     .style("stroke-dasharray","3,3");
 
                 container.append("text")
-                    .attr("x",-185).attr("y",n.y0+12)
-                    .attr("text-anchor","end")
+                    .attr("x",isLeft?-195:width+195)
+                    .attr("y",y+12)
+                    .attr("text-anchor",isLeft?"end":"start")
                     .style("font-weight","600")
-                    .style("fill","#003b6c")
-                    .text(n.assetgroep || "Onbekend");
+                    .style("fill",assetColor(n.assetgroep))
+                    .text(n.assetgroep||"Onbekend");
 
-                last = n.assetgroep;
+                last=n.assetgroep;
             }
         });
 
@@ -221,8 +284,8 @@ function drawSankey(svgId, csvPath) {
             .enter().append("path")
             .attr("class","link")
             .attr("d",d3.sankeyLinkHorizontal())
-            .style("stroke-width", d=>Math.max(1,d.width))
-            .style("stroke", d=>assetColor(graph.nodes[d.target.index].assetgroep));
+            .style("stroke-width",d=>Math.max(1,d.width))
+            .style("stroke",d=>assetColor(graph.nodes[d.target.index].assetgroep));
 
         /* nodes */
         var node = container.append("g")
@@ -230,25 +293,26 @@ function drawSankey(svgId, csvPath) {
             .data(graph.nodes)
             .enter().append("g")
             .attr("class","node")
-            .attr("transform", d=>"translate("+d.x0+","+d.y0+")");
+            .attr("transform",d=>"translate("+d.x0+","+d.y0+")");
 
         node.append("rect")
-            .attr("height", d=>d.y1-d.y0)
-            .attr("width", sankey.nodeWidth())
-            .style("fill", d=>assetColor(d.assetgroep));
+            .attr("height",d=>d.y1-d.y0)
+            .attr("width",sankey.nodeWidth())
+            .style("fill",d=>shadeColor(assetColor(d.assetgroep),d.shadeFactor));
 
         node.append("text")
             .attr("x",-15)
-            .attr("y", d=>(d.y1-d.y0)/2)
+            .attr("y",d=>(d.y1-d.y0)/2)
             .attr("dy","0.35em")
             .attr("text-anchor","end")
             .text(d=>d.name);
     });
 }
 
-/* CSV’s */
-drawSankey("#sankey_ad5","mapping-ad4-ad5-sort-ad5.csv");
-drawSankey("#sankey_ad4","mapping-ad4-ad5-sort-ad4.csv");
+/* ================= Aanroepen ================= */
+
+drawSankey("#sankey_ad5","mapping-ad4-ad5-sort-ad5.csv","right");
+drawSankey("#sankey_ad4","mapping-ad4-ad5-sort-ad4.csv","left");
 </script>
 
 </body>
