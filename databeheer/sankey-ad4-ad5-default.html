@@ -2,44 +2,35 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8"/>
+
 <title>Sankey AD4 → AD5</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="lib/d3-sankey.min.js"></script>
 
 <style>
-body { margin:0; font-family:"Inter",sans-serif; background:#f8f8f8; }
-
+body { margin:0; font-family:Arial, sans-serif; background:#f8f8f8; }
 #topbar { height:8px; background:#003b6c; }
 
 #header {
     background:white;
-    padding:25px 40px;
+    padding:20px 40px;
     border-bottom:1px solid #ddd;
 }
-#header h1 {
-    margin:0;
-    font-size:26px;
-    font-weight:600;
-    color:#003b6c;
-}
-#header p { margin:4px 0 0; color:#555; }
-
 #tabs {
-    padding:10px 40px;
     background:white;
-    border-bottom:1px solid #ddd;
+    padding:10px 40px;
     display:flex;
-    gap:8px;
+    gap:10px;
+    border-bottom:1px solid #ddd;
 }
-
-.tabbtn {
+button {
     padding:6px 12px;
-    border-radius:4px;
     border:1px solid #bbb;
     background:#f2f2f2;
     cursor:pointer;
 }
-.tabbtn.active {
+button.active {
     background:#003b6c;
     color:white;
     border-color:#003b6c;
@@ -47,32 +38,17 @@ body { margin:0; font-family:"Inter",sans-serif; background:#f8f8f8; }
 
 #chart { padding:20px; }
 
-.tabcontent { display:none; }
-.tabcontent.active { display:block; }
-
-svg { background:white; cursor:move; }
+svg { background:white; }
 
 .node rect { fill-opacity:0.9; }
 .node text {
-    pointer-events:none;
     font-size:12px;
     font-weight:600;
-    fill:#333;
+    pointer-events:none;
 }
-
-.link { fill:none; stroke-opacity:0.35; }
-
-@media print {
-    @page { size:landscape; margin:10mm; }
-    body * { visibility:hidden; }
-    #chart, #chart * { visibility:visible; }
-    #chart {
-        position:absolute;
-        left:0; top:0;
-        width:100%;
-    }
-    #tabs { display:none; }
-    svg { width:100%!important; height:auto!important; }
+.link {
+    fill:none;
+    stroke-opacity:0.35;
 }
 </style>
 </head>
@@ -80,230 +56,143 @@ svg { background:white; cursor:move; }
 <body>
 
 <div id="topbar"></div>
-
 <div id="header">
-    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – standaard</h1>
-    <p>Definitief overzicht — gesorteerd per assetgroep en object</p>
+    <h2>Areaaldata 4 → Areaaldata 5</h2>
 </div>
 
 <div id="tabs">
-    <button class="tabbtn active" data-tab="tab-ad5">Gesorteerd op AD5</button>
-    <button class="tabbtn" data-tab="tab-ad4">Gesorteerd op AD4</button>
+    <button class="active" data-tab="ad5">AD5 – per assetgroep</button>
+    <button data-tab="ad4">AD4 – per assetgroep</button>
+    <button data-tab="orig">Origineel (CSV‑volgorde)</button>
 </div>
 
 <div id="chart">
-    <div id="tab-ad5" class="tabcontent active">
-        <svg id="sankey_ad5"></svg>
-    </div>
-    <div id="tab-ad4" class="tabcontent">
-        <svg id="sankey_ad4"></svg>
-    </div>
+    <svg id="svg_ad5"></svg>
+    <svg id="svg_ad4" style="display:none"></svg>
+    <svg id="svg_orig" style="display:none"></svg>
 </div>
 
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="lib/d3-sankey.min.js"></script>
-
 <script>
-var width = 1800;
-var height = 7430;
-var margin = {top:20, right:260, bottom:20, left:260};
+const width = 1800;
+const height = 7430;
+const margin = {top:20, right:260, bottom:20, left:260};
 
-/* ───────── Assetgroep kleuren (AD5) ───────── */
-
-const assetColorMap = {
-    "Bodem": "#8B5A2B",
-    "Groen": "#2E8B57",
-    "Wegkantsystemen": "#7A3EB1",
-    "OVL/VRI": "#F28C28",
-    "Integraal": "#E377C2",
-    "Wegen": "#7F7F7F",
-    "Vaarwegen": "#1F77B4",
-    "Kunstwerken": "#D62728"
+const assetColors = {
+    "Bodem":"#8B5A2B",
+    "Groen":"#2E8B57",
+    "Wegkantsystemen":"#7A3EB1",
+    "OVL/VRI":"#F28C28",
+    "Integraal":"#E377C2",
+    "Wegen":"#7F7F7F",
+    "Vaarwegen":"#1F77B4",
+    "Kunstwerken":"#D62728"
 };
 
-function assetColor(g) {
-    return assetColorMap[g] || "#BBBBBB";
-}
-
-function shadeColor(base, factor) {
-    const c = d3.color(base);
-    if (!c) return base;
-    return factor >= 0 ? c.brighter(1 + factor) : c.darker(1 - factor);
-}
-
-/* ───────── Tabs ───────── */
-
-document.querySelectorAll(".tabbtn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        document.querySelectorAll(".tabbtn").forEach(b => b.classList.remove("active"));
-        document.querySelectorAll(".tabcontent").forEach(c => c.classList.remove("active"));
-        btn.classList.add("active");
-        document.getElementById(btn.dataset.tab).classList.add("active");
-    });
-});
-
-/* ───────── Sankey ───────── */
-
-function drawSankey(svgId, csvPath) {
+function draw(svgId, csv, mode) {
 
     const svg = d3.select(svgId)
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom);
-
+        .attr("width",width + margin.left + margin.right)
+        .attr("height",height + margin.top + margin.bottom);
     svg.selectAll("*").remove();
 
-    const container = svg.append("g")
-        .attr("transform","translate("+margin.left+","+margin.top+")");
+    const g = svg.append("g")
+        .attr("transform",`translate(${margin.left},${margin.top})`);
 
-    const sankey = d3.sankey()
-        .nodeWidth(70)
-        .nodePadding(18)
-        .nodeAlign(d3.sankeyLeft)
-        .extent([[0,0],[width,height]]);
+    d3.csv(csv).then(data => {
 
-    d3.csv(csvPath).then(data => {
-
-        /* -------- nodes -------- */
-
+        const nodes = [];
         const nodeMap = {};
 
         data.forEach(d => {
-
-            // AD4 node: geen assetgroep
             if (!nodeMap[d.source]) {
-                nodeMap[d.source] = {
-                    name: d.source,
-                    level: 0,
-                    assetgroep: null
-                };
+                nodeMap[d.source] = {name:d.source, x:0, level:0};
             }
-
-            // AD5 node: assetgroep komt hier
             if (!nodeMap[d.target]) {
                 nodeMap[d.target] = {
-                    name: d.target,
-                    level: 1,
-                    assetgroep: d.assetgroep || "Onbekend"
+                    name:d.target,
+                    x:1,
+                    level:1,
+                    assetgroep: mode==="orig" ? null : d.assetgroep
                 };
             }
         });
 
-        const nodes = Object.values(nodeMap);
-
-        /* -------- links -------- */
+        Object.values(nodeMap).forEach(n => nodes.push(n));
 
         const links = data.map(d => ({
-            source: d.source,
-            target: d.target,
-            value: +d.value || 1,
-            mapping: d.mapping
+            source: nodes.findIndex(n=>n.name===d.source),
+            target: nodes.findIndex(n=>n.name===d.target),
+            value:+d.value || 1
         }));
 
-        links.forEach(l => {
-            l.source = nodes.findIndex(n => n.name === l.source);
-            l.target = nodes.findIndex(n => n.name === l.target);
-        });
-
-        /* -------- sortering -------- */
-
-        nodes.sort((a,b)=>{
-            if (a.level !== b.level) return a.level - b.level;
-
-            if (a.level === 1 && a.assetgroep !== b.assetgroep) {
-                return (a.assetgroep||"").localeCompare(b.assetgroep||"","nl");
-            }
-
-            return a.name.localeCompare(b.name,"nl");
-        });
-
-        /* -------- kleurtinten per AD5 assetgroep -------- */
-
-        const byGroup = {};
-        nodes.filter(n => n.level === 1).forEach(n => {
-            if (!byGroup[n.assetgroep]) byGroup[n.assetgroep] = [];
-            byGroup[n.assetgroep].push(n);
-        });
-
-        Object.values(byGroup).forEach(group => {
-            group.forEach((n,i) => {
-                n.shade = group.length > 1
-                    ? (i/(group.length-1)-0.5)*0.8
-                    : 0;
+        /* sortering */
+        if (mode !== "orig") {
+            nodes.sort((a,b)=>{
+                if (a.x !== b.x) return a.x - b.x;
+                if (mode==="ad5" && a.level===1 && a.assetgroep!==b.assetgroep)
+                    return (a.assetgroep||"").localeCompare(b.assetgroep||"","nl");
+                return a.name.localeCompare(b.name,"nl");
             });
-        });
+        }
 
-        sankey({nodes, links});
+        const sankey = d3.sankey()
+            .nodeWidth(70)
+            .nodePadding(18)
+            .nodeAlign(d=>d.x)
+            .extent([[0,0],[width,height]]);
 
-        /* -------- assetgroep labels (alleen AD5) -------- */
+        sankey({nodes,links});
 
-        let last = null;
-        nodes.filter(n => n.level === 1).forEach(n => {
-            if (n.assetgroep !== last) {
-
-                const y = n.y0;
-
-                container.append("line")
-                    .attr("x1", 0)
-                    .attr("x2", width + 220)
-                    .attr("y1", y)
-                    .attr("y2", y)
-                    .style("stroke","#ccc")
-                    .style("stroke-dasharray","3,3");
-
-                container.append("text")
-                    .attr("x", width + 225)
-                    .attr("y", y + 12)
-                    .attr("text-anchor","start")
-                    .style("font-weight","600")
-                    .style("fill", assetColor(n.assetgroep))
-                    .text(n.assetgroep);
-
-                last = n.assetgroep;
-            }
-        });
-
-        /* -------- links tekenen -------- */
-
-        container.append("g")
-            .selectAll(".link")
+        /* links */
+        g.append("g").selectAll(".link")
             .data(links)
             .enter().append("path")
             .attr("class","link")
-            .attr("d", d3.sankeyLinkHorizontal())
-            .style("stroke-width", d => Math.max(1,d.width))
-            .style("stroke", d => assetColor(nodes[d.target.index].assetgroep));
+            .attr("d",d3.sankeyLinkHorizontal())
+            .style("stroke-width",d=>Math.max(1,d.width))
+            .style("stroke",d=>{
+                const ag = nodes[d.target.index].assetgroep;
+                return assetColors[ag] || "#999";
+            });
 
-        /* -------- nodes tekenen -------- */
-
-        const node = container.append("g")
-            .selectAll(".node")
+        /* nodes */
+        const node = g.append("g").selectAll(".node")
             .data(nodes)
             .enter().append("g")
             .attr("class","node")
-            .attr("transform", d => "translate("+d.x0+","+d.y0+")");
+            .attr("transform",d=>`translate(${d.x0},${d.y0})`);
 
         node.append("rect")
-            .attr("height", d => d.y1 - d.y0)
-            .attr("width", sankey.nodeWidth())
-            .style("fill", d => {
-                return d.level === 1
-                    ? shadeColor(assetColor(d.assetgroep), d.shade || 0)
-                    : "#E0E0E0";   // AD4 neutraal
+            .attr("width",70)
+            .attr("height",d=>d.y1-d.y0)
+            .style("fill",d=>{
+                if (d.level===0) return "#e0e0e0";
+                return assetColors[d.assetgroep] || "#bbb";
             });
 
         node.append("text")
-            .attr("x", -12)
-            .attr("y", d => (d.y1 - d.y0) / 2)
+            .attr("x",-10)
+            .attr("y",d=>(d.y1-d.y0)/2)
             .attr("dy","0.35em")
             .attr("text-anchor","end")
-            .text(d => d.name);
+            .text(d=>d.name);
     });
 }
 
-/* ───────── Aanroep ───────── */
+/* tabs */
+document.querySelectorAll("button").forEach(b=>{
+    b.onclick=()=>{
+        document.querySelectorAll("button").forEach(x=>x.classList.remove("active"));
+        document.querySelectorAll("svg").forEach(s=>s.style.display="none");
+        b.classList.add("active");
+        document.getElementById("svg_"+b.dataset.tab).style.display="block";
+    };
+});
 
-drawSankey("#sankey_ad5","mapping-ad4-ad5-sort-ad5.csv");
-drawSankey("#sankey_ad4","mapping-ad4-ad5-sort-ad4.csv");
+/* init */
+draw("#svg_ad5","mapping-ad4-ad5-sort-ad5.csv","ad5");
+draw("#svg_ad4","mapping-ad4-ad5-sort-ad4.csv","ad4");
+draw("#svg_orig","mapping-ad4-ad5-sort-ad5.csv","orig");
 </script>
 
 </body>
