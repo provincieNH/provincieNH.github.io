@@ -72,23 +72,38 @@
 
     /* ===== PDF / PRINT EXPORT (toegevoegd) ===== */
     @media print {
-        body * {
-            visibility: hidden;
-        }
-        #chart,
-        #chart * {
-            visibility: visible;
-        }
-        #chart {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-        }
-        #filterbox button {
-            display: none;
-        }
+
+    @page {
+        size: landscape;
+        margin: 10mm;
     }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #chart,
+    #chart * {
+        visibility: visible;
+    }
+
+    #chart {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: visible;
+    }
+
+    svg {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    #filterbox button {
+        display: none;
+    }
+}
 </style>
 </head>
 
