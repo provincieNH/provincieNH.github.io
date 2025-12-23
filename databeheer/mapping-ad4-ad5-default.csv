@@ -1,4 +1,4 @@
-source,target,value,mapping
+source,target,value,mapping,assetgroep
 ad4.buis_l (10618),ad5.aansluitleiding_l (18),1,TYPESPEC_aansluitleiding,Bodem
 ad4.leidingelement_p (26119),ad5.aansluitput_p (3),1,TYPESPEC_Zandvang,Bodem
 ad4.leidingelement_p (26119),ad5.aardelektrode_p (0),1,TYPESPEC_aarding,Bodem

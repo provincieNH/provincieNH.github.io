@@ -1,4 +1,4 @@
-source,target,value,mapping
+source,target,value,mapping,assetgroep
 ad4.adres_tbl (60),ad5.adres_tbl (60),1,x_x,Integraal
 ad4.bak_p (994),ad5.afvalbak_p (963),1,BGTPLUSTYPE_niet-bgt_afvalbak_niet-bgt_ afval apartplaats,Wegkantsystemen
 ad4.bak_p (994),ad5.opslagbak_p (31),1,BGTPLUSTYPE_niet-bgt_zand- _ zoutbak,Wegkantsystemen
