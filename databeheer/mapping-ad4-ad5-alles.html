@@ -69,41 +69,6 @@
     .link:hover {
         stroke-opacity:0.6;
     }
-
-    /* ===== PDF / PRINT EXPORT (toegevoegd) ===== */
-    @media print {
-
-    @page {
-        size: landscape;
-        margin: 10mm;
-    }
-
-    body * {
-        visibility: hidden;
-    }
-
-    #chart,
-    #chart * {
-        visibility: visible;
-    }
-
-    #chart {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        overflow: visible;
-    }
-
-    svg {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    #filterbox button {
-        display: none;
-    }
-}
 </style>
 </head>
 
@@ -112,16 +77,13 @@
 <div id="topbar"></div>
 
 <div id="header">
-    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) volledige mapping v0.92 - bronmappingtabel 18/12/25</h1>
+    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) volledige mapping v0.91 - bronmappingtabel 18/12/25</h1>
     <p>Interactieve Sankey-weergave met filter, zoom en panning</p>
 </div>
 
 <div id="filterbox">
     <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
     <button id="resetZoom">Reset zoom</button>
-
-    <!-- PDF export knop (toegevoegd) -->
-    <button onclick="exportPDF()">Exporteer als PDF</button>
 </div>
 
 <div id="chart">
@@ -130,13 +92,6 @@
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="lib/d3-sankey.min.js"></script>
-
-<!-- PDF export functie (toegevoegd) -->
-<script>
-function exportPDF() {
-    window.print();
-}
-</script>
 
 <script>
 var CSV_PATH = "mapping-ad4-ad5-alles.csv";
