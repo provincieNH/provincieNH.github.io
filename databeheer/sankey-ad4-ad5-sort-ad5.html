@@ -113,7 +113,7 @@
 
 <div id="header">
     <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – gesorteerd op AD5-object volledige mapping</h1>
-    <p>Interactieve Sankey-weergave met filter, zoom en panning</p>
+    <p>Interactieve Sankey-weergave – gesorteerd overzicht</p>
 </div>
 
 <div id="filterbox">
@@ -123,18 +123,13 @@
 </div>
 
 <div id="tabs">
-    <button class="tabbtn active" data-tab="tab-default">Standaard</button>
-    <button class="tabbtn" data-tab="tab-ad5">Op AD5</button>
-    <button class="tabbtn" data-tab="tab-ad4">Op AD4</button>
+    <button class="tabbtn active" data-tab="tab-ad5">Gesorteerd op AD5</button>
+    <button class="tabbtn" data-tab="tab-ad4">Gesorteerd op AD4</button>
 </div>
 
 <div id="chart">
 
-    <div id="tab-default" class="tabcontent active">
-        <svg id="sankey_default"></svg>
-    </div>
-
-    <div id="tab-ad5" class="tabcontent">
+    <div id="tab-ad5" class="tabcontent active">
         <svg id="sankey_ad5"></svg>
     </div>
 
@@ -153,7 +148,7 @@ var height = 7430;
 var margin = {top:20, right:50, bottom:20, left:200};
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-/* tabs */
+/* tab switching */
 document.querySelectorAll(".tabbtn").forEach(btn => {
     btn.addEventListener("click", () => {
         document.querySelectorAll(".tabbtn").forEach(b => b.classList.remove("active"));
@@ -163,7 +158,7 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
     });
 });
 
-/* algemene sankey functie */
+/* generieke sankey builder */
 function drawSankey(svgId, csvPath) {
 
     var svg = d3.select(svgId)
@@ -246,8 +241,7 @@ function drawSankey(svgId, csvPath) {
     });
 }
 
-/* 👉 CSV paden (worden vanuit Python ingevuld) */
-drawSankey("#sankey_default","mapping-ad4-ad5-default.csv");
+/* CSV’s */
 drawSankey("#sankey_ad5","mapping-ad4-ad5-sort-ad5.csv");
 drawSankey("#sankey_ad4","mapping-ad4-ad5-sort-ad4.csv");
 </script>
