@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<title>Sankey AD4 → AD5 per assetgroep</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body { margin:0; font-family:Inter,sans-serif; background:#f8f8f8; }
+#topbar { height:8px; background:#003b6c; }
+#header { background:#fff; padding:25px 40px; border-bottom:1px solid #ddd; }
+#tabs { padding:10px 40px; background:#fff; display:flex; gap:8px; border-bottom:1px solid #ddd; }
+.tabbtn { padding:6px 12px; border:1px solid #bbb; background:#f2f2f2; cursor:pointer; }
+.tabbtn.active { background:#003b6c; color:#fff; }
+#chart { padding:20px; }
+.tabcontent { display:none; }
+.tabcontent.active { display:block; }
+svg { background:#fff; }
+.node rect { fill-opacity:0.9; }
+.node text { font-size:12px; font-weight:600; pointer-events:none; }
+.link { fill:none; stroke-opacity:0.3; }
+</style>
+</head>
+
+<body>
+
+<div id="topbar"></div>
+<div id="header">
+<h1>Areaaldata 4 → Areaaldata 5 (IMBOR)</h1>
+<p>Sankey per assetgroep</p>
+</div>
+
+<div id="tabs">
+<button class="tabbtn active" data-tab="Wegen">Wegen</button>
+<button class="tabbtn" data-tab="Groen">Groen</button>
+<button class="tabbtn" data-tab="Kunstwerken">Kunstwerken</button>
+<button class="tabbtn" data-tab="Vaarwegen">Vaarwegen</button>
+<button class="tabbtn" data-tab="OVL/VRI">OVL/VRI</button>
+<button class="tabbtn" data-tab="Wegkantsystemen">Wegkantsystemen</button>
+<button class="tabbtn" data-tab="Overig">Overig</button>
+</div>
+
+<div id="chart">
+<div id="tab-Wegen" class="tabcontent active"><svg id="svg-Wegen"></svg></div>
+<div id="tab-Groen" class="tabcontent"><svg id="svg-Groen"></svg></div>
+<div id="tab-Kunstwerken" class="tabcontent"><svg id="svg-Kunstwerken"></svg></div>
+<div id="tab-Vaarwegen" class="tabcontent"><svg id="svg-Vaarwegen"></svg></div>
+<div id="tab-OVL/VRI" class="tabcontent"><svg id="svg-OVL/VRI"></svg></div>
+<div id="tab-Wegkantsystemen" class="tabcontent"><svg id="svg-Wegkantsystemen"></svg></div>
+<div id="tab-Overig" class="tabcontent"><svg id="svg-Overig"></svg></div>
+</div>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="lib/d3-sankey.min.js"></script>
+
+<script>
+var width = 1600;
+var height = 7430;
+var margin = {top:20,right:50,bottom:20,left:200};
+
+const colors = {
+ "Wegen":"#7F7F7F",
+ "Groen":"#2E8B57",
+ "Kunstwerken":"#D62728",
+ "Vaarwegen":"#1F77B4",
+ "OVL/VRI":"#F28C28",
+ "Wegkantsystemen":"#7A3EB1",
+ "Overig":"#999"
+};
+
+document.querySelectorAll(".tabbtn").forEach(b=>{
+ b.onclick=()=>{
+  document.querySelectorAll(".tabbtn").forEach(x=>x.classList.remove("active"));
+  document.querySelectorAll(".tabcontent").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");
+  document.getElementById("tab-"+b.dataset.tab).classList.add("active");
+ };
+});
+
+function draw(svgId, rows, kleur) {
+
+ const svg = d3.select(svgId)
+  .attr("width", width+margin.left+margin.right)
+  .attr("height", height+margin.top+margin.bottom);
+
+ svg.selectAll("*").remove();
+
+ const g = svg.append("g").attr("transform",`translate(${margin.left},${margin.top})`);
+
+ const names = Array.from(new Set(rows.flatMap(d=>[d.source,d.target])));
+ const graph={
+  nodes:names.map(n=>({name:n})),
+  links:rows.map(d=>({
+   source:names.indexOf(d.source),
+   target:names.indexOf(d.target),
+   value:+d.value||1
+  }))
+ };
+ const sankey=d3.sankey().nodeWidth(70).nodePadding(18).extent([[0,0],[width,height]]);
+ sankey(graph);
+
+ g.append("g").selectAll(".link")
+  .data(graph.links).enter().append("path")
+  .attr("class","link")
+  .attr("d",d3.sankeyLinkHorizontal())
+  .style("stroke-width",d=>Math.max(1,d.width))
+  .style("stroke",kleur);
+
+ const node=g.append("g").selectAll(".node")
+  .data(graph.nodes).enter().append("g")
+  .attr("class","node")
+  .attr("transform",d=>`translate(${d.x0},${d.y0})`);
+
+ node.append("rect")
+  .attr("width",70)
+  .attr("height",d=>d.y1-d.y0)
+  .style("fill",kleur);
+
+ node.append("text")
+  .attr("x",-12)
+  .attr("y",d=>(d.y1-d.y0)/2)
+  .attr("dy","0.35em")
+  .attr("text-anchor","end")
+  .text(d=>d.name);
+}
+
+d3.csv("mapping-ad4-ad5-assetgroepen.csv").then(data=>{
+ ["Wegen","Groen","Kunstwerken","Vaarwegen","OVL/VRI","Wegkantsystemen","Overig"]
+ .forEach(g=>{
+  const rows=data.filter(d=>d.assetgroep===g);
+  if(rows.length) draw("#svg-"+g,rows,colors[g]);
+ });
+});
+</script>
+
+</body>
+</html>
