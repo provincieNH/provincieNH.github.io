@@ -28,6 +28,7 @@
         gap:10px;
         align-items:center;
     }
+
     #filterbox input {
         width:350px;
         padding:8px 12px;
@@ -45,7 +46,31 @@
         background:#e6e6e6;
     }
 
+    /* tabs */
+    #tabs {
+        padding:10px 40px;
+        background:white;
+        border-bottom:1px solid #ddd;
+        display:flex;
+        gap:8px;
+    }
+    .tabbtn {
+        padding:6px 12px;
+        border-radius:4px;
+        border:1px solid #bbb;
+        background:#f2f2f2;
+        cursor:pointer;
+    }
+    .tabbtn.active {
+        background:#003b6c;
+        color:white;
+        border-color:#003b6c;
+    }
+
     #chart { padding:20px; }
+
+    .tabcontent { display:none; }
+    .tabcontent.active { display:block; }
 
     svg {
         cursor: move;
@@ -69,6 +94,16 @@
     .link:hover {
         stroke-opacity:0.6;
     }
+
+    /* print / pdf */
+    @media print {
+        @page { size: landscape; margin: 10mm; }
+        body * { visibility:hidden; }
+        #chart, #chart * { visibility:visible; }
+        #chart { position:absolute; left:0; top:0; width:100%; }
+        #filterbox button, #tabs { display:none; }
+        svg { width:100% !important; height:auto !important; }
+    }
 </style>
 </head>
 
@@ -77,170 +112,144 @@
 <div id="topbar"></div>
 
 <div id="header">
-    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – standaard volledige mapping v0.91 - bronmappingtabel 23/12/25</h1>
+    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – standaard volledige mapping</h1>
     <p>Interactieve Sankey-weergave met filter, zoom en panning</p>
 </div>
 
 <div id="filterbox">
     <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
     <button id="resetZoom">Reset zoom</button>
+    <button onclick="window.print()">Exporteer als PDF</button>
+</div>
+
+<div id="tabs">
+    <button class="tabbtn active" data-tab="tab-default">Standaard</button>
+    <button class="tabbtn" data-tab="tab-ad5">Op AD5</button>
+    <button class="tabbtn" data-tab="tab-ad4">Op AD4</button>
 </div>
 
 <div id="chart">
-    <svg id="sankey_svg"></svg>
+
+    <div id="tab-default" class="tabcontent active">
+        <svg id="sankey_default"></svg>
+    </div>
+
+    <div id="tab-ad5" class="tabcontent">
+        <svg id="sankey_ad5"></svg>
+    </div>
+
+    <div id="tab-ad4" class="tabcontent">
+        <svg id="sankey_ad4"></svg>
+    </div>
+
 </div>
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="lib/d3-sankey.min.js"></script>
 
 <script>
-var CSV_PATH = "mapping-ad4-ad5-default.csv";
 var width = 1600;
 var height = 7430;
-
 var margin = {top:20, right:50, bottom:20, left:200};
-
-var svg = d3.select("#sankey_svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom);
-
-// vaste marge-container
-var outer = svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-// zoombare container
-var container = outer.append("g");
-
-var sankey = d3.sankey()
-    .nodeWidth(70)
-    .nodePadding(18)
-    .extent([[0, 0], [width, height]]);
-
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-d3.csv(CSV_PATH).then(function(data) {
+/* tabs */
+document.querySelectorAll(".tabbtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".tabbtn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".tabcontent").forEach(c => c.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+});
 
-    const nodeNames = Array.from(new Set(
-        data.flatMap(d => [d.source, d.target])
-    ));
+/* algemene sankey functie */
+function drawSankey(svgId, csvPath) {
 
-    const graph = {
-        nodes: nodeNames.map(n => ({ name: n })),
-        links: data.map(d => ({
-            source: nodeNames.indexOf(d.source),
-            target: nodeNames.indexOf(d.target),
-            value: +d.value || 1,
-            mapping: d.mapping || ""
-        })).filter(d => d.source >= 0 && d.target >= 0)
-    };
+    var svg = d3.select(svgId)
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom);
 
-    sankey(graph);
+    svg.selectAll("*").remove();
 
-    // links
-    container.append("g")
-        .selectAll(".link")
-        .data(graph.links)
-        .enter()
-        .append("path")
-        .attr("class", "link")
-        .attr("d", d3.sankeyLinkHorizontal())
-        .style("stroke-width", d => Math.max(1, d.width))
-        .style("stroke", d => {
-            const p = d.target.name.split(".");
-            return color(p[1] || "default");
-        })
-        .append("title")
-        .text(d => d.mapping);
+    var outer = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    // nodes
-    var node = container.append("g")
-        .selectAll(".node")
-        .data(graph.nodes)
-        .enter()
-        .append("g")
-        .attr("class", "node")
-        .attr("transform", d => "translate(" + d.x0 + "," + d.y0 + ")");
+    var container = outer.append("g");
 
-    node.append("rect")
-        .attr("height", d => d.y1 - d.y0)
-        .attr("width", sankey.nodeWidth())
-        .style("fill", d => {
-            const p = d.name.split(".");
-            return color(p[1] || "default");
-        })
-        .append("title")
-        .text(d => d.name);
+    var sankey = d3.sankey()
+        .nodeWidth(70)
+        .nodePadding(18)
+        .extent([[0, 0], [width, height]]);
 
-    node.append("text")
-        .attr("x", -15)
-        .attr("y", d => (d.y1 - d.y0) / 2)
-        .attr("dy", "0.35em")
-        .attr("text-anchor", "end")
-        .text(d => d.name);
-
-    // zoom & pan
     var zoom = d3.zoom()
         .scaleExtent([0.5, 4])
-        .on("zoom", function(event) {
+        .on("zoom", function() {
             container.attr("transform", d3.event.transform);
         });
 
     svg.call(zoom).on("dblclick.zoom", null);
 
-    // reset zoom
-    document.getElementById("resetZoom")
-        .addEventListener("click", function() {
-            svg.transition().duration(700)
-               .call(zoom.transform, d3.zoomIdentity);
-        });
+    d3.csv(csvPath).then(function(data) {
 
-    // filter + autozoom
-    document.getElementById("filterInput")
-        .addEventListener("input", function(e) {
+        const names = Array.from(new Set(data.flatMap(d => [d.source, d.target])));
 
-        var q = e.target.value.toLowerCase();
+        const graph = {
+            nodes: names.map(n => ({ name:n })),
+            links: data.map(d => ({
+                source: names.indexOf(d.source),
+                target: names.indexOf(d.target),
+                value: +d.value || 1,
+                mapping: d.mapping || ""
+            }))
+        };
 
-        node.style("opacity", d =>
-            d.name.toLowerCase().includes(q) ? 1 : 0.15
-        );
+        sankey(graph);
 
-        container.selectAll(".link").style("opacity", l =>
-            l.source.name.toLowerCase().includes(q) ||
-            l.target.name.toLowerCase().includes(q)
-                ? 0.5 : 0.05
-        );
+        container.append("g")
+            .selectAll(".link")
+            .data(graph.links)
+            .enter()
+            .append("path")
+            .attr("class","link")
+            .attr("d",d3.sankeyLinkHorizontal())
+            .style("stroke-width",d=>Math.max(1,d.width))
+            .style("stroke",d=>{
+                const p=d.target.name.split(".");
+                return color(p[1]||"default");
+            })
+            .append("title")
+            .text(d=>d.mapping);
 
-        if (q.length === 0) return;
+        var node = container.append("g")
+            .selectAll(".node")
+            .data(graph.nodes)
+            .enter()
+            .append("g")
+            .attr("class","node")
+            .attr("transform",d=>"translate("+d.x0+","+d.y0+")");
 
-        var visible = graph.nodes.filter(d =>
-            d.name.toLowerCase().includes(q)
-        );
+        node.append("rect")
+            .attr("height",d=>d.y1-d.y0)
+            .attr("width",sankey.nodeWidth())
+            .style("fill",d=>{
+                const p=d.name.split(".");
+                return color(p[1]||"default");
+            });
 
-        if (!visible.length) return;
-
-        var minX = d3.min(visible, d => d.x0);
-        var minY = d3.min(visible, d => d.y0);
-        var maxX = d3.max(visible, d => d.x1);
-        var maxY = d3.max(visible, d => d.y1);
-
-        var scale = Math.min(
-            width / (maxX - minX + 120),
-            height / (maxY - minY + 120),
-            4
-        );
-
-        svg.transition().duration(600).call(
-            zoom.transform,
-            d3.zoomIdentity
-              .translate(
-                  (width - scale * (minX + maxX)) / 2,
-                  (height - scale * (minY + maxY)) / 2
-              )
-              .scale(scale)
-        );
+        node.append("text")
+            .attr("x",-15)
+            .attr("y",d=>(d.y1-d.y0)/2)
+            .attr("dy","0.35em")
+            .attr("text-anchor","end")
+            .text(d=>d.name);
     });
+}
 
-}).catch(err => console.error(err));
+/* 👉 CSV paden (worden vanuit Python ingevuld) */
+drawSankey("#sankey_default","mapping-ad4-ad5-default.csv");
+drawSankey("#sankey_ad5","mapping-ad4-ad5-sort-ad5.csv");
+drawSankey("#sankey_ad4","mapping-ad4-ad5-sort-ad4.csv");
 </script>
 
 </body>
