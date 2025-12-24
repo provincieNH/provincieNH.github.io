@@ -95,13 +95,13 @@
         stroke-opacity:0.6;
     }
 
-    /* print / pdf */
+    /* print / pdf (mag blijven) */
     @media print {
         @page { size: landscape; margin: 10mm; }
         body * { visibility:hidden; }
         #chart, #chart * { visibility:visible; }
         #chart { position:absolute; left:0; top:0; width:100%; }
-        #filterbox button, #tabs { display:none; }
+        #tabs { display:none; }
         svg { width:100% !important; height:auto !important; }
     }
 </style>
@@ -113,13 +113,13 @@
 
 <div id="header">
     <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – gesorteerd op AD4-object volledige mapping</h1>
-    <p>Interactieve Sankey-weergave – gesorteerd overzicht</p>
+    <p>Interactieve Sankey-weergave – gesorteerd overzicht - versie 0.92 - bronmapping 23-12-2025</p>
+
 </div>
 
 <div id="filterbox">
     <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
     <button id="resetZoom">Reset zoom</button>
-    <button onclick="window.print()">Exporteer als PDF</button>
 </div>
 
 <div id="tabs">
