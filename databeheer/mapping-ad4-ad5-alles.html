@@ -131,18 +131,18 @@ svg { cursor:move; background:white; }
 
 <script>
 /* =========================
-   ASSETGROEP DEFINITIES
+   ASSETGROEP LABEL → CSV WAARDE
    ========================= */
 
 const ASSETGROUPS = {
-    Bodem:           ["bodem"],
-    Groen:           ["groen"],
-    Integraal:       ["integraal"],
-    Kunstwerken:    ["brug", "viaduct", "tunnel", "kunstwerk"],
-    "OVL / VRI":     ["ovl", "vri"],
-    Vaarwegen:       ["vaarweg", "sluis", "kanaal"],
-    Wegen:           ["weg", "rijbaan", "verhard"],
-    Wegkantsystemen: ["drips", "dvm", "wegkants"]
+    Bodem: "bodem",
+    Groen: "groen",
+    Integraal: "integraal",
+    Kunstwerken: "kunstwerken",
+    "OVL / VRI": "ovl / vri",
+    Vaarwegen: "vaarwegen",
+    Wegen: "wegen",
+    Wegkantsystemen: "wegkantsystemen"
 };
 
 /* =========================
@@ -162,10 +162,10 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
    SANKEY GENERATOR
    ========================= */
 
-var width = 1600;
-var height = 7430;
-var margin = {top:20, right:50, bottom:20, left:200};
-var color = d3.scaleOrdinal(d3.schemeCategory10);
+const width = 1600;
+const height = 7430;
+const margin = {top:20, right:50, bottom:20, left:200};
+const color = d3.scaleOrdinal(d3.schemeCategory10);
 
 function drawSankey(svgId, csvPath, assetGroup = null) {
 
@@ -182,7 +182,7 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
 
     const sankey = d3.sankey()
         .nodeWidth(70)
-        .nodePadding(18)
+        .nodePadding(12)
         .extent([[0,0],[width,height]]);
 
     d3.csv(csvPath).then(data => {
@@ -190,21 +190,20 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
         let filtered = data;
 
         if (assetGroup && ASSETGROUPS[assetGroup]) {
-            const keys = ASSETGROUPS[assetGroup];
-            filtered = data.filter(d =>
-                keys.some(k => d.target.toLowerCase().includes(k))
-            );
+            const g = ASSETGROUPS[assetGroup];
+            filtered = data.filter(d => d.assetgroep === g);
         }
 
         const names = Array.from(new Set(filtered.flatMap(d => [d.source, d.target])));
 
         const graph = {
-            nodes: names.map(n => ({ name:n })),
+            nodes: names.map(n => ({ name: n })),
             links: filtered.map(d => ({
                 source: names.indexOf(d.source),
                 target: names.indexOf(d.target),
                 value: +d.value || 1,
-                mapping: d.mapping || ""
+                mapping: d.mapping || "",
+                assetgroep: d.assetgroep || ""
             }))
         };
 
@@ -240,7 +239,7 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
 
         node.append("rect")
             .attr("width", sankey.nodeWidth())
-            .attr("height", d => d.y1 - d.y0)
+            .attr("height", d => Math.max(8, d.y1 - d.y0))
             .style("fill", d => color(d.name.split(".")[1] || "x"));
 
         node.append("text")
@@ -267,7 +266,6 @@ drawSankey("#sankey_ovl", "mapping-ad4-ad5-sort-ad5.csv", "OVL / VRI");
 drawSankey("#sankey_vaarwegen", "mapping-ad4-ad5-sort-ad5.csv", "Vaarwegen");
 drawSankey("#sankey_wegen", "mapping-ad4-ad5-sort-ad5.csv", "Wegen");
 drawSankey("#sankey_wegkantsystemen", "mapping-ad4-ad5-sort-ad5.csv", "Wegkantsystemen");
-
 </script>
 
 </body>
