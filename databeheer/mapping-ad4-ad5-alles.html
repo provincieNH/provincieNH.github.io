@@ -135,7 +135,7 @@ const ASSETGROUPS = {
     Groen: "groen",
     Integraal: "integraal",
     Kunstwerken: "kunstwerken",
-    "OVL / VRI": "ovl / vri",
+    "OVL / VRI": "ovlvri",
     Vaarwegen: "vaarwegen",
     Wegen: "wegen",
     Wegkantsystemen: "wegkantsystemen"
@@ -151,34 +151,28 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
 });
 
 const width = 1600;
-const height = 7430;
 const margin = {top:20, right:50, bottom:20, left:200};
 const color = d3.scaleOrdinal(d3.schemeCategory10);
 const LINK_HEIGHT = 17;
 
+function baseName(label) {
+    return label.replace(/\s*\(.*?\)/g, "");
+}
+
 function drawSankey(svgId, csvPath, assetGroup = null) {
-
-    const svg = d3.select(svgId)
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom);
-
-    svg.selectAll("*").remove();
-
-    const outer = svg.append("g")
-        .attr("transform", `translate(${margin.left},${margin.top})`);
-
-    const container = outer.append("g");
-
-    const sankey = d3.sankey()
-        .nodeWidth(70)
-        .nodePadding(12)
-        .extent([[0,0],[width,height]]);
 
     d3.csv(csvPath).then(data => {
 
+        data.forEach(d => {
+            d.assetgroep_norm = d.assetgroep
+                .toLowerCase()
+                .replace(/\s+/g,"")
+                .replace(/\//g,"");
+        });
+
         let filtered = data;
         if (assetGroup && ASSETGROUPS[assetGroup]) {
-            filtered = data.filter(d => d.assetgroep === ASSETGROUPS[assetGroup]);
+            filtered = data.filter(d => d.assetgroep_norm === ASSETGROUPS[assetGroup]);
         }
 
         const names = Array.from(new Set(filtered.flatMap(d => [d.source, d.target])));
@@ -188,14 +182,30 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             links: filtered.map(d => ({
                 source: names.indexOf(d.source),
                 target: names.indexOf(d.target),
-                value: 1,                // ✅ telt links → nodehoogte klopt
+                value: 1,
                 mapping: d.mapping || ""
             }))
         };
 
+        const height = Math.max(graph.links.length * LINK_HEIGHT + 200, 300);
+
+        const svg = d3.select(svgId)
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        svg.selectAll("*").remove();
+
+        const outer = svg.append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const sankey = d3.sankey()
+            .nodeWidth(70)
+            .nodePadding(12)
+            .extent([[0,0],[width,height]]);
+
         sankey(graph);
 
-        container.append("g")
+        outer.append("g")
             .selectAll(".link")
             .data(graph.links)
             .enter()
@@ -203,14 +213,11 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             .attr("class","link")
             .attr("d", d3.sankeyLinkHorizontal())
             .style("stroke-width", LINK_HEIGHT)
-            .style("stroke", d => {
-                const p = d.target.name.split(".");
-                return color(p[1] || "default");
-            })
+            .style("stroke", d => color(baseName(d.target.name)))
             .append("title")
-            .text(d => d.mapping || "");
+            .text(d => d.mapping);
 
-        const node = container.append("g")
+        const node = outer.append("g")
             .selectAll(".node")
             .data(graph.nodes)
             .enter()
@@ -220,8 +227,8 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
 
         node.append("rect")
             .attr("width", sankey.nodeWidth())
-            .attr("height", d => Math.max(LINK_HEIGHT, d.y1 - d.y0))
-            .style("fill", d => color(d.name.split(".")[1] || "x"));
+            .attr("height", d => d.y1 - d.y0)
+            .style("fill", d => color(baseName(d.name)));
 
         node.append("text")
             .attr("x",-15)
