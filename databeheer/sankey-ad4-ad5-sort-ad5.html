@@ -95,7 +95,6 @@
         stroke-opacity:0.6;
     }
 
-    /* print / pdf (mag blijven) */
     @media print {
         @page { size: landscape; margin: 10mm; }
         body * { visibility:hidden; }
@@ -114,7 +113,6 @@
 <div id="header">
     <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – gesorteerd op AD5-object volledige mapping</h1>
     <p>Interactieve Sankey-weergave – gesorteerd overzicht - versie 0.92 - bronmapping 23-12-2025</p>
-
 </div>
 
 <div id="filterbox">
@@ -238,6 +236,26 @@ function drawSankey(svgId, csvPath) {
             .attr("dy","0.35em")
             .attr("text-anchor","end")
             .text(d=>d.name);
+
+        /* FILTER */
+        const filterInput = document.getElementById("filterInput");
+        if (filterInput) {
+            filterInput.addEventListener("input", function () {
+                const q = this.value.toLowerCase();
+
+                node.style("opacity", d =>
+                    d.name.toLowerCase().includes(q) ? 1 : 0.15
+                );
+
+                link.style("opacity", d =>
+                    d.source.name.toLowerCase().includes(q) ||
+                    d.target.name.toLowerCase().includes(q) ||
+                    (d.mapping && d.mapping.toLowerCase().includes(q))
+                        ? 0.6
+                        : 0.05
+                );
+            });
+        }
     });
 }
 
