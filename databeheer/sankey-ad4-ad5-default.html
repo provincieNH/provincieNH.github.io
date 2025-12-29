@@ -169,6 +169,8 @@ const color = d3.scaleOrdinal(d3.schemeCategory10);
 
 function drawSankey(svgId, csvPath, assetGroup = null) {
 
+    const MAX_LINK_WIDTH = 17;
+
     const svg = d3.select(svgId)
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom);
@@ -216,7 +218,7 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             .append("path")
             .attr("class","link")
             .attr("d", d3.sankeyLinkHorizontal())
-            .style("stroke-width", d => Math.max(1, d.width))
+            .style("stroke-width", d => Math.max(1, Math.min(MAX_LINK_WIDTH, d.width)))
             .style("stroke", d => {
                 const p = d.target.name.split(".");
                 return color(p[1] || "default");
