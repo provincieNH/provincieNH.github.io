@@ -50,6 +50,7 @@ body {
     border-bottom:1px solid #ddd;
     display:flex;
     gap:8px;
+    flex-wrap:wrap;
 }
 .tabbtn {
     padding:6px 12px;
@@ -88,7 +89,7 @@ svg { cursor:move; background:white; }
 
 <div id="header">
     <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – gesorteerd op AD5-object volledige mapping</h1>
-    <p>Interactieve Sankey-weergave – gesorteerd overzicht – versie 0.92 – bronmapping 23‑12‑2025</p>
+    <p>Interactieve Sankey-weergave – compleet & per assetgroep</p>
 </div>
 
 <div id="filterbox">
@@ -98,29 +99,56 @@ svg { cursor:move; background:white; }
 </div>
 
 <div id="tabs">
-    <button class="tabbtn active" data-tab="tab-ad5">Gesorteerd op AD5</button>
-    <button class="tabbtn" data-tab="tab-ad4">Gesorteerd op AD4</button>
+    <button class="tabbtn active" data-tab="tab-ad5">AD5 (alles)</button>
+    <button class="tabbtn" data-tab="tab-ad4">AD4 (alles)</button>
+
+    <button class="tabbtn" data-tab="tab-bodem">Bodem</button>
+    <button class="tabbtn" data-tab="tab-groen">Groen</button>
+    <button class="tabbtn" data-tab="tab-integraal">Integraal</button>
+    <button class="tabbtn" data-tab="tab-kunstwerken">Kunstwerken</button>
+    <button class="tabbtn" data-tab="tab-ovl">OVL / VRI</button>
+    <button class="tabbtn" data-tab="tab-vaarwegen">Vaarwegen</button>
+    <button class="tabbtn" data-tab="tab-wegen">Wegen</button>
+    <button class="tabbtn" data-tab="tab-wegkantsystemen">Wegkantsystemen</button>
 </div>
 
 <div id="chart">
-    <div id="tab-ad5" class="tabcontent active">
-        <svg id="sankey_ad5"></svg>
-    </div>
-    <div id="tab-ad4" class="tabcontent">
-        <svg id="sankey_ad4"></svg>
-    </div>
+    <div id="tab-ad5" class="tabcontent active"><svg id="sankey_ad5"></svg></div>
+    <div id="tab-ad4" class="tabcontent"><svg id="sankey_ad4"></svg></div>
+
+    <div id="tab-bodem" class="tabcontent"><svg id="sankey_bodem"></svg></div>
+    <div id="tab-groen" class="tabcontent"><svg id="sankey_groen"></svg></div>
+    <div id="tab-integraal" class="tabcontent"><svg id="sankey_integraal"></svg></div>
+    <div id="tab-kunstwerken" class="tabcontent"><svg id="sankey_kunstwerken"></svg></div>
+    <div id="tab-ovl" class="tabcontent"><svg id="sankey_ovl"></svg></div>
+    <div id="tab-vaarwegen" class="tabcontent"><svg id="sankey_vaarwegen"></svg></div>
+    <div id="tab-wegen" class="tabcontent"><svg id="sankey_wegen"></svg></div>
+    <div id="tab-wegkantsystemen" class="tabcontent"><svg id="sankey_wegkantsystemen"></svg></div>
 </div>
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="lib/d3-sankey.min.js"></script>
 
 <script>
-var width = 1600;
-var height = 7430;
-var margin = {top:20, right:50, bottom:20, left:200};
-var color = d3.scaleOrdinal(d3.schemeCategory10);
+/* =========================
+   ASSETGROEP DEFINITIES
+   ========================= */
 
-/* tabs */
+const ASSETGROUPS = {
+    Bodem:           ["bodem"],
+    Groen:           ["groen"],
+    Integraal:       ["integraal"],
+    Kunstwerken:    ["brug", "viaduct", "tunnel", "kunstwerk"],
+    "OVL / VRI":     ["ovl", "vri"],
+    Vaarwegen:       ["vaarweg", "sluis", "kanaal"],
+    Wegen:           ["weg", "rijbaan", "verhard"],
+    Wegkantsystemen: ["drips", "dvm", "wegkants"]
+};
+
+/* =========================
+   TABS
+   ========================= */
+
 document.querySelectorAll(".tabbtn").forEach(btn => {
     btn.addEventListener("click", () => {
         document.querySelectorAll(".tabbtn").forEach(b => b.classList.remove("active"));
@@ -130,11 +158,16 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
     });
 });
 
-const filterInput = document.getElementById("filterInput");
-const hitCount    = document.getElementById("hitCount");
-const resetBtn    = document.getElementById("resetZoom");
+/* =========================
+   SANKEY GENERATOR
+   ========================= */
 
-function drawSankey(svgId, csvPath) {
+var width = 1600;
+var height = 7430;
+var margin = {top:20, right:50, bottom:20, left:200};
+var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+function drawSankey(svgId, csvPath, assetGroup = null) {
 
     const svg = d3.select(svgId)
         .attr("width", width + margin.left + margin.right)
@@ -143,7 +176,7 @@ function drawSankey(svgId, csvPath) {
     svg.selectAll("*").remove();
 
     const outer = svg.append("g")
-        .attr("transform",`translate(${margin.left},${margin.top})`);
+        .attr("transform", `translate(${margin.left},${margin.top})`);
 
     const container = outer.append("g");
 
@@ -152,23 +185,25 @@ function drawSankey(svgId, csvPath) {
         .nodePadding(18)
         .extent([[0,0],[width,height]]);
 
-    const zoom = d3.zoom()
-        .scaleExtent([0.5,4])
-        .on("zoom", () => container.attr("transform", d3.event.transform));
-
-    svg.call(zoom).on("dblclick.zoom", null);
-
     d3.csv(csvPath).then(data => {
 
-        const names = Array.from(new Set(data.flatMap(d => [d.source, d.target])));
+        let filtered = data;
+
+        if (assetGroup && ASSETGROUPS[assetGroup]) {
+            const keys = ASSETGROUPS[assetGroup];
+            filtered = data.filter(d =>
+                keys.some(k => d.target.toLowerCase().includes(k))
+            );
+        }
+
+        const names = Array.from(new Set(filtered.flatMap(d => [d.source, d.target])));
 
         const graph = {
             nodes: names.map(n => ({ name:n })),
-            links: data.map(d => ({
+            links: filtered.map(d => ({
                 source: names.indexOf(d.source),
                 target: names.indexOf(d.target),
-                value: +d.value || 1,
-                mapping: d.mapping || ""
+                value: +d.value || 1
             }))
         };
 
@@ -177,77 +212,50 @@ function drawSankey(svgId, csvPath) {
         container.append("g")
             .selectAll(".link")
             .data(graph.links)
-            .enter().append("path")
+            .enter()
+            .append("path")
             .attr("class","link")
-            .attr("d", d3.sankeyLinkHorizontal())
-            .style("stroke-width", d => Math.max(1, d.width))
-            .style("stroke", d => color(d.target.name.split(".")[1] || "default"));
+            .attr("d",d3.sankeyLinkHorizontal())
+            .style("stroke-width", d => Math.max(1,d.width));
 
         const node = container.append("g")
             .selectAll(".node")
             .data(graph.nodes)
-            .enter().append("g")
+            .enter()
+            .append("g")
             .attr("class","node")
             .attr("transform", d => `translate(${d.x0},${d.y0})`);
 
         node.append("rect")
             .attr("width", sankey.nodeWidth())
             .attr("height", d => d.y1 - d.y0)
-            .style("fill", d => color(d.name.split(".")[1] || "default"));
+            .style("fill", d => color(d.name.split(".")[1] || "x"));
 
         node.append("text")
             .attr("x",-15)
-            .attr("y", d => (d.y1 - d.y0) / 2)
+            .attr("y", d => (d.y1 - d.y0)/2)
             .attr("dy","0.35em")
             .attr("text-anchor","end")
             .text(d => d.name);
-
-        /* FILTER + STABIELE PAN */
-        filterInput.addEventListener("input", () => {
-            const q = filterInput.value.trim().toLowerCase();
-            const exact = [];
-            const partial = [];
-
-            node.style("opacity", d => {
-                const n = d.name.toLowerCase();
-                if (!q) return 1;
-                if (n === q) { exact.push(d); partial.push(d); return 1; }
-                if (n.includes(q)) { partial.push(d); return 1; }
-                return 0.15;
-            });
-
-            if (!q) {
-                hitCount.textContent = "";
-                container.transition().duration(400).attr("transform","translate(0,0) scale(1)");
-                return;
-            }
-
-            hitCount.textContent = `${partial.length} object(en) gevonden`;
-
-            if (exact.length === 0) return;
-
-            const cx = (d3.min(exact, d => d.x0) + d3.max(exact, d => d.x1)) / 2;
-            const cy = (d3.min(exact, d => d.y0) + d3.max(exact, d => d.y1)) / 2;
-
-            let scale = 1;
-            if (exact.length === 1) scale = 1.3;
-
-            container.transition().duration(500).attr(
-                "transform",
-                `translate(${width/2 - scale*cx}, ${height/2 - scale*cy}) scale(${scale})`
-            );
-        });
-
-        resetBtn.addEventListener("click", () => {
-            filterInput.value = "";
-            hitCount.textContent = "";
-            container.transition().duration(300).attr("transform","translate(0,0) scale(1)");
-        });
     });
 }
 
-drawSankey("#sankey_ad5","mapping-ad4-ad5-sort-ad5.csv");
-drawSankey("#sankey_ad4","mapping-ad4-ad5-sort-ad4.csv");
+/* =========================
+   SANKEY INSTANCES
+   ========================= */
+
+drawSankey("#sankey_ad5", "mapping-ad4-ad5-sort-ad5.csv");
+drawSankey("#sankey_ad4", "mapping-ad4-ad5-sort-ad4.csv");
+
+drawSankey("#sankey_bodem", "mapping-ad4-ad5-sort-ad5.csv", "Bodem");
+drawSankey("#sankey_groen", "mapping-ad4-ad5-sort-ad5.csv", "Groen");
+drawSankey("#sankey_integraal", "mapping-ad4-ad5-sort-ad5.csv", "Integraal");
+drawSankey("#sankey_kunstwerken", "mapping-ad4-ad5-sort-ad5.csv", "Kunstwerken");
+drawSankey("#sankey_ovl", "mapping-ad4-ad5-sort-ad5.csv", "OVL / VRI");
+drawSankey("#sankey_vaarwegen", "mapping-ad4-ad5-sort-ad5.csv", "Vaarwegen");
+drawSankey("#sankey_wegen", "mapping-ad4-ad5-sort-ad5.csv", "Wegen");
+drawSankey("#sankey_wegkantsystemen", "mapping-ad4-ad5-sort-ad5.csv", "Wegkantsystemen");
+
 </script>
 
 </body>
