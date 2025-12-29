@@ -79,13 +79,6 @@ svg { cursor:move; background:white; }
 }
 .link { fill:none; stroke-opacity:0.3; }
 .link:hover { stroke-opacity:0.6; }
-
-@media print {
-    @page { size:landscape; margin:10mm; }
-    body * { visibility:hidden; }
-    #chart, #chart * { visibility:visible; }
-    #tabs { display:none; }
-}
 </style>
 </head>
 
@@ -181,17 +174,14 @@ function drawSankey(svgId, csvPath) {
 
         sankey(graph);
 
-        const link = container.append("g")
+        container.append("g")
             .selectAll(".link")
             .data(graph.links)
             .enter().append("path")
             .attr("class","link")
             .attr("d", d3.sankeyLinkHorizontal())
             .style("stroke-width", d => Math.max(1, d.width))
-            .style("stroke", d => {
-                const p = d.target.name.split(".");
-                return color(p[1] || "default");
-            });
+            .style("stroke", d => color(d.target.name.split(".")[1] || "default"));
 
         const node = container.append("g")
             .selectAll(".node")
@@ -203,10 +193,7 @@ function drawSankey(svgId, csvPath) {
         node.append("rect")
             .attr("width", sankey.nodeWidth())
             .attr("height", d => d.y1 - d.y0)
-            .style("fill", d => {
-                const p = d.name.split(".");
-                return color(p[1] || "default");
-            });
+            .style("fill", d => color(d.name.split(".")[1] || "default"));
 
         node.append("text")
             .attr("x",-15)
@@ -215,7 +202,7 @@ function drawSankey(svgId, csvPath) {
             .attr("text-anchor","end")
             .text(d => d.name);
 
-        /* FILTER / PAN / ZOOM */
+        /* FILTER + STABIELE PAN */
         filterInput.addEventListener("input", () => {
             const q = filterInput.value.trim().toLowerCase();
             const exact = [];
@@ -226,20 +213,12 @@ function drawSankey(svgId, csvPath) {
                 if (!q) return 1;
                 if (n === q) { exact.push(d); partial.push(d); return 1; }
                 if (n.includes(q)) { partial.push(d); return 1; }
-                return 0.12;
+                return 0.15;
             });
-
-            link.style("opacity", d =>
-                !q ||
-                d.source.name.toLowerCase().includes(q) ||
-                d.target.name.toLowerCase().includes(q) ||
-                (d.mapping && d.mapping.toLowerCase().includes(q))
-                    ? 0.6 : 0.05
-            );
 
             if (!q) {
                 hitCount.textContent = "";
-                svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+                container.transition().duration(400).attr("transform","translate(0,0) scale(1)");
                 return;
             }
 
@@ -250,23 +229,19 @@ function drawSankey(svgId, csvPath) {
             const cx = (d3.min(exact, d => d.x0) + d3.max(exact, d => d.x1)) / 2;
             const cy = (d3.min(exact, d => d.y0) + d3.max(exact, d => d.y1)) / 2;
 
-            const t = d3.zoomTransform(svg.node());
-            let scale = t.k;
-            if (exact.length === 1) scale = Math.min(3, scale * 1.3);
+            let scale = 1;
+            if (exact.length === 1) scale = 1.3;
 
-            svg.transition().duration(600).call(
-                zoom.transform,
-                d3.zoomIdentity
-                    .translate(width/2 - scale*cx + margin.left,
-                               height/2 - scale*cy + margin.top)
-                    .scale(scale)
+            container.transition().duration(500).attr(
+                "transform",
+                `translate(${width/2 - scale*cx}, ${height/2 - scale*cy}) scale(${scale})`
             );
         });
 
         resetBtn.addEventListener("click", () => {
             filterInput.value = "";
             hitCount.textContent = "";
-            svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+            container.transition().duration(300).attr("transform","translate(0,0) scale(1)");
         });
     });
 }
