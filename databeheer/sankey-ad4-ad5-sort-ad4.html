@@ -198,7 +198,7 @@ function drawSankey(svgId, csvPath) {
                 mapping: d.mapping || ""
             }))
         };
-
+        graph.nodes.sort((a, b) => a.name.localeCompare(b.name, "nl"));
         sankey(graph);
 
         container.append("g")
