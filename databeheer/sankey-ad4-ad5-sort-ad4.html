@@ -89,7 +89,7 @@ svg { cursor:move; background:white; }
 
 <div id="header">
     <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – gesorteerd op AD4-object volledige mapping</h1>
-    <p>Interactieve Sankey-weergave – compleet & per assetgroep - v0.93 29-12-2025</p>
+    <p>Interactieve Sankey-weergave – compleet & per assetgroep – v0.94</p>
 </div>
 
 <div id="filterbox">
@@ -150,6 +150,11 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
     });
 });
 
+document.getElementById("filterInput").addEventListener("input", () => {
+    const activeTab = document.querySelector(".tabbtn.active");
+    if (activeTab) activeTab.click();
+});
+
 const width = 1600;
 const margin = {top:20, right:50, bottom:20, left:200};
 const color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -170,12 +175,33 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
                 .replace(/\//g,"");
         });
 
+        const filterValue = document
+            .getElementById("filterInput")
+            .value
+            .toLowerCase()
+            .trim();
+
         let filtered = data;
+
         if (assetGroup && ASSETGROUPS[assetGroup]) {
-            filtered = data.filter(d => d.assetgroep_norm === ASSETGROUPS[assetGroup]);
+            filtered = filtered.filter(
+                d => d.assetgroep_norm === ASSETGROUPS[assetGroup]
+            );
         }
 
-        const names = Array.from(new Set(filtered.flatMap(d => [d.source, d.target])));
+        if (filterValue) {
+            filtered = filtered.filter(d =>
+                d.source.toLowerCase().includes(filterValue) ||
+                d.target.toLowerCase().includes(filterValue)
+            );
+        }
+
+        document.getElementById("hitCount").textContent =
+            filterValue ? `${filtered.length} matches` : "";
+
+        const names = Array.from(
+            new Set(filtered.flatMap(d => [d.source, d.target]))
+        );
 
         const graph = {
             nodes: names.map(n => ({ name: n })),
@@ -195,7 +221,7 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
 
         svg.selectAll("*").remove();
 
-        const outer = svg.append("g")
+        const g = svg.append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
 
         const sankey = d3.sankey()
@@ -205,7 +231,7 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
 
         sankey(graph);
 
-        outer.append("g")
+        g.append("g")
             .selectAll(".link")
             .data(graph.links)
             .enter()
@@ -217,7 +243,7 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             .append("title")
             .text(d => d.mapping);
 
-        const node = outer.append("g")
+        const node = g.append("g")
             .selectAll(".node")
             .data(graph.nodes)
             .enter()
