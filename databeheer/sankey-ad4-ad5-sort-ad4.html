@@ -161,12 +161,9 @@ function drawSankey(svgId, csvPath) {
 
     const zoom = d3.zoom()
         .scaleExtent([0.5,4])
-        .on("zoom", () => outer.attr("transform", d3.event.transform));
+        .on("zoom", () => container.attr("transform", d3.event.transform));
 
-    svg.call(
-    zoom.transform,
-    d3.zoomIdentity.translate(margin.left, margin.top)
-        );
+    svg.call(zoom).on("dblclick.zoom", null);
 
     d3.csv(csvPath).then(data => {
 
@@ -260,8 +257,8 @@ function drawSankey(svgId, csvPath) {
             svg.transition().duration(600).call(
                 zoom.transform,
                 d3.zoomIdentity
-                    .translate(width/2 - scale*cx,
-                               height/2 - scale*cy)
+                    .translate(width/2 - scale*cx + margin.left,
+                               height/2 - scale*cy + margin.top)
                     .scale(scale)
             );
         });
