@@ -203,13 +203,14 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             links: filtered.map(d => ({
                 source: names.indexOf(d.source),
                 target: names.indexOf(d.target),
-                value: +d.value || 1
+                value: +d.value || 1,
+                mapping: d.mapping || ""
             }))
         };
 
         sankey(graph);
 
-        container.append("g")
+        const link = container.append("g")
             .selectAll(".link")
             .data(graph.links)
             .enter()
@@ -221,6 +222,13 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
                 const p = d.target.name.split(".");
                 return color(p[1] || "default");
             });
+
+        link.append("title")
+            .text(d =>
+                d.mapping
+                    ? d.mapping
+                    : `${d.source.name} → ${d.target.name}`
+            );
 
         const node = container.append("g")
             .selectAll(".node")
