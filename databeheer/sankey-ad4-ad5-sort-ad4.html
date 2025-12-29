@@ -257,8 +257,8 @@ function drawSankey(svgId, csvPath) {
             svg.transition().duration(600).call(
                 zoom.transform,
                 d3.zoomIdentity
-                    .translate(width/2 - scale*cx + margin.left,
-                               height/2 - scale*cy + margin.top)
+                    .translate(width/2 - scale*cx,
+                               height/2 - scale*cy)
                     .scale(scale)
             );
         });
