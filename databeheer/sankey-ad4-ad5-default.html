@@ -9,12 +9,13 @@
 <style>
 body {
     margin:0;
-    font-family: "Inter", sans-serif;
+    font-family:"Inter",sans-serif;
     background:#f8f8f8;
 }
-#topbar { background:#003b6c; height:8px; width:100%; }
+#topbar { background:#003b6c; height:8px; }
 #header {
-    background:white; padding:25px 40px;
+    background:white;
+    padding:25px 40px;
     border-bottom:1px solid #ddd;
 }
 #header h1 { margin:0; font-size:26px; font-weight:600; color:#003b6c; }
@@ -25,7 +26,7 @@ body {
     background:white;
     border-bottom:1px solid #e0e0e0;
     display:flex;
-    gap:10px;
+    gap:12px;
     align-items:center;
 }
 #filterbox input {
@@ -41,9 +42,7 @@ body {
     background:#f2f2f2;
     cursor:pointer;
 }
-#filterbox button:hover {
-    background:#e6e6e6;
-}
+#filterbox button:hover { background:#e6e6e6; }
 
 #tabs {
     padding:10px 40px;
@@ -66,37 +65,26 @@ body {
 }
 
 #chart { padding:20px; }
-
 .tabcontent { display:none; }
 .tabcontent.active { display:block; }
 
 svg { cursor:move; background:white; }
 
-.node rect {
-    fill-opacity:0.9;
-    shape-rendering:crispEdges;
-}
+.node rect { fill-opacity:0.9; shape-rendering:crispEdges; }
 .node text {
     pointer-events:none;
     font-size:12px;
     fill:#333;
     font-weight:600;
 }
-.link {
-    fill:none;
-    stroke-opacity:0.3;
-}
-.link:hover {
-    stroke-opacity:0.6;
-}
+.link { fill:none; stroke-opacity:0.3; }
+.link:hover { stroke-opacity:0.6; }
 
 @media print {
     @page { size:landscape; margin:10mm; }
     body * { visibility:hidden; }
     #chart, #chart * { visibility:visible; }
-    #chart { position:absolute; left:0; top:0; width:100%; }
     #tabs { display:none; }
-    svg { width:100% !important; height:auto !important; }
 }
 </style>
 </head>
@@ -112,6 +100,7 @@ svg { cursor:move; background:white; }
 
 <div id="filterbox">
     <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
+    <span id="hitCount" style="color:#555;font-size:14px;"></span>
     <button id="resetZoom">Reset zoom</button>
 </div>
 
@@ -148,33 +137,35 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
     });
 });
 
+const filterInput = document.getElementById("filterInput");
+const hitCount    = document.getElementById("hitCount");
+const resetBtn    = document.getElementById("resetZoom");
+
 function drawSankey(svgId, csvPath) {
 
-    var svg = d3.select(svgId)
+    const svg = d3.select(svgId)
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom);
 
     svg.selectAll("*").remove();
 
-    var outer = svg.append("g")
-        .attr("transform","translate("+margin.left+","+margin.top+")");
+    const outer = svg.append("g")
+        .attr("transform",`translate(${margin.left},${margin.top})`);
 
-    var container = outer.append("g");
+    const container = outer.append("g");
 
-    var sankey = d3.sankey()
+    const sankey = d3.sankey()
         .nodeWidth(70)
         .nodePadding(18)
         .extent([[0,0],[width,height]]);
 
-    var zoom = d3.zoom()
+    const zoom = d3.zoom()
         .scaleExtent([0.5,4])
-        .on("zoom", () => {
-            container.attr("transform", d3.event.transform);
-        });
+        .on("zoom", () => container.attr("transform", d3.event.transform));
 
     svg.call(zoom).on("dblclick.zoom", null);
 
-    d3.csv(csvPath).then(function(data){
+    d3.csv(csvPath).then(data => {
 
         const names = Array.from(new Set(data.flatMap(d => [d.source, d.target])));
 
@@ -190,64 +181,51 @@ function drawSankey(svgId, csvPath) {
 
         sankey(graph);
 
-        var link = container.append("g")
+        const link = container.append("g")
             .selectAll(".link")
             .data(graph.links)
-            .enter()
-            .append("path")
+            .enter().append("path")
             .attr("class","link")
-            .attr("d",d3.sankeyLinkHorizontal())
-            .style("stroke-width",d=>Math.max(1,d.width))
-            .style("stroke",d=>{
-                const p=d.target.name.split(".");
-                return color(p[1]||"default");
+            .attr("d", d3.sankeyLinkHorizontal())
+            .style("stroke-width", d => Math.max(1, d.width))
+            .style("stroke", d => {
+                const p = d.target.name.split(".");
+                return color(p[1] || "default");
             });
 
-        var node = container.append("g")
+        const node = container.append("g")
             .selectAll(".node")
             .data(graph.nodes)
-            .enter()
-            .append("g")
+            .enter().append("g")
             .attr("class","node")
-            .attr("transform",d=>"translate("+d.x0+","+d.y0+")");
+            .attr("transform", d => `translate(${d.x0},${d.y0})`);
 
         node.append("rect")
-            .attr("height",d=>d.y1-d.y0)
-            .attr("width",sankey.nodeWidth())
-            .style("fill",d=>{
-                const p=d.name.split(".");
-                return color(p[1]||"default");
+            .attr("width", sankey.nodeWidth())
+            .attr("height", d => d.y1 - d.y0)
+            .style("fill", d => {
+                const p = d.name.split(".");
+                return color(p[1] || "default");
             });
 
         node.append("text")
             .attr("x",-15)
-            .attr("y",d=>(d.y1-d.y0)/2)
+            .attr("y", d => (d.y1 - d.y0) / 2)
             .attr("dy","0.35em")
             .attr("text-anchor","end")
-            .text(d=>d.name);
+            .text(d => d.name);
 
-        /* FILTER + EXACT PAN + ZOOM + HITCOUNTER */
-        const filterInput = document.getElementById("filterInput");
-        const hitCount    = document.getElementById("hitCount");
-        const resetBtn    = document.getElementById("resetZoom");
-
-        filterInput.oninput = function () {
-            const q = this.value.trim().toLowerCase();
-            const exactMatches = [];
-            const partialMatches = [];
+        /* FILTER / PAN / ZOOM */
+        filterInput.addEventListener("input", () => {
+            const q = filterInput.value.trim().toLowerCase();
+            const exact = [];
+            const partial = [];
 
             node.style("opacity", d => {
                 const n = d.name.toLowerCase();
                 if (!q) return 1;
-                if (n === q) {
-                    exactMatches.push(d);
-                    partialMatches.push(d);
-                    return 1;
-                }
-                if (n.includes(q)) {
-                    partialMatches.push(d);
-                    return 1;
-                }
+                if (n === q) { exact.push(d); partial.push(d); return 1; }
+                if (n.includes(q)) { partial.push(d); return 1; }
                 return 0.12;
             });
 
@@ -256,58 +234,43 @@ function drawSankey(svgId, csvPath) {
                 d.source.name.toLowerCase().includes(q) ||
                 d.target.name.toLowerCase().includes(q) ||
                 (d.mapping && d.mapping.toLowerCase().includes(q))
-                    ? 0.6
-                    : 0.05
+                    ? 0.6 : 0.05
             );
 
-            /* hit counter */
             if (!q) {
-                if (hitCount) hitCount.textContent = "...";
-                svg.transition().duration(400).call(zoom.transform,d3.zoomIdentity);
+                hitCount.textContent = "";
+                svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
                 return;
-            } else {
-                hitCount.textContent = `${partialMatches.length} object(en) gevonden`;
             }
 
-            /* pan alleen bij exacte match(es) */
-            if (exactMatches.length === 0) return;
+            hitCount.textContent = `${partial.length} object(en) gevonden`;
 
-            const minX = d3.min(exactMatches, d => d.x0);
-            const maxX = d3.max(exactMatches, d => d.x1);
-            const minY = d3.min(exactMatches, d => d.y0);
-            const maxY = d3.max(exactMatches, d => d.y1);
+            if (exact.length === 0) return;
 
-            const cx = (minX + maxX)/2;
-            const cy = (minY + maxY)/2;
+            const cx = (d3.min(exact, d => d.x0) + d3.max(exact, d => d.x1)) / 2;
+            const cy = (d3.min(exact, d => d.y0) + d3.max(exact, d => d.y1)) / 2;
 
-            const current = d3.zoomTransform(svg.node());
-            let scale = current.k;
-
-            /* subtiel inzoomen bij 1 exacte hit */
-            if (exactMatches.length === 1) {
-                scale = Math.min(3, current.k * 1.3);
-            }
+            const t = d3.zoomTransform(svg.node());
+            let scale = t.k;
+            if (exact.length === 1) scale = Math.min(3, scale * 1.3);
 
             svg.transition().duration(600).call(
                 zoom.transform,
                 d3.zoomIdentity
-                    .translate(
-                        width/2 - scale*cx + margin.left,
-                        height/2 - scale*cy + margin.top
-                    )
+                    .translate(width/2 - scale*cx + margin.left,
+                               height/2 - scale*cy + margin.top)
                     .scale(scale)
             );
-        };
+        });
 
-        resetBtn.onclick = () => {
+        resetBtn.addEventListener("click", () => {
             filterInput.value = "";
-            if (hitCount) hitCount.textContent = "...";
-            svg.transition().duration(400).call(zoom.transform,d3.zoomIdentity);
-        };
+            hitCount.textContent = "";
+            svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+        });
     });
 }
 
-/* CSV’s */
 drawSankey("#sankey_ad5","mapping-ad4-ad5-sort-ad5.csv");
 drawSankey("#sankey_ad4","mapping-ad4-ad5-sort-ad4.csv");
 </script>
