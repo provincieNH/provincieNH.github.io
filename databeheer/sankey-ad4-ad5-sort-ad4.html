@@ -262,7 +262,7 @@ function drawSankey(svgId, csvPath) {
 
             /* hit counter */
             if (!q) {
-                hitCount.textContent = "";
+                if (hitCount) hitCount.textContent = "...";
                 svg.transition().duration(400).call(zoom.transform,d3.zoomIdentity);
                 return;
             } else {
@@ -301,7 +301,7 @@ function drawSankey(svgId, csvPath) {
 
         resetBtn.onclick = () => {
             filterInput.value = "";
-            hitCount.textContent = "";
+            if (hitCount) hitCount.textContent = "...";
             svg.transition().duration(400).call(zoom.transform,d3.zoomIdentity);
         };
     });
