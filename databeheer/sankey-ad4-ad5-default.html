@@ -21,29 +21,6 @@ body {
 #header h1 { margin:0; font-size:26px; font-weight:600; color:#003b6c; }
 #header p { margin:4px 0 0; color:#555; }
 
-#filterbox {
-    padding:15px 40px;
-    background:white;
-    border-bottom:1px solid #e0e0e0;
-    display:flex;
-    gap:12px;
-    align-items:center;
-}
-#filterbox input {
-    width:350px;
-    padding:8px 12px;
-    border-radius:6px;
-    border:1px solid #bbb;
-}
-#filterbox button {
-    padding:8px 14px;
-    border-radius:6px;
-    border:1px solid #bbb;
-    background:#f2f2f2;
-    cursor:pointer;
-}
-#filterbox button:hover { background:#e6e6e6; }
-
 #tabs {
     padding:10px 40px;
     background:white;
@@ -69,7 +46,7 @@ body {
 .tabcontent { display:none; }
 .tabcontent.active { display:block; }
 
-svg { cursor:move; background:white; }
+svg { background:white; }
 
 .node rect { fill-opacity:0.9; shape-rendering:crispEdges; }
 .node text {
@@ -78,8 +55,8 @@ svg { cursor:move; background:white; }
     fill:#333;
     font-weight:600;
 }
-.link { fill:none; stroke-opacity:0.3; }
-.link:hover { stroke-opacity:0.6; }
+.link { fill:none; stroke-opacity:0.35; }
+.link:hover { stroke-opacity:0.65; }
 </style>
 </head>
 
@@ -88,42 +65,24 @@ svg { cursor:move; background:white; }
 <div id="topbar"></div>
 
 <div id="header">
-    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – standaard volledige mapping</h1>
-    <p>Interactieve Sankey-weergave – compleet & per assetgroep</p>
-</div>
-
-<div id="filterbox">
-    <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
-    <span id="hitCount" style="color:#555;font-size:14px;"></span>
-    <button id="resetZoom">Reset zoom</button>
+    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – standaard</h1>
+    <p>Sankey – linkhoogte vast (17 px), nodehoogte data‑gedreven</p>
 </div>
 
 <div id="tabs">
     <button class="tabbtn active" data-tab="tab-ad5">AD5 (alles)</button>
-    <button class="tabbtn" data-tab="tab-ad4">AD4 (alles)</button>
-
     <button class="tabbtn" data-tab="tab-bodem">Bodem</button>
     <button class="tabbtn" data-tab="tab-groen">Groen</button>
-    <button class="tabbtn" data-tab="tab-integraal">Integraal</button>
-    <button class="tabbtn" data-tab="tab-kunstwerken">Kunstwerken</button>
     <button class="tabbtn" data-tab="tab-ovl">OVL / VRI</button>
-    <button class="tabbtn" data-tab="tab-vaarwegen">Vaarwegen</button>
     <button class="tabbtn" data-tab="tab-wegen">Wegen</button>
-    <button class="tabbtn" data-tab="tab-wegkantsystemen">Wegkantsystemen</button>
 </div>
 
 <div id="chart">
     <div id="tab-ad5" class="tabcontent active"><svg id="sankey_ad5"></svg></div>
-    <div id="tab-ad4" class="tabcontent"><svg id="sankey_ad4"></svg></div>
-
     <div id="tab-bodem" class="tabcontent"><svg id="sankey_bodem"></svg></div>
     <div id="tab-groen" class="tabcontent"><svg id="sankey_groen"></svg></div>
-    <div id="tab-integraal" class="tabcontent"><svg id="sankey_integraal"></svg></div>
-    <div id="tab-kunstwerken" class="tabcontent"><svg id="sankey_kunstwerken"></svg></div>
     <div id="tab-ovl" class="tabcontent"><svg id="sankey_ovl"></svg></div>
-    <div id="tab-vaarwegen" class="tabcontent"><svg id="sankey_vaarwegen"></svg></div>
     <div id="tab-wegen" class="tabcontent"><svg id="sankey_wegen"></svg></div>
-    <div id="tab-wegkantsystemen" class="tabcontent"><svg id="sankey_wegkantsystemen"></svg></div>
 </div>
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -133,12 +92,8 @@ svg { cursor:move; background:white; }
 const ASSETGROUPS = {
     Bodem: "bodem",
     Groen: "groen",
-    Integraal: "integraal",
-    Kunstwerken: "kunstwerken",
-    "OVL / VRI": "ovl / vri",
-    Vaarwegen: "vaarwegen",
-    Wegen: "wegen",
-    Wegkantsystemen: "wegkantsystemen"
+    "OVL / VRI": "ovlvri",
+    Wegen: "wegen"
 };
 
 document.querySelectorAll(".tabbtn").forEach(btn => {
@@ -150,52 +105,62 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
     });
 });
 
-const width = 1600;
-const height = 7430;
-const margin = {top:20, right:50, bottom:20, left:200};
-const color = d3.scaleOrdinal(d3.schemeCategory10);
+const WIDTH = 1500;
+const NODE_WIDTH = 70;
+const NODE_PADDING = 12;
 const LINK_HEIGHT = 17;
+const MARGIN = {top:20, right:50, bottom:20, left:200};
 
-function drawSankey(svgId, csvPath, assetGroup = null) {
+function drawSankey(svgId, csvPath, group = null) {
 
-    const svg = d3.select(svgId)
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom);
+    d3.csv(csvPath).then(raw => {
 
-    svg.selectAll("*").remove();
+        raw.forEach(d => {
+            d.assetgroep = d.assetgroep
+                .toLowerCase()
+                .replace(/\s+/g, "")
+                .replace(/\//g, "");
+        });
 
-    const outer = svg.append("g")
-        .attr("transform", `translate(${margin.left},${margin.top})`);
-
-    const container = outer.append("g");
-
-    const sankey = d3.sankey()
-        .nodeWidth(70)
-        .nodePadding(12)
-        .extent([[0,0],[width,height]]);
-
-    d3.csv(csvPath).then(data => {
-
-        let filtered = data;
-        if (assetGroup && ASSETGROUPS[assetGroup]) {
-            filtered = data.filter(d => d.assetgroep === ASSETGROUPS[assetGroup]);
+        let data = raw;
+        if (group && ASSETGROUPS[group]) {
+            data = raw.filter(d => d.assetgroep === ASSETGROUPS[group]);
         }
 
-        const names = Array.from(new Set(filtered.flatMap(d => [d.source, d.target])));
+        const names = Array.from(new Set(data.flatMap(d => [d.source, d.target])));
 
         const graph = {
-            nodes: names.map(n => ({ name: n })),
-            links: filtered.map(d => ({
+            nodes: names.map(n => ({ name:n })),
+            links: data.map(d => ({
                 source: names.indexOf(d.source),
                 target: names.indexOf(d.target),
-                value: 1,                // ✅ telt links → nodehoogte klopt
+                value: 1,
                 mapping: d.mapping || ""
             }))
         };
 
+        /* 🔑 DIT IS DE FIX */
+        const linkCount = graph.links.length;
+        const height =
+            Math.max(linkCount * LINK_HEIGHT + NODE_PADDING * names.length, 300);
+
+        const svg = d3.select(svgId)
+            .attr("width", WIDTH + MARGIN.left + MARGIN.right)
+            .attr("height", height + MARGIN.top + MARGIN.bottom);
+
+        svg.selectAll("*").remove();
+
+        const g = svg.append("g")
+            .attr("transform", `translate(${MARGIN.left},${MARGIN.top})`);
+
+        const sankey = d3.sankey()
+            .nodeWidth(NODE_WIDTH)
+            .nodePadding(NODE_PADDING)
+            .extent([[0, 0], [WIDTH, height]]);
+
         sankey(graph);
 
-        container.append("g")
+        g.append("g")
             .selectAll(".link")
             .data(graph.links)
             .enter()
@@ -203,14 +168,10 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             .attr("class","link")
             .attr("d", d3.sankeyLinkHorizontal())
             .style("stroke-width", LINK_HEIGHT)
-            .style("stroke", d => {
-                const p = d.target.name.split(".");
-                return color(p[1] || "default");
-            })
             .append("title")
-            .text(d => d.mapping || "");
+            .text(d => d.mapping);
 
-        const node = container.append("g")
+        const node = g.append("g")
             .selectAll(".node")
             .data(graph.nodes)
             .enter()
@@ -219,13 +180,12 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             .attr("transform", d => `translate(${d.x0},${d.y0})`);
 
         node.append("rect")
-            .attr("width", sankey.nodeWidth())
-            .attr("height", d => Math.max(LINK_HEIGHT, d.y1 - d.y0))
-            .style("fill", d => color(d.name.split(".")[1] || "x"));
+            .attr("width", NODE_WIDTH)
+            .attr("height", d => d.y1 - d.y0);
 
         node.append("text")
-            .attr("x",-15)
-            .attr("y", d => (d.y1 - d.y0)/2)
+            .attr("x",-12)
+            .attr("y", d => (d.y1 - d.y0) / 2)
             .attr("dy","0.35em")
             .attr("text-anchor","end")
             .text(d => d.name);
@@ -233,16 +193,10 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
 }
 
 drawSankey("#sankey_ad5", "mapping-ad4-ad5-sort-ad5.csv");
-drawSankey("#sankey_ad4", "mapping-ad4-ad5-sort-ad4.csv");
-
 drawSankey("#sankey_bodem", "mapping-ad4-ad5-sort-ad5.csv", "Bodem");
 drawSankey("#sankey_groen", "mapping-ad4-ad5-sort-ad5.csv", "Groen");
-drawSankey("#sankey_integraal", "mapping-ad4-ad5-sort-ad5.csv", "Integraal");
-drawSankey("#sankey_kunstwerken", "mapping-ad4-ad5-sort-ad5.csv", "Kunstwerken");
 drawSankey("#sankey_ovl", "mapping-ad4-ad5-sort-ad5.csv", "OVL / VRI");
-drawSankey("#sankey_vaarwegen", "mapping-ad4-ad5-sort-ad5.csv", "Vaarwegen");
 drawSankey("#sankey_wegen", "mapping-ad4-ad5-sort-ad5.csv", "Wegen");
-drawSankey("#sankey_wegkantsystemen", "mapping-ad4-ad5-sort-ad5.csv", "Wegkantsystemen");
 </script>
 
 </body>
