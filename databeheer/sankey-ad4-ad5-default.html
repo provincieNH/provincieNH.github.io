@@ -80,6 +80,183 @@ svg { cursor:move; background:white; }
 }
 .link { fill:none; stroke-opacity:0.3; }
 .link:hover { stroke-opacity:0.6; }
+
+.total-node rect {
+    fill: #003b6c;
+    fill-opacity: 1;
+}
+
+.total-node text {
+    fill: #003b6c;
+    font-weight: 700;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="topbar"></div>
+
+<div id="header">
+    <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) – standaard volledige mapping</h1>
+    <p>Interactieve Sankey-weergave – compleet & per assetgroep – v0.95</p>
+</div>
+
+<div id="filterbox">
+    <input id="filterInput" placeholder="Zoek in AD4 of AD5…" />
+    <span id="hitCount" style="color:#555;font-size:14px;"></span>
+    <button id="resetZoom">Reset zoom</button>
+</div>
+
+<div id="tabs">
+    <button class="tabbtn active" data-tab="tab-ad5">AD5 (alles)</button>
+    <button class="tabbtn" data-tab="tab-ad4">AD4 (alles)</button>
+
+    <button class="tabbtn" data-tab="tab-bodem">Bodem</button>
+    <button class="tabbtn" data-tab="tab-groen">Groen</button>
+    <button class="tabbtn" data-tab="tab-integraal">Integraal</button>
+    <button class="tabbtn" data-tab="tab-kunstwerken">Kunstwerken</button>
+    <button class="tabbtn" data-tab="tab-ovl">OVL / VRI</button>
+    <button class="tabbtn" data-tab="tab-vaarwegen">Vaarwegen</button>
+    <button class="tabbtn" data-tab="tab-wegen">Wegen</button>
+    <button class="tabbtn" data-tab="tab-wegkantsystemen">Wegkantsystemen</button>
+</div>
+
+<div id="chart">
+    <div id="tab-ad5" class="tabcontent active"><svg id="sankey_ad5"></svg></div>
+    <div id="tab-ad4" class="tabcontent"><svg id="sankey_ad4"></svg></div>
+
+    <div id="tab-bodem" class="tabcontent"><svg id="sankey_bodem"></svg></div>
+    <div id="tab-groen" class="tabcontent"><svg id="sankey_groen"></svg></div>
+    <div id="tab-integraal" class="tabcontent"><svg id="sankey_integraal"></svg></div>
+    <div id="tab-kunstwerken" class="tabcontent"><svg id="sankey_kunstwerken"></svg></div>
+    <div id="tab-ovl" class="tabcontent"><svg id="sankey_ovl"></svg></div>
+    <div id="tab-vaarwegen" class="tabcontent"><svg id="sankey_vaarwegen"></svg></div>
+    <div id="tab-wegen" class="tabcontent"><svg id="sankey_wegen"></svg></div>
+    <div id="tab-wegkantsystemen" class="tabcontent"><svg id="sankey_wegkantsystemen"></svg></div>
+</div>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="lib/d3-sankey.min.js"></script>
+
+<script>
+const ASSETGROUPS = {
+    Bodem: "bodem",
+    Groen: "groen",
+    Integraal: "integraal",
+    Kunstwerken: "kunstwerken",
+    "OVL / VRI": "ovlvri",
+    Vaarwegen: "vaarwegen",
+    Wegen: "wegen",
+    Wegkantsystemen: "wegkantsystemen"
+};
+
+document.querySelectorAll(".tabbtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".tabbtn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".tabcontent").forEach(c => c.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+});
+
+document.getElementById("filterInput").addEventListener("input", () => {
+    const activeTab = document.querySelector(".tabbtn.active");
+    if (activeTab) activeTab.click();
+});
+
+const width = 1600;
+const margin = {top:20, right:50, bottom:20, left:350};
+const color = d3.scaleOrdinal(d3.schemeCategory10);
+const LINK_HEIGHT = 17;
+
+function baseName(label) {
+    return label.replace(/\s*\(.*?\)/g, "");
+}
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<title>Sankey AD4 → AD5 Mapping</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family:"Inter",sans-serif;
+    background:#f8f8f8;
+}
+#topbar { background:#003b6c; height:8px; }
+#header {
+    background:white;
+    padding:25px 40px;
+    border-bottom:1px solid #ddd;
+}
+#header h1 { margin:0; font-size:26px; font-weight:600; color:#003b6c; }
+#header p { margin:4px 0 0; color:#555; }
+
+#filterbox {
+    padding:15px 40px;
+    background:white;
+    border-bottom:1px solid #e0e0e0;
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+#filterbox input {
+    width:350px;
+    padding:8px 12px;
+    border-radius:6px;
+    border:1px solid #bbb;
+}
+#filterbox button {
+    padding:8px 14px;
+    border-radius:6px;
+    border:1px solid #bbb;
+    background:#f2f2f2;
+    cursor:pointer;
+}
+#filterbox button:hover { background:#e6e6e6; }
+
+#tabs {
+    padding:10px 40px;
+    background:white;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+.tabbtn {
+    padding:6px 12px;
+    border-radius:4px;
+    border:1px solid #bbb;
+    background:#f2f2f2;
+    cursor:pointer;
+}
+.tabbtn.active {
+    background:#003b6c;
+    color:white;
+    border-color:#003b6c;
+}
+
+#chart { padding:20px; }
+.tabcontent { display:none; }
+.tabcontent.active { display:block; }
+
+svg { cursor:move; background:white; }
+
+.node rect { fill-opacity:0.9; shape-rendering:crispEdges; }
+.node text {
+    pointer-events:none;
+    font-size:12px;
+    fill:#333;
+    font-weight:600;
+}
+.link { fill:none; stroke-opacity:0.3; }
+.link:hover { stroke-opacity:0.6; }
 </style>
 </head>
 
@@ -263,6 +440,23 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             .attr("text-anchor","end")
             .text(d => d.name);
     });
+}
+
+drawSankey("#sankey_ad5", "mapping-ad4-ad5-sort-ad5.csv");
+drawSankey("#sankey_ad4", "mapping-ad4-ad5-sort-ad4.csv");
+
+drawSankey("#sankey_bodem", "mapping-ad4-ad5-sort-ad5.csv", "Bodem");
+drawSankey("#sankey_groen", "mapping-ad4-ad5-sort-ad5.csv", "Groen");
+drawSankey("#sankey_integraal", "mapping-ad4-ad5-sort-ad5.csv", "Integraal");
+drawSankey("#sankey_kunstwerken", "mapping-ad4-ad5-sort-ad5.csv", "Kunstwerken");
+drawSankey("#sankey_ovl", "mapping-ad4-ad5-sort-ad5.csv", "OVL / VRI");
+drawSankey("#sankey_vaarwegen", "mapping-ad4-ad5-sort-ad5.csv", "Vaarwegen");
+drawSankey("#sankey_wegen", "mapping-ad4-ad5-sort-ad5.csv", "Wegen");
+drawSankey("#sankey_wegkantsystemen", "mapping-ad4-ad5-sort-ad5.csv", "Wegkantsystemen");
+</script>
+
+</body>
+</html>
 }
 
 drawSankey("#sankey_ad5", "mapping-ad4-ad5-sort-ad5.csv");
