@@ -383,12 +383,14 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
         const graph = {
             nodes: names.map(n => ({ name: n })),
             links: filtered.map(d => ({
-                source: names.indexOf(d.source),
-                target: names.indexOf(d.target),
-                value: 1,
-                mapping: d.mapping || ""
+            source: names.indexOf(d.source),
+            target: names.indexOf(d.target),
+            value: +d.value || 1,   // ✅ ECHTE FLOW
+            mapping: d.mapping || ""
             }))
         };
+
+
 
         const height = Math.max(graph.links.length * LINK_HEIGHT + 200, 300);
 
