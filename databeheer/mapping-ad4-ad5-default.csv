@@ -124,8 +124,8 @@ ad4.bordScheepvaart_p (1662),ad5.kabels_en_leidingenbord_p (1681),1,TYPESPEC_bor
 ad4.scheidingWater_l (11359),ad5.kademuur_l (293),1,BGTPLUSTYPE_kademuur,vaarwegen
 ad4.scheiding_v (5023),ad5.kademuur_v (947),1,BGTPLUSTYPE_kademuur,vaarwegen
 ad4.kast_p (2249),ad5.kast_p (747),1,TYPESPEC_Kast_ onbekend_OV,ovl/vri
-ad4.put_p (1278),ad5.kolk_p (4680),1,BGTPLUSTYPE_niet-bgt_kolk,bodem
-ad4.leidingelement_p (26119),ad5.kolk_p (4680),1,TYPESPEC_Kolk_RWS kolk_Straatkolk_Trottoirkolk_Rioolleidingelement_ onbekend,bodem
+ad4.put_p (1278),ad5.kolk_p (16171),1,BGTPLUSTYPE_niet-bgt_kolk,bodem
+ad4.leidingelement_p (26119),ad5.kolk_p (16171),1,TYPESPEC_Kolk_RWS kolk_Straatkolk_Trottoirkolk_Rioolleidingelement_ onbekend,bodem
 ad4.kruispunt_p (808),ad5.kruispunt_p (808),1,x_x,integraal
 ad4.straatmeubilair_p (6902),ad5.kunstobject_p (4),1,TYPESPEC_kunstobject,wegkantsystemen
 ad4.onbegroeidTerreindeel_v (10669),ad5.kunststofverharding_v (27),1,FYSIEKVOORKOMEN_gesloten verharding_kunststof,wegen
@@ -141,7 +141,7 @@ ad4.ligplaatsstrook_v (38),ad5.ligplaatsstrook_v (38),1,x_x,vaarwegen
 ad4.weginrichtingselement_l (8250),ad5.lijngoot_l (20),1,TYPESPEC_Lijnafwatering,wegen
 ad4.straatmeubilair_p (6902),ad5.luidspreker_p (206),1,TYPESPEC_Luidspreker,ovl/vri
 ad4.gebouwInstallatie_v (6),ad5.luifel_v (3),1,BGTPLUSTYPE_niet-bgt_luifel,kunstwerken
-ad4.mantelbuis_v (10067),ad5.mantelbuis_v (2501),1,x_x,bodem
+ad4.mantelbuis_v (10067),ad5.mantelbuis_v (10068),1,x_x,bodem
 ad4.paalDraagconstructie_p (50695),ad5.markeringspaal_p (61),1,BGTPLUSTYPE_niet-bgt_dijkpaal,wegkantsystemen
 ad4.paalAfbakening_p (34245),ad5.markeringspaal_p (61),1,TYPESPEC_dijkpaal_grensmarkering,wegkantsystemen
 ad4.waterinrichtingselement_p (2466),ad5.meerpaal_p (2303),1,TYPESPEC_Dukdalf_Meerpaal,wegkantsystemen
@@ -160,7 +160,7 @@ ad4.bouwdeelGeluidsscherm_tbl (2050),ad5.neninspectie_tbl (77001),1,x_x,kunstwer
 ad4.bouwdeelOevervak_tbl (21424),ad5.neninspectie_tbl (77001),1,x_x,kunstwerken
 ad4.elementOevervak_tbl (15516),ad5.neninspectie_tbl (77001),1,x_x,kunstwerken
 ad4.ondersteunendWaterdeel_v (14135),ad5.oever_of_slootkant_v (14243),1,BGTPLUSTYPE_oever_ slootkant,vaarwegen
-ad4.elementOevervak_tbl (15516),ad5.oeverelement_tbl (0),1,x_x,vaarwegen
+ad4.elementOevervak_tbl (15516),ad5.oeverelement_tbl (15516),1,x_x,vaarwegen
 ad4.oevervak_v (6921),ad5.oeverzone_v (6921),1,x_x,vaarwegen
 ad4.kunstwerk_p (869),ad5.onderdoorgang_p (113),1,NENBEHEEROBJECT_Onderdoorgangen,kunstwerken
 ad4.ondersteunendWegdeel_v (34754),ad5.onverhard_v (1619),1,FYSIEKVOORKOMEN_onverhard_onverhard_boomschors_onverhard_zand,wegen
@@ -247,9 +247,9 @@ ad4.weginrichtingselement_l (8250),ad5.verblindingswering_l (3),1,BGTPLUSTYPE_ni
 ad4.wegdeel_v (60933),ad5.verharding_v (7846),1,FYSIEKVOORKOMEN_gesloten verharding,wegen
 ad4.ondersteunendWegdeel_v (34754),ad5.verharding_v (7846),1,FYSIEKVOORKOMEN_gesloten verharding,wegen
 ad4.onbegroeidTerreindeel_v (10669),ad5.verharding_v (7846),1,FYSIEKVOORKOMEN_gesloten verharding_Erf,wegen
-ad4.bord_p (36860),ad5.verkeersbord_p (86),1,BGTPLUSTYPE_niet-bgt_plaatsnaambord_niet-bgt_straatnaambord_niet-bgt_verkeersbord_niet-bgt_waarschuwingshek_niet-bgt_wegwijzer_niet-bgt,wegkantsystemen
-ad4.paalDraagconstructie_p (50695),ad5.verkeersbord_p (86),1,BGTPLUSTYPE_niet-bgt_hectometerpaal,wegkantsystemen
-ad4.paalAfbakening_p (34245),ad5.verkeersbord_p (86),1,TYPESPEC_Hectometerpaal_Bermplank,wegkantsystemen
+ad4.bord_p (36860),ad5.verkeersbord_p (64095),1,BGTPLUSTYPE_niet-bgt_plaatsnaambord_niet-bgt_straatnaambord_niet-bgt_verkeersbord_niet-bgt_waarschuwingshek_niet-bgt_wegwijzer_niet-bgt,wegkantsystemen
+ad4.paalDraagconstructie_p (50695),ad5.verkeersbord_p (64095),1,BGTPLUSTYPE_niet-bgt_hectometerpaal,wegkantsystemen
+ad4.paalAfbakening_p (34245),ad5.verkeersbord_p (64095),1,TYPESPEC_Hectometerpaal_Bermplank,wegkantsystemen
 ad4.weginrichtingselement_v (46),ad5.verkeersdrempel_v (3),1,TYPESPEC_Verkeersdrempel,wegen
 ad4.lantaarn_p (7568),ad5.verkeerslantaarn_p (7568),1,x_x,ovl/vri
 ad4.straatmeubilair_p (6902),ad5.verkeersspiegel_p (93),1,TYPESPEC_verkeersspiegel,wegkantsystemen
@@ -260,7 +260,7 @@ ad4.elektriciteitskabel_l (34538),ad5.voedingskabel_l (0),1,TYPESPEC_ENE,bodem
 ad4.telecommunicatiekabel_l (536),ad5.voedingskabel_l (0),1,TYPESPEC_ENE,bodem
 ad4.weginrichtingselement_l (8250),ad5.voegovergang_l (10),1,TYPESPEC_Voegovergang,wegen
 ad4.kunstwerkdeel_v (3773),ad5.voorde_v (2),1,BGTPLUSTYPE_niet-bgt_voorde,kunstwerken
-ad4.kastVri_p (302),ad5.vri_kast_p (183),1,x_x,ovl/vri
+ad4.kastVri_p (302),ad5.vri_kast_p (302),1,x_x,ovl/vri
 ad4.buis_l (10618),ad5.vrijvervalrioolleiding_l (10519),1,TYPESPEC_hemelwaterriool_overstortleiding_stuwrioolleiding_ vuilwaterriool_doorlatendeleiding_zinker_transportrioolleiding,bodem
 ad4.waterinrichtingselement_l (718),ad5.vuilvang_l (2),1,BGTPLUSTYPE_niet-bgt_vuilvang,kunstwerken
 ad4.waterloop_l (458),ad5.watergang_l (458),1,x_x,vaarwegen
