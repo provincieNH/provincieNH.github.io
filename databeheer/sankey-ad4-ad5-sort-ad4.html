@@ -90,7 +90,7 @@ svg { cursor:move; background:white; }
 <div id="header">
     <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) volledige mapping</h1>
     <p>Interactieve Sankey-weergave – compleet & per assetgroep – v0.96</p>
-    <p>gesorteerd op AD4-object — AD4–AD5 mapping (totaal aantal records in Areaaldata 4: 1.311.658 → totaal aantal records in Areaaldata 5: 1.383.307) — gegenereerd op 05-02-2026 11:35</p>
+    <p>gesorteerd op AD4-object — AD4–AD5 mapping (totaal aantal records in Areaaldata 4: 1.311.658 → totaal aantal records in Areaaldata 5: 1.383.307) — gegenereerd op 05-02-2026 11:50</p>
 </div>
 
 <div id="filterbox">
@@ -161,6 +161,9 @@ const margin = {top:20, right:50, bottom:20, left:350};
 const color = d3.scaleOrdinal(d3.schemeCategory10);
 const LINK_HEIGHT = 17;
 
+const zoom = d3.zoom().scaleExtent([0.2, 5]);
+let activeSvg = null;
+
 function baseName(label) {
     return label.replace(/\s*\(.*?\)/g, "");
 }
@@ -225,6 +228,14 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
         const g = svg.append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
 
+        svg.call(
+            zoom.on("zoom", () => {
+                g.attr("transform", d3.event.transform);
+            })
+        );
+
+        activeSvg = svg;
+
         const sankey = d3.sankey()
             .nodeWidth(70)
             .nodePadding(12)
@@ -265,6 +276,15 @@ function drawSankey(svgId, csvPath, assetGroup = null) {
             .text(d => d.name);
     });
 }
+
+document.getElementById("resetZoom").addEventListener("click", () => {
+    if (activeSvg) {
+        activeSvg
+            .transition()
+            .duration(600)
+            .call(zoom.transform, d3.zoomIdentity);
+    }
+});
 
 drawSankey("#sankey_ad5", "mapping-ad4-ad5-sort-ad5.csv");
 drawSankey("#sankey_ad4", "mapping-ad4-ad5-sort-ad4.csv");
