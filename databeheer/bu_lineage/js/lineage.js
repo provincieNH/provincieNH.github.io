@@ -42,52 +42,63 @@ async function loadLineage() {
       rankSep: 120,
       padding: 40
     },
-    style: [
-    {
-  selector: "node[type='dataset']",
-  style: {
-    "shape": "round-rectangle",
-    "background-color": "#e3f2fd",
-    "border-color": "#1565c0",
-    "border-width": 1,
-    "font-weight": 600
-  }
+style: [style: [
+  /* Basisstijl voor alle nodes */
+  {
+    selector: "node",
+    style: {
+      "label": "data(label)",
+      "font-size": 16,
+      "font-weight": 600,
+      "text-wrap": "wrap",
+      "text-max-width": 180,
+      "padding": "14px",
+      "width": "label",
+      "height": "label",
+      "text-valign": "center",
+      "text-halign": "center",
+      "color": "#333"
     }
-      {
-        selector: "node[type='dataset']",
-        style: {
-          "shape": "round-rectangle",
-          "background-color": "#e3f2fd",
-          "border-color": "#1565c0",
-          "border-width": 1
-        }
-      },
-      {
-        {
-          selector: "node[type='job']",
-          style: {
-            "shape": "round-rectangle",
-            "corner-radius": 999,
-            "background-color": "#fff3e0",
-            "border-color": "#ef6c00",
-            "border-width": 1,
-            "font-weight": 400
-          }
-        }
-      },
-      {
-        selector: "edge",
-        style: {
-          "curve-style": "bezier",
-          "target-arrow-shape": "triangle",
-          "line-color": "#999",
-          "target-arrow-color": "#555",
-          "label": "data(label)",
-          "font-size": 10,
-          "color": "#555"
-        }
-      }
-    ]
+  },
+
+  /* Dataset-nodes */
+  {
+    selector: "node[type='dataset']",
+    style: {
+      "shape": "round-rectangle",
+      "background-color": "#e3f2fd",
+      "border-color": "#1565c0",
+      "border-width": 1
+    }
+  },
+
+  /* Job-nodes (pilvorm) */
+  {
+    selector: "node[type='job']",
+    style: {
+      "shape": "round-rectangle",
+      "corner-radius": 999,
+      "background-color": "#fff3e0",
+      "border-color": "#ef6c00",
+      "border-width": 1,
+      "font-weight": 400
+    }
+  },
+
+  /* Edges */
+  {
+    selector: "edge",
+    style: {
+      "curve-style": "bezier",
+      "target-arrow-shape": "triangle",
+      "line-color": "#999",
+      "target-arrow-color": "#555",
+      "label": "data(label)",
+      "font-size": 10,
+      "color": "#555"
+    }
+  }
+]
   });
 
   cy.fit();
