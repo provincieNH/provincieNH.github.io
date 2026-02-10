@@ -43,21 +43,16 @@ async function loadLineage() {
       padding: 40
     },
     style: [
-      {
-        selector: "node",
-        style: {
-          "label": "data(label)",
-          "font-size": 16,
-          "text-wrap": "wrap",
-          "text-max-width": 180,
-          "padding": "14px",
-          "width": "label",
-          "height": "label",
-          "text-valign": "center",
-          "text-halign": "center",
-          "color": "#000"
-        }
-      },
+    {
+  selector: "node[type='dataset']",
+  style: {
+    "shape": "round-rectangle",
+    "background-color": "#e3f2fd",
+    "border-color": "#1565c0",
+    "border-width": 1,
+    "font-weight": 600
+  }
+    }
       {
         selector: "node[type='dataset']",
         style: {
@@ -68,13 +63,16 @@ async function loadLineage() {
         }
       },
       {
-        selector: "node[type='job']",
-        style: {
-          "shape": "round-rectangle",
-          "corner-radius": 20,
-          "background-color": "#fff3e0",
-          "border-color": "#ef6c00",
-          "border-width": 1
+        {
+          selector: "node[type='job']",
+          style: {
+            "shape": "round-rectangle",
+            "corner-radius": 999,
+            "background-color": "#fff3e0",
+            "border-color": "#ef6c00",
+            "border-width": 1,
+            "font-weight": 400
+          }
         }
       },
       {

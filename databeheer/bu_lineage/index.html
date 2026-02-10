@@ -4,15 +4,21 @@
   <meta charset="utf-8" />
   <title>BU Data Lineage</title>
 
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
 
   <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 </head>
+
 <body>
 
-<header>
+<div id="topbar"></div>
+
+<header id="header">
   <h1>BU Data Lineage</h1>
   <p>Overzicht van datasets, herkomst en metadata</p>
 </header>
@@ -22,7 +28,8 @@
 
   <aside id="details">
     <h2>Dataset details</h2>
-    <p>Klik op een dataset.</p>
+    <p class="hint">Klik op een dataset om metadata te bekijken.</p>
+
     <div id="details-content"></div>
 
     <div id="legend">
