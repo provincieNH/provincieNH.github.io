@@ -6,38 +6,32 @@
 
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Cytoscape -->
   <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+  <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+  <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 </head>
 <body>
 
 <header>
   <h1>BU Data Lineage</h1>
-  <p>
-    Overzicht van datasets en hun herkomst (OpenLineage).
-  </p>
+  <p>Overzicht van datasets, herkomst en metadata</p>
 </header>
 
-<main>
-    <div id="container">
+<main id="container">
   <div id="lineage"></div>
 
   <aside id="details">
     <h2>Dataset details</h2>
-    <p>Klik op een dataset om metadata te bekijken.</p>
+    <p>Klik op een dataset.</p>
     <div id="details-content"></div>
+
+    <div id="legend">
+      <div><span class="legend dataset"></span> Dataset</div>
+      <div><span class="legend job"></span> Verwerkingsstap</div>
+    </div>
   </aside>
-</div>
 </main>
 
-<footer>
-  <p>
-    Provincie Noord-Holland – Databeheer BU
-  </p>
-</footer>
-
-<script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
-<script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 <script src="js/lineage.js"></script>
 </body>
 </html>

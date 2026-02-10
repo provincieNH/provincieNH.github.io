@@ -4,51 +4,31 @@ async function loadLineage() {
 
   const nodes = new Map();
   const edges = [];
-  const datasetMeta = new Map();
+  const metaByNode = new Map();
 
-  function addNode(id, label, type) {
+  function addNode(id, label, type, meta = null) {
     if (!nodes.has(id)) {
-      nodes.set(id, {
-        data: { id, label, type }
-      });
+      nodes.set(id, { data: { id, label, type, meta } });
+      if (meta) metaByNode.set(id, meta);
     }
   }
 
-  // Verzamel nodes + metadata
   events.forEach(event => {
     const jobId = "job:" + event.job.name;
     addNode(jobId, event.job.name, "job");
 
     (event.inputs || []).forEach(input => {
+      const meta = input.facets?.metadata?.meta;
       const id = "ds:" + input.namespace + "." + input.name;
-      addNode(id, input.name, "dataset");
-
-      datasetMeta.set(id, {
-        rol: "input",
-        namespace: input.namespace,
-        naam: input.name,
-        job: event.job.name
-      });
-
-      edges.push({
-        data: { source: id, target: jobId, label: "input" }
-      });
+      addNode(id, input.name, "dataset", meta);
+      edges.push({ data: { source: id, target: jobId, label: "input" } });
     });
 
     (event.outputs || []).forEach(output => {
+      const meta = output.facets?.metadata?.meta;
       const id = "ds:" + output.namespace + "." + output.name;
-      addNode(id, output.name, "dataset");
-
-      datasetMeta.set(id, {
-        rol: "output",
-        namespace: output.namespace,
-        naam: output.name,
-        job: event.job.name
-      });
-
-      edges.push({
-        data: { source: jobId, target: id, label: "output" }
-      });
+      addNode(id, output.name, "dataset", meta);
+      edges.push({ data: { source: jobId, target: id, label: "output" } });
     });
   });
 
@@ -67,7 +47,6 @@ async function loadLineage() {
         selector: "node",
         style: {
           "label": "data(label)",
-          "color": "#000",
           "font-size": 16,
           "text-wrap": "wrap",
           "text-max-width": 180,
@@ -75,11 +54,12 @@ async function loadLineage() {
           "width": "label",
           "height": "label",
           "text-valign": "center",
-          "text-halign": "center"
+          "text-halign": "center",
+          "color": "#000"
         }
       },
       {
-        selector: "node[type = 'dataset']",
+        selector: "node[type='dataset']",
         style: {
           "shape": "round-rectangle",
           "background-color": "#e3f2fd",
@@ -88,9 +68,10 @@ async function loadLineage() {
         }
       },
       {
-        selector: "node[type = 'job']",
+        selector: "node[type='job']",
         style: {
-          "shape": "ellipse",
+          "shape": "round-rectangle",
+          "corner-radius": 20,
           "background-color": "#fff3e0",
           "border-color": "#ef6c00",
           "border-width": 1
@@ -103,9 +84,9 @@ async function loadLineage() {
           "target-arrow-shape": "triangle",
           "line-color": "#999",
           "target-arrow-color": "#555",
+          "label": "data(label)",
           "font-size": 10,
-          "color": "#555",
-          "label": "data(label)"
+          "color": "#555"
         }
       }
     ]
@@ -113,18 +94,17 @@ async function loadLineage() {
 
   cy.fit();
 
-  // ✅ Klik op dataset → toon metadata
-  cy.on("tap", "node[type = 'dataset']", evt => {
-    const node = evt.target;
-    const meta = datasetMeta.get(node.id());
+  cy.on("tap", "node[type='dataset']", evt => {
+    const meta = evt.target.data("meta") || {};
+    let html = "<table>";
 
-    const panel = document.getElementById("details-content");
-    panel.innerHTML = `
-      <p><strong>Naam:</strong> ${meta.naam}</p>
-      <p><strong>Namespace:</strong> ${meta.namespace}</p>
-      <p><strong>Rol:</strong> ${meta.rol}</p>
-      <p><strong>Gekoppeld aan job:</strong> ${meta.job}</p>
-    `;
+    for (const [k, v] of Object.entries(meta)) {
+      if (!v) continue;
+      html += `<tr><th>${k.replaceAll("_", " ")}</th><td>${v}</td></tr>`;
+    }
+
+    html += "</table>";
+    document.getElementById("details-content").innerHTML = html;
   });
 }
 
