@@ -22,5 +22,5 @@ main {
 #lineage {
   width: 100%;
   height: calc(100vh - 120px);
-  background: white;
+  background: #fafafa;
 }
