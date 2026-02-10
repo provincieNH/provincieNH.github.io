@@ -58,27 +58,28 @@ async function loadLineage() {
       ...edges
     ],
     layout: {
-      name: "breadthfirst",
-      directed: true,
-      spacingFactor: 1.4,
-      padding: 40
-    },
+          name: "dagre",
+          rankDir: "LR",        // links → rechts
+          nodeSep: 80,
+          rankSep: 120,
+          padding: 40
+        },
     style: [
-      {
-        selector: "node",
-        style: {
-          "label": "data(label)",
-          "color": "#000000",
-          "text-valign": "center",
-          "text-halign": "center",
-          "font-size": 12,
-          "text-wrap": "wrap",
-          "text-max-width": 140,
-          "padding": "10px",
-          "width": "label",
-          "height": "label"
+              {
+          selector: "node",
+          style: {
+            "label": "data(label)",
+            "color": "#000000",
+            "text-valign": "center",
+            "text-halign": "center",
+            "font-size": 16,
+            "text-wrap": "wrap",
+            "text-max-width": 180,
+            "padding": "14px",
+            "width": "label",
+            "height": "label"
+          }
         }
-      },
       {
         selector: "node[type = 'dataset']",
         style: {
@@ -112,5 +113,8 @@ async function loadLineage() {
     ]
   });
 }
+const cy = cytoscape({ ... });
 
+cy.fit();
+cy.center();
 loadLineage();
