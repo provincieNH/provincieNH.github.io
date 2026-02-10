@@ -24,3 +24,30 @@ main {
   height: calc(100vh - 120px);
   background: #fafafa;
 }
+
+#container {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+#lineage {
+  flex: 3;
+  background: #fafafa;
+}
+
+#details {
+  flex: 1;
+  border-left: 1px solid #ccc;
+  padding: 12px;
+  background: #ffffff;
+  font-size: 14px;
+  overflow-y: auto;
+}
+
+#details h2 {
+  margin-top: 0;
+}
+
+#details-content p {
+  margin: 6px 0;
+}
