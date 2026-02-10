@@ -4,9 +4,7 @@
   <meta charset="utf-8" />
   <title>BU Data Lineage</title>
 
-  <!-- Inter font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css" />
 
   <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
@@ -23,18 +21,26 @@
   <p>Overzicht van datasets, herkomst en metadata</p>
 </header>
 
+<div id="filterbox">
+  <input id="searchInput" placeholder="Zoek dataset, eigenaar, classificatie…" />
+  <span id="hitCount"></span>
+</div>
+
 <main id="container">
   <div id="lineage"></div>
 
   <aside id="details">
     <h2>Dataset details</h2>
-    <p class="hint">Klik op een dataset om metadata te bekijken.</p>
+    <p class="hint">Klik op een dataset.</p>
 
     <div id="details-content"></div>
 
     <div id="legend">
       <div><span class="legend dataset"></span> Dataset</div>
       <div><span class="legend job"></span> Verwerkingsstap</div>
+      <div><span class="legend open"></span> Open</div>
+      <div><span class="legend intern"></span> Intern</div>
+      <div><span class="legend vertrouwelijk"></span> Vertrouwelijk</div>
     </div>
   </aside>
 </main>

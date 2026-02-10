@@ -5,13 +5,11 @@ body {
   color: #333;
 }
 
-/* Dunne bovenbalk */
 #topbar {
   height: 8px;
   background: #003b6c;
 }
 
-/* Header */
 #header {
   background: white;
   padding: 25px 40px;
@@ -31,19 +29,38 @@ body {
   font-size: 14px;
 }
 
-/* Hoofdlayout */
-#container {
+#filterbox {
+  padding: 12px 40px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
   display: flex;
-  height: calc(100vh - 120px);
+  gap: 12px;
+  align-items: center;
 }
 
-/* Lineage canvas */
+#filterbox input {
+  width: 360px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-family: inherit;
+}
+
+#hitCount {
+  font-size: 14px;
+  color: #555;
+}
+
+#container {
+  display: flex;
+  height: calc(100vh - 170px);
+}
+
 #lineage {
   flex: 3;
   background: #fafafa;
 }
 
-/* Detailpaneel */
 #details {
   flex: 1;
   background: white;
@@ -62,10 +79,8 @@ body {
 #details .hint {
   font-size: 13px;
   color: #666;
-  margin-bottom: 10px;
 }
 
-/* Metadata tabel */
 #details table {
   width: 100%;
   border-collapse: collapse;
@@ -76,17 +91,13 @@ body {
   text-align: left;
   font-weight: 600;
   padding: 4px 6px;
-  vertical-align: top;
   width: 38%;
-  color: #444;
 }
 
 #details td {
   padding: 4px 6px;
-  color: #333;
 }
 
-/* Legenda */
 #legend {
   margin-top: 18px;
   padding-top: 10px;
@@ -96,10 +107,9 @@ body {
 
 .legend {
   display: inline-block;
-  width: 18px;
+  width: 16px;
   height: 12px;
   margin-right: 6px;
-  vertical-align: middle;
 }
 
 .legend.dataset {
@@ -112,3 +122,7 @@ body {
   border: 1px solid #ef6c00;
   border-radius: 999px;
 }
+
+.legend.open { background:#4caf50; }
+.legend.intern { background:#003b6c; }
+.legend.vertrouwelijk { background:#ef6c00; }
