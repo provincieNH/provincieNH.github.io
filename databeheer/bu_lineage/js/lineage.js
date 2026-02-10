@@ -51,20 +51,61 @@ async function loadLineage() {
       ...edges
     ],
     layout: {
-      name: "breadthfirst",
-      directed: true,
-      padding: 20
+  name: "breadthfirst",
+  directed: true,
+  spacingFactor: 1.4,
+  padding: 40
     },
     style: [
       {
         selector: "node[type = 'dataset']",
-        style: {
-          "background-color": "#1976d2",
-          "label": "data(label)",
-          "color": "#ffffff",
-          "text-valign": "center",
-          "shape": "round-rectangle"
-        }
+        style: [
+  {
+    selector: "node",
+    style: {
+      "label": "data(label)",
+      "color": "#000000",
+      "text-valign": "center",
+      "text-halign": "center",
+      "font-size": 12,
+      "text-wrap": "wrap",
+      "text-max-width": 120,
+      "padding": "10px",
+      "width": "label",
+      "height": "label",
+      "shape": "round-rectangle"
+    }
+  },
+  {
+    selector: "node[type = 'dataset']",
+    style: {
+      "background-color": "#e3f2fd",
+      "border-width": 1,
+      "border-color": "#1565c0"
+    }
+  },
+  {
+    selector: "node[type = 'job']",
+    style: {
+      "background-color": "#fff3e0",
+      "border-width": 1,
+      "border-color": "#ef6c00",
+      "shape": "ellipse"
+    }
+  },
+  {
+    selector: "edge",
+    style: {
+      "curve-style": "bezier",
+      "target-arrow-shape": "triangle",
+      "target-arrow-color": "#555",
+      "line-color": "#999",
+      "label": "data(label)",
+      "font-size": 9,
+      "color": "#555"
+    }
+  }
+]
       },
       {
         selector: "node[type = 'job']",
