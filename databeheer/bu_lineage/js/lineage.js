@@ -42,7 +42,7 @@ async function loadLineage() {
       rankSep: 120,
       padding: 40
     },
-style: [style: [
+style: [
   /* Basisstijl voor alle nodes */
   {
     selector: "node",
