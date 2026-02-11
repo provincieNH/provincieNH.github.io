@@ -23,14 +23,24 @@ async function loadLineage() {
     (event.inputs || []).forEach(input => {
       const dsId = "ds:" + input.namespace + "." + input.name;
       const dsMeta = input.facets?.metadata?.meta || {};
-      addNode(dsId, input.name, "dataset", dsMeta);
+      const dsLabel =
+  dsMeta?.naam
+    ? dsMeta.naam
+    : input.name;
+
+addNode(dsId, dsLabel, "dataset", dsMeta);
       edges.push({ data: { source: dsId, target: jobId } });
     });
 
     (event.outputs || []).forEach(output => {
       const dsId = "ds:" + output.namespace + "." + output.name;
       const dsMeta = output.facets?.metadata?.meta || {};
-      addNode(dsId, output.name, "dataset", dsMeta);
+      const dsLabel =
+    dsMeta?.naam
+    ? dsMeta.naam
+    : output.name;
+
+addNode(dsId, dsLabel, "dataset", dsMeta);
       edges.push({ data: { source: jobId, target: dsId } });
     });
   });
