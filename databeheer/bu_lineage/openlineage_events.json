@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-02-11T15:29:40.394969Z",
+    "eventTime": "2026-02-11T15:34:05.911969Z",
     "run": {
-      "runId": "3c3a4b62-a2db-43fc-9aac-764de8a2725a"
+      "runId": "341c0157-c7ff-46ad-8e09-4c2dcbc6281a"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -88,6 +88,198 @@
               "gebruik_consument": null,
               "gebruik_populariteit": null,
               "gebruik_tools": null
+            }
+          }
+        }
+      }
+    ],
+    "producer": "provincie-noord-holland/databeheer"
+  },
+  {
+    "eventType": "COMPLETE",
+    "eventTime": "2026-02-11T15:34:05.911969Z",
+    "run": {
+      "runId": "48c396b9-4f9c-42a5-a573-6120a30644a8"
+    },
+    "job": {
+      "namespace": "bu_databeheer",
+      "name": "ad4_naar_pub",
+      "facets": {
+        "metadata": {
+          "_producer": "provincie-noord-holland/databeheer",
+          "meta": {
+            "job_naam": "ad naar pub",
+            "job_type": "Dagster",
+            "job_omschrijving": "Actualisering publicatieversies Areaaldata 4 vanuit bron",
+            "job_script_pad": null,
+            "job_repository": null,
+            "job_tooling": "Python",
+            "job_schedule": null,
+            "job_eigenaar": "ID-DI",
+            "job_status": "Actief"
+          }
+        }
+      }
+    },
+    "inputs": [
+      {
+        "namespace": "bron",
+        "name": "Areaaldata 4 Bron",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "dc063311-582c-422f-a1ac-6702d07464a1",
+              "naam": "Areaaldata Open",
+              "pad": "gpbupub.bupub.av_*",
+              "omschrijving": "Subset van Areaaldata beschikbaar als open data",
+              "eigenaar": "ID-DI",
+              "steward": "Timo Anker",
+              "toegangsrechten": "Open",
+              "policies": "",
+              "bron_naam": "Areaaldata 4 Bron",
+              "bron_locatie": "Areaaldata",
+              "transformatie": "Alle tabellen uit Areaaldata voorzien van prefix av_, gevoelige attributen verwijderd, foreign key-waardes vervangen door mens-leesbare waardes (zoals de code van een traject)",
+              "sql_of_code": "",
+              "procesnaam": "ad4_naar_pub",
+              "kwaliteit": "",
+              "categorie": "",
+              "label": "",
+              "classificatie": "",
+              "gebruik_consument": "Areaalviewer",
+              "gebruik_populariteit": "",
+              "gebruik_tools": ""
+            }
+          }
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "namespace": "gpbupub.bupub",
+        "name": "av_*",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "dc063311-582c-422f-a1ac-6702d07464a1",
+              "naam": "Areaaldata Open",
+              "pad": "gpbupub.bupub.av_*",
+              "omschrijving": "Subset van Areaaldata beschikbaar als open data",
+              "eigenaar": "ID-DI",
+              "steward": "Timo Anker",
+              "toegangsrechten": "Open",
+              "policies": "",
+              "bron_naam": "Areaaldata 4 Bron",
+              "bron_locatie": "Areaaldata",
+              "transformatie": "Alle tabellen uit Areaaldata voorzien van prefix av_, gevoelige attributen verwijderd, foreign key-waardes vervangen door mens-leesbare waardes (zoals de code van een traject)",
+              "sql_of_code": "",
+              "procesnaam": "ad4_naar_pub",
+              "kwaliteit": "",
+              "categorie": "",
+              "label": "",
+              "classificatie": "",
+              "gebruik_consument": "Areaalviewer",
+              "gebruik_populariteit": "",
+              "gebruik_tools": ""
+            }
+          }
+        }
+      }
+    ],
+    "producer": "provincie-noord-holland/databeheer"
+  },
+  {
+    "eventType": "COMPLETE",
+    "eventTime": "2026-02-11T15:34:05.911969Z",
+    "run": {
+      "runId": "a5bf54ef-0a56-49b9-90c7-2d4be86ace54"
+    },
+    "job": {
+      "namespace": "bu_databeheer",
+      "name": "ad4_naar_pub",
+      "facets": {
+        "metadata": {
+          "_producer": "provincie-noord-holland/databeheer",
+          "meta": {
+            "job_naam": "ad naar pub",
+            "job_type": "Dagster",
+            "job_omschrijving": "Actualisering publicatieversies Areaaldata 4 vanuit bron",
+            "job_script_pad": null,
+            "job_repository": null,
+            "job_tooling": "Python",
+            "job_schedule": null,
+            "job_eigenaar": "ID-DI",
+            "job_status": "Actief"
+          }
+        }
+      }
+    },
+    "inputs": [
+      {
+        "namespace": "bron",
+        "name": "Areaaldata 4 Bron",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "793318b8-9fd9-440e-846a-e70a016cee63",
+              "naam": "Areaaldata Intern",
+              "pad": "gpbupub.bupub.adi_*",
+              "omschrijving": "Subset van Areaaldata beschikbaar als interne data",
+              "eigenaar": "ID-DI",
+              "steward": "Timo Anker",
+              "toegangsrechten": "PNH",
+              "policies": "",
+              "bron_naam": "Areaaldata 4 Bron",
+              "bron_locatie": "Areaaldata",
+              "transformatie": "Alle tabellen uit Areaaldata voorzien van prefix adi_, foreign key-waardes vervangen door mens-leesbare waardes (zoals de code van een traject)",
+              "sql_of_code": "",
+              "procesnaam": "ad4_naar_pub",
+              "kwaliteit": "",
+              "categorie": "",
+              "label": "",
+              "classificatie": "",
+              "gebruik_consument": "Areaaldata Intern Viewer",
+              "gebruik_populariteit": "",
+              "gebruik_tools": ""
+            }
+          }
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "namespace": "gpbupub.bupub",
+        "name": "adi_*",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "793318b8-9fd9-440e-846a-e70a016cee63",
+              "naam": "Areaaldata Intern",
+              "pad": "gpbupub.bupub.adi_*",
+              "omschrijving": "Subset van Areaaldata beschikbaar als interne data",
+              "eigenaar": "ID-DI",
+              "steward": "Timo Anker",
+              "toegangsrechten": "PNH",
+              "policies": "",
+              "bron_naam": "Areaaldata 4 Bron",
+              "bron_locatie": "Areaaldata",
+              "transformatie": "Alle tabellen uit Areaaldata voorzien van prefix adi_, foreign key-waardes vervangen door mens-leesbare waardes (zoals de code van een traject)",
+              "sql_of_code": "",
+              "procesnaam": "ad4_naar_pub",
+              "kwaliteit": "",
+              "categorie": "",
+              "label": "",
+              "classificatie": "",
+              "gebruik_consument": "Areaaldata Intern Viewer",
+              "gebruik_populariteit": "",
+              "gebruik_tools": ""
             }
           }
         }
