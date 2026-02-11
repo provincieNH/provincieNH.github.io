@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-02-11T16:48:13.116328Z",
+    "eventTime": "2026-02-11T21:47:01.468148Z",
     "run": {
-      "runId": "d7727ea6-b188-4b5b-b07e-772d5bab2ea2"
+      "runId": "80505aeb-4840-43df-8c05-3ade07453f04"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -61,9 +61,189 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-02-11T16:48:13.116328Z",
+    "eventTime": "2026-02-11T21:47:01.468148Z",
     "run": {
-      "runId": "99c794b0-c55e-4fc0-922e-d578726fdf0a"
+      "runId": "944d6b16-614f-4f42-b530-4261e8968365"
+    },
+    "job": {
+      "namespace": "bu_databeheer",
+      "name": "budata_naar_pub",
+      "facets": {
+        "metadata": {
+          "_producer": "provincie-noord-holland/databeheer",
+          "meta": {
+            "job_naam": "budata naar pub",
+            "job_type": "Python",
+            "job_omschrijving": "Actualisering publicatieversies Budata",
+            "job_tooling": "Dagster",
+            "job_schedule": null,
+            "job_eigenaar": "ID-DI",
+            "volgorde": 1
+          }
+        }
+      }
+    },
+    "inputs": [
+      {
+        "namespace": "gpbu.budata",
+        "name": "bu_prj_overzichtGeodata",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "791a7d40-5585-41b2-88c4-35cc3d743c61",
+              "naam": "D&I Projecten",
+              "pad": "gpbu.budata.bu_prj_overzichtGeodata"
+            }
+          }
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "namespace": "gpbupub.bupub",
+        "name": "bu_*",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "28bd1a90-602a-46b6-a097-c07f5d8aa389",
+              "naam": "Budata pub",
+              "pad": "gpbupub.bupub.bu_*"
+            }
+          }
+        }
+      }
+    ],
+    "producer": "provincie-noord-holland/databeheer"
+  },
+  {
+    "eventType": "COMPLETE",
+    "eventTime": "2026-02-11T21:47:01.468148Z",
+    "run": {
+      "runId": "6c0544ac-dc09-4f7f-aa26-8243ae759243"
+    },
+    "job": {
+      "namespace": "bu_databeheer",
+      "name": "budata_naar_pub",
+      "facets": {
+        "metadata": {
+          "_producer": "provincie-noord-holland/databeheer",
+          "meta": {
+            "job_naam": "budata naar pub",
+            "job_type": "Python",
+            "job_omschrijving": "Actualisering publicatieversies Budata",
+            "job_tooling": "Dagster",
+            "job_schedule": null,
+            "job_eigenaar": "ID-DI",
+            "volgorde": 1
+          }
+        }
+      }
+    },
+    "inputs": [
+      {
+        "namespace": "gpbu.budata",
+        "name": "bu_graafberichten_v*",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "951496dc-616b-4940-98fb-ea64f832c5f6",
+              "naam": "Graafberichten",
+              "pad": "gpbu.budata.bu_graafberichten_v*"
+            }
+          }
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "namespace": "gpbupub.bupub",
+        "name": "bu_*",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "28bd1a90-602a-46b6-a097-c07f5d8aa389",
+              "naam": "Budata pub",
+              "pad": "gpbupub.bupub.bu_*"
+            }
+          }
+        }
+      }
+    ],
+    "producer": "provincie-noord-holland/databeheer"
+  },
+  {
+    "eventType": "COMPLETE",
+    "eventTime": "2026-02-11T21:47:01.468148Z",
+    "run": {
+      "runId": "90449a11-3a44-429e-b2f0-fdbf9beb4d63"
+    },
+    "job": {
+      "namespace": "bu_databeheer",
+      "name": "budata_naar_pub",
+      "facets": {
+        "metadata": {
+          "_producer": "provincie-noord-holland/databeheer",
+          "meta": {
+            "job_naam": "budata naar pub",
+            "job_type": "Python",
+            "job_omschrijving": "Actualisering publicatieversies Budata",
+            "job_tooling": "Dagster",
+            "job_schedule": null,
+            "job_eigenaar": "ID-DI",
+            "volgorde": 1
+          }
+        }
+      }
+    },
+    "inputs": [
+      {
+        "namespace": "gpbu.budata",
+        "name": "bu_functioneleGrens*",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "11ed3529-1558-43cb-9dc3-a249f63e7594",
+              "naam": "Functionele grenzen",
+              "pad": "gpbu.budata.bu_functioneleGrens*"
+            }
+          }
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "namespace": "gpbupub.bupub",
+        "name": "bu_*",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "id": "28bd1a90-602a-46b6-a097-c07f5d8aa389",
+              "naam": "Budata pub",
+              "pad": "gpbupub.bupub.bu_*"
+            }
+          }
+        }
+      }
+    ],
+    "producer": "provincie-noord-holland/databeheer"
+  },
+  {
+    "eventType": "COMPLETE",
+    "eventTime": "2026-02-11T21:47:01.468148Z",
+    "run": {
+      "runId": "4e4ca47b-dbfd-47d1-9bb2-f07498c17c13"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -121,9 +301,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-02-11T16:48:13.116328Z",
+    "eventTime": "2026-02-11T21:47:01.468148Z",
     "run": {
-      "runId": "d8236951-fdcd-4039-b0ac-d49991cb98c1"
+      "runId": "56c694a1-c108-45d2-a4ba-2859e92eddcd"
     },
     "job": {
       "namespace": "bu_databeheer",
