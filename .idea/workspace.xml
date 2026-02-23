@@ -22,11 +22,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12251 #comment layout test" />
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12706 #comment cursief?">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +62,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -307,119 +317,143 @@
       <option name="project" value="LOCAL" />
       <updated>1664366716613</updated>
     </task>
-    <task id="LOCAL-00033" summary="DID-136 #comment Overzicht van htmls gegenereerd">
+    <task id="LOCAL-00047" summary="gd-12706 #comment opzet lineage tussenwebsite op basis van OpenLineage">
       <option name="closed" value="true" />
-      <created>1765372235063</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
+      <created>1770735193566</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1765372235063</updated>
+      <updated>1770735193566</updated>
     </task>
-    <task id="LOCAL-00034" summary="DID-136 #comment Overzicht van htmls gegenereerd">
+    <task id="LOCAL-00048" summary="gd-12706 #comment opzet UX verbeteringen">
       <option name="closed" value="true" />
-      <created>1765537824501</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
+      <created>1770735550856</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
-      <updated>1765537824501</updated>
+      <updated>1770735550856</updated>
     </task>
-    <task id="LOCAL-00035" summary="DID-136 #comment terug naar origineel">
+    <task id="LOCAL-00049" summary="gd-12706 #comment opzet UX verbeteringen">
       <option name="closed" value="true" />
-      <created>1765538012679</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
+      <created>1770735586300</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
-      <updated>1765538012679</updated>
+      <updated>1770735586300</updated>
     </task>
-    <task id="LOCAL-00036" summary="gd-12251 #comment sankey js toegevoegd.">
+    <task id="LOCAL-00050" summary="gd-12706 #comment opzet UX verbeteringen">
       <option name="closed" value="true" />
-      <created>1765539141215</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
+      <created>1770735885643</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
-      <updated>1765539141215</updated>
+      <updated>1770735885643</updated>
     </task>
-    <task id="LOCAL-00037" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+    <task id="LOCAL-00051" summary="gd-12706 #comment opzet UX verbeteringen">
       <option name="closed" value="true" />
-      <created>1765970327425</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
+      <created>1770736615339</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1765970327425</updated>
+      <updated>1770736615339</updated>
     </task>
-    <task id="LOCAL-00038" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+    <task id="LOCAL-00052" summary="gd-12706 #comment opzet UX verbeteringen - doorklikbaar">
       <option name="closed" value="true" />
-      <created>1765970393611</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
+      <created>1770736839289</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
-      <updated>1765970393611</updated>
+      <updated>1770736839289</updated>
     </task>
-    <task id="LOCAL-00039" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+    <task id="LOCAL-00053" summary="gd-12706 #comment opzet UX verbeteringen - doorklikbaar">
       <option name="closed" value="true" />
-      <created>1765970470516</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
+      <created>1770737577205</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
-      <updated>1765970470516</updated>
+      <updated>1770737577205</updated>
     </task>
-    <task id="LOCAL-00040" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+    <task id="LOCAL-00054" summary="gd-12706 #comment Stijl meer als Sankey pagina gemaakt">
       <option name="closed" value="true" />
-      <created>1765970894822</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
+      <created>1770738305059</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
-      <updated>1765970894822</updated>
+      <updated>1770738305059</updated>
     </task>
-    <task id="LOCAL-00041" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+    <task id="LOCAL-00055" summary="gd-12706 #comment Stijl meer als Sankey pagina gemaakt">
       <option name="closed" value="true" />
-      <created>1765971315545</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
+      <created>1770738477758</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
-      <updated>1765971315545</updated>
+      <updated>1770738477758</updated>
     </task>
-    <task id="LOCAL-00042" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+    <task id="LOCAL-00056" summary="gd-12706 #comment Stijl meer als Sankey pagina gemaakt">
       <option name="closed" value="true" />
-      <created>1765971438893</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
+      <created>1770738567212</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
       <option name="project" value="LOCAL" />
-      <updated>1765971438893</updated>
+      <updated>1770738567213</updated>
     </task>
-    <task id="LOCAL-00043" summary="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen">
+    <task id="LOCAL-00057" summary="gd-12706 #comment 🔍 Zoekbalk (zoals Sankey)&#10;🎨 Classificatie‑accenten (subtiel, professioneel)&#10;✨ Hover upstream/downstream&#10;🖱️ Klik → volledige metadata&#10;🎯 Eén consistente BU‑look &amp; feel">
       <option name="closed" value="true" />
-      <created>1765975016275</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
+      <created>1770740432377</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
       <option name="project" value="LOCAL" />
-      <updated>1765975016275</updated>
+      <updated>1770740432377</updated>
     </task>
-    <task id="LOCAL-00044" summary="gd-12251 #comment layout test">
+    <task id="LOCAL-00058" summary="gd-12706 #comment jobs toegevoegd.">
       <option name="closed" value="true" />
-      <created>1765975272319</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
+      <created>1770823492260</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
       <option name="project" value="LOCAL" />
-      <updated>1765975272319</updated>
+      <updated>1770823492260</updated>
     </task>
-    <task id="LOCAL-00045" summary="gd-12251 #comment layout test">
+    <task id="LOCAL-00059" summary="gd-12706 #comment labels gebruikt ipv technisch pad-namespace">
       <option name="closed" value="true" />
-      <created>1765975412974</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
+      <created>1770826394724</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
       <option name="project" value="LOCAL" />
-      <updated>1765975412974</updated>
+      <updated>1770826394724</updated>
     </task>
-    <task id="LOCAL-00046" summary="gd-12251 #comment layout test">
+    <task id="LOCAL-00060" summary="gd-12706 #comment tekst aangepast - 'dan doen we het wel zelf'">
       <option name="closed" value="true" />
-      <created>1765975515290</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
+      <created>1770883830737</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
       <option name="project" value="LOCAL" />
-      <updated>1765975515290</updated>
+      <updated>1770883830738</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00061" summary="gd-12706 #comment tekst aangepast - 'dan doen we het wel zelf'">
+      <option name="closed" value="true" />
+      <created>1770884068710</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1770884068710</updated>
+    </task>
+    <task id="LOCAL-00062" summary="gd-12706 #comment cursief?">
+      <option name="closed" value="true" />
+      <created>1770884229417</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1770884229417</updated>
+    </task>
+    <task id="LOCAL-00063" summary="gd-12706 #comment cursief?">
+      <option name="closed" value="true" />
+      <created>1770884308957</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1770884308957</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,15 +468,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="nieuwe html voor wegvak" />
-    <MESSAGE value="nieuwe hoogte diagram" />
-    <MESSAGE value="nieuwe hoogte diagram verharding_v" />
-    <MESSAGE value="csv zonder duplicaten" />
-    <MESSAGE value="andere layout waarde voor verharding html" />
-    <MESSAGE value="toevoegen bestanden voor verhardingsInspectie_tbl" />
-    <MESSAGE value="toevoegen bestanden voor traject_v" />
-    <MESSAGE value="Bijstellen hoogte traject_v.html" />
-    <MESSAGE value="Extra csvs en htmls voor verhardingen adhv subtypes" />
     <MESSAGE value="opnieuw geschreven csv voor algemene mapping" />
     <MESSAGE value="poging tot sorteren mapping csv" />
     <MESSAGE value="Gegenereerde htmls" />
@@ -459,6 +484,15 @@
     <MESSAGE value="gd-12251 #comment sankey js toegevoegd." />
     <MESSAGE value="gd-12251 #comment kleine test voor de visualisatie van 3 mappingen" />
     <MESSAGE value="gd-12251 #comment layout test" />
-    <option name="LAST_COMMIT_MESSAGE" value="gd-12251 #comment layout test" />
+    <MESSAGE value="gd-12706 #comment opzet lineage tussenwebsite op basis van OpenLineage" />
+    <MESSAGE value="gd-12706 #comment opzet UX verbeteringen" />
+    <MESSAGE value="gd-12706 #comment opzet UX verbeteringen - doorklikbaar" />
+    <MESSAGE value="gd-12706 #comment Stijl meer als Sankey pagina gemaakt" />
+    <MESSAGE value="gd-12706 #comment  Zoekbalk (zoals Sankey)&#10; Classificatie‑accenten (subtiel, professioneel)&#10;✨ Hover upstream/downstream&#10;️ Klik → volledige metadata&#10; Eén consistente BU‑look &amp; feel" />
+    <MESSAGE value="gd-12706 #comment jobs toegevoegd." />
+    <MESSAGE value="gd-12706 #comment labels gebruikt ipv technisch pad-namespace" />
+    <MESSAGE value="gd-12706 #comment tekst aangepast - 'dan doen we het wel zelf'" />
+    <MESSAGE value="gd-12706 #comment cursief?" />
+    <option name="LAST_COMMIT_MESSAGE" value="gd-12706 #comment cursief?" />
   </component>
 </project>
