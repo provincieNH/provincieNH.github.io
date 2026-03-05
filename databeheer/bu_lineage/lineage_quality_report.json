@@ -1,0 +1,123 @@
+{
+  "unused_jobs": [],
+  "unused_datasets": [
+    {
+      "dataset_id": "b80f8cb7-9570-4c85-9c21-7e4ff44a55d2",
+      "dataset_naam": "NDW verkeersborden",
+      "dataset_pad": "https://www.arcgis.com/apps/mapviewer/index.html?webmap=396aaff1601145f69b22a93dd944c318"
+    },
+    {
+      "dataset_id": "0f4a7a7e-fe6e-4b00-9477-45edf936f7d3",
+      "dataset_naam": "Verkeersintensiteiten",
+      "dataset_pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025"
+    },
+    {
+      "dataset_id": "c403bf99-3708-47b8-b75d-963bdf759fa6",
+      "dataset_naam": "Theoretisch vaarwegprofiel",
+      "dataset_pad": "gpbu.budata.bu_Theor_Vaarwegprofiel_*"
+    },
+    {
+      "dataset_id": "692b875d-1334-41ec-adcd-0c29accf54dd",
+      "dataset_naam": "Monitoringspunten voor het benchmarken van databaseperformance",
+      "dataset_pad": "gpbu.budata.MON_POINTS"
+    },
+    {
+      "dataset_id": "56ed1e2d-ecdb-4983-8e17-48f7cd2c40a5",
+      "dataset_naam": "Incident Management wegen",
+      "dataset_pad": "gpbu.budata.bu_im_*"
+    },
+    {
+      "dataset_id": "30b86560-dc4d-4b14-a174-d2c6883d325a",
+      "dataset_naam": "Logging van de datawaliteitsportaal",
+      "dataset_pad": "gpbu.budata.DKP_*"
+    },
+    {
+      "dataset_id": "8425ed60-e992-494d-bdb9-5deb3dc5c283",
+      "dataset_naam": "Meetnet biodiversiteit bermen",
+      "dataset_pad": "gpbu.mbb"
+    },
+    {
+      "dataset_id": "a672e40f-10c2-4ea9-ab30-a66e56471f52",
+      "dataset_naam": "AD5 Conversieparameters",
+      "dataset_pad": "gpbu.budata.ad5_*"
+    },
+    {
+      "dataset_id": "acc1ea6c-65d6-4fa1-9e62-cb2883de1788",
+      "dataset_naam": "Gebiedsradar data",
+      "dataset_pad": "gpbu.budata.bu_gr_*"
+    },
+    {
+      "dataset_id": "fddb8f7d-d5d8-449e-8fb6-0ac382ff7aca",
+      "dataset_naam": "Gebiedscontract aanspreekpunten",
+      "dataset_pad": "gpbu.budata.bu_gcr_aanspreekpunt_tbl"
+    },
+    {
+      "dataset_id": "5c7f9453-df9a-4c2a-af35-60782f8fbc05",
+      "dataset_naam": "BGT terugmeldingen",
+      "dataset_pad": "gpbu.budata.bu_bgtterugmeldingen_p"
+    },
+    {
+      "dataset_id": "92c4b65d-c7b9-400a-8c23-9747562ccee6",
+      "dataset_naam": "BGT landelijk",
+      "dataset_pad": "BRAVO"
+    }
+  ],
+  "orphan_lineage": [],
+  "datasets_without_lineage": [
+    {
+      "dataset_id": "b80f8cb7-9570-4c85-9c21-7e4ff44a55d2",
+      "dataset_naam": "NDW verkeersborden",
+      "dataset_pad": "https://www.arcgis.com/apps/mapviewer/index.html?webmap=396aaff1601145f69b22a93dd944c318"
+    },
+    {
+      "dataset_id": "0f4a7a7e-fe6e-4b00-9477-45edf936f7d3",
+      "dataset_naam": "Verkeersintensiteiten",
+      "dataset_pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025"
+    },
+    {
+      "dataset_id": "c403bf99-3708-47b8-b75d-963bdf759fa6",
+      "dataset_naam": "Theoretisch vaarwegprofiel",
+      "dataset_pad": "gpbu.budata.bu_Theor_Vaarwegprofiel_*"
+    },
+    {
+      "dataset_id": "692b875d-1334-41ec-adcd-0c29accf54dd",
+      "dataset_naam": "Monitoringspunten voor het benchmarken van databaseperformance",
+      "dataset_pad": "gpbu.budata.MON_POINTS"
+    },
+    {
+      "dataset_id": "56ed1e2d-ecdb-4983-8e17-48f7cd2c40a5",
+      "dataset_naam": "Incident Management wegen",
+      "dataset_pad": "gpbu.budata.bu_im_*"
+    },
+    {
+      "dataset_id": "30b86560-dc4d-4b14-a174-d2c6883d325a",
+      "dataset_naam": "Logging van de datawaliteitsportaal",
+      "dataset_pad": "gpbu.budata.DKP_*"
+    },
+    {
+      "dataset_id": "8425ed60-e992-494d-bdb9-5deb3dc5c283",
+      "dataset_naam": "Meetnet biodiversiteit bermen",
+      "dataset_pad": "gpbu.mbb"
+    },
+    {
+      "dataset_id": "a672e40f-10c2-4ea9-ab30-a66e56471f52",
+      "dataset_naam": "AD5 Conversieparameters",
+      "dataset_pad": "gpbu.budata.ad5_*"
+    },
+    {
+      "dataset_id": "acc1ea6c-65d6-4fa1-9e62-cb2883de1788",
+      "dataset_naam": "Gebiedsradar data",
+      "dataset_pad": "gpbu.budata.bu_gr_*"
+    },
+    {
+      "dataset_id": "fddb8f7d-d5d8-449e-8fb6-0ac382ff7aca",
+      "dataset_naam": "Gebiedscontract aanspreekpunten",
+      "dataset_pad": "gpbu.budata.bu_gcr_aanspreekpunt_tbl"
+    },
+    {
+      "dataset_id": "5c7f9453-df9a-4c2a-af35-60782f8fbc05",
+      "dataset_naam": "BGT terugmeldingen",
+      "dataset_pad": "gpbu.budata.bu_bgtterugmeldingen_p"
+    }
+  ]
+}
