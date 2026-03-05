@@ -7,11 +7,6 @@
       "dataset_pad": "https://www.arcgis.com/apps/mapviewer/index.html?webmap=396aaff1601145f69b22a93dd944c318"
     },
     {
-      "dataset_id": "0f4a7a7e-fe6e-4b00-9477-45edf936f7d3",
-      "dataset_naam": "Verkeersintensiteiten",
-      "dataset_pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025"
-    },
-    {
       "dataset_id": "c403bf99-3708-47b8-b75d-963bdf759fa6",
       "dataset_naam": "Theoretisch vaarwegprofiel",
       "dataset_pad": "gpbu.budata.bu_Theor_Vaarwegprofiel_*"
@@ -58,11 +53,6 @@
       "dataset_id": "b80f8cb7-9570-4c85-9c21-7e4ff44a55d2",
       "dataset_naam": "NDW verkeersborden",
       "dataset_pad": "https://www.arcgis.com/apps/mapviewer/index.html?webmap=396aaff1601145f69b22a93dd944c318"
-    },
-    {
-      "dataset_id": "0f4a7a7e-fe6e-4b00-9477-45edf936f7d3",
-      "dataset_naam": "Verkeersintensiteiten",
-      "dataset_pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025"
     },
     {
       "dataset_id": "c403bf99-3708-47b8-b75d-963bdf759fa6",
