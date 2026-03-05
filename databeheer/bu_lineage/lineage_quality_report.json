@@ -50,11 +50,6 @@
       "dataset_id": "5c7f9453-df9a-4c2a-af35-60782f8fbc05",
       "dataset_naam": "BGT terugmeldingen",
       "dataset_pad": "gpbu.budata.bu_bgtterugmeldingen_p"
-    },
-    {
-      "dataset_id": "92c4b65d-c7b9-400a-8c23-9747562ccee6",
-      "dataset_naam": "BGT landelijk",
-      "dataset_pad": "BRAVO"
     }
   ],
   "orphan_lineage": [],
