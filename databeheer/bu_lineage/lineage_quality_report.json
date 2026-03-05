@@ -32,11 +32,6 @@
       "dataset_pad": "gpbu.budata.DKP_*"
     },
     {
-      "dataset_id": "8425ed60-e992-494d-bdb9-5deb3dc5c283",
-      "dataset_naam": "Meetnet biodiversiteit bermen",
-      "dataset_pad": "gpbu.mbb"
-    },
-    {
       "dataset_id": "a672e40f-10c2-4ea9-ab30-a66e56471f52",
       "dataset_naam": "AD5 Conversieparameters",
       "dataset_pad": "gpbu.budata.ad5_*"
@@ -93,11 +88,6 @@
       "dataset_id": "30b86560-dc4d-4b14-a174-d2c6883d325a",
       "dataset_naam": "Logging van de datawaliteitsportaal",
       "dataset_pad": "gpbu.budata.DKP_*"
-    },
-    {
-      "dataset_id": "8425ed60-e992-494d-bdb9-5deb3dc5c283",
-      "dataset_naam": "Meetnet biodiversiteit bermen",
-      "dataset_pad": "gpbu.mbb"
     },
     {
       "dataset_id": "a672e40f-10c2-4ea9-ab30-a66e56471f52",
