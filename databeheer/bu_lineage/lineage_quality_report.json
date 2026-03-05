@@ -1,10 +1,5 @@
 {
-  "unused_jobs": [
-    {
-      "job_id": "d63720c0-a575-4cce-82b3-80c63c984b18",
-      "job_naam": "LV naar AD"
-    }
-  ],
+  "unused_jobs": [],
   "unused_datasets": [
     {
       "dataset_id": "b80f8cb7-9570-4c85-9c21-7e4ff44a55d2",
