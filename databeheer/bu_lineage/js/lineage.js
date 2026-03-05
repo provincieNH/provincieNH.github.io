@@ -23,10 +23,7 @@ async function loadLineage() {
     (event.inputs || []).forEach(input => {
       const dsId = "ds:" + input.namespace + "." + input.name;
       const dsMeta = input.facets?.metadata?.meta || {};
-      const dsLabel =
-        dsMeta?.naam
-          ? dsMeta.naam
-          : input.name;
+      const dsLabel = dsMeta?.naam ? dsMeta.naam : input.name;
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
       edges.push({ data: { source: dsId, target: jobId } });
@@ -35,10 +32,7 @@ async function loadLineage() {
     (event.outputs || []).forEach(output => {
       const dsId = "ds:" + output.namespace + "." + output.name;
       const dsMeta = output.facets?.metadata?.meta || {};
-      const dsLabel =
-        dsMeta?.naam
-          ? dsMeta.naam
-          : output.name;
+      const dsLabel = dsMeta?.naam ? dsMeta.naam : output.name;
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
       edges.push({ data: { source: jobId, target: dsId } });
@@ -107,8 +101,7 @@ async function loadLineage() {
       {
         selector: "edge",
         style: {
-          "curve-style": "unbundled-bezier",
-          "control-point-step-size": 40,
+          "curve-style": "straight",
           "target-arrow-shape": "triangle",
           "arrow-scale": 1.1,
           "line-color": "#9aa0a6",
@@ -116,11 +109,29 @@ async function loadLineage() {
           "width": 2,
           "z-index": 1
         }
+      },
+
+      {
+        selector: "edge.backflow",
+        style: {
+          "curve-style": "unbundled-bezier",
+          "control-point-step-size": 60
+        }
       }
     ]
   });
 
   cy.fit();
+
+  // Detecteer edges die rechts → links lopen
+  cy.edges().forEach(edge => {
+    const source = edge.source().position();
+    const target = edge.target().position();
+
+    if (target.x < source.x) {
+      edge.addClass("backflow");
+    }
+  });
 
   // Hover: upstream + downstream highlight
   cy.on("mouseover", "node", evt => {
