@@ -24,11 +24,11 @@ async function loadLineage() {
       const dsId = "ds:" + input.namespace + "." + input.name;
       const dsMeta = input.facets?.metadata?.meta || {};
       const dsLabel =
-  dsMeta?.naam
-    ? dsMeta.naam
-    : input.name;
+        dsMeta?.naam
+          ? dsMeta.naam
+          : input.name;
 
-addNode(dsId, dsLabel, "dataset", dsMeta);
+      addNode(dsId, dsLabel, "dataset", dsMeta);
       edges.push({ data: { source: dsId, target: jobId } });
     });
 
@@ -36,11 +36,11 @@ addNode(dsId, dsLabel, "dataset", dsMeta);
       const dsId = "ds:" + output.namespace + "." + output.name;
       const dsMeta = output.facets?.metadata?.meta || {};
       const dsLabel =
-    dsMeta?.naam
-    ? dsMeta.naam
-    : output.name;
+        dsMeta?.naam
+          ? dsMeta.naam
+          : output.name;
 
-addNode(dsId, dsLabel, "dataset", dsMeta);
+      addNode(dsId, dsLabel, "dataset", dsMeta);
       edges.push({ data: { source: jobId, target: dsId } });
     });
   });
@@ -48,11 +48,16 @@ addNode(dsId, dsLabel, "dataset", dsMeta);
   const cy = cytoscape({
     container: document.getElementById("lineage"),
     elements: [...nodes.values(), ...edges],
+
     layout: {
       name: "dagre",
       rankDir: "LR",
+      nodeSep: 80,
+      edgeSep: 40,
+      rankSep: 140,
       padding: 40
     },
+
     style: [
       {
         selector: "node",
@@ -66,9 +71,11 @@ addNode(dsId, dsLabel, "dataset", dsMeta);
           "height": "label",
           "text-valign": "center",
           "text-halign": "center",
-          "color": "#333"
+          "color": "#333",
+          "z-index": 10
         }
       },
+
       {
         selector: "node[type='dataset']",
         style: {
@@ -78,6 +85,7 @@ addNode(dsId, dsLabel, "dataset", dsMeta);
           "border-width": 1
         }
       },
+
       {
         selector: "node[type='job']",
         style: {
@@ -88,19 +96,25 @@ addNode(dsId, dsLabel, "dataset", dsMeta);
           "border-width": 1
         }
       },
+
       {
         selector: ".faded",
         style: {
           "opacity": 0.15
         }
       },
+
       {
         selector: "edge",
         style: {
-          "curve-style": "bezier",
+          "curve-style": "unbundled-bezier",
+          "control-point-step-size": 40,
           "target-arrow-shape": "triangle",
-          "line-color": "#999",
-          "target-arrow-color": "#555"
+          "arrow-scale": 1.1,
+          "line-color": "#9aa0a6",
+          "target-arrow-color": "#9aa0a6",
+          "width": 2,
+          "z-index": 1
         }
       }
     ]
@@ -125,11 +139,14 @@ addNode(dsId, dsLabel, "dataset", dsMeta);
   cy.on("tap", "node", evt => {
     const meta = evt.target.data("meta") || {};
     let html = "<table>";
+
     for (const [k, v] of Object.entries(meta)) {
       if (!v) continue;
       html += `<tr><th>${k}</th><td>${v}</td></tr>`;
     }
+
     html += "</table>";
+
     document.getElementById("details-content").innerHTML = html;
   });
 }
