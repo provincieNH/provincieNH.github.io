@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "f52571c2-03d0-4faa-b592-78761eb855c3"
+      "runId": "ad51df05-cce3-49a9-afcb-67752889713c"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -54,6 +54,10 @@
               "naam": "Klicimport",
               "pad": "gpbupub.klicimport.*"
             }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
           }
         }
       }
@@ -62,9 +66,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "666f8f92-9895-42d2-ac6c-3eb0ab178104"
+      "runId": "88cce72e-de7d-46e6-9fac-45d2709859ea"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -123,9 +127,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "90ab9667-a20f-4a0c-9d30-2298ab1561bd"
+      "runId": "05628c04-0815-46eb-a4e1-05319768bdcc"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -174,6 +178,10 @@
               "naam": "Graafberichten",
               "pad": "gpbu.budata.bu_graafberichten_v*"
             }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
           }
         }
       },
@@ -189,6 +197,10 @@
               "naam": "Functionele grenzen",
               "pad": "gpbu.budata.bu_functioneleGrens*"
             }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
           }
         }
       }
@@ -206,6 +218,10 @@
               "naam": "Budata pub",
               "pad": "gpbupub.bupub.bu_*"
             }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
           }
         }
       }
@@ -214,9 +230,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "50bda60e-39cf-4463-b9e2-37d2a0d25178"
+      "runId": "4d1e68ba-bdf5-4556-8f80-e5f1fdad7cb0"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -290,9 +306,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "627876ab-2f45-47a1-beae-39f72d0d9def"
+      "runId": "b6ca1f01-7bda-498e-8550-e678d7009f3e"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -343,6 +359,10 @@
               "naam": "Areaaldata Open",
               "pad": "gpbupub.bupub.av_*"
             }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
           }
         }
       },
@@ -358,6 +378,10 @@
               "naam": "Areaaldata Intern",
               "pad": "gpbupub.bupub.adi_*"
             }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
           }
         }
       }
@@ -366,9 +390,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "377aa4f9-6caf-427d-8a58-9f6b9aba95c4"
+      "runId": "eb4c1501-5f2e-4a56-8ed0-c182b62da423"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -427,9 +451,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "bec797ce-c445-481c-ac19-0397e8359670"
+      "runId": "68dadba4-3b2c-4d16-9997-7a0b9543de10"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -488,9 +512,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "a06a8c66-fde4-4a73-99ae-d9085d25d97b"
+      "runId": "b3ff5c12-e755-4eca-bafc-0fd9e6b4eed1"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -549,9 +573,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "f27a97f8-8903-422d-bfb1-eedabd0f37fa"
+      "runId": "7aea5d2e-4d53-4d79-bc0e-5f803d5e0ebc"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -602,6 +626,10 @@
               "naam": "RWS Fairway Information System",
               "pad": "gpbupub.bupub.FIS_*"
             }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
           }
         }
       }
@@ -610,9 +638,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "2b5ed0eb-db65-403d-95ae-a1961b97f2a7"
+      "runId": "05a17ae3-d580-4346-b005-c3fc7a8b1a98"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -663,6 +691,10 @@
               "naam": "Areaaldata 5 intern",
               "pad": "gsbupub.bupub.adi5_*"
             }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
           }
         }
       }
@@ -671,9 +703,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-05T14:01:04.805039Z",
+    "eventTime": "2026-03-05T14:03:37.678425Z",
     "run": {
-      "runId": "d5b67158-73bd-4cb6-b522-f52d90cd58a5"
+      "runId": "0838e7bf-9276-4f78-aaeb-60075af5f355"
     },
     "job": {
       "namespace": "bu_databeheer",
