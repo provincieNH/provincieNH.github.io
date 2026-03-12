@@ -123,15 +123,17 @@ async function loadLineage() {
       },
 
       {
-        selector: "node[type='job']",
-        style: {
-          "shape": "polygon",
-          "shape-polygon-points": "-1,-1 0.8,-1 1,1 -0.8,1",
-          "background-color": "#fff3e0",
-          "border-color": "#ef6c00",
-          "border-width": 1
-        }
-      },
+          selector: "node[type='job']",
+          style: {
+            "shape": "polygon",
+            "shape-polygon-points": "-1,-1 0.6,-1 1,1 -0.6,1",
+            "width": 160,
+            "height": 60,
+            "background-color": "#fff3e0",
+            "border-color": "#ef6c00",
+            "border-width": 1
+          }
+        },
 
       {
         selector: ".faded",
