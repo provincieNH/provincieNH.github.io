@@ -6,7 +6,7 @@ async function loadLineage() {
   const edges = [];
 
   function medailleKleur(medaille) {
-    if (!medaille) return "#1565c0";
+    if (!medaille) return "#FFFFFF";
 
     const m = medaille.toLowerCase();
 
@@ -14,7 +14,7 @@ async function loadLineage() {
     if (m === "zilver") return "#C0C0C0";
     if (m === "brons") return "#CD7F32";
 
-    return "#ffffff";
+    return "#1565c0";
   }
 
   function addNode(id, label, type, meta = {}) {
