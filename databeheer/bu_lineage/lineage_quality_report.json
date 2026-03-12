@@ -32,6 +32,11 @@
       "dataset_pad": "gpbu.budata.ad5_*"
     },
     {
+      "dataset_id": "5c7f9453-df9a-4c2a-af35-60782f8fbc05",
+      "dataset_naam": "BGT terugmeldingen",
+      "dataset_pad": "gpbu.budata.bu_bgtterugmeldingen_p"
+    },
+    {
       "dataset_id": "acc1ea6c-65d6-4fa1-9e62-cb2883de1788",
       "dataset_naam": "Gebiedsradar data",
       "dataset_pad": "gpbu.budata.bu_gr_*"
@@ -40,11 +45,6 @@
       "dataset_id": "fddb8f7d-d5d8-449e-8fb6-0ac382ff7aca",
       "dataset_naam": "Gebiedscontract aanspreekpunten",
       "dataset_pad": "gpbu.budata.bu_gcr_aanspreekpunt_tbl"
-    },
-    {
-      "dataset_id": "5c7f9453-df9a-4c2a-af35-60782f8fbc05",
-      "dataset_naam": "BGT terugmeldingen",
-      "dataset_pad": "gpbu.budata.bu_bgtterugmeldingen_p"
     }
   ],
   "orphan_lineage": [],
@@ -80,6 +80,11 @@
       "dataset_pad": "gpbu.budata.ad5_*"
     },
     {
+      "dataset_id": "5c7f9453-df9a-4c2a-af35-60782f8fbc05",
+      "dataset_naam": "BGT terugmeldingen",
+      "dataset_pad": "gpbu.budata.bu_bgtterugmeldingen_p"
+    },
+    {
       "dataset_id": "acc1ea6c-65d6-4fa1-9e62-cb2883de1788",
       "dataset_naam": "Gebiedsradar data",
       "dataset_pad": "gpbu.budata.bu_gr_*"
@@ -88,11 +93,6 @@
       "dataset_id": "fddb8f7d-d5d8-449e-8fb6-0ac382ff7aca",
       "dataset_naam": "Gebiedscontract aanspreekpunten",
       "dataset_pad": "gpbu.budata.bu_gcr_aanspreekpunt_tbl"
-    },
-    {
-      "dataset_id": "5c7f9453-df9a-4c2a-af35-60782f8fbc05",
-      "dataset_naam": "BGT terugmeldingen",
-      "dataset_pad": "gpbu.budata.bu_bgtterugmeldingen_p"
     }
   ]
 }
