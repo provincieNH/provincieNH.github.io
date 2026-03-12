@@ -126,3 +126,24 @@ body {
 .legend.open { background:#4caf50; }
 .legend.intern { background:#003b6c; }
 .legend.vertrouwelijk { background:#ef6c00; }
+
+.legend.medal {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 3px;
+  margin-right: 6px;
+}
+
+.legend.goud {
+  border: 3px solid #D4AF37;
+}
+
+.legend.zilver {
+  border: 3px solid #C0C0C0;
+}
+
+.legend.brons {
+  border: 3px solid #CD7F32;
+}
