@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "d302b678-fb37-43f8-8c33-c048841732cc"
+      "runId": "490da9d5-b065-4a12-a711-b5914365a269"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -15,10 +15,14 @@
             "job_naam": "KLIC Import",
             "job_type": "ArcGIS Pro AddIn",
             "job_omschrijving": "Import KLIC datasets",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": "ArcGIS Pro",
             "job_schedule": "",
             "job_eigenaar": null,
             "job_status": "Actief",
+            "aangemaakt_op": "2026-02-11 23:46:00.190034",
+            "gewijzigd_op": "2026-02-11 23:46:00.190034",
             "job_id": "0b8c4c2d-d03c-4808-9c27-26b392924736"
           }
         }
@@ -34,9 +38,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "246f4184-8e1f-4743-ab88-f55f8539c3b2",
-              "naam": "KLIC API",
-              "pad": "API",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "KLIC API",
+              "dataset_pad": "API",
+              "dataset_omschrijving": "Kabel en leiding informatie API",
+              "dataset_eigenaar": "Kadaster",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -59,9 +79,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "74c14361-c532-4cba-8308-0413b8f54e8c",
-              "naam": "Klicimport",
-              "pad": "gpbupub.klicimport.*",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Klicimport",
+              "dataset_pad": "gpbupub.klicimport.*",
+              "dataset_omschrijving": "Applicatiedata voor het consumeren van Kabel en Leiding informatie van het Kadaster via KLIC meldingen en de ArcGIS Pro addin Klicimport",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -82,9 +118,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "a33072a1-ce00-4fb7-9ca8-4df6662be539"
+      "runId": "d92c71b1-d390-4b25-a080-0795f9eb6d93"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -96,10 +132,14 @@
             "job_naam": "Floron Nectarindex naar PNH",
             "job_type": "FME",
             "job_omschrijving": "Floron Nectarindex naar PNH viewer en dashboardbrondata",
+            "job_script_pad": "gereedschap/data_conversie/floron_naar_pnh/nectarindex_naar_pnh.fmw",
+            "job_repository": null,
             "job_tooling": "FME Form",
             "job_schedule": null,
             "job_eigenaar": "ID-DI",
             "job_status": "In ontwikkeling",
+            "aangemaakt_op": "2026-03-11 11:30:32.447271",
+            "gewijzigd_op": "2026-03-11 11:30:32.447271",
             "job_id": "14c13ac8-f8d9-4fc0-a33a-79a60589a65e"
           }
         }
@@ -115,9 +155,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "d100a9e4-bcf1-4ef5-824d-d95eea1b85f3",
-              "naam": "Nectarindex",
-              "pad": "API",
-              "dataset_medaille": null
+              "dataset_naam": "Nectarindex",
+              "dataset_pad": "API",
+              "dataset_omschrijving": "Nectarindex gepubliceerd op de Floron website",
+              "dataset_eigenaar": "Floron",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-03-11 11:30:37.087438",
+              "gewijzigd_op": "2026-03-11 11:30:37.087438"
             }
           },
           "visualization": {
@@ -140,9 +196,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "78b7dd85-543f-4e0b-9039-fc6b9d7d453d",
-              "naam": "nectar_index_shapes",
-              "pad": "G:\\igi\\producten\\Dashboards\\GD9060_Bedrijfswaarden BU\\3_Productiedata\\nectar_index_shapes",
-              "dataset_medaille": null
+              "dataset_naam": "nectar_index_shapes",
+              "dataset_pad": "G:\\igi\\producten\\Dashboards\\GD9060_Bedrijfswaarden BU\\3_Productiedata\\nectar_index_shapes",
+              "dataset_omschrijving": "Nectar index voor bedrijfswaardendashboard",
+              "dataset_eigenaar": null,
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-03-11 11:23:41.330535",
+              "gewijzigd_op": "2026-03-11 11:23:41.330535"
             }
           },
           "visualization": {
@@ -159,9 +231,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "b00968e5-12ef-4b1d-84fd-1c08849f384f"
+      "runId": "4c9c6838-0a42-4d04-ba25-cb8f5dffb79a"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -173,10 +245,14 @@
             "job_naam": "NDW verkeersborden import",
             "job_type": "FME",
             "job_omschrijving": "Import en verwerking van NDW verkeersborden in GPBU",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": "FME Flow",
             "job_schedule": null,
             "job_eigenaar": "ID-DI",
             "job_status": "Actief",
+            "aangemaakt_op": "2026-02-11 16:00:54.667513",
+            "gewijzigd_op": "2026-02-11 16:00:54.667513",
             "job_id": "3308c432-91b9-4870-b60a-11d074b5d8cf"
           }
         }
@@ -192,9 +268,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "f622e8bd-de9a-43d8-9289-e86e37b7aebc",
-              "naam": "NDW verkeersborden",
-              "pad": "gpbu.budata.bu_NDW_verkeersborden_p",
-              "dataset_medaille": null
+              "dataset_naam": "NDW verkeersborden",
+              "dataset_pad": "gpbu.budata.bu_NDW_verkeersborden_p",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -217,9 +309,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "f622e8bd-de9a-43d8-9289-e86e37b7aebc",
-              "naam": "NDW verkeersborden",
-              "pad": "gpbu.budata.bu_NDW_verkeersborden_p",
-              "dataset_medaille": null
+              "dataset_naam": "NDW verkeersborden",
+              "dataset_pad": "gpbu.budata.bu_NDW_verkeersborden_p",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -236,9 +344,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "846d76e3-9e25-443e-a1c6-4c8a8d928df1"
+      "runId": "2a7ce26f-9234-465e-a45f-dede72fd35c4"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -250,10 +358,14 @@
             "job_naam": "dataiku_csv_intensiteitsdata_naar_sde.fmw",
             "job_type": "FME",
             "job_omschrijving": "Intensiteitsdata naar pub",
+            "job_script_pad": "dataiku_csv_intensiteitsdata_naar_sde.fmw",
+            "job_repository": null,
             "job_tooling": null,
             "job_schedule": null,
             "job_eigenaar": "ID-DI-MOB",
             "job_status": "Actief",
+            "aangemaakt_op": "2026-03-05 16:15:38.833622",
+            "gewijzigd_op": "2026-03-05 16:15:38.833622",
             "job_id": "387a99eb-bd97-4f17-9095-151e951a5321"
           }
         }
@@ -269,9 +381,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "0f4a7a7e-fe6e-4b00-9477-45edf936f7d3",
-              "naam": "Verkeersintensiteiten",
-              "pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025",
-              "dataset_medaille": "Brons"
+              "dataset_naam": "Verkeersintensiteiten",
+              "dataset_pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025",
+              "dataset_omschrijving": "Jaarlijkse verzameling gegevens afkomstig van het NDW met informatie over verkeersintensiteiten in diverse granulariteiten",
+              "dataset_eigenaar": "ID_DI",
+              "dataset_steward": "George Stern",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "Mobiliteitsdata",
+              "dataset_label": null,
+              "dataset_classificatie": "Intern",
+              "dataset_gebruik_consument": "Viewers (Intern)",
+              "dataset_gebruik_populariteit": "Laag, max 5 users",
+              "dataset_gebruik_tools": "FME, ArcGIS Pro",
+              "dataset_medaille": "Brons",
+              "aangemaakt_op": "2026-03-02 17:58:37.099182",
+              "gewijzigd_op": "2026-03-02 17:58:37.123104"
             }
           },
           "visualization": {
@@ -294,9 +422,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "7ce25aa0-342f-4a8f-9282-22154c87312e",
-              "naam": "Verkeerintensiteiten per telpunt",
-              "pad": "gpbupub.bupub.mob*",
-              "dataset_medaille": "Goud"
+              "dataset_naam": "Verkeerintensiteiten per telpunt",
+              "dataset_pad": "gpbupub.bupub.mob*",
+              "dataset_omschrijving": "Verkeerintensiteiten per telpunt",
+              "dataset_eigenaar": null,
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Goud",
+              "aangemaakt_op": "2026-03-05 16:18:50.393800",
+              "gewijzigd_op": "2026-03-05 16:18:50.393800"
             }
           },
           "visualization": {
@@ -317,9 +461,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "8e33817c-3fb2-479c-9495-a10f06332b5c"
+      "runId": "5f2e4e1e-3748-413d-aec1-e3132eedc1e6"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -331,10 +475,14 @@
             "job_naam": "budata naar pub",
             "job_type": "Python",
             "job_omschrijving": "Actualisering publicatieversies Budata",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": "Dagster",
             "job_schedule": null,
             "job_eigenaar": "ID-DI",
             "job_status": "Actief",
+            "aangemaakt_op": "2026-02-11 16:46:34.696658",
+            "gewijzigd_op": "2026-02-11 16:46:34.696658",
             "job_id": "3c8c94e9-ffcd-4c00-a8f2-2192626f9e31"
           }
         }
@@ -350,9 +498,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "791a7d40-5585-41b2-88c4-35cc3d743c61",
-              "naam": "D&I Projecten",
-              "pad": "gpbu.budata.bu_prj_overzichtGeodata",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "D&I Projecten",
+              "dataset_pad": "gpbu.budata.bu_prj_overzichtGeodata",
+              "dataset_omschrijving": "Dataset met het projectenoverzicht van B&U",
+              "dataset_eigenaar": "ID-DI-Projectadviseurs",
+              "dataset_steward": "Nina Jensen",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -373,9 +537,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "951496dc-616b-4940-98fb-ea64f832c5f6",
-              "naam": "Graafberichten",
-              "pad": "gpbu.budata.bu_graafberichten_v*",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Graafberichten",
+              "dataset_pad": "gpbu.budata.bu_graafberichten_v*",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -400,9 +580,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "11ed3529-1558-43cb-9dc3-a249f63e7594",
-              "naam": "Functionele grenzen",
-              "pad": "gpbu.budata.bu_functioneleGrens*",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Functionele grenzen",
+              "dataset_pad": "gpbu.budata.bu_functioneleGrens*",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -429,9 +625,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "28bd1a90-602a-46b6-a097-c07f5d8aa389",
-              "naam": "Budata pub",
-              "pad": "gpbupub.bupub.bu_*",
-              "dataset_medaille": "Goud"
+              "dataset_naam": "Budata pub",
+              "dataset_pad": "gpbupub.bupub.bu_*",
+              "dataset_omschrijving": "Publicatie versie van budata",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Goud",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -452,9 +664,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "87fa40e1-1d73-4dc6-bc29-9d59f963c920"
+      "runId": "e45ce92a-7abd-4660-a63d-d3b9d26c073a"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -466,10 +678,14 @@
             "job_naam": "CoMeT",
             "job_type": "FME",
             "job_omschrijving": "Dataleveringscontroletool",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": "FME Form",
             "job_schedule": null,
             "job_eigenaar": "ID-DI",
             "job_status": "Actief",
+            "aangemaakt_op": "2026-02-11 17:26:01.504619",
+            "gewijzigd_op": "2026-02-11 17:26:01.504619",
             "job_id": "48c61202-69e0-465f-97eb-5ef37b7d9334"
           }
         }
@@ -485,9 +701,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "123423dd-616b-4940-98fb-ea64f832c5f6",
-              "naam": "Gebiedscontractant OMS",
-              "pad": "areaaldata",
-              "dataset_medaille": "Brons"
+              "dataset_naam": "Gebiedscontractant OMS",
+              "dataset_pad": "areaaldata",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ON",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Brons",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -508,9 +740,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "f9eb0604-94d9-485f-9cb1-4f215c9a9da5",
-              "naam": "Projectdatalevering",
-              "pad": "FGDB",
-              "dataset_medaille": "Brons"
+              "dataset_naam": "Projectdatalevering",
+              "dataset_pad": "FGDB",
+              "dataset_omschrijving": "Container met door een project gewijzigde uitsnede van Areaaldata",
+              "dataset_eigenaar": "ON",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Brons",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -533,9 +781,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
-              "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Areaaldata 4 Bron",
+              "dataset_pad": "gpbuapp",
+              "dataset_omschrijving": "Assetdata PNH - stam-, paspoort- en inspectiegevens",
+              "dataset_eigenaar": "BSP",
+              "dataset_steward": "Martijn Nijhout",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -552,9 +816,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "a32b485c-7be4-434e-ad05-7d95f35339c2"
+      "runId": "d3ec401d-bfd6-4cc1-8a44-95fb9eae8712"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -566,10 +830,14 @@
             "job_naam": "ad naar pub",
             "job_type": "Python",
             "job_omschrijving": "Actualisering publicatieversies Areaaldata 4 vanuit bron",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": "Dagster",
             "job_schedule": null,
             "job_eigenaar": "ID-DI",
             "job_status": "Actief",
+            "aangemaakt_op": "2026-02-11 16:00:54.667513",
+            "gewijzigd_op": "2026-02-11 16:00:54.667513",
             "job_id": "9678defd-8802-420c-a53a-5f7aaad717df"
           }
         }
@@ -585,9 +853,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
-              "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Areaaldata 4 Bron",
+              "dataset_pad": "gpbuapp",
+              "dataset_omschrijving": "Assetdata PNH - stam-, paspoort- en inspectiegevens",
+              "dataset_eigenaar": "BSP",
+              "dataset_steward": "Martijn Nijhout",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -610,9 +894,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "dc063311-582c-422f-a1ac-6702d07464a1",
-              "naam": "Areaaldata Open",
-              "pad": "gpbupub.bupub.av_*",
-              "dataset_medaille": "Goud"
+              "dataset_naam": "Areaaldata Open",
+              "dataset_pad": "gpbupub.bupub.av_*",
+              "dataset_omschrijving": "Subset van Areaaldata beschikbaar als open data",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": "Timo Anker",
+              "dataset_toegangsrechten": "Open",
+              "dataset_policies": "",
+              "dataset_sql_of_code": "",
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": "",
+              "dataset_categorie": "",
+              "dataset_label": "",
+              "dataset_classificatie": "",
+              "dataset_gebruik_consument": "Areaalviewer",
+              "dataset_gebruik_populariteit": "",
+              "dataset_gebruik_tools": "",
+              "dataset_medaille": "Goud",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -637,9 +937,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "793318b8-9fd9-440e-846a-e70a016cee63",
-              "naam": "Areaaldata Intern",
-              "pad": "gpbupub.bupub.adi_*",
-              "dataset_medaille": "Goud"
+              "dataset_naam": "Areaaldata Intern",
+              "dataset_pad": "gpbupub.bupub.adi_*",
+              "dataset_omschrijving": "Subset van Areaaldata beschikbaar als interne data",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": "Timo Anker",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": "",
+              "dataset_sql_of_code": "",
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": "",
+              "dataset_categorie": "",
+              "dataset_label": "",
+              "dataset_classificatie": "",
+              "dataset_gebruik_consument": "Areaaldata Intern Viewer",
+              "dataset_gebruik_populariteit": "",
+              "dataset_gebruik_tools": "",
+              "dataset_medaille": "Goud",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -660,9 +976,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "dd8cd706-907e-4b58-b74f-5249d0fd65a1"
+      "runId": "531ae970-0855-48c3-84b9-5fdd2f9d6689"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -674,10 +990,14 @@
             "job_naam": "MBB naar NDFF",
             "job_type": "QGIS",
             "job_omschrijving": "Upload Meetnet Biodiversiteit Bermendata naar NDFF",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": null,
             "job_schedule": null,
             "job_eigenaar": null,
             "job_status": "Actief",
+            "aangemaakt_op": "2026-03-05 14:01:39.110583",
+            "gewijzigd_op": "2026-03-05 14:01:39.110583",
             "job_id": "c3db5bc5-59be-424b-98cc-3d536b579d9c"
           }
         }
@@ -693,9 +1013,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "8425ed60-e992-494d-bdb9-5deb3dc5c283",
-              "naam": "Meetnet biodiversiteit bermen",
-              "pad": "gpbu.mbb",
-              "dataset_medaille": null
+              "dataset_naam": "Meetnet biodiversiteit bermen",
+              "dataset_pad": "gpbu.mbb",
+              "dataset_omschrijving": "Brondata voor het project meetnet biodiversiteit bermen, waarin volgens NDFF format meetgevens over flora en fauna in de provinciale bermen wordt vastgelegd.",
+              "dataset_eigenaar": "ID - Ecologie",
+              "dataset_steward": "Ruud van Schaik",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -718,9 +1054,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "a58a37dc-57aa-4ba7-924e-7b3a7806e3eb",
-              "naam": "NDFF",
-              "pad": "API",
-              "dataset_medaille": null
+              "dataset_naam": "NDFF",
+              "dataset_pad": "API",
+              "dataset_omschrijving": "NDFF API voor invoer",
+              "dataset_eigenaar": "NDFF",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-03-05 14:03:48.274824",
+              "gewijzigd_op": "2026-03-05 14:03:48.274824"
             }
           },
           "visualization": {
@@ -737,9 +1089,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "f9ca8d66-fa4c-42f9-8c63-94ad37ca7efe"
+      "runId": "5663f461-3580-45cc-b20b-66bcc7bb9d6b"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -751,10 +1103,14 @@
             "job_naam": "AD5 ontwikkelstraat",
             "job_type": "FME",
             "job_omschrijving": "AD5 ontwikkelstraat",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": null,
             "job_schedule": null,
             "job_eigenaar": null,
             "job_status": "Actief",
+            "aangemaakt_op": "2026-03-05 15:48:30.764681",
+            "gewijzigd_op": "2026-03-05 15:48:30.764681",
             "job_id": "c7abbeed-f878-440a-a325-d742b38bdc6b"
           }
         }
@@ -770,9 +1126,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
-              "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Areaaldata 4 Bron",
+              "dataset_pad": "gpbuapp",
+              "dataset_omschrijving": "Assetdata PNH - stam-, paspoort- en inspectiegevens",
+              "dataset_eigenaar": "BSP",
+              "dataset_steward": "Martijn Nijhout",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -795,9 +1167,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "8a751d5e-2b2d-4bdd-816e-e6a94ba5b1a5",
-              "naam": "Areaaldata 5 Bron",
-              "pad": "gbu.areaaldata",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Areaaldata 5 Bron",
+              "dataset_pad": "gbu.areaaldata",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -814,9 +1202,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "59aa56ff-28d7-45b5-bfc4-1091923eeba3"
+      "runId": "aa431958-c919-4e27-9ab5-31dec762d2d7"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -828,10 +1216,14 @@
             "job_naam": "NDW intensiteitsdata opwerkingscript?",
             "job_type": "Dataiku recipe",
             "job_omschrijving": "NDW intensiteitsdata opwerking",
+            "job_script_pad": "?",
+            "job_repository": "Dataiku",
             "job_tooling": "Dataiku",
             "job_schedule": "Handmatig - een keer per jaar",
             "job_eigenaar": "ID-DI-MOB",
             "job_status": "Actief",
+            "aangemaakt_op": "2026-03-12 22:38:22.825839",
+            "gewijzigd_op": "2026-03-12 22:38:22.825839",
             "job_id": "d300680a-77de-4bee-b08e-eee552d85176"
           }
         }
@@ -847,9 +1239,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "3d25508c-2ef3-4dea-a2b5-3cfc05e58738",
-              "naam": "NDW intensiteitsdata",
-              "pad": "Download",
-              "dataset_medaille": "Brons"
+              "dataset_naam": "NDW intensiteitsdata",
+              "dataset_pad": "Download",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "NDW",
+              "dataset_steward": "George Stern",
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Brons",
+              "aangemaakt_op": "2026-03-12 22:06:13.368481",
+              "gewijzigd_op": "2026-03-12 22:06:13.368481"
             }
           },
           "visualization": {
@@ -872,9 +1280,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "0f4a7a7e-fe6e-4b00-9477-45edf936f7d3",
-              "naam": "Verkeersintensiteiten",
-              "pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025",
-              "dataset_medaille": "Brons"
+              "dataset_naam": "Verkeersintensiteiten",
+              "dataset_pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025",
+              "dataset_omschrijving": "Jaarlijkse verzameling gegevens afkomstig van het NDW met informatie over verkeersintensiteiten in diverse granulariteiten",
+              "dataset_eigenaar": "ID_DI",
+              "dataset_steward": "George Stern",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "Mobiliteitsdata",
+              "dataset_label": null,
+              "dataset_classificatie": "Intern",
+              "dataset_gebruik_consument": "Viewers (Intern)",
+              "dataset_gebruik_populariteit": "Laag, max 5 users",
+              "dataset_gebruik_tools": "FME, ArcGIS Pro",
+              "dataset_medaille": "Brons",
+              "aangemaakt_op": "2026-03-02 17:58:37.099182",
+              "gewijzigd_op": "2026-03-02 17:58:37.123104"
             }
           },
           "visualization": {
@@ -891,9 +1315,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "66b69104-6c9e-4eed-9bbe-f05c21fee396"
+      "runId": "77ded7d2-7d8e-43b2-b068-d64f7e7cbb07"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -905,10 +1329,14 @@
             "job_naam": "LV naar AD",
             "job_type": "FME",
             "job_omschrijving": "Actualsering Areaaldata vanuit Landelijke voorziening BGT",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": "FME Form",
             "job_schedule": null,
             "job_eigenaar": "ID-DI",
             "job_status": "In ontwikkeling",
+            "aangemaakt_op": "2026-03-05 12:58:08.308976",
+            "gewijzigd_op": "2026-03-05 12:58:08.308976",
             "job_id": "d63720c0-a575-4cce-82b3-80c63c984b18"
           }
         }
@@ -924,9 +1352,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "92c4b65d-c7b9-400a-8c23-9747562ccee6",
-              "naam": "BGT landelijk",
-              "pad": "BRAVO",
-              "dataset_medaille": null
+              "dataset_naam": "BGT landelijk",
+              "dataset_pad": "BRAVO",
+              "dataset_omschrijving": "Landelijke voorziening",
+              "dataset_eigenaar": "Kadaster",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-03-04 18:17:19.534549",
+              "gewijzigd_op": "2026-03-04 18:17:19.534549"
             }
           },
           "visualization": {
@@ -949,9 +1393,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
-              "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Areaaldata 4 Bron",
+              "dataset_pad": "gpbuapp",
+              "dataset_omschrijving": "Assetdata PNH - stam-, paspoort- en inspectiegevens",
+              "dataset_eigenaar": "BSP",
+              "dataset_steward": "Martijn Nijhout",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -968,9 +1428,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "5fc558e3-2a8a-4b84-a2d1-cd4092e7a668"
+      "runId": "2052b78a-f389-4244-9640-befd0885982a"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -982,10 +1442,14 @@
             "job_naam": "areaaldata_naar_gisib",
             "job_type": "FME",
             "job_omschrijving": "Actualiseert Gisib via de Gisib API vanuit Areaaldata",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": "FME Form",
             "job_schedule": null,
             "job_eigenaar": null,
             "job_status": "Actief",
+            "aangemaakt_op": "2026-03-05 13:07:45.934343",
+            "gewijzigd_op": "2026-03-05 13:07:45.934343",
             "job_id": "dcafba84-17b3-49db-a361-c9972351c48d"
           }
         }
@@ -1001,9 +1465,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
-              "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Areaaldata 4 Bron",
+              "dataset_pad": "gpbuapp",
+              "dataset_omschrijving": "Assetdata PNH - stam-, paspoort- en inspectiegevens",
+              "dataset_eigenaar": "BSP",
+              "dataset_steward": "Martijn Nijhout",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -1026,9 +1506,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "98891667-60af-48b6-9ce1-ef4d1924bd64",
-              "naam": "Gisib",
-              "pad": null,
-              "dataset_medaille": null
+              "dataset_naam": "Gisib",
+              "dataset_pad": null,
+              "dataset_omschrijving": "Gisib applicatiedatabase",
+              "dataset_eigenaar": null,
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-03-05 13:05:43.500324",
+              "gewijzigd_op": "2026-03-05 13:05:43.500324"
             }
           },
           "visualization": {
@@ -1045,9 +1541,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "186e41f3-52ed-4090-a037-07630a5dbdc1"
+      "runId": "c7a2a882-d679-4c6c-aee9-01fc748abe4d"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1059,10 +1555,14 @@
             "job_naam": "FIS data download en vertaling",
             "job_type": "FME",
             "job_omschrijving": "Download van FIS API en vertaling naar GPBUPUB",
+            "job_script_pad": "D:\\git\\gis_beheer\\fme_server\\beheer\\ID_FIS_data_download.fmw",
+            "job_repository": null,
             "job_tooling": "FME Flow",
             "job_schedule": null,
             "job_eigenaar": "ID-DI",
             "job_status": "Actief",
+            "aangemaakt_op": "2026-02-11 16:00:54.667513",
+            "gewijzigd_op": "2026-02-11 16:00:54.667513",
             "job_id": "e101158e-3f61-4d09-85c3-64a896e69524"
           }
         }
@@ -1078,9 +1578,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "19c6fd93-39ce-49e3-901f-beee6410e727",
-              "naam": "FIS API",
-              "pad": "API",
-              "dataset_medaille": null
+              "dataset_naam": "FIS API",
+              "dataset_pad": "API",
+              "dataset_omschrijving": "Fairway Information System",
+              "dataset_eigenaar": "RWS",
+              "dataset_steward": "RWS",
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "API",
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -1103,9 +1619,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "2f9b5602-26bc-4451-a3a3-c0b32eba8dbc",
-              "naam": "RWS Fairway Information System",
-              "pad": "gpbupub.bupub.FIS_*",
-              "dataset_medaille": null
+              "dataset_naam": "RWS Fairway Information System",
+              "dataset_pad": "gpbupub.bupub.FIS_*",
+              "dataset_omschrijving": "De dataset is de vertaalde output van de FIS data API van Rijkswaterstaat",
+              "dataset_eigenaar": "Ingrid van Hout/Linda van Bijlevelt",
+              "dataset_steward": "Sander van de Waterbeemd",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": "FME tool op GIS Beheer (D:\\git\\gis_beheer\\fme_server\\beheer\\ID_FIS_data_download.fmw)",
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "Areaaldata, Geodata, Beheer & Uitvoering, Ingenieursdiensten, Data & Informatie",
+              "dataset_label": "",
+              "dataset_classificatie": "Intern",
+              "dataset_gebruik_consument": "Viewers (Intern)",
+              "dataset_gebruik_populariteit": "Laag",
+              "dataset_gebruik_tools": "FME, ArcGIS Pro, VertiGIS",
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -1126,9 +1658,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "f88bb690-f4ed-4a7c-9d04-7cbff6215deb"
+      "runId": "2959fe8b-5a14-4ac5-935b-4a740abe70e5"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1140,10 +1672,14 @@
             "job_naam": "ad5 naar pub",
             "job_type": "Python",
             "job_omschrijving": "Actualisering publicatieversies Areaaldata 5 vanuit bron",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": "Dagster",
             "job_schedule": null,
             "job_eigenaar": "ID-DI",
             "job_status": "Actief",
+            "aangemaakt_op": "2026-02-11 16:00:54.667000",
+            "gewijzigd_op": "2026-02-11 16:00:54.667000",
             "job_id": "e2e29250-f001-4cde-b9c6-3243b4b5cc6b"
           }
         }
@@ -1159,9 +1695,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "8a751d5e-2b2d-4bdd-816e-e6a94ba5b1a5",
-              "naam": "Areaaldata 5 Bron",
-              "pad": "gbu.areaaldata",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Areaaldata 5 Bron",
+              "dataset_pad": "gbu.areaaldata",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -1184,9 +1736,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "71ed0d1f-2c87-4332-ba37-a1b50197d7b5",
-              "naam": "Areaaldata 5 intern",
-              "pad": "gsbupub.bupub.adi5_*",
-              "dataset_medaille": "Goud"
+              "dataset_naam": "Areaaldata 5 intern",
+              "dataset_pad": "gsbupub.bupub.adi5_*",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Goud",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -1207,9 +1775,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:44:12.054406Z",
+    "eventTime": "2026-03-12T21:49:17.772480Z",
     "run": {
-      "runId": "54d2da13-3703-4727-9da7-133c9878323a"
+      "runId": "bf109fef-8863-4010-83b7-bb1f3c61cea0"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1221,10 +1789,14 @@
             "job_naam": "AD naar LV",
             "job_type": "Uitbesteed",
             "job_omschrijving": "Mutaties uit Areaaldata worden geëxporteerd naar geopackage voor ontzorgende partij die de LV bijwerkt.",
+            "job_script_pad": null,
+            "job_repository": null,
             "job_tooling": null,
             "job_schedule": null,
             "job_eigenaar": null,
             "job_status": "Actief",
+            "aangemaakt_op": "2026-03-05 14:01:39.110583",
+            "gewijzigd_op": "2026-03-05 14:01:39.110583",
             "job_id": "f01bf716-476b-4053-adc6-6d498a918183"
           }
         }
@@ -1240,9 +1812,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
-              "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp",
-              "dataset_medaille": "Zilver"
+              "dataset_naam": "Areaaldata 4 Bron",
+              "dataset_pad": "gpbuapp",
+              "dataset_omschrijving": "Assetdata PNH - stam-, paspoort- en inspectiegevens",
+              "dataset_eigenaar": "BSP",
+              "dataset_steward": "Martijn Nijhout",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
             }
           },
           "visualization": {
@@ -1265,9 +1853,25 @@
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
               "dataset_id": "92c4b65d-c7b9-400a-8c23-9747562ccee6",
-              "naam": "BGT landelijk",
-              "pad": "BRAVO",
-              "dataset_medaille": null
+              "dataset_naam": "BGT landelijk",
+              "dataset_pad": "BRAVO",
+              "dataset_omschrijving": "Landelijke voorziening",
+              "dataset_eigenaar": "Kadaster",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-03-04 18:17:19.534549",
+              "gewijzigd_op": "2026-03-04 18:17:19.534549"
             }
           },
           "visualization": {
