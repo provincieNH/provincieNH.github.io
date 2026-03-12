@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.364431Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "6a93d41e-08bf-4a46-85c7-1496f13c9806"
+      "runId": "d302b678-fb37-43f8-8c33-c048841732cc"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -61,13 +61,13 @@
               "dataset_id": "74c14361-c532-4cba-8308-0413b8f54e8c",
               "naam": "Klicimport",
               "pad": "gpbupub.klicimport.*",
-              "dataset_medaille": null
+              "dataset_medaille": "Zilver"
             }
           },
           "visualization": {
             "_producer": "provincie-noord-holland/databeheer",
             "style": {
-              "borderColor": "#888888",
+              "borderColor": "#C0C0C0",
               "borderWidth": 3
             }
           },
@@ -82,9 +82,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "b79d06ce-cb12-43be-82bc-4970ef4e678f"
+      "runId": "a33072a1-ce00-4fb7-9ca8-4df6662be539"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -159,9 +159,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "946514b8-71e7-48ae-9a4e-ea4ae2d1e3fb"
+      "runId": "b00968e5-12ef-4b1d-84fd-1c08849f384f"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -236,9 +236,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "e94433d0-a2f7-4098-9917-52cc1c796c62"
+      "runId": "846d76e3-9e25-443e-a1c6-4c8a8d928df1"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -317,9 +317,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "7241a076-064f-43c5-8632-7d468baa6eb8"
+      "runId": "8e33817c-3fb2-479c-9495-a10f06332b5c"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -352,13 +352,13 @@
               "dataset_id": "791a7d40-5585-41b2-88c4-35cc3d743c61",
               "naam": "D&I Projecten",
               "pad": "gpbu.budata.bu_prj_overzichtGeodata",
-              "dataset_medaille": null
+              "dataset_medaille": "Zilver"
             }
           },
           "visualization": {
             "_producer": "provincie-noord-holland/databeheer",
             "style": {
-              "borderColor": "#888888",
+              "borderColor": "#C0C0C0",
               "borderWidth": 3
             }
           }
@@ -375,13 +375,13 @@
               "dataset_id": "951496dc-616b-4940-98fb-ea64f832c5f6",
               "naam": "Graafberichten",
               "pad": "gpbu.budata.bu_graafberichten_v*",
-              "dataset_medaille": null
+              "dataset_medaille": "Zilver"
             }
           },
           "visualization": {
             "_producer": "provincie-noord-holland/databeheer",
             "style": {
-              "borderColor": "#888888",
+              "borderColor": "#C0C0C0",
               "borderWidth": 3
             }
           },
@@ -452,9 +452,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "f22004e2-d29b-4002-85f8-f7086f5b1b03"
+      "runId": "87fa40e1-1d73-4dc6-bc29-9d59f963c920"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -552,9 +552,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "f5f9ed85-b717-4d62-b551-fbc6d546f4c3"
+      "runId": "a32b485c-7be4-434e-ad05-7d95f35339c2"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -660,9 +660,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "102c977d-9ad9-4b18-b254-943ed213480f"
+      "runId": "dd8cd706-907e-4b58-b74f-5249d0fd65a1"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -737,9 +737,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "ec7ed7f2-26f1-4819-9b9d-83d81c449cd9"
+      "runId": "f9ca8d66-fa4c-42f9-8c63-94ad37ca7efe"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -814,9 +814,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "184d193f-d8e3-4f0e-b2b0-e2cd5a368431"
+      "runId": "59aa56ff-28d7-45b5-bfc4-1091923eeba3"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -849,13 +849,13 @@
               "dataset_id": "3d25508c-2ef3-4dea-a2b5-3cfc05e58738",
               "naam": "NDW intensiteitsdata",
               "pad": "Download",
-              "dataset_medaille": null
+              "dataset_medaille": "Brons"
             }
           },
           "visualization": {
             "_producer": "provincie-noord-holland/databeheer",
             "style": {
-              "borderColor": "#888888",
+              "borderColor": "#CD7F32",
               "borderWidth": 3
             }
           }
@@ -891,9 +891,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "aad2c244-9202-4ad2-aed4-c512262f7a9d"
+      "runId": "66b69104-6c9e-4eed-9bbe-f05c21fee396"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -968,9 +968,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "9b72bb1d-913d-4d52-be91-96af2f562ec3"
+      "runId": "5fc558e3-2a8a-4b84-a2d1-cd4092e7a668"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1045,9 +1045,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "2245bc80-651f-4237-b9c2-400c4fe5e046"
+      "runId": "186e41f3-52ed-4090-a037-07630a5dbdc1"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1126,9 +1126,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "549db6eb-396f-4bf3-b8e0-a91ccbbb3ea6"
+      "runId": "f88bb690-f4ed-4a7c-9d04-7cbff6215deb"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1207,9 +1207,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:41:26.365407Z",
+    "eventTime": "2026-03-12T21:44:12.054406Z",
     "run": {
-      "runId": "b44206aa-6a97-41ac-816b-3fb6b61b342b"
+      "runId": "54d2da13-3703-4727-9da7-133c9878323a"
     },
     "job": {
       "namespace": "bu_databeheer",
