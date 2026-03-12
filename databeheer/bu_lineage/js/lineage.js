@@ -14,7 +14,7 @@ async function loadLineage() {
     if (m === "zilver") return "#C0C0C0";
     if (m === "brons") return "#CD7F32";
 
-    return "#1565c0";
+    return "#ffffff";
   }
 
   function addNode(id, label, type, meta = {}) {
