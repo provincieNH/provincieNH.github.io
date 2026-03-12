@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "dce8dbaf-2b6b-4542-8204-37264396043b"
+      "runId": "67c6b9ab-7aa4-476c-84ad-32fa8c2b019b"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -35,7 +35,8 @@
             "meta": {
               "dataset_id": "246f4184-8e1f-4743-ab88-f55f8539c3b2",
               "naam": "KLIC API",
-              "pad": "API"
+              "pad": "API",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -52,7 +53,8 @@
             "meta": {
               "dataset_id": "74c14361-c532-4cba-8308-0413b8f54e8c",
               "naam": "Klicimport",
-              "pad": "gpbupub.klicimport.*"
+              "pad": "gpbupub.klicimport.*",
+              "dataset_medaille": null
             }
           },
           "datasetPattern": {
@@ -66,9 +68,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "239bcee1-329f-481e-8882-42f1bed44495"
+      "runId": "07daf9d6-c5cb-43c5-a84d-469bb845fa0d"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -100,7 +102,8 @@
             "meta": {
               "dataset_id": "d100a9e4-bcf1-4ef5-824d-d95eea1b85f3",
               "naam": "Nectarindex",
-              "pad": "API"
+              "pad": "API",
+              "dataset_medaille": null
             }
           }
         }
@@ -117,7 +120,8 @@
             "meta": {
               "dataset_id": "78b7dd85-543f-4e0b-9039-fc6b9d7d453d",
               "naam": "nectar_index_shapes",
-              "pad": "G:\\igi\\producten\\Dashboards\\GD9060_Bedrijfswaarden BU\\3_Productiedata\\nectar_index_shapes"
+              "pad": "G:\\igi\\producten\\Dashboards\\GD9060_Bedrijfswaarden BU\\3_Productiedata\\nectar_index_shapes",
+              "dataset_medaille": null
             }
           }
         }
@@ -127,9 +131,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "bfbb3f9d-5a90-4df6-a14e-d920b4a3fef8"
+      "runId": "0f956ccb-8f74-4617-93cb-7a69fa9036a8"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -161,7 +165,8 @@
             "meta": {
               "dataset_id": "f622e8bd-de9a-43d8-9289-e86e37b7aebc",
               "naam": "NDW verkeersborden",
-              "pad": "gpbu.budata.bu_NDW_verkeersborden_p"
+              "pad": "gpbu.budata.bu_NDW_verkeersborden_p",
+              "dataset_medaille": null
             }
           }
         }
@@ -178,7 +183,8 @@
             "meta": {
               "dataset_id": "f622e8bd-de9a-43d8-9289-e86e37b7aebc",
               "naam": "NDW verkeersborden",
-              "pad": "gpbu.budata.bu_NDW_verkeersborden_p"
+              "pad": "gpbu.budata.bu_NDW_verkeersborden_p",
+              "dataset_medaille": null
             }
           }
         }
@@ -188,9 +194,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "f751f951-7820-4b0a-ac91-d438d2ed0be5"
+      "runId": "0bdb79ed-4ab4-4927-b617-c3af0a508bab"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -222,7 +228,8 @@
             "meta": {
               "dataset_id": "0f4a7a7e-fe6e-4b00-9477-45edf936f7d3",
               "naam": "Verkeersintensiteiten",
-              "pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025"
+              "pad": "G:\\id\\verkeersmonitoring\\Mobiliteitsdatabase\\Mobiliteitsdata in Areaaldata 2025",
+              "dataset_medaille": "Brons"
             }
           }
         }
@@ -239,7 +246,8 @@
             "meta": {
               "dataset_id": "7ce25aa0-342f-4a8f-9282-22154c87312e",
               "naam": "Verkeerintensiteiten per telpunt",
-              "pad": "gpbupub.bupub.mob*"
+              "pad": "gpbupub.bupub.mob*",
+              "dataset_medaille": "Goud"
             }
           },
           "datasetPattern": {
@@ -253,9 +261,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "26c04f61-b6e4-44de-b6b6-9ee14f2ec192"
+      "runId": "976e8da5-5dee-4114-94d4-5ce1479e6799"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -287,7 +295,8 @@
             "meta": {
               "dataset_id": "951496dc-616b-4940-98fb-ea64f832c5f6",
               "naam": "Graafberichten",
-              "pad": "gpbu.budata.bu_graafberichten_v*"
+              "pad": "gpbu.budata.bu_graafberichten_v*",
+              "dataset_medaille": null
             }
           },
           "datasetPattern": {
@@ -306,7 +315,8 @@
             "meta": {
               "dataset_id": "791a7d40-5585-41b2-88c4-35cc3d743c61",
               "naam": "D&I Projecten",
-              "pad": "gpbu.budata.bu_prj_overzichtGeodata"
+              "pad": "gpbu.budata.bu_prj_overzichtGeodata",
+              "dataset_medaille": null
             }
           }
         }
@@ -321,7 +331,8 @@
             "meta": {
               "dataset_id": "11ed3529-1558-43cb-9dc3-a249f63e7594",
               "naam": "Functionele grenzen",
-              "pad": "gpbu.budata.bu_functioneleGrens*"
+              "pad": "gpbu.budata.bu_functioneleGrens*",
+              "dataset_medaille": null
             }
           },
           "datasetPattern": {
@@ -342,7 +353,8 @@
             "meta": {
               "dataset_id": "28bd1a90-602a-46b6-a097-c07f5d8aa389",
               "naam": "Budata pub",
-              "pad": "gpbupub.bupub.bu_*"
+              "pad": "gpbupub.bupub.bu_*",
+              "dataset_medaille": "Goud"
             }
           },
           "datasetPattern": {
@@ -356,9 +368,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "bd261e67-54de-464b-bbcb-04d149e86e26"
+      "runId": "0fb10c6d-3d2a-43b8-8389-2c893bf0620d"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -390,7 +402,8 @@
             "meta": {
               "dataset_id": "123423dd-616b-4940-98fb-ea64f832c5f6",
               "naam": "Gebiedscontractant OMS",
-              "pad": "areaaldata"
+              "pad": "areaaldata",
+              "dataset_medaille": "Brons"
             }
           }
         }
@@ -405,7 +418,8 @@
             "meta": {
               "dataset_id": "f9eb0604-94d9-485f-9cb1-4f215c9a9da5",
               "naam": "Projectdatalevering",
-              "pad": "FGDB"
+              "pad": "FGDB",
+              "dataset_medaille": "Brons"
             }
           }
         }
@@ -422,7 +436,8 @@
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
               "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp"
+              "pad": "gpbuapp",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -432,9 +447,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "abf92f13-5468-48a8-bb05-4f3418f624a7"
+      "runId": "ad0d0256-d8d5-4403-a712-a04273bdf6ff"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -466,7 +481,8 @@
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
               "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp"
+              "pad": "gpbuapp",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -483,7 +499,8 @@
             "meta": {
               "dataset_id": "dc063311-582c-422f-a1ac-6702d07464a1",
               "naam": "Areaaldata Open",
-              "pad": "gpbupub.bupub.av_*"
+              "pad": "gpbupub.bupub.av_*",
+              "dataset_medaille": "Goud"
             }
           },
           "datasetPattern": {
@@ -502,7 +519,8 @@
             "meta": {
               "dataset_id": "793318b8-9fd9-440e-846a-e70a016cee63",
               "naam": "Areaaldata Intern",
-              "pad": "gpbupub.bupub.adi_*"
+              "pad": "gpbupub.bupub.adi_*",
+              "dataset_medaille": "Goud"
             }
           },
           "datasetPattern": {
@@ -516,9 +534,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "afdc09ff-00f7-466b-a4cb-aa8566260fca"
+      "runId": "080946c6-6f2d-4071-9e99-ff9ff42becaa"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -550,7 +568,8 @@
             "meta": {
               "dataset_id": "8425ed60-e992-494d-bdb9-5deb3dc5c283",
               "naam": "Meetnet biodiversiteit bermen",
-              "pad": "gpbu.mbb"
+              "pad": "gpbu.mbb",
+              "dataset_medaille": null
             }
           }
         }
@@ -567,7 +586,8 @@
             "meta": {
               "dataset_id": "a58a37dc-57aa-4ba7-924e-7b3a7806e3eb",
               "naam": "NDFF",
-              "pad": "API"
+              "pad": "API",
+              "dataset_medaille": null
             }
           }
         }
@@ -577,9 +597,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "abc2c6d3-7c42-416e-916e-590384862e0b"
+      "runId": "6755ead4-5014-43cb-96ae-d498c465f2c6"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -611,7 +631,8 @@
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
               "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp"
+              "pad": "gpbuapp",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -628,7 +649,8 @@
             "meta": {
               "dataset_id": "8a751d5e-2b2d-4bdd-816e-e6a94ba5b1a5",
               "naam": "Areaaldata 5 Bron",
-              "pad": "gbu.areaaldata"
+              "pad": "gbu.areaaldata",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -638,9 +660,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "83e93cb6-9446-46d8-8006-5e1a36a24827"
+      "runId": "c3117f03-e3a7-4e93-aeab-2ff096c2d29e"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -672,7 +694,8 @@
             "meta": {
               "dataset_id": "92c4b65d-c7b9-400a-8c23-9747562ccee6",
               "naam": "BGT landelijk",
-              "pad": "BRAVO"
+              "pad": "BRAVO",
+              "dataset_medaille": null
             }
           }
         }
@@ -689,7 +712,8 @@
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
               "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp"
+              "pad": "gpbuapp",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -699,9 +723,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "75397af0-37ed-4ff9-bba8-3a55f8838ec2"
+      "runId": "dae6f023-675a-4c8b-87d7-86f077bd75d9"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -733,7 +757,8 @@
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
               "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp"
+              "pad": "gpbuapp",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -750,7 +775,8 @@
             "meta": {
               "dataset_id": "98891667-60af-48b6-9ce1-ef4d1924bd64",
               "naam": "Gisib",
-              "pad": null
+              "pad": null,
+              "dataset_medaille": null
             }
           }
         }
@@ -760,9 +786,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "cf20876e-faf9-4a74-8fe5-922cc0b0565f"
+      "runId": "d47aeb6d-5903-4db2-9eb0-8d9b9138fe90"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -794,7 +820,8 @@
             "meta": {
               "dataset_id": "19c6fd93-39ce-49e3-901f-beee6410e727",
               "naam": "FIS API",
-              "pad": "API"
+              "pad": "API",
+              "dataset_medaille": null
             }
           }
         }
@@ -811,7 +838,8 @@
             "meta": {
               "dataset_id": "2f9b5602-26bc-4451-a3a3-c0b32eba8dbc",
               "naam": "RWS Fairway Information System",
-              "pad": "gpbupub.bupub.FIS_*"
+              "pad": "gpbupub.bupub.FIS_*",
+              "dataset_medaille": null
             }
           },
           "datasetPattern": {
@@ -825,9 +853,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "6da4a018-d7ef-4ac7-bdac-228014f67906"
+      "runId": "6cdaddd8-a823-4960-b4e9-92716359e622"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -859,7 +887,8 @@
             "meta": {
               "dataset_id": "8a751d5e-2b2d-4bdd-816e-e6a94ba5b1a5",
               "naam": "Areaaldata 5 Bron",
-              "pad": "gbu.areaaldata"
+              "pad": "gbu.areaaldata",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -876,7 +905,8 @@
             "meta": {
               "dataset_id": "71ed0d1f-2c87-4332-ba37-a1b50197d7b5",
               "naam": "Areaaldata 5 intern",
-              "pad": "gsbupub.bupub.adi5_*"
+              "pad": "gsbupub.bupub.adi5_*",
+              "dataset_medaille": "Goud"
             }
           },
           "datasetPattern": {
@@ -890,9 +920,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-11T10:34:23.225679Z",
+    "eventTime": "2026-03-12T15:56:54.839032Z",
     "run": {
-      "runId": "7d04b499-d7eb-4d1e-9f9a-cb239d763186"
+      "runId": "3948e11d-b8b9-40ef-a952-b5d4ea936a48"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -924,7 +954,8 @@
             "meta": {
               "dataset_id": "b8d84b80-5f73-46b9-847a-936d15076b3d",
               "naam": "Areaaldata 4 Bron",
-              "pad": "gpbuapp"
+              "pad": "gpbuapp",
+              "dataset_medaille": "Zilver"
             }
           }
         }
@@ -941,7 +972,8 @@
             "meta": {
               "dataset_id": "92c4b65d-c7b9-400a-8c23-9747562ccee6",
               "naam": "BGT landelijk",
-              "pad": "BRAVO"
+              "pad": "BRAVO",
+              "dataset_medaille": null
             }
           }
         }
