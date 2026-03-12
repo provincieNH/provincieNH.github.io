@@ -122,7 +122,7 @@ async function loadLineage() {
         }
       },
 
-      {
+
         {
           selector: "node[type='job']",
           style: {
@@ -192,19 +192,46 @@ async function loadLineage() {
 
   cy.on("tap", "node", evt => {
 
-    const meta = evt.target.data("meta") || {};
-    let html = "<table>";
+      const node = evt.target;
+      const meta = node.data("meta") || {};
 
-    for (const [k, v] of Object.entries(meta)) {
-      if (!v) continue;
-      html += `<tr><th>${k}</th><td>${v}</td></tr>`;
-    }
+      let html = "<table class='meta'>";
 
-    html += "</table>";
+      for (const [key, value] of Object.entries(meta)) {
 
-    document.getElementById("details-content").innerHTML = html;
+        if (value === null || value === "" || value === undefined) continue;
 
-  });
+        let v = value;
+
+        // script/code netjes tonen
+        if (key === "dataset_sql_of_code" || key === "job_script_pad") {
+          v = "<pre>" + value + "</pre>";
+        }
+
+        // datum formatteren
+        if (key === "aangemaakt_op" || key === "gewijzigd_op") {
+          try {
+            v = new Date(value).toLocaleString();
+          } catch {
+            v = value;
+          }
+        }
+
+        const label = key.replaceAll("_", " ");
+
+        html += `
+          <tr>
+            <th>${label}</th>
+            <td>${v}</td>
+          </tr>
+        `;
+      }
+
+      html += "</table>";
+
+      document.getElementById("details-content").innerHTML = html;
+
+    });
 }
 
 loadLineage();
