@@ -96,44 +96,42 @@ async function loadLineage() {
     style: [
 
       {
-          selector: "node",
-          style: {
-            "label": "data(label)",
-            "font-size": 15,
-            "text-wrap": "wrap",
-            "text-max-width": 180,
-            "padding": "14px",
-            "text-valign": "center",
-            "text-halign": "center",
-            "color": "#333",
-            "z-index": 10
-          }
-        },
+        selector: "node",
+        style: {
+          "label": "data(label)",
+          "font-size": 15,
+          "text-wrap": "wrap",
+          "text-max-width": 180,
+          "padding": "14px",
+          "width": "label",
+          "height": "label",
+          "text-valign": "center",
+          "text-halign": "center",
+          "color": "#333",
+          "z-index": 10
+        }
+      },
 
       {
-          selector: "node[type='dataset']",
-          style: {
-            "shape": "round-rectangle",
-            "background-color": "#e3f2fd",
-            "border-color": "data(borderColor)",
-            "border-width": "data(borderWidth)",
-            "width": "label",
-            "height": "label"
-          }
-        },
+        selector: "node[type='dataset']",
+        style: {
+          "shape": "round-rectangle",
+          "background-color": "#e3f2fd",
+          "border-color": "data(borderColor)",
+          "border-width": "data(borderWidth)"
+        }
+      },
 
       {
-          selector: "node[type='job']",
-          style: {
-            "shape": "polygon",
-            "shape-polygon-points": "-1,-1 0.6,-1 1,1 -0.6,1",
-            "width": 160,
-            "height": 60,
-            "background-color": "#fff3e0",
-            "border-color": "#ef6c00",
-            "border-width": 1
-          }
-        },
+        selector: "node[type='job']",
+        style: {
+          "shape": "round-rectangle",
+          "corner-radius": 999,
+          "background-color": "#fff3e0",
+          "border-color": "#ef6c00",
+          "border-width": 1
+        }
+      },
 
       {
         selector: ".faded",
@@ -161,18 +159,7 @@ async function loadLineage() {
           "curve-style": "unbundled-bezier",
           "control-point-step-size": 60
         }
-      },
-
-      {
-  selector: ".highlight",
-  style: {
-    "border-width": 6,
-    "line-color": "#d32f2f",
-    "target-arrow-color": "#d32f2f",
-    "transition-property": "border-width, line-color",
-    "transition-duration": "0.2s"
-  }
-}
+      }
 
     ]
   });
@@ -202,29 +189,19 @@ async function loadLineage() {
 
   cy.on("tap", "node", evt => {
 
-  const n = evt.target;
+    const meta = evt.target.data("meta") || {};
+    let html = "<table>";
 
-  cy.elements().removeClass("highlight");
-  cy.elements().addClass("faded");
+    for (const [k, v] of Object.entries(meta)) {
+      if (!v) continue;
+      html += `<tr><th>${k}</th><td>${v}</td></tr>`;
+    }
 
-  const connected = n.union(n.predecessors()).union(n.successors());
+    html += "</table>";
 
-  connected.removeClass("faded");
-  connected.addClass("highlight");
+    document.getElementById("details-content").innerHTML = html;
 
-  const meta = n.data("meta") || {};
-  let html = "<table>";
-
-  for (const [k, v] of Object.entries(meta)) {
-    if (!v) continue;
-    html += `<tr><th>${k}</th><td>${v}</td></tr>`;
-  }
-
-  html += "</table>";
-
-  document.getElementById("details-content").innerHTML = html;
-
-});
+  });
 }
 
 loadLineage();
