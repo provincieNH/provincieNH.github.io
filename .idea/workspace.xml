@@ -22,8 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12706 #comment cursief?">
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12706 #comment voorwaardelijke curves bij rechts naar links.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/bu_lineage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/bu_lineage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,30 +318,6 @@
       <option name="project" value="LOCAL" />
       <updated>1664366716613</updated>
     </task>
-    <task id="LOCAL-00047" summary="gd-12706 #comment opzet lineage tussenwebsite op basis van OpenLineage">
-      <option name="closed" value="true" />
-      <created>1770735193566</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1770735193566</updated>
-    </task>
-    <task id="LOCAL-00048" summary="gd-12706 #comment opzet UX verbeteringen">
-      <option name="closed" value="true" />
-      <created>1770735550856</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1770735550856</updated>
-    </task>
-    <task id="LOCAL-00049" summary="gd-12706 #comment opzet UX verbeteringen">
-      <option name="closed" value="true" />
-      <created>1770735586300</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1770735586300</updated>
-    </task>
     <task id="LOCAL-00050" summary="gd-12706 #comment opzet UX verbeteringen">
       <option name="closed" value="true" />
       <created>1770735885643</created>
@@ -453,7 +430,31 @@
       <option name="project" value="LOCAL" />
       <updated>1770884308957</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="gd-12706 #comment Ingegraal is Algemeen geworden">
+      <option name="closed" value="true" />
+      <created>1772107897122</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1772107897122</updated>
+    </task>
+    <task id="LOCAL-00065" summary="gd-12706 #comment bezier curves!">
+      <option name="closed" value="true" />
+      <created>1772720182030</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1772720182030</updated>
+    </task>
+    <task id="LOCAL-00066" summary="gd-12706 #comment voorwaardelijke curves bij rechts naar links.">
+      <option name="closed" value="true" />
+      <created>1772720618334</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1772720618334</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -468,9 +469,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="opnieuw geschreven csv voor algemene mapping" />
-    <MESSAGE value="poging tot sorteren mapping csv" />
-    <MESSAGE value="Gegenereerde htmls" />
     <MESSAGE value="fix algemene html" />
     <MESSAGE value="automatisch gegenereerde htmls, dit keer goed" />
     <MESSAGE value="gefixte algemene html" />
@@ -493,6 +491,9 @@
     <MESSAGE value="gd-12706 #comment labels gebruikt ipv technisch pad-namespace" />
     <MESSAGE value="gd-12706 #comment tekst aangepast - 'dan doen we het wel zelf'" />
     <MESSAGE value="gd-12706 #comment cursief?" />
-    <option name="LAST_COMMIT_MESSAGE" value="gd-12706 #comment cursief?" />
+    <MESSAGE value="gd-12706 #comment Ingegraal is Algemeen geworden" />
+    <MESSAGE value="gd-12706 #comment bezier curves!" />
+    <MESSAGE value="gd-12706 #comment voorwaardelijke curves bij rechts naar links." />
+    <option name="LAST_COMMIT_MESSAGE" value="gd-12706 #comment voorwaardelijke curves bij rechts naar links." />
   </component>
 </project>

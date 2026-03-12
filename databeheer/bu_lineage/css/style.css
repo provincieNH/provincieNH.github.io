@@ -118,9 +118,12 @@ body {
 }
 
 .legend.job {
+  width: 18px;
+  height: 14px;
   background: #fff3e0;
   border: 1px solid #ef6c00;
-  border-radius: 999px;
+
+  transform: skewX(-25deg);
 }
 
 .legend.open { background:#4caf50; }
