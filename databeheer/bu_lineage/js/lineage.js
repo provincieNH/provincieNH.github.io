@@ -159,7 +159,7 @@ async function loadLineage() {
           "curve-style": "unbundled-bezier",
           "control-point-step-size": 60
         }
-      }
+      },
 
       {
   selector: ".highlight",
