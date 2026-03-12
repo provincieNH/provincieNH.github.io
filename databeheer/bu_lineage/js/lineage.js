@@ -96,31 +96,31 @@ async function loadLineage() {
     style: [
 
       {
-        selector: "node",
-        style: {
-          "label": "data(label)",
-          "font-size": 15,
-          "text-wrap": "wrap",
-          "text-max-width": 180,
-          "padding": "14px",
-          "width": "label",
-          "height": "label",
-          "text-valign": "center",
-          "text-halign": "center",
-          "color": "#333",
-          "z-index": 10
-        }
-      },
+          selector: "node",
+          style: {
+            "label": "data(label)",
+            "font-size": 15,
+            "text-wrap": "wrap",
+            "text-max-width": 180,
+            "padding": "14px",
+            "text-valign": "center",
+            "text-halign": "center",
+            "color": "#333",
+            "z-index": 10
+          }
+        },
 
       {
-        selector: "node[type='dataset']",
-        style: {
-          "shape": "round-rectangle",
-          "background-color": "#e3f2fd",
-          "border-color": "data(borderColor)",
-          "border-width": "data(borderWidth)"
-        }
-      },
+          selector: "node[type='dataset']",
+          style: {
+            "shape": "round-rectangle",
+            "background-color": "#e3f2fd",
+            "border-color": "data(borderColor)",
+            "border-width": "data(borderWidth)",
+            "width": "label",
+            "height": "label"
+          }
+        },
 
       {
           selector: "node[type='job']",
