@@ -40,7 +40,7 @@ async function loadLineage() {
 
     const jobMeta = event.job.facets?.metadata?.meta || {};
     const jobId = "job:" + event.job.name;
-    const jobLabel = jobMeta.naam || event.job.name;
+    const jobLabel = jobMeta.job_naam || event.job.name;
 
     addNode(jobId, jobLabel, "job", jobMeta);
 
@@ -48,7 +48,10 @@ async function loadLineage() {
 
       const dsId = "ds:" + input.namespace + "." + input.name;
       const dsMeta = input.facets?.metadata?.meta || {};
-      const dsLabel = dsMeta?.naam ? dsMeta.naam : input.name;
+
+      const dsLabel =
+        dsMeta?.dataset_naam ||
+        input.name.split("__")[0];
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
 
@@ -65,7 +68,10 @@ async function loadLineage() {
 
       const dsId = "ds:" + output.namespace + "." + output.name;
       const dsMeta = output.facets?.metadata?.meta || {};
-      const dsLabel = dsMeta?.naam ? dsMeta.naam : output.name;
+
+      const dsLabel =
+        dsMeta?.dataset_naam ||
+        output.name.split("__")[0];
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
 
@@ -122,19 +128,18 @@ async function loadLineage() {
         }
       },
 
-
-        {
-          selector: "node[type='job']",
-          style: {
-            "shape": "round-rectangle",
-            "corner-radius": 999,
-            "background-color": "#fff3e0",
-            "border-color": "#ef6c00",
-            "border-width": 2,
-            "width": 140,
-            "height": 50
-          }
-        },
+      {
+        selector: "node[type='job']",
+        style: {
+          "shape": "round-rectangle",
+          "corner-radius": 999,
+          "background-color": "#fff3e0",
+          "border-color": "#ef6c00",
+          "border-width": 2,
+          "width": 140,
+          "height": 50
+        }
+      },
 
       {
         selector: ".faded",
@@ -192,46 +197,44 @@ async function loadLineage() {
 
   cy.on("tap", "node", evt => {
 
-      const node = evt.target;
-      const meta = node.data("meta") || {};
+    const node = evt.target;
+    const meta = node.data("meta") || {};
 
-      let html = "<table class='meta'>";
+    let html = "<table class='meta'>";
 
-      for (const [key, value] of Object.entries(meta)) {
+    for (const [key, value] of Object.entries(meta)) {
 
-        if (value === null || value === "" || value === undefined) continue;
+      if (value === null || value === "" || value === undefined) continue;
 
-        let v = value;
+      let v = value;
 
-        // script/code netjes tonen
-        if (key === "dataset_sql_of_code" || key === "job_script_pad") {
-          v = "<pre>" + value + "</pre>";
-        }
-
-        // datum formatteren
-        if (key === "aangemaakt_op" || key === "gewijzigd_op") {
-          try {
-            v = new Date(value).toLocaleString();
-          } catch {
-            v = value;
-          }
-        }
-
-        const label = key.replaceAll("_", " ");
-
-        html += `
-          <tr>
-            <th>${label}</th>
-            <td>${v}</td>
-          </tr>
-        `;
+      if (key === "dataset_sql_of_code" || key === "job_script_pad") {
+        v = "<pre>" + value + "</pre>";
       }
 
-      html += "</table>";
+      if (key === "aangemaakt_op" || key === "gewijzigd_op") {
+        try {
+          v = new Date(value).toLocaleString();
+        } catch {
+          v = value;
+        }
+      }
 
-      document.getElementById("details-content").innerHTML = html;
+      const label = key.replaceAll("_", " ");
 
-    });
+      html += `
+        <tr>
+          <th>${label}</th>
+          <td>${v}</td>
+        </tr>
+      `;
+    }
+
+    html += "</table>";
+
+    document.getElementById("details-content").innerHTML = html;
+
+  });
 }
 
 loadLineage();
