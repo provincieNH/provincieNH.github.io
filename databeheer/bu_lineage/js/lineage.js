@@ -5,15 +5,39 @@ async function loadLineage() {
   const nodes = new Map();
   const edges = [];
 
+  function medailleKleur(medaille) {
+    if (!medaille) return "#1565c0";
+
+    const m = medaille.toLowerCase();
+
+    if (m === "goud") return "#D4AF37";
+    if (m === "zilver") return "#C0C0C0";
+    if (m === "brons") return "#CD7F32";
+
+    return "#1565c0";
+  }
+
   function addNode(id, label, type, meta = {}) {
     if (!nodes.has(id)) {
+
+      const medaille = meta.dataset_medaille;
+      const borderColor = medailleKleur(medaille);
+
       nodes.set(id, {
-        data: { id, label, type, meta }
+        data: {
+          id,
+          label,
+          type,
+          meta,
+          borderColor,
+          borderWidth: type === "dataset" ? 4 : 1
+        }
       });
     }
   }
 
   events.forEach(event => {
+
     const jobMeta = event.job.facets?.metadata?.meta || {};
     const jobId = "job:" + event.job.name;
     const jobLabel = jobMeta.naam || event.job.name;
@@ -21,22 +45,39 @@ async function loadLineage() {
     addNode(jobId, jobLabel, "job", jobMeta);
 
     (event.inputs || []).forEach(input => {
+
       const dsId = "ds:" + input.namespace + "." + input.name;
       const dsMeta = input.facets?.metadata?.meta || {};
       const dsLabel = dsMeta?.naam ? dsMeta.naam : input.name;
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
-      edges.push({ data: { source: dsId, target: jobId } });
+
+      edges.push({
+        data: {
+          source: dsId,
+          target: jobId
+        }
+      });
+
     });
 
     (event.outputs || []).forEach(output => {
+
       const dsId = "ds:" + output.namespace + "." + output.name;
       const dsMeta = output.facets?.metadata?.meta || {};
       const dsLabel = dsMeta?.naam ? dsMeta.naam : output.name;
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
-      edges.push({ data: { source: jobId, target: dsId } });
+
+      edges.push({
+        data: {
+          source: jobId,
+          target: dsId
+        }
+      });
+
     });
+
   });
 
   const cy = cytoscape({
@@ -53,6 +94,7 @@ async function loadLineage() {
     },
 
     style: [
+
       {
         selector: "node",
         style: {
@@ -75,8 +117,8 @@ async function loadLineage() {
         style: {
           "shape": "round-rectangle",
           "background-color": "#e3f2fd",
-          "border-color": "#1565c0",
-          "border-width": 1
+          "border-color": "data(borderColor)",
+          "border-width": "data(borderWidth)"
         }
       },
 
@@ -118,12 +160,12 @@ async function loadLineage() {
           "control-point-step-size": 60
         }
       }
+
     ]
   });
 
   cy.fit();
 
-  // Detecteer edges die rechts → links lopen
   cy.edges().forEach(edge => {
     const source = edge.source().position();
     const target = edge.target().position();
@@ -133,7 +175,6 @@ async function loadLineage() {
     }
   });
 
-  // Hover: upstream + downstream highlight
   cy.on("mouseover", "node", evt => {
     const n = evt.target;
     cy.elements().addClass("faded");
@@ -146,8 +187,8 @@ async function loadLineage() {
     cy.elements().removeClass("faded");
   });
 
-  // Klik → metadata (dataset of job)
   cy.on("tap", "node", evt => {
+
     const meta = evt.target.data("meta") || {};
     let html = "<table>";
 
@@ -159,6 +200,7 @@ async function loadLineage() {
     html += "</table>";
 
     document.getElementById("details-content").innerHTML = html;
+
   });
 }
 
