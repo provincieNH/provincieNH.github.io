@@ -125,8 +125,8 @@ async function loadLineage() {
       {
         selector: "node[type='job']",
         style: {
-          "shape": "round-rectangle",
-          "corner-radius": 999,
+          "shape": "polygon",
+          "shape-polygon-points": "-1,-1 0.8,-1 1,1 -0.8,1",
           "background-color": "#fff3e0",
           "border-color": "#ef6c00",
           "border-width": 1
@@ -161,6 +161,17 @@ async function loadLineage() {
         }
       }
 
+      {
+  selector: ".highlight",
+  style: {
+    "border-width": 6,
+    "line-color": "#d32f2f",
+    "target-arrow-color": "#d32f2f",
+    "transition-property": "border-width, line-color",
+    "transition-duration": "0.2s"
+  }
+}
+
     ]
   });
 
@@ -189,19 +200,29 @@ async function loadLineage() {
 
   cy.on("tap", "node", evt => {
 
-    const meta = evt.target.data("meta") || {};
-    let html = "<table>";
+  const n = evt.target;
 
-    for (const [k, v] of Object.entries(meta)) {
-      if (!v) continue;
-      html += `<tr><th>${k}</th><td>${v}</td></tr>`;
-    }
+  cy.elements().removeClass("highlight");
+  cy.elements().addClass("faded");
 
-    html += "</table>";
+  const connected = n.union(n.predecessors()).union(n.successors());
 
-    document.getElementById("details-content").innerHTML = html;
+  connected.removeClass("faded");
+  connected.addClass("highlight");
 
-  });
+  const meta = n.data("meta") || {};
+  let html = "<table>";
+
+  for (const [k, v] of Object.entries(meta)) {
+    if (!v) continue;
+    html += `<tr><th>${k}</th><td>${v}</td></tr>`;
+  }
+
+  html += "</table>";
+
+  document.getElementById("details-content").innerHTML = html;
+
+});
 }
 
 loadLineage();
