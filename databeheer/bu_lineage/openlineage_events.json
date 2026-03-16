@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "f5ce5815-3895-4597-98c9-d39913b2ca48"
+      "runId": "d03557d6-b19b-4674-a1ca-4728fdf98752"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -118,9 +118,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "b2b7d042-7b18-4136-ae05-40cb6737bc89"
+      "runId": "051c8556-4ff3-4e25-b992-135dd3dfcead"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -231,9 +231,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "735bcbf5-15aa-4b03-96ae-be99f88fff6d"
+      "runId": "a736f530-f37c-42ff-84f9-801ef22c8897"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -344,9 +344,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "2ecb1fe1-f463-4259-96f1-018d92c117b8"
+      "runId": "3be82f4d-a23e-4b6c-9f77-e1ab82cc0fa5"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -461,9 +461,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "2403483e-29be-4d16-ac82-63c5583d4af2"
+      "runId": "fbfdb02d-798c-4a3f-91ba-e5899279c393"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -664,9 +664,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "d2c8d282-a760-4cf6-8fd1-1ddc443663fe"
+      "runId": "4e38e167-db26-4660-902f-1029a8cc4a30"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -816,9 +816,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "7eeea56c-dabb-446c-91ec-5671d8c96c24"
+      "runId": "33537f77-ef4a-488c-852b-d4a05b60865c"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -905,7 +905,7 @@
               "dataset_procesnaam": null,
               "dataset_kwaliteit": "",
               "dataset_categorie": "",
-              "dataset_label": "",
+              "dataset_label": null,
               "dataset_classificatie": "",
               "dataset_gebruik_consument": "Areaalviewer",
               "dataset_gebruik_populariteit": "",
@@ -948,7 +948,7 @@
               "dataset_procesnaam": null,
               "dataset_kwaliteit": "",
               "dataset_categorie": "",
-              "dataset_label": "",
+              "dataset_label": null,
               "dataset_classificatie": "",
               "dataset_gebruik_consument": "Areaaldata Intern Viewer",
               "dataset_gebruik_populariteit": "",
@@ -976,9 +976,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "f23aa151-0eac-46a7-820f-67d45803e8fa"
+      "runId": "a7d4fda5-d1fb-4771-a46e-4915962e1a29"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1089,9 +1089,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "1af61451-90b8-481d-900a-b63584eac124"
+      "runId": "ffb46aa4-3a53-4589-bc35-477b501fe16f"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1202,9 +1202,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "2a239ef7-3477-423a-9a97-665becbb2a3f"
+      "runId": "2c605fef-d8b4-4783-8716-c5c2a15d895e"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1315,9 +1315,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.095663Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "904a858a-3ed7-40c6-af55-0e1df6811b27"
+      "runId": "68aa53bb-36e5-4587-a21e-f978f45dfcda"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1428,9 +1428,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.096677Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "bea8c3c5-c27d-4c19-a884-9e79e62acf4a"
+      "runId": "2c43719b-0ab8-4424-bdb2-7758972fb12f"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1541,9 +1541,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.096677Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "a2644daa-3a38-4951-9243-e9006000ec43"
+      "runId": "0194a5d4-cada-442d-918b-290ab4fb9f8f"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1630,7 +1630,7 @@
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
               "dataset_categorie": "Areaaldata, Geodata, Beheer & Uitvoering, Ingenieursdiensten, Data & Informatie",
-              "dataset_label": "",
+              "dataset_label": null,
               "dataset_classificatie": "Intern",
               "dataset_gebruik_consument": "Viewers (Intern)",
               "dataset_gebruik_populariteit": "Laag",
@@ -1658,9 +1658,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.096677Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "b27a7172-413f-491c-ae27-845652cd66de"
+      "runId": "b8c40afa-7780-4260-8089-e37eca99d743"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1775,9 +1775,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-03-12T21:56:30.096677Z",
+    "eventTime": "2026-03-16T09:42:12.246945Z",
     "run": {
-      "runId": "e08ab58c-918c-4503-b569-9f07a420f401"
+      "runId": "7f47519c-20ce-4b86-9a5b-3e2bacb950ab"
     },
     "job": {
       "namespace": "bu_databeheer",
