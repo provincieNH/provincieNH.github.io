@@ -6,6 +6,10 @@ In deze repository staan de bestanden voor het script dat BGT-gegevens (Basisreg
 
 Dit script helpt bij het omzetten en voorbereiden van geografische data uit de BGT zodat deze gebruikt kan worden in analyses en monitoring van CO2-gerelateerde informatie.
 
+## Architectuur
+
+![Architectuur BGT naar CO2 monitor](https://github.com/provincieNH/provincieNH.github.io/blob/master/databeheer/bgt_naar_co2_monitor/architectuur_plaatje.png)
+
 ## Bestanden
 
 De belangrijkste bestanden in deze repository:
@@ -13,10 +17,6 @@ De belangrijkste bestanden in deze repository:
 - **Python script**  
   Verwerkt BGT-data en zet deze om naar een formaat dat gebruikt kan worden in de CO2-monitor.  
   https://github.com/provincieNH/provincieNH.github.io/blob/master/databeheer/bgt_naar_co2_monitor/bgt_naar_co2_monitor_sqlite_met_rapportage.py
-
-- **Architectuurdiagram**  
-  Overzicht van de opzet en datastromen van het script en de verwerking.  
-  https://github.com/provincieNH/provincieNH.github.io/blob/master/databeheer/bgt_naar_co2_monitor/architectuur_plaatje.png
 
 - **FME-workbench**  
   Workflow voor het downloaden en verwerken van BGT-data naar Excel.  
