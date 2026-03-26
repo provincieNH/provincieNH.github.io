@@ -90,7 +90,7 @@ svg { cursor:move; background:white; }
 <div id="header">
     <h1>Areaaldata 4 → Areaaldata 5 (IMBOR) volledige mapping</h1>
     <p>Interactieve Sankey-weergave – compleet & per assetgroep – v0.96</p>
-    <p>gesorteerd op AD5-object — AD4–AD5 mapping (totaal aantal records in Areaaldata 4: 1.312.967 → totaal aantal records in Areaaldata 5: 1.384.426) — gegenereerd op 26-02-2026 12:56</p>
+    <p>gesorteerd op AD5-object — AD4–AD5 mapping (totaal aantal records in Areaaldata 4: 1.320.890 → totaal aantal records in Areaaldata 5: 1.384.427) — gegenereerd op 26-03-2026 15:13</p>
 </div>
 
 <div id="filterbox">
@@ -103,9 +103,9 @@ svg { cursor:move; background:white; }
     <button class="tabbtn active" data-tab="tab-ad5">AD5 (alles)</button>
     <button class="tabbtn" data-tab="tab-ad4">AD4 (alles)</button>
 
-    <button class="tabbtn" data-tab="tab-algemeen">Algemeen</button>
     <button class="tabbtn" data-tab="tab-bodem">Bodem</button>
     <button class="tabbtn" data-tab="tab-groen">Groen</button>
+    <button class="tabbtn" data-tab="tab-integraal">Integraal</button>
     <button class="tabbtn" data-tab="tab-kunstwerken">Kunstwerken</button>
     <button class="tabbtn" data-tab="tab-ovl">OVL / VRI</button>
     <button class="tabbtn" data-tab="tab-vaarwegen">Vaarwegen</button>
@@ -117,9 +117,9 @@ svg { cursor:move; background:white; }
     <div id="tab-ad5" class="tabcontent active"><svg id="sankey_ad5"></svg></div>
     <div id="tab-ad4" class="tabcontent"><svg id="sankey_ad4"></svg></div>
 
-    <div id="tab-algemeen" class="tabcontent"><svg id="sankey_algemeen"></svg></div>
     <div id="tab-bodem" class="tabcontent"><svg id="sankey_bodem"></svg></div>
     <div id="tab-groen" class="tabcontent"><svg id="sankey_groen"></svg></div>
+    <div id="tab-integraal" class="tabcontent"><svg id="sankey_integraal"></svg></div>
     <div id="tab-kunstwerken" class="tabcontent"><svg id="sankey_kunstwerken"></svg></div>
     <div id="tab-ovl" class="tabcontent"><svg id="sankey_ovl"></svg></div>
     <div id="tab-vaarwegen" class="tabcontent"><svg id="sankey_vaarwegen"></svg></div>
@@ -134,7 +134,7 @@ svg { cursor:move; background:white; }
 const ASSETGROUPS = {
     Bodem: "bodem",
     Groen: "groen",
-    Algemeen: "algemeen",
+    Integraal: "integraal",
     Kunstwerken: "kunstwerken",
     "OVL / VRI": "ovlvri",
     Vaarwegen: "vaarwegen",
@@ -291,7 +291,7 @@ drawSankey("#sankey_ad4", "mapping-ad4-ad5-sort-ad4.csv");
 
 drawSankey("#sankey_bodem", "mapping-ad4-ad5-sort-ad5.csv", "Bodem");
 drawSankey("#sankey_groen", "mapping-ad4-ad5-sort-ad5.csv", "Groen");
-drawSankey("#sankey_algemeen", "mapping-ad4-ad5-sort-ad5.csv", "Algemeen");
+drawSankey("#sankey_integraal", "mapping-ad4-ad5-sort-ad5.csv", "Integraal");
 drawSankey("#sankey_kunstwerken", "mapping-ad4-ad5-sort-ad5.csv", "Kunstwerken");
 drawSankey("#sankey_ovl", "mapping-ad4-ad5-sort-ad5.csv", "OVL / VRI");
 drawSankey("#sankey_vaarwegen", "mapping-ad4-ad5-sort-ad5.csv", "Vaarwegen");
