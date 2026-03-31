@@ -75,6 +75,8 @@ ad4.kunstwerkdeel_v (3790),ad5.faunavoorziening_v (53),1,BGTPLUSTYPE_niet-bgt_fa
 ad4.fietsparkeervoorziening_l (776),ad5.fietsparkeervoorziening_l (776),1,x_x,wegen
 ad4.straatmeubilair_p (6902),ad5.fietsparkeervoorziening_p (133),1,TYPESPEC_fietsenrek,wegen
 ad4.kunstwerk_p (869),ad5.flyover_p (9),1,BEHEEROBJECTSUBTYP_Fly-over,kunstwerken
+ad4.kunstwerkdeel_v (3790),ad5.folie_v (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
+ad4.kunstwerkdeel_v (3790),ad5.folie_v (0),1,TYPESPEC_Folie,kunstwerken
 ad4.straatmeubilair_p (6902),ad5.fontein_p (1),1,TYPESPEC_Fontein,wegen
 ad4.begroeidTerreindeel_v (3882),ad5.fruit_of_kweekbomen_v (38),1,FYSIEKVOORKOMEN_fruitteelt_boomteelt_fruitteelt_hoogstam boomgaarden_fruitteelt_laagstam boomgaarden_fruitteelt_wijngaarden_fruitteelt_klein fruit,groen
 ad4.kast_p (2248),ad5.gaskast_p (78),1,TYPESPEC_Gaskast,overig
@@ -86,7 +88,7 @@ ad4.weginrichtingselement_l (8265),ad5.geleideconstructie_l (2701),1,TYPESPEC_GR
 ad4.weginrichtingselement_v (48),ad5.geleideconstructie_v (25),1,TYPESPEC_Barrier,wegen
 ad4.waterinrichtingselement_l (718),ad5.geleidewerk_l (416),1,BGTPLUSTYPE_niet-bgt_geleidewerk,vaarwegen
 ad4.scheidingGeluidsscherm_l (486),ad5.geluidsscherm_l (486),1,x_x,kunstwerken
-ad4.geluidwerendeVoorziening_l (196),ad5.geluidwerendevoorziening_l (0),1,x_x,onbekend
+ad4.geluidwerendeVoorziening_l (196),ad5.geluidwerendeconstructie_l (196),1,x_x,kunstwerken
 ad4.kunstwerkdeel_v (3790),ad5.gemaal_v (130),1,BGTPLUSTYPE_gemaal,kunstwerken
 ad4.kunstwerk_p (869),ad5.gemaalcomplex_p (3),1,NENBEHEEROBJECT_Gemalen,kunstwerken
 ad4.ondersteunendWaterdeel_v (15949),ad5.getijdengebied_v (0),1,BGTPLUSTYPE_slik,vaarwegen
@@ -133,6 +135,9 @@ ad4.bouwdeelGeluidsscherm_tbl (2050),ad5.kunstwerkbouwdeel_tbl (28605),1,x_x,kun
 ad4.bouwdeelKunstwerk_tbl (26555),ad5.kunstwerkbouwdeel_tbl (28605),1,x_x,kunstwerken
 ad4.kunstwerkdeel_l (2534),ad5.kunstwerkdeel_l (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
 ad4.kunstwerkdeel_v (3790),ad5.kunstwerkdeel_v (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
+ad4.kunstwerkdeel_v (3790),ad5.kunstwerkdeel_v (0),1,TYPESPEC_Overig,kunstwerken
+ad4.kunstwerkdeeL-v (0),ad5.kwelscherm_v (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
+ad4.kunstwerkdeel (0),ad5.kwelscherm_v (0),1,TYPESPEC_Kwelscherm,kunstwerken
 ad4.kwElement_tbl (10587),ad5.kunstwerkelement_tbl (10587),1,x_x,kunstwerken
 ad4.overbruggingsdeel_v (2931),ad5.landhoofd_v (503),1,TYPEOVERBRUGGINGSDEEL_landhoofd,kunstwerken
 ad4.lamp_p (12569),ad5.lichtbron_p (12569),1,x_x,elektrotechniek
@@ -162,7 +167,7 @@ ad4.kwElement_tbl (10587),ad5.neninspectie_tbl (95760),1,x_x,inspecties
 ad4.oevervak_v (6921),ad5.neninspectie_tbl (95760),1,x_x,inspecties
 ad4.scheidingGeluidsscherm_l (486),ad5.neninspectie_tbl (95760),1,x_x,inspecties
 ad4.scheidingWater_l (11352),ad5.neninspectie_tbl (95760),1,x_x,inspecties
-ad4.pandHuisnummerreeks_t (2014),ad5.nummeraanduiding_t (0),1,x_x,onbekend
+ad4.pandHuisnummerreeks_t (2014),ad5.nummeraanduiding_a (2014),1,x_x,overig
 ad4.ondersteunendWaterdeel_v (15949),ad5.oever_of_slootkant_v (15950),1,BGTPLUSTYPE_oever_ slootkant,vaarwegen
 ad4.bouwdeelOevervak_tbl (21424),ad5.oeverbouwdeel_tbl (21424),1,x_x,vaarwegen
 ad4.elementOevervak_tbl (15516),ad5.oeverelement_tbl (15516),1,x_x,vaarwegen

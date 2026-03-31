@@ -22,9 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="gd-12706 #comment voorwaardelijke curves bij rechts naar links.">
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="Misc #comment versie 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/bu_lineage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/bu_lineage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-default.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-default.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-sort-ad4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-sort-ad4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-sort-ad5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-sort-ad5.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,38 +322,6 @@
       <option name="project" value="LOCAL" />
       <updated>1664366716613</updated>
     </task>
-    <task id="LOCAL-00050" summary="gd-12706 #comment opzet UX verbeteringen">
-      <option name="closed" value="true" />
-      <created>1770735885643</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1770735885643</updated>
-    </task>
-    <task id="LOCAL-00051" summary="gd-12706 #comment opzet UX verbeteringen">
-      <option name="closed" value="true" />
-      <created>1770736615339</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1770736615339</updated>
-    </task>
-    <task id="LOCAL-00052" summary="gd-12706 #comment opzet UX verbeteringen - doorklikbaar">
-      <option name="closed" value="true" />
-      <created>1770736839289</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1770736839289</updated>
-    </task>
-    <task id="LOCAL-00053" summary="gd-12706 #comment opzet UX verbeteringen - doorklikbaar">
-      <option name="closed" value="true" />
-      <created>1770737577205</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1770737577205</updated>
-    </task>
     <task id="LOCAL-00054" summary="gd-12706 #comment Stijl meer als Sankey pagina gemaakt">
       <option name="closed" value="true" />
       <created>1770738305059</created>
@@ -454,7 +426,39 @@
       <option name="project" value="LOCAL" />
       <updated>1772720618334</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Misc #comment opzet voor het delen van de bgt2co2monitorscripts">
+      <option name="closed" value="true" />
+      <created>1774351771424</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1774351771424</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Misc #comment correcte assetgroepen">
+      <option name="closed" value="true" />
+      <created>1774943407931</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1774943407931</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Misc #comment spelling elektrotechniek">
+      <option name="closed" value="true" />
+      <created>1774943591076</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1774943591076</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Misc #comment versie 1">
+      <option name="closed" value="true" />
+      <created>1774943716343</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1774943716344</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -469,10 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix algemene html" />
-    <MESSAGE value="automatisch gegenereerde htmls, dit keer goed" />
-    <MESSAGE value="gefixte algemene html" />
-    <MESSAGE value="dynamische hoogte algemene html" />
     <MESSAGE value="nieuwe dynamische hoogte algemene html" />
     <MESSAGE value="nieuwe dynamische hoogten htmls" />
     <MESSAGE value="nieuwe dynamische hoogten htmls (48px per regel)" />
@@ -494,6 +494,10 @@
     <MESSAGE value="gd-12706 #comment Ingegraal is Algemeen geworden" />
     <MESSAGE value="gd-12706 #comment bezier curves!" />
     <MESSAGE value="gd-12706 #comment voorwaardelijke curves bij rechts naar links." />
-    <option name="LAST_COMMIT_MESSAGE" value="gd-12706 #comment voorwaardelijke curves bij rechts naar links." />
+    <MESSAGE value="Misc #comment opzet voor het delen van de bgt2co2monitorscripts" />
+    <MESSAGE value="Misc #comment correcte assetgroepen" />
+    <MESSAGE value="Misc #comment spelling elektrotechniek" />
+    <MESSAGE value="Misc #comment versie 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Misc #comment versie 1" />
   </component>
 </project>
