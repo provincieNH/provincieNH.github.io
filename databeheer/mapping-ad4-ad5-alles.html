@@ -152,8 +152,41 @@ document.querySelectorAll(".tabbtn").forEach(btn => {
 });
 
 document.getElementById("filterInput").addEventListener("input", () => {
+
     const activeTab = document.querySelector(".tabbtn.active");
-    if (activeTab) activeTab.click();
+    if (!activeTab) return;
+
+    const tab = activeTab.dataset.tab;
+
+    if (tab === "tab-ad5")
+        drawSankey("#sankey_ad5", "mapping-ad4-ad5-sort-ad5.csv");
+
+    else if (tab === "tab-ad4")
+        drawSankey("#sankey_ad4", "mapping-ad4-ad5-sort-ad4.csv");
+
+    else if (tab === "tab-algemeen")
+        drawSankey("#sankey_algemeen", "mapping-ad4-ad5-sort-ad5.csv", "Algemeen");
+
+    else if (tab === "tab-electrotechniek")
+        drawSankey("#sankey_electrotechniek", "mapping-ad4-ad5-sort-ad5.csv", "Electrotechniek");
+
+    else if (tab === "tab-groen")
+        drawSankey("#sankey_groen", "mapping-ad4-ad5-sort-ad5.csv", "Groen");
+
+    else if (tab === "tab-inspecties")
+        drawSankey("#sankey_inspecties", "mapping-ad4-ad5-sort-ad5.csv", "Inspecties");
+
+    else if (tab === "tab-kunstwerken")
+        drawSankey("#sankey_kunstwerken", "mapping-ad4-ad5-sort-ad5.csv", "Kunstwerken");
+
+    else if (tab === "tab-overig")
+        drawSankey("#sankey_overig", "mapping-ad4-ad5-sort-ad5.csv", "Overig");
+
+    else if (tab === "tab-vaarwegen")
+        drawSankey("#sankey_vaarwegen", "mapping-ad4-ad5-sort-ad5.csv", "Vaarwegen");
+
+    else if (tab === "tab-wegen")
+        drawSankey("#sankey_wegen", "mapping-ad4-ad5-sort-ad5.csv", "Wegen");
 });
 
 const width = 1600;
