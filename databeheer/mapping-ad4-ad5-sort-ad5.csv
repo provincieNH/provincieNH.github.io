@@ -5,16 +5,16 @@ ad4.leidingelement_p (26174),ad5.aardelektrode_p (128),1,TYPESPEC_aarding,elektr
 ad4.straatmeubilairAbri_p (282),ad5.abri_p (282),1,x_x,wegen
 ad4.straatmeubilairLichtpunt_p (25496),ad5.actievewegmarkering_p (1),1,TYPESPEC_AM,elektrotechniek
 ad4.adres_tbl (60),ad5.adres_tbl (60),1,x_x,overig
-ad4.paalDraagconstructie_p (50706),ad5.afsluitpaal_p (2153),1,BGTPLUSTYPE_niet-bgt_afsluitpaal,wegen
 ad4.paalAfbakening_p (34233),ad5.afsluitpaal_p (2153),1,TYPESPEC_Afsluiter_schamppaal,wegen
+ad4.paalDraagconstructie_p (50706),ad5.afsluitpaal_p (2153),1,BGTPLUSTYPE_niet-bgt_afsluitpaal,wegen
 ad4.bak_p (994),ad5.afvalbak_p (963),1,BGTPLUSTYPE_niet-bgt_afvalbak_niet-bgt_ afval apartplaats,wegen
 ad4.straatmeubilair_p (6902),ad5.akoestische_signaalgever_p (92),1,TYPESPEC_bel,elektrotechniek
 ad4.sensor_p (1996),ad5.antenne_p (92),1,TYPESPEC_Kar antenne,elektrotechniek
 ad4.kunstwerk_p (869),ad5.aquaduct_p (2),1,NENBEHEEROBJECT_Aquaducten,kunstwerken
 ad4.straatmeubilairLichtpunt_p (25496),ad5.armatuur_p (0),1,TYPESPEC_ARM_MU,elektrotechniek
-ad4.wegdeel_v (61137),ad5.asfaltverharding_v (40069),1,FYSIEKVOORKOMEN_gesloten verharding_asfalt,wegen
-ad4.ondersteunendWegdeel_v (34767),ad5.asfaltverharding_v (40069),1,FYSIEKVOORKOMEN_gesloten verharding_asfalt,wegen
 ad4.onbegroeidTerreindeel_v (10730),ad5.asfaltverharding_v (40069),1,FYSIEKVOORKOMEN_gesloten verharding_asfalt,wegen
+ad4.ondersteunendWegdeel_v (34767),ad5.asfaltverharding_v (40069),1,FYSIEKVOORKOMEN_gesloten verharding_asfalt,wegen
+ad4.wegdeel_v (61137),ad5.asfaltverharding_v (40069),1,FYSIEKVOORKOMEN_gesloten verharding_asfalt,wegen
 ad4.weginrichtingselement_l (8265),ad5.balustrade_l (119),1,BGTPLUSTYPE_niet-bgt_balustrade,kunstwerken
 ad4.weginrichtingselement_l (8265),ad5.band_l (4637),1,TYPESPEC_OPS,wegen
 ad4.gebiedscontractregio_v (7),ad5.beheergebied_v (7),1,x_x,algemeen
@@ -24,9 +24,9 @@ ad4.scheidingWater_l (11352),ad5.beschoeiing_l (6693),1,BGTPLUSTYPE_walbeschermi
 ad4.kast_p (2248),ad5.besturingskast_p (71),1,TYPESPEC_Rioolpompkast,elektrotechniek
 ad4.straatmeubilair_p (6902),ad5.betaalautomaat_p (9),1,TYPESPEC_Betaalautomaat,overig
 ad4.waterinrichtingselement_p (2466),ad5.betonning_p (87),1,TYPESPEC_Baken,vaarwegen
-ad4.ondersteunendWegdeel_v (34767),ad5.betonverharding_v (4270),1,FYSIEKVOORKOMEN_gesloten verharding_cementbeton,wegen
 ad4.wegdeel_v (61137),ad5.betonverharding_v (4270),1,FYSIEKVOORKOMEN_gesloten verharding_cementbeton,wegen
 ad4.onbegroeidTerreindeel_v (10730),ad5.betonverharding_v (4270),1,FYSIEKVOORKOMEN_gesloten verharding_cementbeton,wegen
+ad4.ondersteunendWegdeel_v (34767),ad5.betonverharding_v (4270),1,FYSIEKVOORKOMEN_gesloten verharding_cementbeton,wegen
 ad4.kunstwerk_p (869),ad5.beweegbarebrug_p (88),1,NENBEHEEROBJECT_Bruggen beweegbaar,kunstwerken
 ad4.weginrichtingselement_p (6575),ad5.blok_p (6575),1,TYPESPEC_schampblok,wegen
 ad4.straatmeubilair_p (6902),ad5.bolder_p (5628),1,TYPESPEC_Bolder,vaarwegen
@@ -42,15 +42,15 @@ ad4.straatmeubilair_p (6902),ad5.brievenbus_p (46),1,TYPESPEC_Brievenbus,overig
 ad4.vtaInspectie_tbl (201986),ad5.bvc_inspectie_tbl (201986),1,x_x,inspecties
 ad4.kast_p (2248),ad5.cai_kast_p (95),1,TYPESPEC_CAI,elektrotechniek
 ad4.sensor_p (1996),ad5.camera_p (671),1,TYPESPEC_Detectie_ camera overig_ObservatieCamera_Straatmeubilair_ camera,elektrotechniek
-ad4.elektriciteitskabel_l (34503),ad5.combikabel_l (8),1,TYPESPEC_ADD,elektrotechniek
 ad4.telecommunicatiekabel_l (536),ad5.combikabel_l (8),1,TYPESPEC_ADD,elektrotechniek
+ad4.elektriciteitskabel_l (34503),ad5.combikabel_l (8),1,TYPESPEC_ADD,elektrotechniek
 ad4.kunstwerkdeel_v (3790),ad5.coupure_v (2),1,BGTPLUSTYPE_niet-bgt_coupure,kunstwerken
 ad4.crowInspectie_tbl (76),ad5.crowinspectie_tbl (76),1,x_x,inspecties
 ad4.crowInspectieresultaat_tbl (263589),ad5.crowinspectieresultaat_tbl (263589),1,x_x,inspecties
 ad4.crowMeting_tbl (184557),ad5.crowmeting_tbl (184557),1,x_x,inspecties
 ad4.scheidingWater_l (11352),ad5.damwand_l (4366),1,BGTPLUSTYPE_damwand,vaarwegen
-ad4.telecommunicatiekabel_l (536),ad5.datakabel_l (1396),1,TYPESPEC_DAT,elektrotechniek
 ad4.elektriciteitskabel_l (34503),ad5.datakabel_l (1396),1,TYPESPEC_DAT,elektrotechniek
+ad4.telecommunicatiekabel_l (536),ad5.datakabel_l (1396),1,TYPESPEC_DAT,elektrotechniek
 ad4.overbruggingsdeel_v (2931),ad5.dek_v (1020),1,TYPEOVERBRUGGINGSDEEL_dek,kunstwerken
 ad4.sensor_l (11571),ad5.detector_l (11571),1,x_x,elektrotechniek
 ad4.sensor_p (1996),ad5.detector_p (9),1,TYPESPEC_Radar detector,elektrotechniek
@@ -64,11 +64,11 @@ ad4.kunstwerkdeel_v (3790),ad5.duiker_v (1579),1,BGTPLUSTYPE_niet-bgt_duiker,kun
 ad4.begroeidTerreindeelBerm_v (15634),ad5.duin_v (294),1,FYSIEKVOORKOMEN_duin_duin_gesloten duinvegetatie_duin_open duinvegetatie,groen
 ad4.kunstwerk_p (869),ad5.ecoduct_p (6),1,NENBEHEEROBJECT_Ecoducten,kunstwerken
 ad4.kast_p (2248),ad5.elektriciteitskast_p (74),1,TYPESPEC_Elec,elektrotechniek
+ad4.onbegroeidTerreindeel_v (10730),ad5.elementenverharding_v (27418),1,FYSIEKVOORKOMEN_open verharding_open verharding_beton element_open verharding_betonstraatstenen_open verharding_gebakken klinkers_open verharding_sierbestrating_open verharding_tegels_half verhard_grasklinkers,wegen
 ad4.ondersteunendWegdeel_v (34767),ad5.elementenverharding_v (27418),1,FYSIEKVOORKOMEN_open verharding_open verharding_beton element_open verharding_betonstraatstenen_open verharding_gebakken klinkers_open verharding_sierbestrating_open verharding_tegels_half verhard_grasklinkers,wegen
 ad4.wegdeel_v (61137),ad5.elementenverharding_v (27418),1,FYSIEKVOORKOMEN_open verharding_open verharding_beton element_open verharding_betonstraatstenen_open verharding_gebakken klinkers_open verharding_sierbestrating_open verharding_tegels_half verhard_grasklinkers,wegen
-ad4.onbegroeidTerreindeel_v (10730),ad5.elementenverharding_v (27418),1,FYSIEKVOORKOMEN_open verharding_open verharding_beton element_open verharding_betonstraatstenen_open verharding_gebakken klinkers_open verharding_sierbestrating_open verharding_tegels_half verhard_grasklinkers,wegen
-ad4.scheidingGeleidewand_l (307),ad5.faunameubilair_l (329),1,x_x,groen
 ad4.ecopassage_l (197),ad5.faunameubilair_l (329),1,TYPESPEC_Loopplank onder brug,groen
+ad4.scheidingGeleidewand_l (307),ad5.faunameubilair_l (329),1,x_x,groen
 ad4.ecopassage_l (197),ad5.faunaverblijfplaats_p (1),1,TYPESPEC_Vleermuisbunker,groen
 ad4.ecopassage_l (197),ad5.faunavoorziening_l (174),1,TYPESPEC_Amfibie_ntunnel_Boombrug_brug of viaduct met faunavoorziening_Duiker_ Looprichel_ecoduiker _ duiker met faunavoorziening_kleine faunatunnel_Looprichel_Onduidelijk_Overig_Overige faunatunnel_tunnel _ viaduct met medegebruik fauna,groen
 ad4.kunstwerkdeel_v (3790),ad5.faunavoorziening_v (53),1,BGTPLUSTYPE_niet-bgt_faunavoorziening,groen
@@ -80,8 +80,8 @@ ad4.begroeidTerreindeel_v (3882),ad5.fruit_of_kweekbomen_v (38),1,FYSIEKVOORKOME
 ad4.kast_p (2248),ad5.gaskast_p (78),1,TYPESPEC_Gaskast,overig
 ad4.put_p (1278),ad5.gasput_p (12),1,BGTPLUSTYPE_niet-bgt_gasput,overig
 ad4.faunavoorziening_v (82),ad5.gebied_faunavoorziening_v (82),1,x_x,groen
-ad4.pand_v (5350),ad5.gebouw_v (5730),1,x_x,overig
 ad4.overigBouwwerk_v (855),ad5.gebouw_v (5730),1,BGTPLUSTYPE_niet-bgt_bunker_niet-bgt_schuur_lage trafo,overig
+ad4.pand_v (5350),ad5.gebouw_v (5730),1,x_x,overig
 ad4.weginrichtingselement_l (8265),ad5.geleideconstructie_l (2701),1,TYPESPEC_GR_VC_MSB,wegen
 ad4.weginrichtingselement_v (48),ad5.geleideconstructie_v (25),1,TYPESPEC_Barrier,wegen
 ad4.waterinrichtingselement_l (718),ad5.geleidewerk_l (416),1,BGTPLUSTYPE_niet-bgt_geleidewerk,vaarwegen
@@ -92,17 +92,17 @@ ad4.kunstwerk_p (869),ad5.gemaalcomplex_p (3),1,NENBEHEEROBJECT_Gemalen,kunstwer
 ad4.ondersteunendWaterdeel_v (15949),ad5.getijdengebied_v (0),1,BGTPLUSTYPE_slik,vaarwegen
 ad4.kast_p (2248),ad5.gms_kast_p (38),1,TYPESPEC_GMS-kast,elektrotechniek
 ad4.sensor_p (1996),ad5.gms_sensor_p (150),1,TYPESPEC_GMS-sensor geleiding_GMS-sensor temperatuur,elektrotechniek
+ad4.begroeidTerreindeel_v (3882),ad5.gras_en_kruidachtigen_v (37199),1,FYSIEKVOORKOMEN_grasland agrarisch_grasland overig_groenvoorziening_gras- en kruidachtigen,groen
 ad4.begroeidTerreindeelBerm_v (15634),ad5.gras_en_kruidachtigen_v (37199),1,FYSIEKVOORKOMEN_grasland agrarisch_grasland overig_groenvoorziening_gras- en kruidachtigen,groen
 ad4.ondersteunendWegdeel_v (34767),ad5.gras_en_kruidachtigen_v (37199),1,FYSIEKVOORKOMEN_groenvoorziening_gras- en kruidachtigen,groen
-ad4.begroeidTerreindeel_v (3882),ad5.gras_en_kruidachtigen_v (37199),1,FYSIEKVOORKOMEN_grasland agrarisch_grasland overig_groenvoorziening_gras- en kruidachtigen,groen
 ad4.vegetatieobject_v (210),ad5.groeiplaats_v (7),1,TYPESPEC_Groeiplaatsinrichting,groen
-ad4.begroeidTerreindeelBerm_v (15634),ad5.groenobject_v (4342),1,FYSIEKVOORKOMEN_groenvoorziening,groen
 ad4.ondersteunendWegdeel_v (34767),ad5.groenobject_v (4342),1,FYSIEKVOORKOMEN_groenvoorziening,groen
+ad4.begroeidTerreindeelBerm_v (15634),ad5.groenobject_v (4342),1,FYSIEKVOORKOMEN_groenvoorziening,groen
 ad4.vegetatieObject_l (1302),ad5.haag_l (1302),1,BGTPLUSTYPE_niet-bgt_haag,groen
 ad4.vegetatieObject_v (210),ad5.haag_v (1),1,TYPESPEC_Haag,groen
-ad4.wegdeel_v (61137),ad5.halfverharding_v (1899),1,FYSIEKVOORKOMEN_half verhard_half verhard_gravel_half verhard_grind_half verhard_puin_half verhard_schelpen,wegen
-ad4.ondersteunendWegdeel_v (34767),ad5.halfverharding_v (1899),1,FYSIEKVOORKOMEN_half verhard_half verhard_gravel_half verhard_grind_half verhard_puin_half verhard_schelpen,wegen
 ad4.onbegroeidTerreindeel_v (10730),ad5.halfverharding_v (1899),1,FYSIEKVOORKOMEN_half verhard_half verhard_gravel_half verhard_grind_half verhard_puin_half verhard_schelpen,wegen
+ad4.ondersteunendWegdeel_v (34767),ad5.halfverharding_v (1899),1,FYSIEKVOORKOMEN_half verhard_half verhard_gravel_half verhard_grind_half verhard_puin_half verhard_schelpen,wegen
+ad4.wegdeel_v (61137),ad5.halfverharding_v (1899),1,FYSIEKVOORKOMEN_half verhard_half verhard_gravel_half verhard_grind_half verhard_puin_half verhard_schelpen,wegen
 ad4.halte_v (395),ad5.halteplaats_v (395),1,x_x,wegen
 ad4.sensor_p (1996),ad5.handhavingssysteem_p (20),1,TYPESPEC_Detectie_ flitspaal,elektrotechniek
 ad4.begroeidTerreindeelPlantvak_v (4552),ad5.heide_v (29),1,FYSIEKVOORKOMEN_heide,groen
@@ -116,16 +116,16 @@ ad4.begroeidTerreindeel_v (3882),ad5.houtwal_v (152),1,FYSIEKVOORKOMEN_houtwal,g
 ad4.bordZwemwater_p (340),ad5.informatiebord_p (1328),1,x_x,overig
 ad4.bordScheepvaart_p (1671),ad5.informatiebord_p (1328),1,TYPESPEC_Informatiebord,overig
 ad4.bord_p (38993),ad5.informatiebord_p (1328),1,BGTPLUSTYPE_niet-bgt_informatiebord,overig
+ad4.bord_p (38993),ad5.informatiepaneel_p (443),1,BGTPLUSTYPE_niet-bgt_dynamische snelheidsindicator,wegen
 ad4.bordDRIS_p (240),ad5.informatiepaneel_p (443),1,x_x,wegen
 ad4.kleineHalteDisplay_p (44),ad5.informatiepaneel_p (443),1,x_x,wegen
-ad4.bord_p (38993),ad5.informatiepaneel_p (443),1,BGTPLUSTYPE_niet-bgt_dynamische snelheidsindicator,wegen
-ad4.bordScheepvaart_p (1671),ad5.kabels_en_leidingenbord_p (1681),1,TYPESPEC_bord kabels_leidingen,overig
 ad4.bord_p (38993),ad5.kabels_en_leidingenbord_p (1681),1,BGTPLUSTYPE_niet-bgt_verklikker transportleiding,overig
+ad4.bordScheepvaart_p (1671),ad5.kabels_en_leidingenbord_p (1681),1,TYPESPEC_bord kabels_leidingen,overig
 ad4.scheidingWater_l (11352),ad5.kademuur_l (293),1,BGTPLUSTYPE_kademuur,vaarwegen
 ad4.scheiding_v (5061),ad5.kademuur_v (950),1,BGTPLUSTYPE_kademuur,vaarwegen
 ad4.kast_p (2248),ad5.kast_p (747),1,TYPESPEC_Kast_ onbekend_OV,elektrotechniek
-ad4.put_p (1278),ad5.kolk_p (16171),1,BGTPLUSTYPE_niet-bgt_kolk,wegen
 ad4.leidingelement_p (26174),ad5.kolk_p (16171),1,TYPESPEC_Kolk_RWS kolk_Straatkolk_Trottoirkolk_Rioolleidingelement_ onbekend,wegen
+ad4.put_p (1278),ad5.kolk_p (16171),1,BGTPLUSTYPE_niet-bgt_kolk,wegen
 ad4.kruispunt_p (808),ad5.kruispunt_p (808),1,x_x,algemeen
 ad4.straatmeubilair_p (6902),ad5.kunstobject_p (4),1,TYPESPEC_kunstobject,wegen
 ad4.onbegroeidTerreindeel_v (10730),ad5.kunststofverharding_v (26),1,FYSIEKVOORKOMEN_gesloten verharding_kunststof,wegen
@@ -142,30 +142,35 @@ ad4.weginrichtingselement_l (8265),ad5.lijngoot_l (20),1,TYPESPEC_Lijnafwatering
 ad4.straatmeubilair_p (6902),ad5.luidspreker_p (206),1,TYPESPEC_Luidspreker,elektrotechniek
 ad4.gebouwInstallatie_v (6),ad5.luifel_v (3),1,BGTPLUSTYPE_niet-bgt_luifel,kunstwerken
 ad4.mantelbuis_v (10068),ad5.mantelbuis_v (10068),1,x_x,elektrotechniek
-ad4.paalDraagconstructie_p (50706),ad5.markeringspaal_p (61),1,BGTPLUSTYPE_niet-bgt_dijkpaal,groen
 ad4.paalAfbakening_p (34233),ad5.markeringspaal_p (61),1,TYPESPEC_dijkpaal_grensmarkering,groen
+ad4.paalDraagconstructie_p (50706),ad5.markeringspaal_p (61),1,BGTPLUSTYPE_niet-bgt_dijkpaal,groen
 ad4.waterinrichtingselement_p (2466),ad5.meerpaal_p (2303),1,TYPESPEC_Dukdalf_Meerpaal,vaarwegen
 ad4.paalDraagconstructie_p (50706),ad5.meldpaal_p (359),1,BGTPLUSTYPE_niet-bgt_drukknoppaal_niet-bgt_praatpaal,elektrotechniek
 ad4.begroeidTerreindeel_v (3882),ad5.moeras_v (6),1,FYSIEKVOORKOMEN_moeras,groen
 ad4.weginrichtingselement_l (8265),ad5.molgoot_l (696),1,TYPESPEC_Molgoot,wegen
 ad4.scheidingLand_l (12392),ad5.muur_l (759),1,BGTPLUSTYPE_muur,kunstwerken
-ad4.scheiding_v (5061),ad5.muur_v (3856),1,BGTPLUSTYPE_muur,kunstwerken
-ad4.scheiding_v (5061),ad5.muur_v (3856),1,RELATIEVEHOOGTELIGGING_0_1_2,kunstwerken
 ad4.kunstwerkdeel_v (3790),ad5.muur_v (3856),1,BGTPLUSTYPE_niet-bgt_keermuur,kunstwerken
 ad4.kunstwerkdeel_v (3790),ad5.muur_v (3856),1,RELATIEVEHOOGTELIGGING_0_1_2,kunstwerken
-ad4.elementOevervak_tbl (15516),ad5.neninspectie_tbl (95760),1,x_x,inspecties
-ad4.bouwdeelGeluidsscherm_tbl (2050),ad5.neninspectie_tbl (95760),1,x_x,inspecties
-ad4.bouwdeelOevervak_tbl (21424),ad5.neninspectie_tbl (95760),1,x_x,inspecties
-ad4.kwElement_tbl (10587),ad5.neninspectie_tbl (95760),1,x_x,inspecties
+ad4.scheiding_v (5061),ad5.muur_v (3856),1,BGTPLUSTYPE_muur,kunstwerken
+ad4.scheiding_v (5061),ad5.muur_v (3856),1,RELATIEVEHOOGTELIGGING_0_1_2,kunstwerken
+ad4.scheidingWater_l (11352),ad5.neninspectie_tbl (95760),1,x_x,inspecties
+ad4.scheidingGeluidsscherm_l (486),ad5.neninspectie_tbl (95760),1,x_x,inspecties
+ad4.oevervak_v (6921),ad5.neninspectie_tbl (95760),1,x_x,inspecties
 ad4.kunstwerk_p (869),ad5.neninspectie_tbl (95760),1,x_x,inspecties
+ad4.kwElement_tbl (10587),ad5.neninspectie_tbl (95760),1,x_x,inspecties
+ad4.bouwdeelOevervak_tbl (21424),ad5.neninspectie_tbl (95760),1,x_x,inspecties
 ad4.bouwdeelKunstwerk_tbl (26555),ad5.neninspectie_tbl (95760),1,x_x,inspecties
+ad4.bouwdeelGeluidsscherm_tbl (2050),ad5.neninspectie_tbl (95760),1,x_x,inspecties
+ad4.elementOevervak_tbl (15516),ad5.neninspectie_tbl (95760),1,x_x,inspecties
+ad4.pandHuisnummerreeks_t (2014),ad5.nummeraanduiding_t (0),1,x_x,onbekend
 ad4.ondersteunendWaterdeel_v (15949),ad5.oever_of_slootkant_v (15950),1,BGTPLUSTYPE_oever_ slootkant,vaarwegen
+ad4.bouwdeelOevervak_tbl (21424),ad5.oeverbouwdeel_tbl (21424),1,x_x,vaarwegen
 ad4.elementOevervak_tbl (15516),ad5.oeverelement_tbl (15516),1,x_x,vaarwegen
 ad4.oevervak_v (6921),ad5.oeverzone_v (6921),1,x_x,vaarwegen
 ad4.kunstwerk_p (869),ad5.onderdoorgang_p (113),1,NENBEHEEROBJECT_Onderdoorgangen,kunstwerken
-ad4.wegdeel_v (61137),ad5.onverhard_v (1623),1,FYSIEKVOORKOMEN_onverhard_onverhard_boomschors_onverhard_zand,wegen
 ad4.onbegroeidTerreindeel_v (10730),ad5.onverhard_v (1623),1,FYSIEKVOORKOMEN_onverhard_onverhard_boomschors_onverhard_zand,wegen
 ad4.ondersteunendWegdeel_v (34767),ad5.onverhard_v (1623),1,FYSIEKVOORKOMEN_onverhard_onverhard_boomschors_onverhard_zand,wegen
+ad4.wegdeel_v (61137),ad5.onverhard_v (1623),1,FYSIEKVOORKOMEN_onverhard_onverhard_boomschors_onverhard_zand,wegen
 ad4.overigBouwwerk_v (855),ad5.open_loods_v (36),1,BGTPLUSTYPE_open loods,overig
 ad4.bak_p (994),ad5.opslagbak_p (31),1,BGTPLUSTYPE_niet-bgt_zand- _ zoutbak,kunstwerken
 ad4.overigBouwwerk_v (855),ad5.opslagtank_v (24),1,BGTPLUSTYPE_opslagtank,overig
@@ -177,25 +182,24 @@ ad4.kastOvl_p (609),ad5.ovl_kast_p (609),1,x_x,elektrotechniek
 ad4.mast_p (3),ad5.paal_p (51350),1,BGTPLUSTYPE_niet-bgt_laagspanningsmast,overig
 ad4.paalAfbakening_p (34233),ad5.paal_p (51350),1,TYPESPEC_Paal,overig
 ad4.paalDraagconstructie_p (50706),ad5.paal_p (51350),1,BGTPLUSTYPE_niet-bgt_haltepaal_niet-bgt_lichtmast_niet-bgt_verkeersbordpaal_niet-bgt_verkeersregelinstallatiepaal_niet-bgt_portaal_niet-bgt,overig
-ad4.pandHuisnummerreeks_t (2014),ad5.pand_huisnummerreeks_t (0),1,x_x,onbekend
 ad4.peilbuis_p (666),ad5.peilbuis_p (666),1,x_x,overig
-ad4.perron_v (442),ad5.perron_v (444),1,x_x,wegen
 ad4.kunstwerkdeel_v (3790),ad5.perron_v (444),1,BGTPLUSTYPE_perron,wegen
+ad4.perron_v (442),ad5.perron_v (444),1,x_x,wegen
 ad4.overbruggingsdeel_v (2931),ad5.pijler_v (1041),1,TYPEOVERBRUGGINGSDEEL_pijler,kunstwerken
 ad4.begroeidTerreindeelPlantvak_v (4552),ad5.planten_v (720),1,FYSIEKVOORKOMEN_groenvoorziening_planten,groen
 ad4.ondersteunendWegdeel_v (34767),ad5.planten_v (720),1,FYSIEKVOORKOMEN_groenvoorziening_planten,groen
 ad4.plaaginvasiesoortInspectie_p (151),ad5.plantensoortlocatie_p (151),1,x_x,groen
-ad4.paalDraagconstructie_p (50706),ad5.poller_p (19),1,BGTPLUSTYPE_niet-bgt_poller,elektrotechniek
 ad4.paalAfbakening_p (34233),ad5.poller_p (19),1,TYPESPEC_Poller,elektrotechniek
+ad4.paalDraagconstructie_p (50706),ad5.poller_p (19),1,BGTPLUSTYPE_niet-bgt_poller,elektrotechniek
 ad4.installatie_p (296),ad5.pomp_p (261),1,BGTPLUSTYPE_niet-bgt_pomp,elektrotechniek
 ad4.kunstwerkdeel_v (3790),ad5.ponton_v (1),1,BGTPLUSTYPE_niet-bgt_ponton,vaarwegen
 ad4.uitleggerPortaal_l (923),ad5.portaal_l (572),1,TYPESPEC_Portaal,elektrotechniek
-ad4.ondersteunendWegdeelKruin_l (2197),ad5.profiellijn_l (3596),1,x_x,groen
-ad4.begroeidTerreindeelPlKr_l (198),ad5.profiellijn_l (3596),1,x_x,groen
 ad4.begroeidTerreindeelBermKr_l (1022),ad5.profiellijn_l (3596),1,x_x,groen
-ad4.onbegroeidTerreindeelKruin_l (111),ad5.profiellijn_l (3596),1,x_x,groen
-ad4.wegdeelKruin_l (10),ad5.profiellijn_l (3596),1,x_x,groen
 ad4.begroeidTerreindeelKruin_l (58),ad5.profiellijn_l (3596),1,x_x,groen
+ad4.begroeidTerreindeelPlKr_l (198),ad5.profiellijn_l (3596),1,x_x,groen
+ad4.onbegroeidTerreindeelKruin_l (111),ad5.profiellijn_l (3596),1,x_x,groen
+ad4.ondersteunendWegdeelKruin_l (2197),ad5.profiellijn_l (3596),1,x_x,groen
+ad4.wegdeelKruin_l (10),ad5.profiellijn_l (3596),1,x_x,groen
 ad4.overbruggingsdeel_v (2931),ad5.pyloon_v (28),1,TYPEOVERBRUGGINGSDEEL_pyloon,kunstwerken
 ad4.sensor_p (1996),ad5.rateltikker_p (15),1,TYPESPEC_Rateltikker,elektrotechniek
 ad4.bord_p (38993),ad5.reclamebord_p (92),1,BGTPLUSTYPE_niet-bgt_reclamebord,overig
@@ -203,12 +207,12 @@ ad4.waterinrichtingselement_l (718),ad5.remmingswerk_l (300),1,BGTPLUSTYPE_niet-
 ad4.begroeidTerreindeelPlantvak_v (4552),ad5.rietland_v (335),1,FYSIEKVOORKOMEN_rietland,groen
 ad4.weginrichtingselement_l (8265),ad5.rijstrookscheiding_l (79),1,TYPESPEC_VRBS,wegen
 ad4.leidingelement_p (26174),ad5.rioolafsluiter_p (8),1,TYPESPEC_cleanOut,wegen
-ad4.put_p (1278),ad5.rioolput_p (4821),1,BGTPLUSTYPE_niet-bgt_inspectie- _ rioolput,wegen
 ad4.leidingelement_p (26174),ad5.rioolput_p (4821),1,TYPESPEC_Inspectieput,wegen
+ad4.put_p (1278),ad5.rioolput_p (4821),1,BGTPLUSTYPE_niet-bgt_inspectie- _ rioolput,wegen
 ad4.straatmeubilair_p (6902),ad5.rookpaal_p (3),1,TYPESPEC_Peukenpaal,wegen
 ad4.weginrichtingselement_v (48),ad5.rooster_v (19),1,TYPESPEC_Wildrooster_Rooster,wegen
-ad4.bordScheepvaart_p (1671),ad5.scheepvaartbord_p (3460),1,TYPESPEC_BPR bord_Route verwijsbord,vaarwegen
 ad4.paalAfbakening_p (34233),ad5.scheepvaartbord_p (3460),1,TYPESPEC_hectometerbord_scheepvaart,vaarwegen
+ad4.bordScheepvaart_p (1671),ad5.scheepvaartbord_p (3460),1,TYPESPEC_BPR bord_Route verwijsbord,vaarwegen
 ad4.paalDraagconstructie_p (50706),ad5.sirene_p (1),1,BGTPLUSTYPE_niet-bgt_sirene,elektrotechniek
 ad4.kast_p (2248),ad5.slagboominstallatie_p (362),1,TYPESPEC_Slagboomkast,elektrotechniek
 ad4.straatmeubilair_p (6902),ad5.slagboominstallatie_p (362),1,TYPESPEC_Slagboom,elektrotechniek
@@ -221,8 +225,8 @@ ad4.ondersteunendWegdeel_v (34767),ad5.struiken_v (1070),1,FYSIEKVOORKOMEN_groen
 ad4.kunstwerkdeel_l (2534),ad5.stuw_l (296),1,BGTPLUSTYPE_stuw,kunstwerken
 ad4.kunstwerkdeel_v (3790),ad5.stuw_v (256),1,BGTPLUSTYPE_stuw,kunstwerken
 ad4.straatmeubilair_p (6902),ad5.tafel_p (13),1,TYPESPEC_Picknick tafel,groen
-ad4.kastDRIS_p (5),ad5.telecomkast_p (514),1,x_x,elektrotechniek
 ad4.kast_p (2248),ad5.telecomkast_p (514),1,TYPESPEC_Schakelkast PTT,elektrotechniek
+ad4.kastDRIS_p (5),ad5.telecomkast_p (514),1,x_x,elektrotechniek
 ad4.kast_p (2248),ad5.telkast_p (291),1,TYPESPEC_Telkast_ onbekend,elektrotechniek
 ad4.paalDraagconstructie_p (50706),ad5.telpaal_p (12),1,BGTPLUSTYPE_niet-bgt_telpaal,elektrotechniek
 ad4.paalAfbakening_p (34233),ad5.telpaal_p (12),1,TYPESPEC_Telpaal,elektrotechniek
@@ -230,25 +234,24 @@ ad4.theorHectometrering_p (18251),ad5.theoretische_hectometrering_p (18251),1,x_
 ad4.gebouwInstallatie_v (6),ad5.toegangstrap_v (3),1,BGTPLUSTYPE_niet-bgt_toegangstrap,kunstwerken
 ad4.kunstwerk_p (869),ad5.tunnel_p (3),1,NENBEHEEROBJECT_Tunnels,kunstwerken
 ad4.tunneldeel_v (119),ad5.tunnelbuis_v (119),1,x_x,kunstwerken
+ad4.scheiding_v (5061),ad5.tunnelwand_v (264),1,RELATIEVEHOOGTELIGGING_-1,kunstwerken
 ad4.kunstwerkdeel_v (3790),ad5.tunnelwand_v (264),1,BGTPLUSTYPE_niet-bgt_keermuur,kunstwerken
 ad4.scheiding_v (5061),ad5.tunnelwand_v (264),1,RELATIEVEHOOGTELIGGING_-1,kunstwerken
 ad4.scheiding_v (5061),ad5.tunnelwand_v (264),1,BGTPLUSTYPE_muur,kunstwerken
-ad4.scheiding_v (5061),ad5.tunnelwand_v (264),1,RELATIEVEHOOGTELIGGING_-1,kunstwerken
 ad4.utiliteitsNet_tbl (1037),ad5.utiliteitsnet_tbl (1037),1,x_x,elektrotechniek
 ad4.vaarwegdeeltraject_v (34),ad5.vaarweg_v (34),1,x_x,algemeen
 ad4.vaarweg_l (16),ad5.vaarwegas_l (16),1,x_x,algemeen
 ad4.vaarwegdeeltrajectas_l (34),ad5.vaarwegdeeltrajectas_l (34),1,x_x,algemeen
 ad4.kunstwerk_p (869),ad5.vastebrug_p (210),1,NENBEHEEROBJECT_Bruggen vast,kunstwerken
 ad4.kunstwerk_p (869),ad5.veerverbinding_p (5),1,NENBEHEEROBJECT_Recreatieve gebieden,kunstwerken
-ad4.straatmeubilair_p (6902),ad5.veiligheidsvoorziening_p (110),1,TYPESPEC_Lier_Nooduitgangtrap_ Reddingsboei_Inspringvoorziening,overig
 ad4.waterinrichtingselement_p (2466),ad5.veiligheidsvoorziening_p (110),1,TYPESPEC_Drenkelingenladder,overig
+ad4.straatmeubilair_p (6902),ad5.veiligheidsvoorziening_p (110),1,TYPESPEC_Lier_Nooduitgangtrap_ Reddingsboei_Inspringvoorziening,overig
 ad4.leidingelement_p (26174),ad5.verbindingsstuk_p (6024),1,TYPESPEC_DEM_mof,elektrotechniek
 ad4.weginrichtingselement_l (8265),ad5.verblindingswering_l (3),1,BGTPLUSTYPE_niet-bgt_verblindingswering,wegen
-ad4.ondersteunendWegdeel_v (34767),ad5.verharding_v (7869),1,FYSIEKVOORKOMEN_gesloten verharding,wegen
 ad4.onbegroeidTerreindeel_v (10730),ad5.verharding_v (7869),1,FYSIEKVOORKOMEN_gesloten verharding_Erf,wegen
+ad4.ondersteunendWegdeel_v (34767),ad5.verharding_v (7869),1,FYSIEKVOORKOMEN_gesloten verharding,wegen
 ad4.wegdeel_v (61137),ad5.verharding_v (7869),1,FYSIEKVOORKOMEN_gesloten verharding,wegen
 ad4.bord_p (38993),ad5.verkeersbord_p (0),1,BGTPLUSTYPE_niet-bgt_plaatsnaambord_niet-bgt_straatnaambord_niet-bgt_verkeersbord_niet-bgt_waarschuwingshek_niet-bgt_wegwijzer_niet-bgt,wegen
-ad4.paalDraagconstructie_p (50706),ad5.verkeersbord_p (0),1,BGTPLUSTYPE_niet-bgt_hectometerpaal,wegen
 ad4.paalAfbakening_p (34233),ad5.verkeersbord_p (0),1,TYPESPEC_Hectometerpaal_Bermplank,wegen
 ad4.weginrichtingselement_v (48),ad5.verkeersdrempel_v (3),1,TYPESPEC_Verkeersdrempel,wegen
 ad4.lantaarn_p (7554),ad5.verkeerslantaarn_p (7554),1,x_x,elektrotechniek
@@ -271,7 +274,7 @@ ad4.sensor_p (1996),ad5.weerstation_p (4),1,TYPESPEC_Weerstation,elektrotechniek
 ad4.traject_v (210),ad5.weg_v (194),1,TYPESPEC_Busbaan_Fietspad_Weg,algemeen
 ad4.weg_l (85),ad5.wegas_l (85),1,x_x,algemeen
 ad4.straatmeubilair_p (6902),ad5.wegdekreflector_p (69),1,TYPESPEC_Reflector,wegen
-ad4.x (0),ad5.wegmarkering_tbl (0),1,x_x,wegen
+ad4.weginrichtingselement_l (8265),ad5.wegmarkering_tbl (0),1,BGTPLUSTYPE_niet-bgt_wegmarkering,wegen
 ad4.wegvak_v (6541),ad5.wegvak_v (6541),1,x_x,wegen
 ad4.functioneelGebied_v (19),ad5.werkgebied_v (19),1,x_x,algemeen
 ad4.sensor_p (1996),ad5.windmeter_p (17),1,TYPESPEC_Windmeter,elektrotechniek
