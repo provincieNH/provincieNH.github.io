@@ -103,28 +103,28 @@ svg { cursor:move; background:white; }
     <button class="tabbtn active" data-tab="tab-ad5">AD5 (alles)</button>
     <button class="tabbtn" data-tab="tab-ad4">AD4 (alles)</button>
 
-    <button class="tabbtn" data-tab="tab-bodem">Bodem</button>
+    <button class="tabbtn" data-tab="tab-algemeen">Algemeen</button>
+    <button class="tabbtn" data-tab="tab-electrotechniek">Electrotechniek</button>
     <button class="tabbtn" data-tab="tab-groen">Groen</button>
-    <button class="tabbtn" data-tab="tab-integraal">Integraal</button>
+    <button class="tabbtn" data-tab="tab-inspecties">Inspecties</button>
     <button class="tabbtn" data-tab="tab-kunstwerken">Kunstwerken</button>
-    <button class="tabbtn" data-tab="tab-ovl">OVL / VRI</button>
+    <button class="tabbtn" data-tab="tab-overig">Overig</button>
     <button class="tabbtn" data-tab="tab-vaarwegen">Vaarwegen</button>
     <button class="tabbtn" data-tab="tab-wegen">Wegen</button>
-    <button class="tabbtn" data-tab="tab-wegkantsystemen">Wegkantsystemen</button>
 </div>
 
 <div id="chart">
     <div id="tab-ad5" class="tabcontent active"><svg id="sankey_ad5"></svg></div>
     <div id="tab-ad4" class="tabcontent"><svg id="sankey_ad4"></svg></div>
 
-    <div id="tab-bodem" class="tabcontent"><svg id="sankey_bodem"></svg></div>
+    <div id="tab-algemeen" class="tabcontent"><svg id="sankey_algemeen"></svg></div>
+    <div id="tab-electrotechniek" class="tabcontent"><svg id="sankey_electrotechniek"></svg></div>
     <div id="tab-groen" class="tabcontent"><svg id="sankey_groen"></svg></div>
-    <div id="tab-integraal" class="tabcontent"><svg id="sankey_integraal"></svg></div>
+    <div id="tab-inspecties" class="tabcontent"><svg id="sankey_inspecties"></svg></div>
     <div id="tab-kunstwerken" class="tabcontent"><svg id="sankey_kunstwerken"></svg></div>
-    <div id="tab-ovl" class="tabcontent"><svg id="sankey_ovl"></svg></div>
+    <div id="tab-overig" class="tabcontent"><svg id="sankey_overig"></svg></div>
     <div id="tab-vaarwegen" class="tabcontent"><svg id="sankey_vaarwegen"></svg></div>
     <div id="tab-wegen" class="tabcontent"><svg id="sankey_wegen"></svg></div>
-    <div id="tab-wegkantsystemen" class="tabcontent"><svg id="sankey_wegkantsystemen"></svg></div>
 </div>
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -132,14 +132,14 @@ svg { cursor:move; background:white; }
 
 <script>
 const ASSETGROUPS = {
-    Bodem: "bodem",
+    Algemeen: "algemeen",
+    Electrotechniek: "electrotechniek",
     Groen: "groen",
-    Integraal: "integraal",
+    Inspecties: "inspecties",
     Kunstwerken: "kunstwerken",
-    "OVL / VRI": "ovlvri",
+    Overig: "overig",
     Vaarwegen: "vaarwegen",
-    Wegen: "wegen",
-    Wegkantsystemen: "wegkantsystemen"
+    Wegen: "wegen"
 };
 
 document.querySelectorAll(".tabbtn").forEach(btn => {
@@ -289,14 +289,14 @@ document.getElementById("resetZoom").addEventListener("click", () => {
 drawSankey("#sankey_ad5", "mapping-ad4-ad5-sort-ad5.csv");
 drawSankey("#sankey_ad4", "mapping-ad4-ad5-sort-ad4.csv");
 
-drawSankey("#sankey_bodem", "mapping-ad4-ad5-sort-ad5.csv", "Bodem");
+drawSankey("#sankey_algemeen", "mapping-ad4-ad5-sort-ad5.csv", "Algemeen");
+drawSankey("#sankey_electrotechniek", "mapping-ad4-ad5-sort-ad5.csv", "Electrotechniek");
 drawSankey("#sankey_groen", "mapping-ad4-ad5-sort-ad5.csv", "Groen");
-drawSankey("#sankey_integraal", "mapping-ad4-ad5-sort-ad5.csv", "Integraal");
+drawSankey("#sankey_inspecties", "mapping-ad4-ad5-sort-ad5.csv", "Inspecties");
 drawSankey("#sankey_kunstwerken", "mapping-ad4-ad5-sort-ad5.csv", "Kunstwerken");
-drawSankey("#sankey_ovl", "mapping-ad4-ad5-sort-ad5.csv", "OVL / VRI");
+drawSankey("#sankey_overig", "mapping-ad4-ad5-sort-ad5.csv", "Overig");
 drawSankey("#sankey_vaarwegen", "mapping-ad4-ad5-sort-ad5.csv", "Vaarwegen");
 drawSankey("#sankey_wegen", "mapping-ad4-ad5-sort-ad5.csv", "Wegen");
-drawSankey("#sankey_wegkantsystemen", "mapping-ad4-ad5-sort-ad5.csv", "Wegkantsystemen");
 </script>
 
 </body>
