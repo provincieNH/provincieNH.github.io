@@ -136,8 +136,8 @@ ad4.bouwdeelKunstwerk_tbl (26555),ad5.kunstwerkbouwdeel_tbl (28605),1,x_x,kunstw
 ad4.kunstwerkdeel_l (2534),ad5.kunstwerkdeel_l (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
 ad4.kunstwerkdeel_v (3790),ad5.kunstwerkdeel_v (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
 ad4.kunstwerkdeel_v (3790),ad5.kunstwerkdeel_v (0),1,TYPESPEC_Overig,kunstwerken
-ad4.kunstwerkdeeL-v (0),ad5.kwelscherm_v (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
-ad4.kunstwerkdeel (0),ad5.kwelscherm_v (0),1,TYPESPEC_Kwelscherm,kunstwerken
+ad4.kunstwerkdeeL_v (3790),ad5.kwelscherm_v (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
+ad4.kunstwerkdeeL_v (3790),ad5.kwelscherm_v (0),1,TYPESPEC_Kwelscherm,kunstwerken
 ad4.kwElement_tbl (10587),ad5.kunstwerkelement_tbl (10587),1,x_x,kunstwerken
 ad4.overbruggingsdeel_v (2931),ad5.landhoofd_v (503),1,TYPEOVERBRUGGINGSDEEL_landhoofd,kunstwerken
 ad4.lamp_p (12569),ad5.lichtbron_p (12569),1,x_x,elektrotechniek

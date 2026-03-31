@@ -89,8 +89,8 @@ ad4.kunstwerk_p (869),ad5.vastebrug_p (210),1,NENBEHEEROBJECT_Bruggen vast,kunst
 ad4.kunstwerk_p (869),ad5.onderdoorgang_p (113),1,NENBEHEEROBJECT_Onderdoorgangen,kunstwerken
 ad4.kunstwerk_p (869),ad5.neninspectie_tbl (95760),1,x_x,inspecties
 ad4.kunstwerk_p (869),ad5.ecoduct_p (6),1,NENBEHEEROBJECT_Ecoducten,kunstwerken
-ad4.kunstwerkdeeL-v (0),ad5.kwelscherm_v (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
-ad4.kunstwerkdeel (0),ad5.kwelscherm_v (0),1,TYPESPEC_Kwelscherm,kunstwerken
+ad4.kunstwerkdeeL_v (3790),ad5.kwelscherm_v (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
+ad4.kunstwerkdeeL_v (3790),ad5.kwelscherm_v (0),1,TYPESPEC_Kwelscherm,kunstwerken
 ad4.kunstwerkdeel_l (2534),ad5.kunstwerkdeel_l (0),1,BGTPLUSTYPE_niet-bgt,kunstwerken
 ad4.kunstwerkdeel_l (2534),ad5.stuw_l (296),1,BGTPLUSTYPE_stuw,kunstwerken
 ad4.kunstwerkdeel_l (2534),ad5.duiker_l (2239),1,BGTPLUSTYPE_niet-bgt_ niet-bgt_duiker,kunstwerken
