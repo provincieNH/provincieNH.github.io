@@ -104,7 +104,7 @@ svg { cursor:move; background:white; }
     <button class="tabbtn" data-tab="tab-ad4">AD4 (alles)</button>
 
     <button class="tabbtn" data-tab="tab-algemeen">Algemeen</button>
-    <button class="tabbtn" data-tab="tab-electrotechniek">Electrotechniek</button>
+    <button class="tabbtn" data-tab="tab-elektrotechniek">Elektrotechniek</button>
     <button class="tabbtn" data-tab="tab-groen">Groen</button>
     <button class="tabbtn" data-tab="tab-inspecties">Inspecties</button>
     <button class="tabbtn" data-tab="tab-kunstwerken">Kunstwerken</button>
@@ -118,7 +118,7 @@ svg { cursor:move; background:white; }
     <div id="tab-ad4" class="tabcontent"><svg id="sankey_ad4"></svg></div>
 
     <div id="tab-algemeen" class="tabcontent"><svg id="sankey_algemeen"></svg></div>
-    <div id="tab-electrotechniek" class="tabcontent"><svg id="sankey_electrotechniek"></svg></div>
+    <div id="tab-elektrotechniek" class="tabcontent"><svg id="sankey_elektrotechniek"></svg></div>
     <div id="tab-groen" class="tabcontent"><svg id="sankey_groen"></svg></div>
     <div id="tab-inspecties" class="tabcontent"><svg id="sankey_inspecties"></svg></div>
     <div id="tab-kunstwerken" class="tabcontent"><svg id="sankey_kunstwerken"></svg></div>
@@ -133,7 +133,7 @@ svg { cursor:move; background:white; }
 <script>
 const ASSETGROUPS = {
     Algemeen: "algemeen",
-    Electrotechniek: "electrotechniek",
+    Elektrotechniek: "elektrotechniek",
     Groen: "groen",
     Inspecties: "inspecties",
     Kunstwerken: "kunstwerken",
@@ -290,7 +290,7 @@ drawSankey("#sankey_ad5", "mapping-ad4-ad5-sort-ad5.csv");
 drawSankey("#sankey_ad4", "mapping-ad4-ad5-sort-ad4.csv");
 
 drawSankey("#sankey_algemeen", "mapping-ad4-ad5-sort-ad5.csv", "Algemeen");
-drawSankey("#sankey_electrotechniek", "mapping-ad4-ad5-sort-ad5.csv", "Electrotechniek");
+drawSankey("#sankey_elektrotechniek", "mapping-ad4-ad5-sort-ad5.csv", "Elektrotechniek");
 drawSankey("#sankey_groen", "mapping-ad4-ad5-sort-ad5.csv", "Groen");
 drawSankey("#sankey_inspecties", "mapping-ad4-ad5-sort-ad5.csv", "Inspecties");
 drawSankey("#sankey_kunstwerken", "mapping-ad4-ad5-sort-ad5.csv", "Kunstwerken");
