@@ -22,13 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="Misc #comment versie 1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.csv" beforeDir="false" />
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="Misc #comment zoekfunctie mogelijk hersteld">
       <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-default.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-default.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-sort-ad4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-sort-ad4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-sort-ad5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-sort-ad5.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,22 +317,6 @@
       <option name="project" value="LOCAL" />
       <updated>1664366716613</updated>
     </task>
-    <task id="LOCAL-00054" summary="gd-12706 #comment Stijl meer als Sankey pagina gemaakt">
-      <option name="closed" value="true" />
-      <created>1770738305059</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1770738305059</updated>
-    </task>
-    <task id="LOCAL-00055" summary="gd-12706 #comment Stijl meer als Sankey pagina gemaakt">
-      <option name="closed" value="true" />
-      <created>1770738477758</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1770738477758</updated>
-    </task>
     <task id="LOCAL-00056" summary="gd-12706 #comment Stijl meer als Sankey pagina gemaakt">
       <option name="closed" value="true" />
       <created>1770738567212</created>
@@ -458,7 +437,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774943716344</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Misc #comment zoekfunctie mogelijk hersteld">
+      <option name="closed" value="true" />
+      <created>1774945018160</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1774945018161</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Misc #comment zoekfunctie mogelijk hersteld">
+      <option name="closed" value="true" />
+      <created>1774945272225</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1774945272225</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -473,7 +468,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="nieuwe dynamische hoogte algemene html" />
     <MESSAGE value="nieuwe dynamische hoogten htmls" />
     <MESSAGE value="nieuwe dynamische hoogten htmls (48px per regel)" />
     <MESSAGE value="GD-8547 #comment pagina onderzoeken toegevoegd" />
@@ -498,6 +492,7 @@
     <MESSAGE value="Misc #comment correcte assetgroepen" />
     <MESSAGE value="Misc #comment spelling elektrotechniek" />
     <MESSAGE value="Misc #comment versie 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Misc #comment versie 1" />
+    <MESSAGE value="Misc #comment zoekfunctie mogelijk hersteld" />
+    <option name="LAST_COMMIT_MESSAGE" value="Misc #comment zoekfunctie mogelijk hersteld" />
   </component>
 </project>
