@@ -1,685 +1,188 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <title>Archief: Status van de synchronisatie tussen Areaaldata en Gisib op 4-10-17</title>
-</head>
-<body>
-<!-- Codes by HTML.am -->
+<meta charset="UTF-8">
+<title>Scriptmonitor – Databeheer</title>
 
-<!-- CSS Code -->
-<style type="text/css" scoped>
-table.GeneratedTable {
-width:100%;
-background-color:#FFFFFF;
-border-collapse:collapse;border-width:1px;
-border-color:#336600;
-border-style:dotted;
-color:#000000;
-font-family:Tahoma, sans-serif;font-size:1em;letter-spacing:0.2em;line-height:1.3em;color:#330099;background-color:#CCFFFF;padding:1.5em;
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+.dashboard {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+  margin-bottom:28px;
 }
 
-
-table.GeneratedTable td, table.GeneratedTable th {
-border-width:1px;
-border-color:#336600;
-border-style:dotted;
-padding:3px;
+.card{
+  background:#f7f9fb;
+  border:1px solid #e0e0e0;
+  border-left:6px solid var(--pnh-lightblue);
+  padding:16px;
 }
 
-table.GeneratedTable thead {
-background-color:#0099FF;
+.card h3{
+  margin:0 0 8px 0;
+  font-size:15px;
+  color:var(--pnh-darkblue);
 }
+
+.card .date{
+  font-size:12px;
+  color:#666;
+  margin-top:4px;
+}
+
+.status{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-weight:500;
+}
+
+.status-dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  display:inline-block;
+}
+
+.status-success .status-dot{background:#2ca02c;}
+.status-error .status-dot{background:#d62728;}
+.status-running .status-dot{background:#ffcc00;}
+
+.status-success{color:#2ca02c;}
+.status-error{color:#d62728;}
+.status-running{color:#b38f00;}
+
+.updated{
+  font-size:12px;
+  color:#666;
+  margin-top:12px;
+}
+
 </style>
 
-<!-- HTML Code -->
-<table class="GeneratedTable">
-    <thead>
-    <tr>
-        <th>Gisib</th>
-        <th>Areaaldata</th>
-        <th>Datum synchronisatie (2 kanten)</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Beheerobject</td>
-        <td>kunstwerkBeweegbaar_p/kunstwerkVast_p/schutsluis_p</td>
-        <td>1-11-2017</td>
-    </tr>
-    <tr>
-        <td>Bord</td>
-        <td>bord_p</td>
-        <td>5-9-2017</td>
-    </tr>
-    <tr>
-        <td>Mast</td>
-        <td>paalDraagconstructie_p</td>
-        <td>5-9-2017</td>
-    </tr>
-    <tr>
-        <td>Wegvakonderdeel</td>
-        <td>wegdeel_v</td>
-        <td>1-9-2017</td>
-    </tr>
-    <tr>
-        <td>Ondersteunend wegvakonderdeel</td>
-        <td>ondersteunendWegdeel_v</td>
-        <td>1-9-2017</td>
-    </tr>
-    <tr>
-        <td>Berm</td>
-        <td>ondersteunendWegdeel_v</td>
-        <td>1-9-2017</td>
-    </tr>
-    <tr>
-        <td>Berm</td>
-        <td>begroeidTerreindeelBerm_v</td>
-        <td>1-7-2017</td>
-    </tr>
-    <tr>
-        <td>Lantaarn</td>
-        <td>lantaarn_p</td>
-        <td>1-5-2017</td>
-    </tr>
-    <tr>
-        <td>Bak</td>
-        <td>bak_p</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Scheiding</td>
-        <td>scheiding_l</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Straatmeubilair/Overig meubilair</td>
-        <td>straatmeubilair_p</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Bermplank/Indexeringspaal/Paal</td>
-        <td>paalAfbakening_p</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Traject</td>
-        <td>traject_v</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Gebiedscontractregio</td>
-        <td>gebiedscontractregio_v</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Uithouder</td>
-        <td>uithouder_p</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Armatuur/Markeringsunit</td>
-        <td>straatmeubilairLichtpunt_p</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Geleiderail</td>
-        <td>weginrichtingselement_l</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Uitlegger portaal</td>
-        <td>uitleggerPortaal_l</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Abri</td>
-        <td>overigBouwwerk_v</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Halte</td>
-        <td>halte_p</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Fietsparkeervoorziening</td>
-        <td>fietsparkeervoorziening_l</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Boom</td>
-        <td>vegetatieObject_p</td>
-        <td>1-6-2017</td>
-    </tr>
-    <tr>
-        <td>Plantvak</td>
-        <td>begroeidTerreindeelPlantvak_v</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td>Beschoeiing	</td>
-        <td>scheiding_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Beschoeiing LM	</td>
-        <td>scheiding_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Beschoeiing LM reparatie	</td>
-        <td>	x
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Detectie	</td>
-        <td>sensor_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Herdenkingsmonument	</td>
-        <td>straatmeubilair_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Kunstwerk element / element	</td>
-        <td>kwElement_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Kunstwerk inspectie	</td>
-        <td>nenConditiescore_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Kunstwerk inspectie	</td>
-        <td>nenInspectie_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Lus	</td>
-        <td>sensor_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Overig bouwwerk	</td>
-        <td>overigBouwwerk_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Paal	</td>
-        <td>mastDraagconstructie_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Plasberm	</td>
-        <td>ondersteunendWaterdeel_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Rotonde	</td>
-        <td>ondersteunendWegdeelPlantvak_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Scheiding	</td>
-        <td>scheiding_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Scheiding	</td>
-        <td>scheiding_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Slagboom	</td>
-        <td>straatmeubilair_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Wegvak	</td>
-        <td>wegvak_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Wegvakonderdeel	</td>
-        <td>wegdeel_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Bodem	</td>
-        <td>bodem_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Bolder	</td>
-        <td>straatmeubilair_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Bouwdeel	</td>
-        <td>bouwdeelGeluidsscherm_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Bouwdeel	</td>
-        <td>bouwdeelKunstwerk_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Bouwdeel	</td>
-        <td>bouwdeelOevervak_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Buis	</td>
-        <td>buis_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Buisleiding	</td>
-        <td>buisleiding_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>CROW Weginspectie	</td>
-        <td>crowInspectie_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>CROW Weginspectie	</td>
-        <td>crowInspectieresultaat_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>DRIS kast	</td>
-        <td>kastDRIS_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Element / Oevervak element	</td>
-        <td>scheidingOevervak_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Faunavoorziening	</td>
-        <td>faunavoorziening_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Geluidwerende constructie	</td>
-        <td>scheidingGeluidsscherm_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Geluidwerende voorziening	</td>
-        <td>geluidwerendeVoorziening_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>GMS Kast	</td>
-        <td>kast_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Heg	</td>
-        <td>vegetatieObject_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Kabel	</td>
-        <td>electriciteitskabel_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Kabel	</td>
-        <td>telecommunicatiekabel_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Kabelbed	</td>
-        <td>kabelbed_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Kast	</td>
-        <td>kast_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Leidingelement	</td>
-        <td>leidingelement_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Mantelbuis	</td>
-        <td>mantelbuis_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Mast onderdeel	</td>
-        <td>onderdeel_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Observatiecamera	</td>
-        <td>sensor_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Oeverbescherming	</td>
-        <td>onbegroeidTerreindeel_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Oeverreparatie	</td>
-        <td>oeverReparatie_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Oevervak	</td>
-        <td>oevervak_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Overig bouwwerk	</td>
-        <td>waterinrichtingselement_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Overig kunstwerk	</td>
-        <td>kunstwerkdeel_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>OVL Installatie	</td>
-        <td>utiliteitsNet_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>OVL kast	</td>
-        <td>kastOvl_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Put	</td>
-        <td>put_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Recreatieplek	</td>
-        <td>recreatieplek_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Rioolleidingelement	</td>
-        <td>put_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Straatmeubilair	</td>
-        <td>sensor_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Stuw	</td>
-        <td>kunstwerkdeel_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Telkast	</td>
-        <td>kast_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Vaarwegdeeltraject	</td>
-        <td>vaarwegdeeltraject_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>VRI Installatie	</td>
-        <td>utiliteitsNet_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>VRI kast	</td>
-        <td>kastVri_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>VTA Inspectie	</td>
-        <td>vtaInspectie_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Waterdeel	</td>
-        <td>waterdeel_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Waterloop	</td>
-        <td>waterdeel_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Waterloop	</td>
-        <td>waterloop_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Weg	</td>
-        <td>weg_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Adres	</td>
-        <td>adres_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Betonning	</td>
-        <td>waterinrichtingselement_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Doorvaartmaat	</td>
-        <td>doorvaartmaat_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Inspectie beschoeiing LM	</td>
-        <td>beschoeiingInspectie_tbl
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Installatie	</td>
-        <td>installatie_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Kruispunt	</td>
-        <td>kruispunt_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Ligplaatsstrook	</td>
-        <td>ligplaatsstrook_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Meerpaal	</td>
-        <td>waterinrichtingselement_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Plantvak	</td>
-        <td>weginrichtingselement_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Spoorrail	</td>
-        <td>spoorrail_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Theoretische hectometrering	</td>
-        <td>theorHectometrering_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Vaarweg	</td>
-        <td>vaarweg_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Vaarwegdeeltrajectas	</td>
-        <td>vaarwegdeeltrajectas_l
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Wegwijzer	</td>
-        <td>bordWegwijzer_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Zwemwaterbord	</td>
-        <td>bordZwemwater_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Complex	</td>
-        <td>	x
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Ecologische Hoofdstructuur	</td>
-        <td>ecoHoofdstructuur_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Ecologische Verbindingszone	</td>
-        <td>ecoVerbZone_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Lamp	</td>
-        <td>lamp_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Nweg foto	</td>
-        <td>	x
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Planten soort verdeling	</td>
-        <td>	x
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Telpaal	</td>
-        <td>telpaal_p
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Oeverbescherming	</td>
-        <td>ondersteunendWaterdeel_v
-        </td>
-        <td>-</td >
-    </tr>
-    <tr>
-        <td>Overig Bouwwerk	</td>
-        <td>kunstwerkdeel_v
-        </td>
-        <td>-</td >
-    </tr>
-    </tbody>
-</table>
+</head>
+
+<body>
+
+<div id="top_bar"></div>
+
+<div id="header_wrap">
+  <div class="inner">
+    <h1 id="project_title">Databeheer – Scriptmonitor</h1>
+    <p id="project_tagline">Status van automatische dataprocessen</p>
+  </div>
+</div>
+
+<div id="main_content_wrap">
+  <div class="inner">
+
+    <div class="content">
+
+      <h2>Overzicht scripts</h2>
+
+      <div class="dashboard">
+
+        <div class="card">
+          <h3>gpbu_naar_gpbupub</h3>
+          <div class="status status-success">
+            <span class="status-dot"></span>Succes
+          </div>
+          <div class="date">Uitgevoerd op: 2‑4‑2026</div>
+        </div>
+
+        <div class="card">
+          <h3>ad_naar_av</h3>
+          <div class="status status-success">
+            <span class="status-dot"></span>Succes
+          </div>
+          <div class="date">Uitgevoerd op: 2‑4‑2026</div>
+        </div>
+
+        <div class="card">
+          <h3>ad_naar_adi</h3>
+          <div class="status status-success">
+            <span class="status-dot"></span>Succes
+          </div>
+          <div class="date">Uitgevoerd op: 2‑4‑2026</div>
+        </div>
+
+        <div class="card">
+          <h3>ad5_naar_adi5</h3>
+          <div class="status status-success">
+            <span class="status-dot"></span>Succes
+          </div>
+          <div class="date">Uitgevoerd op: 1‑4‑2026</div>
+        </div>
+
+      </div>
+
+      <p class="updated">
+        Pagina geladen op <span id="loadtime"></span>
+      </p>
+
+      <h2>Detailoverzicht</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Naam script</th>
+            <th>Uitgevoerd op</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>gpbu_naar_gpbupub</td>
+            <td>2‑4‑2026</td>
+            <td class="status status-success"><span class="status-dot"></span>Succes</td>
+          </tr>
+
+          <tr>
+            <td>ad_naar_av</td>
+            <td>2‑4‑2026</td>
+            <td class="status status-success"><span class="status-dot"></span>Succes</td>
+          </tr>
+
+          <tr>
+            <td>ad_naar_adi</td>
+            <td>2‑4‑2026</td>
+            <td class="status status-success"><span class="status-dot"></span>Succes</td>
+          </tr>
+
+          <tr>
+            <td>ad5_naar_adi5</td>
+            <td>1‑4‑2026</td>
+            <td class="status status-success"><span class="status-dot"></span>Succes</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+</div>
+
+<div id="footer_wrap">
+  <div class="inner">
+    Provincie Noord‑Holland – Databeheer
+  </div>
+</div>
+
+<script>
+
+const now = new Date();
+document.getElementById("loadtime").textContent =
+  now.toLocaleDateString("nl-NL") + " " +
+  now.toLocaleTimeString("nl-NL");
+
+</script>
+
 </body>
 </html>
