@@ -1,0 +1,484 @@
+@charset "UTF-8";
+/* ----------------------------------------------------
+   PNH – kleurdefinities & spacing
+---------------------------------------------------- */
+:root {
+  --pnh-darkblue: rgb(25, 60, 95);
+  --pnh-lightblue: rgb(40, 145, 225);
+  --pnh-yellow: rgb(250, 175, 0);
+  --pnh-white: #ffffff;
+  --text-color: rgb(40, 40, 40);
+  --side-padding: 32px;
+  --logo-width: 140px;
+  --logo-height: 40px;
+}
+
+/* ----------------------------------------------------
+   Basis styling
+---------------------------------------------------- */
+body {
+  background: var(--pnh-white);
+  color: var(--text-color);
+  font-family: "Fedra Sans Book", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Links */
+a {
+  color: var(--pnh-darkblue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--pnh-yellow);
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------------
+   Top-balk
+---------------------------------------------------- */
+#top_bar {
+  width: 100%;
+  background: var(--pnh-darkblue);
+  padding: 3px 0;
+}
+
+/* ----------------------------------------------------
+   Header
+---------------------------------------------------- */
+#header_wrap {
+  background: var(--pnh-white);
+  padding: 8px 0 6px;
+  position: relative;
+  border-bottom: 2px solid var(--pnh-lightblue);
+}
+
+#header_wrap::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: var(--side-padding);
+  width: var(--logo-width);
+  height: var(--logo-height);
+  background-image: url("../img/PNH_RGB_pos_trans.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+#header_wrap .inner {
+  width: 100%;
+  max-width: none;
+  padding-left: calc(var(--side-padding) + var(--logo-width) + 16px);
+  padding-right: var(--side-padding);
+  text-align: center;
+}
+
+#project_title {
+  color: var(--pnh-lightblue);
+  font-size: 20px;
+  margin: 0;
+}
+
+#project_tagline {
+  color: var(--pnh-lightblue);
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ----------------------------------------------------
+   Content & page height
+---------------------------------------------------- */
+#main_content_wrap {
+  background: var(--pnh-white);
+  padding-top: 16px;
+  min-height: calc(100vh - 140px);
+}
+
+#main_content_wrap .inner {
+  padding: 20px var(--side-padding);
+  box-sizing: border-box;
+  max-width: none;
+
+  /* ✅ ESSENTIEEL */
+  min-height: calc(100vh - 140px);
+  display: grid;
+}
+
+/* ----------------------------------------------------
+   Hoofdlayout – GRID (definitief stabiel)
+---------------------------------------------------- */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+
+  /* ✅ vult de hoogte van .inner */
+  height: 100%;
+  align-items: stretch;
+}
+
+/* ----------------------------------------------------
+   Sidebar
+---------------------------------------------------- */
+.download-btn:hover {
+background:#f0f0f0;
+}
+
+.sidebar details summary {
+cursor:pointer;
+font-weight:500;
+}
+
+.sidebar details > ul {
+margin-left:10px;
+}
+
+.sidebar {
+  width: 260px;
+  overflow-y: auto;
+}
+
+/* Sidebar zoekveld */
+#sidebar-search {
+  width: 100%;
+  padding: 4px 6px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* ----------------------------------------------------
+   Sidebar navigatie
+---------------------------------------------------- */
+.assetgroep-title {
+  position: relative;
+  cursor: pointer;
+  margin: 6px 0 4px;
+  padding-left: 14px;
+  font-size: 13px;
+}
+
+.assetgroep-title::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #005fa3;
+  pointer-events: none;
+}
+
+.assetgroep.open .assetgroep-title::before {
+  content: "▼";
+}
+
+.assetgroep a {
+  display: none;
+}
+
+.assetgroep.open a {
+  display: block;
+}
+
+.assetgroep-title:hover {
+  color: #005fa3;
+}
+
+/* ----------------------------------------------------
+   Content
+---------------------------------------------------- */
+.content {
+  min-width: 0;
+}
+
+/* ----------------------------------------------------
+   Tabellen
+---------------------------------------------------- */
+table {
+  background: white;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+table thead th {
+  background: var(--pnh-darkblue);
+  color: white;
+  padding: 6px;
+  text-align: left;
+}
+
+table tbody td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 5px;
+}
+
+table tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+table tr.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Leveringskolommen – PNH geel */
+.attribuuttabel th.levering-header {
+    background-color: #FFCC00; /* PNH-geel */
+    color: #000;
+}
+
+
+table {
+  background: white;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+table thead th {
+  background: var(--pnh-darkblue);
+  color: white;
+  padding: 6px;
+  text-align: left;
+}
+
+table tbody td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 5px;
+}
+
+table tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+table tr.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.attribuuttabel {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Basis */
+.attribuuttabel th,
+.attribuuttabel td {
+    padding: 6px 8px;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Kolombreedtes */
+.attribuuttabel th:nth-child(1),
+.attribuuttabel td:nth-child(1) { width: 10%; }  /* Attribuut */
+
+.attribuuttabel th:nth-child(2),
+.attribuuttabel td:nth-child(2) { width: 10%; }  /* Alias */
+
+.attribuuttabel th:nth-child(3),
+.attribuuttabel td:nth-child(3) { width: 8%; }   /* Datatype */
+
+.attribuuttabel th:nth-child(4),
+.attribuuttabel td:nth-child(4) { width: 8%; }   /* Oorsprong */
+
+.attribuuttabel th:nth-child(5),
+.attribuuttabel td:nth-child(5) { width: 8%; }   /* Superklasse */
+
+.attribuuttabel th:nth-child(6),
+.attribuuttabel td:nth-child(6) { width: 8%; }   /* Attribuuttype */
+
+.attribuuttabel th:nth-child(7),
+.attribuuttabel td:nth-child(7) { width: 10%; }  /* Enumeratie/Referentie */
+
+.attribuuttabel th:nth-child(8),
+.attribuuttabel td:nth-child(8) { width: 10%; }  /* Verwijzende sleutel */
+
+.attribuuttabel th:nth-child(9),
+.attribuuttabel td:nth-child(9) { width: 6%; }   /* Standaardwaarde */
+
+.attribuuttabel th:nth-child(10),
+.attribuuttabel td:nth-child(10) { width: 5%; }  /* Nullable */
+
+.attribuuttabel th:nth-child(11),
+.attribuuttabel td:nth-child(11) { width: 12%; } /* Definitie */
+
+.attribuuttabel th:nth-child(12),
+.attribuuttabel td:nth-child(12) { width: 7%; }  /* Leveren_door_Project */
+
+.attribuuttabel th:nth-child(13),
+.attribuuttabel td:nth-child(13) { width: 8%; }  /* Leveren_door_GBC */
+
+/* ----------------------------------------------------
+   Tabel sorteren + vastgezette header (Excel-achtig)
+---------------------------------------------------- */
+.attribuuttabel thead th {
+  cursor: pointer;
+  user-select: none;
+
+  /* ✅ sticky header */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  /* voorkomt doorschijnen bij scroll */
+  background-color: var(--pnh-darkblue);
+}
+
+.attribuuttabel thead th:hover {
+  background: #0f355a; /* iets donkerder dan PNH darkblue */
+}
+
+/* Leveringskolommen blijven bovenop en geel */
+.attribuuttabel thead th.levering-header {
+  background-color: var(--pnh-yellow);
+  color: #000;
+  z-index: 3;
+}
+
+.attribuuttabel th.sort-asc::after {
+  content: " ▲";
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.attribuuttabel th.sort-desc::after {
+  content: " ▼";
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* ----------------------------------------------------
+   Definitieblok
+---------------------------------------------------- */
+details.definitieblok {
+  margin: 12px 0 20px;
+  padding: 8px 12px;
+  background: #f7f9fb;
+  border-left: 4px solid var(--pnh-lightblue);
+}
+
+details.definitieblok summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--pnh-darkblue);
+}
+
+details.definitieblok dl {
+  margin-top: 8px;
+}
+
+details.definitieblok dt {
+  font-weight: 600;
+  color: var(--pnh-darkblue);
+  margin-top: 8px;
+}
+
+details.definitieblok dd {
+  margin: 2px 0 6px 0;
+  color: var(--text-color);
+}
+
+/* ----------------------------------------------------
+   Footer
+---------------------------------------------------- */
+#footer_wrap {
+  background: var(--pnh-lightblue);
+  padding: 10px 0;
+}
+
+#footer_wrap .inner {
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+  color: white;
+  font-size: 12px;
+}
+
+/* ----------------------------------------------------
+   Landingpagina – tegels
+---------------------------------------------------- */
+
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px var(--side-padding);
+}
+
+.landing-container h1 {
+  color: var(--pnh-lightblue);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.landing-container .intro {
+  margin-bottom: 24px;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+/* Grid met tegels */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Tegel */
+.tile {
+  display: block;
+  padding: 20px;
+  background: #f7f9fb;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid var(--pnh-lightblue);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-left-color 0.15s ease;
+}
+
+.tile h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--pnh-darkblue);
+}
+
+.tile p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+/* Hover-effect in PNH-stijl */
+.tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  border-left-color: var(--pnh-yellow);
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------
+   Introblok – landingspagina
+---------------------------------------------------- */
+
+.introblok {
+  margin-bottom: 32px;
+  padding: 16px 20px;
+  background: #f7f9fb;
+  border-left: 4px solid var(--pnh-lightblue);
+}
+
+.introblok h2 {
+  margin-top: 0;
+  color: var(--pnh-darkblue);
+}
+
+html {
+  scroll-behavior: smooth;
+}
