@@ -22,11 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="Misc #comment moderne css">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/mapping-ad4-ad5-alles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databeheer/synchstatus/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/databeheer/synchstatus/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="121a08d4-921f-487b-a759-48e8b5ad8a24" name="Default Changelist" comment="Misc #comment moderne css" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,11 +64,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/git/provincieNH.github.io/css"
+    "last_opened_file_path": "D:/git/provincieNH.github.io/databeheer/css"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git\provincieNH.github.io\databeheer\css" />
       <recent name="D:\git\provincieNH.github.io\css" />
       <recent name="D:\git\provincieNH.github.io\databeheer" />
     </key>
@@ -320,22 +317,6 @@
       <option name="project" value="LOCAL" />
       <updated>1664366716613</updated>
     </task>
-    <task id="LOCAL-00058" summary="gd-12706 #comment jobs toegevoegd.">
-      <option name="closed" value="true" />
-      <created>1770823492260</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1770823492260</updated>
-    </task>
-    <task id="LOCAL-00059" summary="gd-12706 #comment labels gebruikt ipv technisch pad-namespace">
-      <option name="closed" value="true" />
-      <created>1770826394724</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1770826394724</updated>
-    </task>
     <task id="LOCAL-00060" summary="gd-12706 #comment tekst aangepast - 'dan doen we het wel zelf'">
       <option name="closed" value="true" />
       <created>1770883830737</created>
@@ -456,7 +437,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775131992807</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Misc #comment moderne css">
+      <option name="closed" value="true" />
+      <created>1775132634527</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1775132634527</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Misc #comment moderne css">
+      <option name="closed" value="true" />
+      <created>1775132824500</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1775132824500</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
