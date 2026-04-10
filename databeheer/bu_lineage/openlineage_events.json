@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "d443f006-4880-4c70-9aca-7d2030fd057f"
+      "runId": "2e227757-2941-4983-8a1b-edc1727c0d4d"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -118,9 +118,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "db9050ce-0f23-46ab-8b75-7ec22cf50f6e"
+      "runId": "00f44a37-8f43-4a13-aa8f-086fea8d1d4b"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -231,9 +231,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "f968ca4f-fe82-4423-950d-d42b778858bd"
+      "runId": "2ef37d12-0da5-4ec0-a82b-048054410e29"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -344,9 +344,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "0b43c708-05de-4416-8948-ef51346536bc"
+      "runId": "b560043b-1bd8-4a4e-a77b-98839b7267dc"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -461,9 +461,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "ae1ae2d8-15e6-482e-b512-f111cb0c48e4"
+      "runId": "78ea1ce2-76d8-43c4-88ee-063f794ac2d4"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -490,18 +490,18 @@
     },
     "inputs": [
       {
-        "namespace": "gpbu.budata",
-        "name": "bu_prj_overzichtGeodata__791a7d40-5585-41b2-88c4-35cc3d743c61",
+        "namespace": "G:\\id\\systeembeheer\\db_connecties\\Eigenaar\\GPBU\\budata_gpbu.sde\\gpbu.budata",
+        "name": "bu_bim_scope_v__2859f03b-1144-435e-b960-1c6a3ff65f0f",
         "facets": {
           "metadata": {
             "_producer": "provincie-noord-holland/databeheer",
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
-              "dataset_id": "791a7d40-5585-41b2-88c4-35cc3d743c61",
-              "dataset_naam": "D&I Projecten",
-              "dataset_pad": "gpbu.budata.bu_prj_overzichtGeodata",
-              "dataset_omschrijving": "Dataset met het projectenoverzicht van B&U",
-              "dataset_eigenaar": "ID-DI-Projectadviseurs",
+              "dataset_id": "2859f03b-1144-435e-b960-1c6a3ff65f0f",
+              "dataset_naam": "BIM Scope (bron)",
+              "dataset_pad": "G:\\id\\systeembeheer\\db_connecties\\Eigenaar\\GPBU\\budata_gpbu.sde\\gpbu.budata.bu_bim_scope_v",
+              "dataset_omschrijving": "?",
+              "dataset_eigenaar": "ID_DI",
               "dataset_steward": "PIA",
               "dataset_toegangsrechten": "PNH",
               "dataset_policies": null,
@@ -515,8 +515,8 @@
               "dataset_gebruik_populariteit": null,
               "dataset_gebruik_tools": null,
               "dataset_medaille": "Zilver",
-              "aangemaakt_op": "2026-02-11 16:00:54.667000",
-              "gewijzigd_op": "2026-02-11 16:00:54.667000"
+              "aangemaakt_op": "2026-04-10 11:03:48.817123",
+              "gewijzigd_op": "2026-04-10 11:03:48.817123"
             }
           },
           "visualization": {
@@ -613,9 +613,87 @@
             "pattern": true
           }
         }
+      },
+      {
+        "namespace": "gpbu.budata",
+        "name": "bu_prj_overzichtGeodata__791a7d40-5585-41b2-88c4-35cc3d743c61",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "791a7d40-5585-41b2-88c4-35cc3d743c61",
+              "dataset_naam": "D&I Projecten",
+              "dataset_pad": "gpbu.budata.bu_prj_overzichtGeodata",
+              "dataset_omschrijving": "Dataset met het projectenoverzicht van B&U",
+              "dataset_eigenaar": "ID-DI-Projectadviseurs",
+              "dataset_steward": "PIA",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
       }
     ],
     "outputs": [
+      {
+        "namespace": "G:\\id\\systeembeheer\\db_connecties\\Eigenaar\\GPBU\\budata_gpbu.sde\\gpbu.budata",
+        "name": "bu_bim_scope_v__2859f03b-1144-435e-b960-1c6a3ff65f0f",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "2859f03b-1144-435e-b960-1c6a3ff65f0f",
+              "dataset_naam": "BIM Scope (bron)",
+              "dataset_pad": "G:\\id\\systeembeheer\\db_connecties\\Eigenaar\\GPBU\\budata_gpbu.sde\\gpbu.budata.bu_bim_scope_v",
+              "dataset_omschrijving": "?",
+              "dataset_eigenaar": "ID_DI",
+              "dataset_steward": "PIA",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-04-10 11:03:48.817123",
+              "gewijzigd_op": "2026-04-10 11:03:48.817123"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
       {
         "namespace": "gpbupub.bupub",
         "name": "bu_*__28bd1a90-602a-46b6-a097-c07f5d8aa389",
@@ -664,9 +742,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "79250cd2-c342-4bbf-a7e7-50120cfebc29"
+      "runId": "a765b56b-899a-43c3-9187-7f1527e996ed"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -816,9 +894,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "1a2b47f3-3f8c-44f2-85b7-b61b5e6177bc"
+      "runId": "45fd5653-4137-4832-b163-51d89e7392c8"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -929,9 +1007,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "857787e7-7c74-44a3-acf7-1c530056a594"
+      "runId": "5dadaeb1-3cae-42f4-9720-f5351532d573"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1000,49 +1078,6 @@
     "outputs": [
       {
         "namespace": "gpbupub.bupub",
-        "name": "adi_*__793318b8-9fd9-440e-846a-e70a016cee63",
-        "facets": {
-          "metadata": {
-            "_producer": "provincie-noord-holland/databeheer",
-            "_schemaURL": "https://example.com/dataset-metadata.json",
-            "meta": {
-              "dataset_id": "793318b8-9fd9-440e-846a-e70a016cee63",
-              "dataset_naam": "Areaaldata Intern",
-              "dataset_pad": "gpbupub.bupub.adi_*",
-              "dataset_omschrijving": "Subset van Areaaldata beschikbaar als interne data",
-              "dataset_eigenaar": "ID-DI",
-              "dataset_steward": "Producten",
-              "dataset_toegangsrechten": "PNH",
-              "dataset_policies": "",
-              "dataset_sql_of_code": "",
-              "dataset_procesnaam": null,
-              "dataset_kwaliteit": "",
-              "dataset_categorie": "",
-              "dataset_label": null,
-              "dataset_classificatie": "",
-              "dataset_gebruik_consument": "Areaaldata Intern Viewer",
-              "dataset_gebruik_populariteit": "",
-              "dataset_gebruik_tools": "",
-              "dataset_medaille": "Goud",
-              "aangemaakt_op": "2026-02-11 16:00:54.667000",
-              "gewijzigd_op": "2026-02-11 16:00:54.667000"
-            }
-          },
-          "visualization": {
-            "_producer": "provincie-noord-holland/databeheer",
-            "style": {
-              "borderColor": "#D4AF37",
-              "borderWidth": 3
-            }
-          },
-          "datasetPattern": {
-            "_producer": "provincie-noord-holland/databeheer",
-            "pattern": true
-          }
-        }
-      },
-      {
-        "namespace": "gpbupub.bupub",
         "name": "av_*__dc063311-582c-422f-a1ac-6702d07464a1",
         "facets": {
           "metadata": {
@@ -1083,15 +1118,58 @@
             "pattern": true
           }
         }
+      },
+      {
+        "namespace": "gpbupub.bupub",
+        "name": "adi_*__793318b8-9fd9-440e-846a-e70a016cee63",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "793318b8-9fd9-440e-846a-e70a016cee63",
+              "dataset_naam": "Areaaldata Intern",
+              "dataset_pad": "gpbupub.bupub.adi_*",
+              "dataset_omschrijving": "Subset van Areaaldata beschikbaar als interne data",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": "Producten",
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": "",
+              "dataset_sql_of_code": "",
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": "",
+              "dataset_categorie": "",
+              "dataset_label": null,
+              "dataset_classificatie": "",
+              "dataset_gebruik_consument": "Areaaldata Intern Viewer",
+              "dataset_gebruik_populariteit": "",
+              "dataset_gebruik_tools": "",
+              "dataset_medaille": "Goud",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#D4AF37",
+              "borderWidth": 3
+            }
+          },
+          "datasetPattern": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "pattern": true
+          }
+        }
       }
     ],
     "producer": "provincie-noord-holland/databeheer"
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "830375bf-cc04-4be9-aae1-03ffbf33be7a"
+      "runId": "00b41f16-2c91-4383-85d4-b1917345606b"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1202,9 +1280,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "95cc7bb3-331b-4bc0-a8c1-5db6caefa448"
+      "runId": "788298b1-e373-48c8-94e6-00ae10157298"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1315,9 +1393,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "ded0463d-a5f2-4629-99a2-106c10516dc2"
+      "runId": "807aedcf-f7b4-4d46-a801-d62301a31d8f"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1428,9 +1506,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "4588c897-ac6d-4ea9-af7f-521433ba73e2"
+      "runId": "c377666a-a3ba-4ef8-8f83-7cbd14be80be"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1541,9 +1619,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "931b31d7-844d-4a75-a1f3-45ce159d30a8"
+      "runId": "bd3b09b4-52d0-4b17-b7e4-3ec0465c6c58"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1654,9 +1732,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "a45be69a-e757-4fb9-8559-7c8683b08e4e"
+      "runId": "5a8739f0-7814-4e00-aa9c-8625ef041ba2"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1735,7 +1813,7 @@
               "dataset_naam": "RWS Fairway Information System",
               "dataset_pad": "gpbupub.bupub.FIS_*",
               "dataset_omschrijving": "De dataset is de vertaalde output van de FIS data API van Rijkswaterstaat",
-              "dataset_eigenaar": "Ingrid van Hout/Linda van Bijlevelt",
+              "dataset_eigenaar": "IvH",
               "dataset_steward": "Systeembeheer",
               "dataset_toegangsrechten": "PNH",
               "dataset_policies": null,
@@ -1771,9 +1849,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "1505f460-be34-4b2b-b243-62f9e5a7e087"
+      "runId": "8e08d849-f084-49b3-8bb9-c641aa764bae"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1888,9 +1966,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-10T08:52:12.720778Z",
+    "eventTime": "2026-04-10T09:19:35.113027Z",
     "run": {
-      "runId": "db0354fc-255d-4509-85c7-34c3a03e8e74"
+      "runId": "ec929d0a-f3d3-4344-874e-a018ed1e537a"
     },
     "job": {
       "namespace": "bu_databeheer",
