@@ -84,40 +84,7 @@
 
       <h2>Overzicht scripts</h2>
 
-      <div class="dashboard">
-
-        <div class="card">
-          <h3>gpbu_naar_gpbupub</h3>
-          <div class="status status-success">
-            <span class="status-dot"></span>Succes
-          </div>
-          <div class="date">Uitgevoerd op: 2‑4‑2026</div>
-        </div>
-
-        <div class="card">
-          <h3>ad_naar_av</h3>
-          <div class="status status-success">
-            <span class="status-dot"></span>Succes
-          </div>
-          <div class="date">Uitgevoerd op: 2‑4‑2026</div>
-        </div>
-
-        <div class="card">
-          <h3>ad_naar_adi</h3>
-          <div class="status status-success">
-            <span class="status-dot"></span>Succes
-          </div>
-          <div class="date">Uitgevoerd op: 2‑4‑2026</div>
-        </div>
-
-        <div class="card">
-          <h3>ad5_naar_adi5</h3>
-          <div class="status status-success">
-            <span class="status-dot"></span>Succes
-          </div>
-          <div class="date">Uitgevoerd op: 1‑4‑2026</div>
-        </div>
-
+      <div class="dashboard" id="dashboard">
       </div>
 
       <p class="updated">
@@ -135,32 +102,7 @@
           </tr>
         </thead>
 
-        <tbody>
-
-          <tr>
-            <td>gpbu_naar_gpbupub</td>
-            <td>2‑4‑2026</td>
-            <td class="status status-success"><span class="status-dot"></span>Succes</td>
-          </tr>
-
-          <tr>
-            <td>ad_naar_av</td>
-            <td>2‑4‑2026</td>
-            <td class="status status-success"><span class="status-dot"></span>Succes</td>
-          </tr>
-
-          <tr>
-            <td>ad_naar_adi</td>
-            <td>2‑4‑2026</td>
-            <td class="status status-success"><span class="status-dot"></span>Succes</td>
-          </tr>
-
-          <tr>
-            <td>ad5_naar_adi5</td>
-            <td>1‑4‑2026</td>
-            <td class="status status-success"><span class="status-dot"></span>Succes</td>
-          </tr>
-
+        <tbody id="scriptTable">
         </tbody>
       </table>
 
@@ -182,6 +124,61 @@ document.getElementById("loadtime").textContent =
   now.toLocaleDateString("nl-NL") + " " +
   now.toLocaleTimeString("nl-NL");
 
+fetch("status.json")
+.then(response => response.json())
+.then(data => {
+
+  const table = document.getElementById("scriptTable");
+  const dashboard = document.getElementById("dashboard");
+
+  Object.entries(data.scripts).forEach(([name, info]) => {
+
+    let statusClass = "";
+
+    if (info.status === "success") {
+        statusClass = "status-success";
+    }
+    else if (info.status === "failed") {
+        statusClass = "status-failed";
+    }
+    else if (info.status === "running") {
+        statusClass = "status-running";
+    }
+
+    // -------- tabelrij --------
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${name}</td>
+      <td>${info.last_run}</td>
+      <td class="status ${statusClass}">
+        <span class="status-dot"></span>
+        ${info.status}
+      </td>
+    `;
+
+    table.appendChild(row);
+
+    // -------- dashboard card --------
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <h3>${name}</h3>
+      <div class="status ${statusClass}">
+        <span class="status-dot"></span>
+        ${info.status}
+      </div>
+      <div class="date">Uitgevoerd op: ${info.last_run}</div>
+    `;
+
+    dashboard.appendChild(card);
+
+  });
+
+});
 </script>
 
 </body>
