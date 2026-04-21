@@ -1,65 +1,52 @@
 {
-    "scripts":
-    {
-        "ad4_naar_pub_prod":
-        {
-          "last_run": "2026-04-15 22:00",
-          "status": "success"
-        },
-        "act_ad4_prod":
-        {
-          "last_run": "2026-04-16 03:38",
-          "status": "success"
-        },
-        "ad4_rel_class_fix_prod":
-        {
-          "last_run": "2026-04-16 03:45",
-          "status": "success"
-        },
-        "ad4_naar_pub_stag":
-        {
-          "last_run": "2026-04-14 12:57",
-          "status": "success"
-        },
-        "act_ad4_stag":
-        {
-          "last_run": "2026-04-14 22:18",
-          "status": "success"
-        },
-        "ad4_rel_class_fix_stag":
-        {
-          "last_run": "2026-04-02 22:52",
-          "status": "success"
-        },
-        "ad5_naar_pub_prod":
-        {
-          "last_run": "2026-04-12 19:30",
-          "status": "success"
-        },
-        "act_ad5_prod":
-        {
-          "last_run": "2026-04-12 20:00",
-          "status": "success"
-        },
-        "ad5_naar_pub_stag":
-        {
-          "last_run": "2026-04-12 20:15",
-          "status": "success"
-        },
-        "act_ad5_stag":
-        {
-          "last_run": "2026-04-12 20:44",
-          "status": "success"
-        },
-        "copy_gpbu":
-        {
-          "last_run": "2026-04-15 19:30",
-          "status": "success"
-        },
-        "update_test":
-        {
-          "last_run": "2026-04-15 19:30",
-          "status": "success"
-        }
+  "scripts": {
+    "ad4_naar_pub_prod": {
+      "last_run": "2026-04-15 22:00",
+      "status": "success"
+    },
+    "act_ad4_prod": {
+      "last_run": "2026-04-16 03:38",
+      "status": "success"
+    },
+    "ad4_rel_class_fix_prod": {
+      "last_run": "2026-04-16 03:45",
+      "status": "success"
+    },
+    "ad4_naar_pub_stag": {
+      "last_run": "2026-04-14 12:57",
+      "status": "success"
+    },
+    "act_ad4_stag": {
+      "last_run": "2026-04-14 22:18",
+      "status": "success"
+    },
+    "ad4_rel_class_fix_stag": {
+      "last_run": "2026-04-02 22:52",
+      "status": "success"
+    },
+    "ad5_naar_pub_prod": {
+      "last_run": "2026-04-12 19:30",
+      "status": "success"
+    },
+    "act_ad5_prod": {
+      "last_run": "2026-04-12 20:00",
+      "status": "success"
+    },
+    "ad5_naar_pub_stag": {
+      "last_run": "2026-04-12 20:15",
+      "status": "success"
+    },
+    "act_ad5_stag": {
+      "last_run": "2026-04-12 20:44",
+      "status": "success"
+    },
+    "copy_gpbu": {
+      "last_run": "2026-04-15 19:30",
+      "status": "success"
+    },
+    "update_test": {
+      "last_run": "20260421_144706",
+      "status": "running"
     }
+  }
 }
