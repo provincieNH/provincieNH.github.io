@@ -8,20 +8,12 @@
       "last_run": "2026-04-16 03:38",
       "status": "success"
     },
-    "ad4_rel_class_fix_prod": {
-      "last_run": "2026-04-16 03:45",
-      "status": "success"
-    },
     "ad4_naar_pub_stag": {
       "last_run": "2026-04-14 12:57",
       "status": "success"
     },
     "act_ad4_stag": {
       "last_run": "2026-04-14 22:18",
-      "status": "success"
-    },
-    "ad4_rel_class_fix_stag": {
-      "last_run": "2026-04-02 22:52",
       "status": "success"
     },
     "ad5_naar_pub_prod": {
