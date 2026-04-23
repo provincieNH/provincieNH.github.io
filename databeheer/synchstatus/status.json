@@ -1,11 +1,11 @@
 {
   "scripts": {
     "ad4_naar_pub_prod": {
-      "last_run": "2026-04-22 02:59",
+      "last_run": "2026-04-23 02:36",
       "status": "success"
     },
     "act_ad4_prod": {
-      "last_run": "2026-04-16 03:38",
+      "last_run": "2026-04-23 03:20",
       "status": "success"
     },
     "ad4_naar_pub_stag": {
@@ -13,8 +13,8 @@
       "status": "success"
     },
     "act_ad4_stag": {
-      "last_run": "2026-04-14 22:18",
-      "status": "success"
+      "last_run": "2026-04-22 16:00",
+      "status": "failed"
     },
     "ad5_naar_pub_prod": {
       "last_run": "2026-04-12 19:30",
@@ -33,7 +33,7 @@
       "status": "success"
     },
     "copy_gpbu": {
-      "last_run": "2026-04-21 18:47",
+      "last_run": "2026-04-22 18:29",
       "status": "success"
     },
     "update_test": {
