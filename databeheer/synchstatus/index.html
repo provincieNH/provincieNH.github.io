@@ -97,7 +97,7 @@
         <thead>
           <tr>
             <th>Naam script</th>
-            <th>Uitgevoerd op</th>
+            <th>Laatste update op</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -137,12 +137,15 @@ fetch("status.json")
 
     if (info.status === "success") {
         statusClass = "status-success";
+        dateDesc = "Geslaagd op";
     }
     else if (info.status === "failed") {
         statusClass = "status-failed";
+        dateDesc = "Mislukt op";
     }
     else if (info.status === "running") {
         statusClass = "status-running";
+        dateDesc = "Gestart op";
     }
 
     // -------- tabelrij --------
@@ -171,7 +174,7 @@ fetch("status.json")
         <span class="status-dot"></span>
         ${info.status}
       </div>
-      <div class="date">Uitgevoerd op: ${info.last_run}</div>
+      <div class="date">${dateDesc}: ${info.last_run}</div>
     `;
 
     dashboard.appendChild(card);
