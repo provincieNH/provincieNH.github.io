@@ -1,8 +1,8 @@
 {
   "scripts": {
     "ad4_naar_pub_prod": {
-      "last_run": "2026-04-27 22:00",
-      "status": "running"
+      "last_run": "2026-04-28 02:46",
+      "status": "success"
     },
     "act_ad4_prod": {
       "last_run": "2026-04-25 03:40",
