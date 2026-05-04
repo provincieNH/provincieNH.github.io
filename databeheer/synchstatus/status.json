@@ -35,10 +35,6 @@
     "copy_gpbu": {
       "last_run": "2026-05-01 22:10",
       "status": "success"
-    },
-    "update_test": {
-      "last_run": "2026-04-21 15:06",
-      "status": "success"
     }
   }
 }
