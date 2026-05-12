@@ -318,6 +318,28 @@ if (btn.dataset.medal) {
       suggestionsBox.innerHTML = "";
     }
   });
+
+  document.addEventListener("keydown", (e) => {
+
+  // ESC = reset alles
+  if (e.key === "Escape") {
+    activeFilters = { type: null, medal: null };
+    searchInput.value = "";
+    suggestionsBox.innerHTML = "";
+    hitCount.innerText = "";
+
+    cy.elements().removeClass("faded");
+    cy.fit(undefined, 80);
+  }
+
+  // "/" = focus op zoekveld (nice UX)
+  if (e.key === "/") {
+    e.preventDefault();
+    searchInput.focus();
+  }
+
+});
+
 }
 
 loadLineage();
