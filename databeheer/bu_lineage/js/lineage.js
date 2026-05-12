@@ -62,75 +62,82 @@ async function loadLineage() {
 
   });
 
-  const cy = cytoscape({
-    container: document.getElementById("lineage"),
-    elements: [...nodes.values(), ...edges],
+const cy = cytoscape({
+  container: document.getElementById("lineage"),
+  elements: [...nodes.values(), ...edges],
 
-    layout: {
-      name: "dagre",
-      rankDir: "LR",
-      nodeSep: 80,
-      edgeSep: 40,
-      rankSep: 140,
-      padding: 40
-    },
+  layout: {
+    name: "dagre",
+    rankDir: "LR",
+    nodeSep: 80,
+    edgeSep: 40,
+    rankSep: 140,
+    padding: 40
+  },
 
-    style: [
-      {
-        selector: "node",
-        style: {
-          "label": "data(label)",
-          "font-size": 15,
-          "text-wrap": "wrap",
-          "text-max-width": 180,
-          "padding": "14px",
-          "width": "label",
-          "height": "label",
-          "text-valign": "center",
-          "text-halign": "center",
-          "color": "#333"
-        }
-      },
-      {
-        selector: "node[type='dataset']",
-        style: {
-          "shape": "round-rectangle",
-          "background-color": "#e3f2fd",
-          "border-color": "data(borderColor)",
-          "border-width": "data(borderWidth)"
-        }
-      },
-      {
-        selector: "node[type='job']",
-        style: {
-          "shape": "round-rectangle",
-          "corner-radius": 999,
-          "background-color": "#fff3e0",
-          "border-color": "#ef6c00",
-          "border-width": 2,
-          "width": 140,
-          "height": 50
-        }
-      },
-      {
-        selector: ".faded",
-        style: {
-          "opacity": 0.1,
-          "transition-opacity": 0.2
-        }
-      },
-      {
-        selector: "edge",
-        style: {
-          "curve-style": "straight",
-          "target-arrow-shape": "triangle",
-          "line-color": "#9aa0a6",
-          "target-arrow-color": "#9aa0a6",
-          "width": 2
-        }
+  // 🔥 NIEUW — subtieler zoomgedrag
+  zoomingEnabled: true,
+  userZoomingEnabled: true,
+  wheelSensitivity: 0.2,
+  minZoom: 0.3,
+  maxZoom: 2,
+
+  style: [
+    {
+      selector: "node",
+      style: {
+        "label": "data(label)",
+        "font-size": 15,
+        "text-wrap": "wrap",
+        "text-max-width": 180,
+        "padding": "14px",
+        "width": "label",
+        "height": "label",
+        "text-valign": "center",
+        "text-halign": "center",
+        "color": "#333"
       }
-    ]
-  });
+    },
+    {
+      selector: "node[type='dataset']",
+      style: {
+        "shape": "round-rectangle",
+        "background-color": "#e3f2fd",
+        "border-color": "data(borderColor)",
+        "border-width": "data(borderWidth)"
+      }
+    },
+    {
+      selector: "node[type='job']",
+      style: {
+        "shape": "round-rectangle",
+        "corner-radius": 999,
+        "background-color": "#fff3e0",
+        "border-color": "#ef6c00",
+        "border-width": 2,
+        "width": 140,
+        "height": 50
+      }
+    },
+    {
+      selector: ".faded",
+      style: {
+        "opacity": 0.1,
+        "transition-opacity": 0.2
+      }
+    },
+    {
+      selector: "edge",
+      style: {
+        "curve-style": "straight",
+        "target-arrow-shape": "triangle",
+        "line-color": "#9aa0a6",
+        "target-arrow-color": "#9aa0a6",
+        "width": 2
+      }
+    }
+  ]
+});
 
   cy.fit();
 
@@ -270,6 +277,9 @@ if (btn.dataset.medal) {
     suggestionsBox.innerHTML = "";
     cy.elements().removeClass("faded");
   };
+
+
+
 
   // 🎯 klik = focus + details
   cy.on("tap", "node", evt => {
