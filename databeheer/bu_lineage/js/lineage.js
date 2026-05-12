@@ -141,40 +141,56 @@ async function loadLineage() {
   let activeFilters = { type: null, medal: null };
 
   function applyAllFilters() {
-    const q = searchInput.value.toLowerCase().trim();
-    let hits = 0;
+  const q = searchInput.value.toLowerCase().trim();
+  let hits = 0;
 
-    cy.elements().addClass("faded");
+  cy.elements().addClass("faded");
 
-    cy.nodes().forEach(node => {
+  cy.nodes().forEach(node => {
 
-      const label = (node.data("label") || "").toLowerCase();
-      const meta = node.data("meta") || {};
-      const type = node.data("type");
-      const medal = (meta.dataset_medaille || "").toLowerCase();
+    const label = (node.data("label") || "").toLowerCase();
+    const meta = node.data("meta") || {};
+    const type = node.data("type");
+    const medal = (meta.dataset_medaille || "").toLowerCase();
 
-      let match = true;
+    let match = true;
 
-      if (q) {
-        match = label.includes(q) ||
-          Object.values(meta).some(v =>
-            v && v.toString().toLowerCase().includes(q)
-          );
+    // 🔍 zoek
+    if (q) {
+      match =
+        label.includes(q) ||
+        Object.values(meta).some(v =>
+          v && v.toString().toLowerCase().includes(q)
+        );
+    }
+
+    // 🎛 type filter
+    if (activeFilters.type) {
+      if (type !== activeFilters.type) match = false;
+    }
+
+    // 🏅 medaille filter (alleen datasets!)
+    if (activeFilters.medal) {
+      if (type !== "dataset" || medal !== activeFilters.medal) {
+        match = false;
       }
+    }
 
-      if (activeFilters.type && type !== activeFilters.type) match = false;
-      if (activeFilters.medal && medal !== activeFilters.medal) match = false;
+    if (match) {
+      hits++;
 
-      if (match) {
-        node.removeClass("faded");
-        node.predecessors().removeClass("faded");
-        node.successors().removeClass("faded");
-        hits++;
-      }
-    });
+      const context = node
+        .union(node.predecessors())
+        .union(node.successors());
 
-    hitCount.innerText = q ? `${hits} resultaten` : "";
-  }
+      context.removeClass("faded");
+      context.connectedEdges().removeClass("faded");
+    }
+
+  });
+
+  hitCount.innerText = q ? `${hits} resultaten` : "";
+}
 
   // 🔍 zoeken + suggesties
   searchInput.addEventListener("input", () => {
@@ -235,8 +251,15 @@ async function loadLineage() {
   // 🎛 filters
   document.querySelectorAll("#filters button").forEach(btn => {
     btn.addEventListener("click", () => {
-      if (btn.dataset.filter) activeFilters.type = btn.dataset.filter;
-      if (btn.dataset.medal) activeFilters.medal = btn.dataset.medal;
+      if (btn.dataset.filter) {
+  activeFilters.type =
+    activeFilters.type === btn.dataset.filter ? null : btn.dataset.filter;
+}
+
+if (btn.dataset.medal) {
+  activeFilters.medal =
+    activeFilters.medal === btn.dataset.medal ? null : btn.dataset.medal;
+}
       applyAllFilters();
     });
   });
