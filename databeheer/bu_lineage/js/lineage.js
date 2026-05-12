@@ -47,9 +47,7 @@ async function loadLineage() {
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
 
-      edges.push({
-        data: { source: dsId, target: jobId }
-      });
+      edges.push({ data: { source: dsId, target: jobId } });
     });
 
     (event.outputs || []).forEach(output => {
@@ -59,9 +57,7 @@ async function loadLineage() {
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
 
-      edges.push({
-        data: { source: jobId, target: dsId }
-      });
+      edges.push({ data: { source: jobId, target: dsId } });
     });
 
   });
@@ -118,7 +114,10 @@ async function loadLineage() {
       },
       {
         selector: ".faded",
-        style: { "opacity": 0.15 }
+        style: {
+          "opacity": 0.1,
+          "transition-opacity": 0.2
+        }
       },
       {
         selector: "edge",
@@ -156,7 +155,6 @@ async function loadLineage() {
 
       let match = true;
 
-      // zoek
       if (q) {
         match = label.includes(q) ||
           Object.values(meta).some(v =>
@@ -164,7 +162,6 @@ async function loadLineage() {
           );
       }
 
-      // filters
       if (activeFilters.type && type !== activeFilters.type) match = false;
       if (activeFilters.medal && medal !== activeFilters.medal) match = false;
 
@@ -181,6 +178,8 @@ async function loadLineage() {
 
   // 🔍 zoeken + suggesties
   searchInput.addEventListener("input", () => {
+
+    cy.stop(); // voorkomt animatie stacking
 
     const q = searchInput.value.toLowerCase();
     suggestionsBox.innerHTML = "";
@@ -202,10 +201,28 @@ async function loadLineage() {
         div.onclick = () => {
           searchInput.value = m;
           suggestionsBox.innerHTML = "";
-          applyAllFilters();
+
+          applyAllFilters(); // alleen highlight
 
           const node = cy.nodes().filter(n => n.data("label") === m);
-          if (node.length) cy.fit(node, 100);
+
+          if (node.length) {
+            const eles = node
+              .union(node.predecessors())
+              .union(node.successors());
+
+            cy.animate({
+              fit: {
+                eles: eles,
+                padding: 120
+              },
+              duration: 400
+            });
+
+            if (cy.zoom() > 1.5) {
+              cy.zoom(1.5);
+            }
+          }
         };
 
         suggestionsBox.appendChild(div);
@@ -231,7 +248,7 @@ async function loadLineage() {
     cy.elements().removeClass("faded");
   };
 
-  // 🎯 klik (focus + details)
+  // 🎯 klik = focus + details
   cy.on("tap", "node", evt => {
 
     const node = evt.target;
@@ -243,18 +260,19 @@ async function loadLineage() {
     node.successors().removeClass("faded");
 
     const eles = node.union(node.predecessors()).union(node.successors());
-    cy.fit(eles, 80);
+
+    cy.animate({
+      fit: {
+        eles: eles,
+        padding: 120
+      },
+      duration: 400
+    });
 
     let html = "<table class='meta'>";
     for (const [key, value] of Object.entries(meta)) {
       if (!value) continue;
-      let v = value;
-
-      if (key.includes("datum")) {
-        try { v = new Date(value).toLocaleString(); } catch {}
-      }
-
-      html += `<tr><th>${key}</th><td>${v}</td></tr>`;
+      html += `<tr><th>${key}</th><td>${value}</td></tr>`;
     }
     html += "</table>";
 
