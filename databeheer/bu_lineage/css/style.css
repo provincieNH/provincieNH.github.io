@@ -99,10 +99,22 @@ body {
 }
 
 #legend {
-  margin-top: 18px;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
-  font-size: 13px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+
+  border-radius: 8px;
+  padding: 10px 12px;
+
+  font-size: 12px;
+  line-height: 1.6;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+  z-index: 10;
 }
 
 .legend {
@@ -179,4 +191,14 @@ body {
 
 .suggestions div:hover {
   background: #eee;
+}
+
+
+#legend .spacer {
+  height: 6px;
+}
+
+#legend div {
+  display: flex;
+  align-items: center;
 }
