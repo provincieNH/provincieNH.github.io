@@ -212,6 +212,7 @@ searchInput.addEventListener("input", () => {
       hits++;
     } else {
       node.addClass("faded");
+      node.connectedEdges().addClass("faded");
     }
 
   });
