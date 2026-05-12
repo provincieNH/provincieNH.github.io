@@ -221,6 +221,62 @@ searchInput.addEventListener("input", () => {
 
 });
 
+
+const filterButtons = document.querySelectorAll("#filters button");
+let activeFilters = {
+  type: null,
+  medal: null
+};
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    if (btn.dataset.filter) {
+      activeFilters.type = btn.dataset.filter;
+    }
+
+    if (btn.dataset.medal) {
+      activeFilters.medal = btn.dataset.medal;
+    }
+
+    applyFilters();
+  });
+});
+
+document.getElementById("resetFilters").onclick = () => {
+  activeFilters = { type: null, medal: null };
+  cy.elements().removeClass("faded");
+};
+
+function applyFilters() {
+
+  cy.elements().addClass("faded");
+
+  cy.nodes().forEach(node => {
+
+    const type = node.data("type");
+    const medal = (node.data("meta")?.dataset_medaille || "").toLowerCase();
+
+    let match = true;
+
+    if (activeFilters.type && type !== activeFilters.type) {
+      match = false;
+    }
+
+    if (activeFilters.medal && medal !== activeFilters.medal) {
+      match = false;
+    }
+
+    if (match) {
+      node.removeClass("faded");
+      node.predecessors().removeClass("faded");
+      node.successors().removeClass("faded");
+    }
+
+  });
+
+}
+
   cy.edges().forEach(edge => {
     const source = edge.source().position();
     const target = edge.target().position();
@@ -241,6 +297,24 @@ searchInput.addEventListener("input", () => {
   cy.on("mouseout", "node", () => {
     cy.elements().removeClass("faded");
   });
+
+cy.on("tap", "node", evt => {
+
+  const node = evt.target;
+
+  // RESET eerst
+  cy.elements().addClass("faded");
+
+  // Alleen relevante nodes tonen
+  node.removeClass("faded");
+  node.predecessors().removeClass("faded");
+  node.successors().removeClass("faded");
+
+  // Zoom naar selectie
+  const eles = node.union(node.predecessors()).union(node.successors());
+  cy.fit(eles, 80);
+
+});
 
   cy.on("tap", "node", evt => {
 
@@ -283,5 +357,40 @@ searchInput.addEventListener("input", () => {
 
   });
 }
+
+const suggestionsBox = document.getElementById("suggestions");
+
+searchInput.addEventListener("input", () => {
+
+  const q = searchInput.value.toLowerCase();
+  suggestionsBox.innerHTML = "";
+
+  if (!q) return;
+
+  const matches = [];
+
+  cy.nodes().forEach(node => {
+    const label = node.data("label");
+    if (label.toLowerCase().includes(q)) {
+      matches.push(label);
+    }
+  });
+
+  matches.slice(0, 10).forEach(m => {
+    const div = document.createElement("div");
+    div.innerText = m;
+
+    div.onclick = () => {
+      searchInput.value = m;
+      suggestionsBox.innerHTML = "";
+
+      // trigger search
+      searchInput.dispatchEvent(new Event("input"));
+    };
+
+    suggestionsBox.appendChild(div);
+  });
+
+});
 
 loadLineage();

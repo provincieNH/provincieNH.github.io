@@ -161,3 +161,22 @@ body {
   margin-left: 10px;
   color: #666;
 }
+
+.suggestions {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 300px;
+  z-index: 1000;
+}
+
+.suggestions div {
+  padding: 6px;
+  cursor: pointer;
+}
+
+.suggestions div:hover {
+  background: #eee;
+}
