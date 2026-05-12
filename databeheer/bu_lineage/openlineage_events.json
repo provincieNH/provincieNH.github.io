@@ -1,9 +1,9 @@
 [
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "54ff18db-1482-44d7-8300-fb82fd17c450"
+      "runId": "9dfe52d8-4fce-4d17-8bd1-596ee44e122e"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -31,7 +31,7 @@
     "inputs": [
       {
         "namespace": "default",
-        "name": "API__246f4184-8e1f-4743-ab88-f55f8539c3b2",
+        "name": "TODO: vul API endpoint URL__246f4184-8e1f-4743-ab88-f55f8539c3b2",
         "facets": {
           "metadata": {
             "_producer": "provincie-noord-holland/databeheer",
@@ -39,7 +39,7 @@
             "meta": {
               "dataset_id": "246f4184-8e1f-4743-ab88-f55f8539c3b2",
               "dataset_naam": "KLIC API",
-              "dataset_pad": "API",
+              "dataset_pad": "TODO: vul API endpoint URL",
               "dataset_omschrijving": "Kabel en leiding informatie API",
               "dataset_eigenaar": "Kadaster",
               "dataset_steward": null,
@@ -48,7 +48,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "API",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -71,6 +71,45 @@
     ],
     "outputs": [
       {
+        "namespace": "default",
+        "name": "unknown__415472a9-160f-4cfd-b808-f73da09ab44c",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "415472a9-160f-4cfd-b808-f73da09ab44c",
+              "dataset_naam": "KLIC-dataset",
+              "dataset_pad": null,
+              "dataset_omschrijving": "TODO: inhoud en bron bepalen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": "onbekend",
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-05-12 13:17:31.666151",
+              "gewijzigd_op": "2026-05-12 13:17:31.666151"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
+      {
         "namespace": "gpbupub.klicimport",
         "name": "*__74c14361-c532-4cba-8308-0413b8f54e8c",
         "facets": {
@@ -89,7 +128,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -118,9 +157,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "8fedc4da-adf5-4ac6-bd68-8e8786660299"
+      "runId": "91def62b-1d3f-455f-b7c5-874724245ec8"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -148,7 +187,7 @@
     "inputs": [
       {
         "namespace": "default",
-        "name": "API__d100a9e4-bcf1-4ef5-824d-d95eea1b85f3",
+        "name": "TODO: vul API endpoint URL__d100a9e4-bcf1-4ef5-824d-d95eea1b85f3",
         "facets": {
           "metadata": {
             "_producer": "provincie-noord-holland/databeheer",
@@ -156,7 +195,7 @@
             "meta": {
               "dataset_id": "d100a9e4-bcf1-4ef5-824d-d95eea1b85f3",
               "dataset_naam": "Nectarindex",
-              "dataset_pad": "API",
+              "dataset_pad": "TODO: vul API endpoint URL",
               "dataset_omschrijving": "Nectarindex gepubliceerd op de Floron website",
               "dataset_eigenaar": "Floron",
               "dataset_steward": null,
@@ -165,7 +204,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "API",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -231,9 +270,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "0fc957ee-0d73-4927-8daa-da046e5513e0"
+      "runId": "3a64a643-d9bf-461d-aa1f-2ffdc5081db4"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -278,7 +317,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -319,7 +358,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -344,9 +383,239 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "754efbbb-062e-4fa6-b9f1-672555934abf"
+      "runId": "850b6f55-46da-455c-9d1b-9cca26912949"
+    },
+    "job": {
+      "namespace": "bu_databeheer",
+      "name": "peilingraster_omtrek_naar_sde",
+      "facets": {
+        "metadata": {
+          "_producer": "provincie-noord-holland/databeheer",
+          "meta": {
+            "job_naam": "peilingraster_omtrek_naar_sde",
+            "job_type": "FME",
+            "job_omschrijving": "Polygoon met metadata maken van omtrek peilingraster",
+            "job_script_pad": "gereedschap/data_conversie/peilingraster_naar_sde/peilingraster_omtrek_naar_sde.fmw",
+            "job_repository": null,
+            "job_tooling": "FME",
+            "job_schedule": null,
+            "job_eigenaar": "ID-DI-SYS",
+            "job_status": "Actief",
+            "aangemaakt_op": "2026-04-10 14:58:59.458429",
+            "gewijzigd_op": "2026-04-10 14:58:59.458429",
+            "job_id": "35a283d3-6181-4e2d-8bae-71e54e87f54a"
+          }
+        }
+      }
+    },
+    "inputs": [
+      {
+        "namespace": "default",
+        "name": "onbekend__ae3eb1ad-e1d6-4af4-83c2-d231c6ab028e",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "ae3eb1ad-e1d6-4af4-83c2-d231c6ab028e",
+              "dataset_naam": "Peilingdata bron",
+              "dataset_pad": "onbekend",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": null,
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "database",
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-05-12 13:58:56.929244",
+              "gewijzigd_op": "2026-05-12 13:58:56.929244"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#888888",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
+      {
+        "namespace": "default",
+        "name": "unknown__bc6289ca-8389-48a5-9aa8-bb40efb04134",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "bc6289ca-8389-48a5-9aa8-bb40efb04134",
+              "dataset_naam": "Metadata voor peilingdata",
+              "dataset_pad": null,
+              "dataset_omschrijving": "TODO: inhoud en bron bepalen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": "onbekend",
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-05-12 13:17:31.666151",
+              "gewijzigd_op": "2026-05-12 13:17:31.666151"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
+      {
+        "namespace": "default",
+        "name": "unknown__34f4071d-96e3-46dc-a89d-cd2634d441d1",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "34f4071d-96e3-46dc-a89d-cd2634d441d1",
+              "dataset_naam": "Peilbuizen",
+              "dataset_pad": null,
+              "dataset_omschrijving": "TODO: inhoud en bron bepalen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": "onbekend",
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-05-12 13:17:31.666151",
+              "gewijzigd_op": "2026-05-12 13:17:31.666151"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
+      {
+        "namespace": "default",
+        "name": "?__9c7c81c4-4482-408c-9f5a-9111bf0aeaa7",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "9c7c81c4-4482-408c-9f5a-9111bf0aeaa7",
+              "dataset_naam": "Peiling polygoon",
+              "dataset_pad": "?",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": null,
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": null,
+              "aangemaakt_op": "2026-04-10 15:34:35.891209",
+              "gewijzigd_op": "2026-04-10 15:34:35.891209"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#888888",
+              "borderWidth": 3
+            }
+          }
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "namespace": "default",
+        "name": "unknown__bc6289ca-8389-48a5-9aa8-bb40efb04134",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "bc6289ca-8389-48a5-9aa8-bb40efb04134",
+              "dataset_naam": "Metadata voor peilingdata",
+              "dataset_pad": null,
+              "dataset_omschrijving": "TODO: inhoud en bron bepalen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": "onbekend",
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-05-12 13:17:31.666151",
+              "gewijzigd_op": "2026-05-12 13:17:31.666151"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      }
+    ],
+    "producer": "provincie-noord-holland/databeheer"
+  },
+  {
+    "eventType": "COMPLETE",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
+    "run": {
+      "runId": "a3ace78c-ef18-4ac4-9f2f-29924f72dd34"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -432,7 +701,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -461,9 +730,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "1159283e-e5ed-4fc9-8e4d-6b0987a0a114"
+      "runId": "9b5b12aa-80d4-412e-9d61-23c56f40fafe"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -491,6 +760,45 @@
     "inputs": [
       {
         "namespace": "gpbu.budata",
+        "name": "bu_gcr_aanspreekpunt_tbl__fddb8f7d-d5d8-449e-8fb6-0ac382ff7aca",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "fddb8f7d-d5d8-449e-8fb6-0ac382ff7aca",
+              "dataset_naam": "Gebiedscontract aanspreekpunten",
+              "dataset_pad": "gpbu.budata.bu_gcr_aanspreekpunt_tbl",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "database",
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
+      {
+        "namespace": "gpbu.budata",
         "name": "bu_ad_melding_p__30c2e277-ccc4-4930-a938-cb3f2e1ec216",
         "facets": {
           "metadata": {
@@ -508,7 +816,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -547,7 +855,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -586,46 +894,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
-              "dataset_label": null,
-              "dataset_classificatie": null,
-              "dataset_gebruik_consument": null,
-              "dataset_gebruik_populariteit": null,
-              "dataset_gebruik_tools": null,
-              "dataset_medaille": "Zilver",
-              "aangemaakt_op": "2026-02-11 16:00:54.667000",
-              "gewijzigd_op": "2026-02-11 16:00:54.667000"
-            }
-          },
-          "visualization": {
-            "_producer": "provincie-noord-holland/databeheer",
-            "style": {
-              "borderColor": "#C0C0C0",
-              "borderWidth": 3
-            }
-          }
-        }
-      },
-      {
-        "namespace": "gpbu.budata",
-        "name": "bu_gcr_aanspreekpunt_tbl__fddb8f7d-d5d8-449e-8fb6-0ac382ff7aca",
-        "facets": {
-          "metadata": {
-            "_producer": "provincie-noord-holland/databeheer",
-            "_schemaURL": "https://example.com/dataset-metadata.json",
-            "meta": {
-              "dataset_id": "fddb8f7d-d5d8-449e-8fb6-0ac382ff7aca",
-              "dataset_naam": "Gebiedscontract aanspreekpunten",
-              "dataset_pad": "gpbu.budata.bu_gcr_aanspreekpunt_tbl",
-              "dataset_omschrijving": null,
-              "dataset_eigenaar": "ID-DI",
-              "dataset_steward": null,
-              "dataset_toegangsrechten": "PNH",
-              "dataset_policies": null,
-              "dataset_sql_of_code": null,
-              "dataset_procesnaam": null,
-              "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -664,7 +933,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -707,7 +976,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -752,7 +1021,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -781,9 +1050,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "13fb5139-b671-4f25-b0cb-6b61abb44360"
+      "runId": "77272a04-4f8c-4df5-90c1-dd6dd0eb2b0c"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -811,45 +1080,6 @@
     "inputs": [
       {
         "namespace": "?",
-        "name": "vegetatieObject_p__3e814f09-bf68-4e56-94c3-0f6e32815fba",
-        "facets": {
-          "metadata": {
-            "_producer": "provincie-noord-holland/databeheer",
-            "_schemaURL": "https://example.com/dataset-metadata.json",
-            "meta": {
-              "dataset_id": "3e814f09-bf68-4e56-94c3-0f6e32815fba",
-              "dataset_naam": "VegetatieObject_p",
-              "dataset_pad": "?.vegetatieObject_p",
-              "dataset_omschrijving": "Bomen",
-              "dataset_eigenaar": "ID-DI",
-              "dataset_steward": "Databeheer",
-              "dataset_toegangsrechten": "Databeheer",
-              "dataset_policies": null,
-              "dataset_sql_of_code": null,
-              "dataset_procesnaam": null,
-              "dataset_kwaliteit": null,
-              "dataset_categorie": null,
-              "dataset_label": null,
-              "dataset_classificatie": null,
-              "dataset_gebruik_consument": null,
-              "dataset_gebruik_populariteit": null,
-              "dataset_gebruik_tools": null,
-              "dataset_medaille": "Zilver",
-              "aangemaakt_op": "2026-04-10 18:13:31.375308",
-              "gewijzigd_op": "2026-04-10 18:13:31.375308"
-            }
-          },
-          "visualization": {
-            "_producer": "provincie-noord-holland/databeheer",
-            "style": {
-              "borderColor": "#C0C0C0",
-              "borderWidth": 3
-            }
-          }
-        }
-      },
-      {
-        "namespace": "?",
         "name": "vtaInspecties_tbl__ad3f7793-50de-4dfc-96bd-6954a6a661e5",
         "facets": {
           "metadata": {
@@ -867,7 +1097,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -876,6 +1106,45 @@
               "dataset_medaille": "Zilver",
               "aangemaakt_op": "2026-04-10 18:13:31.367475",
               "gewijzigd_op": "2026-04-10 18:13:31.367475"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
+      {
+        "namespace": "?",
+        "name": "vegetatieObject_p__3e814f09-bf68-4e56-94c3-0f6e32815fba",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "3e814f09-bf68-4e56-94c3-0f6e32815fba",
+              "dataset_naam": "VegetatieObject_p",
+              "dataset_pad": "?.vegetatieObject_p",
+              "dataset_omschrijving": "Bomen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": "Databeheer",
+              "dataset_toegangsrechten": "Databeheer",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "database",
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-04-10 18:13:31.375308",
+              "gewijzigd_op": "2026-04-10 18:13:31.375308"
             }
           },
           "visualization": {
@@ -908,7 +1177,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -933,9 +1202,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "a5a91b09-99fa-49b9-9154-a42b02ee6c9e"
+      "runId": "4e3956c2-565e-4a5f-8818-149a4fa81cf6"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -963,16 +1232,16 @@
     "inputs": [
       {
         "namespace": "default",
-        "name": "areaaldata__123423dd-616b-4940-98fb-ea64f832c5f6",
+        "name": "FGDB__f9eb0604-94d9-485f-9cb1-4f215c9a9da5",
         "facets": {
           "metadata": {
             "_producer": "provincie-noord-holland/databeheer",
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
-              "dataset_id": "123423dd-616b-4940-98fb-ea64f832c5f6",
-              "dataset_naam": "Gebiedscontractant OMS",
-              "dataset_pad": "areaaldata",
-              "dataset_omschrijving": null,
+              "dataset_id": "f9eb0604-94d9-485f-9cb1-4f215c9a9da5",
+              "dataset_naam": "Projectdatalevering",
+              "dataset_pad": "FGDB",
+              "dataset_omschrijving": "Container met door een project gewijzigde uitsnede van Areaaldata",
               "dataset_eigenaar": "ON",
               "dataset_steward": null,
               "dataset_toegangsrechten": null,
@@ -1002,16 +1271,16 @@
       },
       {
         "namespace": "default",
-        "name": "FGDB__f9eb0604-94d9-485f-9cb1-4f215c9a9da5",
+        "name": "areaaldata__123423dd-616b-4940-98fb-ea64f832c5f6",
         "facets": {
           "metadata": {
             "_producer": "provincie-noord-holland/databeheer",
             "_schemaURL": "https://example.com/dataset-metadata.json",
             "meta": {
-              "dataset_id": "f9eb0604-94d9-485f-9cb1-4f215c9a9da5",
-              "dataset_naam": "Projectdatalevering",
-              "dataset_pad": "FGDB",
-              "dataset_omschrijving": "Container met door een project gewijzigde uitsnede van Areaaldata",
+              "dataset_id": "123423dd-616b-4940-98fb-ea64f832c5f6",
+              "dataset_naam": "Gebiedscontractant OMS",
+              "dataset_pad": "areaaldata",
+              "dataset_omschrijving": null,
               "dataset_eigenaar": "ON",
               "dataset_steward": null,
               "dataset_toegangsrechten": null,
@@ -1085,9 +1354,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "ec49e28c-2aa5-468d-adba-b79d6ee3de86"
+      "runId": "5c9fa85b-9c1f-40f6-8fd5-5ce76347b84a"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1198,9 +1467,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "4ef9c49a-b294-46dc-b0ec-a43134228aa6"
+      "runId": "51135ce2-113b-4e09-9f50-f7ce64461e8a"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1286,7 +1555,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -1311,9 +1580,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "bc722d4e-de95-48c1-b6d3-a899e7b4c815"
+      "runId": "ca6c963d-18b9-43f3-914d-ff16f135e078"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1471,9 +1740,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "41a603a4-ddc8-4f82-95a5-6f50b85b5806"
+      "runId": "828fe333-4671-4851-8d42-96f40343faec"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1537,6 +1806,45 @@
             }
           }
         }
+      },
+      {
+        "namespace": "gbu",
+        "name": "areaaldata__8a751d5e-2b2d-4bdd-816e-e6a94ba5b1a5",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "8a751d5e-2b2d-4bdd-816e-e6a94ba5b1a5",
+              "dataset_naam": "Areaaldata 5 Bron",
+              "dataset_pad": "gbu.areaaldata",
+              "dataset_omschrijving": null,
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": "PNH",
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "database",
+              "dataset_label": null,
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-02-11 16:00:54.667000",
+              "gewijzigd_op": "2026-02-11 16:00:54.667000"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
       }
     ],
     "outputs": [
@@ -1559,7 +1867,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -1582,15 +1890,132 @@
             "pattern": true
           }
         }
+      },
+      {
+        "namespace": "gpbu",
+        "name": "budata__1b41058a-f47f-429e-94e5-42672a36d3ef",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "1b41058a-f47f-429e-94e5-42672a36d3ef",
+              "dataset_naam": "Systeemgrens",
+              "dataset_pad": "gpbu.budata",
+              "dataset_omschrijving": "TODO: inhoud en bron bepalen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "database",
+              "dataset_label": "onbekend",
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-05-12 13:17:31.666151",
+              "gewijzigd_op": "2026-05-12 13:17:31.666151"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
+      {
+        "namespace": "gpbu",
+        "name": "budata__fcb266be-4e9d-4f66-bd77-10b294d6f558",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "fcb266be-4e9d-4f66-bd77-10b294d6f558",
+              "dataset_naam": "Gemeentegrens",
+              "dataset_pad": "gpbu.budata",
+              "dataset_omschrijving": "TODO: inhoud en bron bepalen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "database",
+              "dataset_label": "onbekend",
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-05-12 13:17:31.666151",
+              "gewijzigd_op": "2026-05-12 13:17:31.666151"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
+      {
+        "namespace": "gpbu",
+        "name": "budata__2562466d-e72a-4f28-bebd-a91410ff9b7d",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "2562466d-e72a-4f28-bebd-a91410ff9b7d",
+              "dataset_naam": "Beheergrens",
+              "dataset_pad": "gpbu.budata",
+              "dataset_omschrijving": "TODO: inhoud en bron bepalen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": "database",
+              "dataset_label": "onbekend",
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-05-12 13:17:31.666151",
+              "gewijzigd_op": "2026-05-12 13:17:31.666151"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
       }
     ],
     "producer": "provincie-noord-holland/databeheer"
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "c76a852c-9ff7-4532-a160-5140855c5617"
+      "runId": "569e6a6f-201c-4f4e-97dd-50647494a501"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1635,7 +2060,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -1659,7 +2084,7 @@
     "outputs": [
       {
         "namespace": "default",
-        "name": "API__a58a37dc-57aa-4ba7-924e-7b3a7806e3eb",
+        "name": "TODO: vul API endpoint URL__a58a37dc-57aa-4ba7-924e-7b3a7806e3eb",
         "facets": {
           "metadata": {
             "_producer": "provincie-noord-holland/databeheer",
@@ -1667,7 +2092,7 @@
             "meta": {
               "dataset_id": "a58a37dc-57aa-4ba7-924e-7b3a7806e3eb",
               "dataset_naam": "NDFF",
-              "dataset_pad": "API",
+              "dataset_pad": "TODO: vul API endpoint URL",
               "dataset_omschrijving": "NDFF API voor invoer",
               "dataset_eigenaar": "NDFF",
               "dataset_steward": null,
@@ -1676,7 +2101,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "API",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -1701,9 +2126,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "8946fd3c-55db-4204-ab8c-75f9e5a64aff"
+      "runId": "58e48048-d239-4b48-b1ca-2005af068184"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1789,7 +2214,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -1814,9 +2239,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "227f92c0-8fcf-48cc-be19-dfdb4a258a2e"
+      "runId": "07f2b272-14af-4d6c-b0df-2e2b6c8d35c2"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -1842,6 +2267,45 @@
       }
     },
     "inputs": [
+      {
+        "namespace": "default",
+        "name": "unknown__39a1373a-9bdb-421c-998c-620ea31c12ab",
+        "facets": {
+          "metadata": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "_schemaURL": "https://example.com/dataset-metadata.json",
+            "meta": {
+              "dataset_id": "39a1373a-9bdb-421c-998c-620ea31c12ab",
+              "dataset_naam": "NDW: Reistijden",
+              "dataset_pad": null,
+              "dataset_omschrijving": "TODO: inhoud en bron bepalen",
+              "dataset_eigenaar": "ID-DI",
+              "dataset_steward": null,
+              "dataset_toegangsrechten": null,
+              "dataset_policies": null,
+              "dataset_sql_of_code": null,
+              "dataset_procesnaam": null,
+              "dataset_kwaliteit": null,
+              "dataset_categorie": null,
+              "dataset_label": "onbekend",
+              "dataset_classificatie": null,
+              "dataset_gebruik_consument": null,
+              "dataset_gebruik_populariteit": null,
+              "dataset_gebruik_tools": null,
+              "dataset_medaille": "Zilver",
+              "aangemaakt_op": "2026-05-12 13:17:31.666151",
+              "gewijzigd_op": "2026-05-12 13:17:31.666151"
+            }
+          },
+          "visualization": {
+            "_producer": "provincie-noord-holland/databeheer",
+            "style": {
+              "borderColor": "#C0C0C0",
+              "borderWidth": 3
+            }
+          }
+        }
+      },
       {
         "namespace": "default",
         "name": "Download__3d25508c-2ef3-4dea-a2b5-3cfc05e58738",
@@ -1927,9 +2391,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "10898555-202f-47b3-a3da-b3073213a4ff"
+      "runId": "9259908d-1a9f-4291-b78f-ab8311153855"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -2040,9 +2504,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "81c2f075-6435-4b02-92e6-581000fe9cbe"
+      "runId": "661d5003-dfaf-476c-b630-a05474e1594e"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -2153,9 +2617,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "7f2aee78-95d4-4dba-8587-9ed12864c980"
+      "runId": "b9cf8ae9-10a9-4725-ae6d-ee5b0831bb70"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -2183,7 +2647,7 @@
     "inputs": [
       {
         "namespace": "default",
-        "name": "API__19c6fd93-39ce-49e3-901f-beee6410e727",
+        "name": "TODO: vul API endpoint URL__19c6fd93-39ce-49e3-901f-beee6410e727",
         "facets": {
           "metadata": {
             "_producer": "provincie-noord-holland/databeheer",
@@ -2191,7 +2655,7 @@
             "meta": {
               "dataset_id": "19c6fd93-39ce-49e3-901f-beee6410e727",
               "dataset_naam": "FIS API",
-              "dataset_pad": "API",
+              "dataset_pad": "TODO: vul API endpoint URL",
               "dataset_omschrijving": "Fairway Information System",
               "dataset_eigenaar": "RWS",
               "dataset_steward": "RWS",
@@ -2270,9 +2734,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "e32499b6-49d6-4316-98c6-301969fee92b"
+      "runId": "441f12b5-8abd-471a-84f1-5db3497570e7"
     },
     "job": {
       "namespace": "bu_databeheer",
@@ -2317,7 +2781,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -2358,7 +2822,7 @@
               "dataset_sql_of_code": null,
               "dataset_procesnaam": null,
               "dataset_kwaliteit": null,
-              "dataset_categorie": null,
+              "dataset_categorie": "database",
               "dataset_label": null,
               "dataset_classificatie": null,
               "dataset_gebruik_consument": null,
@@ -2387,9 +2851,9 @@
   },
   {
     "eventType": "COMPLETE",
-    "eventTime": "2026-04-21T19:56:14.849300Z",
+    "eventTime": "2026-05-12T12:02:53.553121Z",
     "run": {
-      "runId": "b41a6a8c-fb26-479a-b70b-b72c07963fda"
+      "runId": "5b730a97-1211-4219-86ed-0bb6d7cfa87a"
     },
     "job": {
       "namespace": "bu_databeheer",
