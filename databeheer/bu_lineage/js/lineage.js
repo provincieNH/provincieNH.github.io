@@ -7,19 +7,15 @@ async function loadLineage() {
 
   function medailleKleur(medaille) {
     if (!medaille) return "#FFFFFF";
-
     const m = medaille.toLowerCase();
-
     if (m === "goud") return "#D4AF37";
     if (m === "zilver") return "#C0C0C0";
     if (m === "brons") return "#CD7F32";
-
     return "#1565c0";
   }
 
   function addNode(id, label, type, meta = {}) {
     if (!nodes.has(id)) {
-
       const medaille = meta.dataset_medaille;
       const borderColor = medailleKleur(medaille);
 
@@ -45,43 +41,27 @@ async function loadLineage() {
     addNode(jobId, jobLabel, "job", jobMeta);
 
     (event.inputs || []).forEach(input => {
-
       const dsId = "ds:" + input.namespace + "." + input.name;
       const dsMeta = input.facets?.metadata?.meta || {};
-
-      const dsLabel =
-        dsMeta?.dataset_naam ||
-        input.name.split("__")[0];
+      const dsLabel = dsMeta?.dataset_naam || input.name.split("__")[0];
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
 
       edges.push({
-        data: {
-          source: dsId,
-          target: jobId
-        }
+        data: { source: dsId, target: jobId }
       });
-
     });
 
     (event.outputs || []).forEach(output => {
-
       const dsId = "ds:" + output.namespace + "." + output.name;
       const dsMeta = output.facets?.metadata?.meta || {};
-
-      const dsLabel =
-        dsMeta?.dataset_naam ||
-        output.name.split("__")[0];
+      const dsLabel = dsMeta?.dataset_naam || output.name.split("__")[0];
 
       addNode(dsId, dsLabel, "dataset", dsMeta);
 
       edges.push({
-        data: {
-          source: jobId,
-          target: dsId
-        }
+        data: { source: jobId, target: dsId }
       });
-
     });
 
   });
@@ -100,7 +80,6 @@ async function loadLineage() {
     },
 
     style: [
-
       {
         selector: "node",
         style: {
@@ -113,11 +92,9 @@ async function loadLineage() {
           "height": "label",
           "text-valign": "center",
           "text-halign": "center",
-          "color": "#333",
-          "z-index": 10
+          "color": "#333"
         }
       },
-
       {
         selector: "node[type='dataset']",
         style: {
@@ -127,7 +104,6 @@ async function loadLineage() {
           "border-width": "data(borderWidth)"
         }
       },
-
       {
         selector: "node[type='job']",
         style: {
@@ -140,257 +116,157 @@ async function loadLineage() {
           "height": 50
         }
       },
-
       {
         selector: ".faded",
-        style: {
-          "opacity": 0.15
-        }
+        style: { "opacity": 0.15 }
       },
-
       {
         selector: "edge",
         style: {
           "curve-style": "straight",
           "target-arrow-shape": "triangle",
-          "arrow-scale": 1.1,
           "line-color": "#9aa0a6",
           "target-arrow-color": "#9aa0a6",
-          "width": 2,
-          "z-index": 1
-        }
-      },
-
-      {
-        selector: "edge.backflow",
-        style: {
-          "curve-style": "unbundled-bezier",
-          "control-point-step-size": 60
+          "width": 2
         }
       }
-
     ]
   });
 
   cy.fit();
 
   const searchInput = document.getElementById("searchInput");
-const hitCount = document.getElementById("hitCount");
+  const hitCount = document.getElementById("hitCount");
+  const suggestionsBox = document.getElementById("suggestions");
 
-searchInput.addEventListener("input", () => {
+  let activeFilters = { type: null, medal: null };
 
-  const q = searchInput.value.toLowerCase().trim();
+  function applyAllFilters() {
+    const q = searchInput.value.toLowerCase().trim();
+    let hits = 0;
 
-  if (!q) {
-    cy.elements().removeClass("faded");
-    hitCount.innerText = "";
-    return;
+    cy.elements().addClass("faded");
+
+    cy.nodes().forEach(node => {
+
+      const label = (node.data("label") || "").toLowerCase();
+      const meta = node.data("meta") || {};
+      const type = node.data("type");
+      const medal = (meta.dataset_medaille || "").toLowerCase();
+
+      let match = true;
+
+      // zoek
+      if (q) {
+        match = label.includes(q) ||
+          Object.values(meta).some(v =>
+            v && v.toString().toLowerCase().includes(q)
+          );
+      }
+
+      // filters
+      if (activeFilters.type && type !== activeFilters.type) match = false;
+      if (activeFilters.medal && medal !== activeFilters.medal) match = false;
+
+      if (match) {
+        node.removeClass("faded");
+        node.predecessors().removeClass("faded");
+        node.successors().removeClass("faded");
+        hits++;
+      }
+    });
+
+    hitCount.innerText = q ? `${hits} resultaten` : "";
   }
 
-  let hits = 0;
+  // 🔍 zoeken + suggesties
+  searchInput.addEventListener("input", () => {
 
-  cy.nodes().forEach(node => {
+    const q = searchInput.value.toLowerCase();
+    suggestionsBox.innerHTML = "";
 
-    const label = (node.data("label") || "").toLowerCase();
-    const meta = node.data("meta") || {};
+    if (q) {
+      const matches = [];
 
-    let match = label.includes(q);
-
-    if (!match) {
-      for (const val of Object.values(meta)) {
-        if (val && val.toString().toLowerCase().includes(q)) {
-          match = true;
-          break;
+      cy.nodes().forEach(node => {
+        const label = node.data("label");
+        if (label.toLowerCase().includes(q)) {
+          matches.push(label);
         }
-      }
+      });
+
+      matches.slice(0, 10).forEach(m => {
+        const div = document.createElement("div");
+        div.innerText = m;
+
+        div.onclick = () => {
+          searchInput.value = m;
+          suggestionsBox.innerHTML = "";
+          applyAllFilters();
+
+          const node = cy.nodes().filter(n => n.data("label") === m);
+          if (node.length) cy.fit(node, 100);
+        };
+
+        suggestionsBox.appendChild(div);
+      });
     }
 
-    if (match) {
-      node.removeClass("faded");
-      node.predecessors().removeClass("faded");
-      node.successors().removeClass("faded");
-      hits++;
-    } else {
-      node.addClass("faded");
-      node.connectedEdges().addClass("faded");
-    }
-
+    applyAllFilters();
   });
 
-  hitCount.innerText = hits + " resultaat" + (hits === 1 ? "" : "en");
-
-});
-
-
-const filterButtons = document.querySelectorAll("#filters button");
-let activeFilters = {
-  type: null,
-  medal: null
-};
-
-filterButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-
-    if (btn.dataset.filter) {
-      activeFilters.type = btn.dataset.filter;
-    }
-
-    if (btn.dataset.medal) {
-      activeFilters.medal = btn.dataset.medal;
-    }
-
-    applyFilters();
-  });
-});
-
-document.getElementById("resetFilters").onclick = () => {
-  activeFilters = { type: null, medal: null };
-  cy.elements().removeClass("faded");
-};
-
-function applyFilters() {
-
-  cy.elements().addClass("faded");
-
-  cy.nodes().forEach(node => {
-
-    const type = node.data("type");
-    const medal = (node.data("meta")?.dataset_medaille || "").toLowerCase();
-
-    let match = true;
-
-    if (activeFilters.type && type !== activeFilters.type) {
-      match = false;
-    }
-
-    if (activeFilters.medal && medal !== activeFilters.medal) {
-      match = false;
-    }
-
-    if (match) {
-      node.removeClass("faded");
-      node.predecessors().removeClass("faded");
-      node.successors().removeClass("faded");
-    }
-
+  // 🎛 filters
+  document.querySelectorAll("#filters button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (btn.dataset.filter) activeFilters.type = btn.dataset.filter;
+      if (btn.dataset.medal) activeFilters.medal = btn.dataset.medal;
+      applyAllFilters();
+    });
   });
 
-}
-
-  cy.edges().forEach(edge => {
-    const source = edge.source().position();
-    const target = edge.target().position();
-
-    if (target.x < source.x) {
-      edge.addClass("backflow");
-    }
-  });
-
-  cy.on("mouseover", "node", evt => {
-    const n = evt.target;
-    cy.elements().addClass("faded");
-    n.removeClass("faded");
-    n.predecessors().removeClass("faded");
-    n.successors().removeClass("faded");
-  });
-
-  cy.on("mouseout", "node", () => {
+  document.getElementById("resetFilters").onclick = () => {
+    activeFilters = { type: null, medal: null };
+    searchInput.value = "";
+    suggestionsBox.innerHTML = "";
     cy.elements().removeClass("faded");
-  });
+  };
 
-cy.on("tap", "node", evt => {
-
-  const node = evt.target;
-
-  // RESET eerst
-  cy.elements().addClass("faded");
-
-  // Alleen relevante nodes tonen
-  node.removeClass("faded");
-  node.predecessors().removeClass("faded");
-  node.successors().removeClass("faded");
-
-  // Zoom naar selectie
-  const eles = node.union(node.predecessors()).union(node.successors());
-  cy.fit(eles, 80);
-
-});
-
+  // 🎯 klik (focus + details)
   cy.on("tap", "node", evt => {
 
     const node = evt.target;
     const meta = node.data("meta") || {};
 
+    cy.elements().addClass("faded");
+    node.removeClass("faded");
+    node.predecessors().removeClass("faded");
+    node.successors().removeClass("faded");
+
+    const eles = node.union(node.predecessors()).union(node.successors());
+    cy.fit(eles, 80);
+
     let html = "<table class='meta'>";
-
     for (const [key, value] of Object.entries(meta)) {
-
-      if (value === null || value === "" || value === undefined) continue;
-
+      if (!value) continue;
       let v = value;
 
-      if (key === "dataset_sql_of_code" || key === "job_script_pad") {
-        v = "<pre>" + value + "</pre>";
+      if (key.includes("datum")) {
+        try { v = new Date(value).toLocaleString(); } catch {}
       }
 
-      if (key === "aangemaakt_op" || key === "gewijzigd_op") {
-        try {
-          v = new Date(value).toLocaleString();
-        } catch {
-          v = value;
-        }
-      }
-
-      const label = key.replaceAll("_", " ");
-
-      html += `
-        <tr>
-          <th>${label}</th>
-          <td>${v}</td>
-        </tr>
-      `;
+      html += `<tr><th>${key}</th><td>${v}</td></tr>`;
     }
-
     html += "</table>";
 
     document.getElementById("details-content").innerHTML = html;
-
   });
-}
 
-const suggestionsBox = document.getElementById("suggestions");
-
-searchInput.addEventListener("input", () => {
-
-  const q = searchInput.value.toLowerCase();
-  suggestionsBox.innerHTML = "";
-
-  if (!q) return;
-
-  const matches = [];
-
-  cy.nodes().forEach(node => {
-    const label = node.data("label");
-    if (label.toLowerCase().includes(q)) {
-      matches.push(label);
+  // klik buiten = suggestions sluiten
+  document.addEventListener("click", e => {
+    if (!e.target.closest("#filterbox")) {
+      suggestionsBox.innerHTML = "";
     }
   });
-
-  matches.slice(0, 10).forEach(m => {
-    const div = document.createElement("div");
-    div.innerText = m;
-
-    div.onclick = () => {
-      searchInput.value = m;
-      suggestionsBox.innerHTML = "";
-
-      // trigger search
-      searchInput.dispatchEvent(new Event("input"));
-    };
-
-    suggestionsBox.appendChild(div);
-  });
-
-});
+}
 
 loadLineage();

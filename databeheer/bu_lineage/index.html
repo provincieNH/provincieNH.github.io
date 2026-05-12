@@ -14,13 +14,9 @@
 
 <body>
 
-<div id="topbar"></div>
-
 <header id="header">
   <h1>BU Data Lineage</h1>
-  <h2>Overzicht van datasets, herkomst en metadata</h2>
-    <em>"Dan doen we het zelf maar zolang Acryl stuk is en DatapleinNh nog niet bestaat ^_^"</em>
-    <p>Gemaakt op basis van Postgres, OpenLineage, Cytoscape.js - versie 0.3 maart 2026</p>
+  <h2>Overzicht van datasets en herkomst</h2>
 </header>
 
 <div id="filters">
@@ -33,38 +29,21 @@
 </div>
 
 <div id="filterbox">
-  <input id="searchInput" placeholder="Zoek dataset, eigenaar, classificatie…" />
+  <input id="searchInput" placeholder="Zoek dataset, eigenaar…" />
   <span id="hitCount"></span>
+  <div id="suggestions" class="suggestions"></div>
 </div>
-
-<div id="suggestions" class="suggestions"></div>
-
-
 
 <main id="container">
   <div id="lineage"></div>
 
   <aside id="details">
-    <h2>Dataset details</h2>
-    <p class="hint">Klik op een dataset.</p>
-
+    <h2>Details</h2>
     <div id="details-content"></div>
-
-    <div id="legend">
-
-      <div><span class="legend dataset"></span> Dataset</div>
-      <div><span class="legend job"></span> Verwerkingsstap</div>
-
-      <hr>
-
-      <div><span class="legend medal goud"></span> Goud dataset</div>
-      <div><span class="legend medal zilver"></span> Zilver dataset</div>
-      <div><span class="legend medal brons"></span> Brons dataset</div>
-
-    </div>
   </aside>
 </main>
 
 <script src="js/lineage.js"></script>
+
 </body>
 </html>
