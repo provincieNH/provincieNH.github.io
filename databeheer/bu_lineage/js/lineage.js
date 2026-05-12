@@ -174,6 +174,52 @@ async function loadLineage() {
 
   cy.fit();
 
+  const searchInput = document.getElementById("searchInput");
+const hitCount = document.getElementById("hitCount");
+
+searchInput.addEventListener("input", () => {
+
+  const q = searchInput.value.toLowerCase().trim();
+
+  if (!q) {
+    cy.elements().removeClass("faded");
+    hitCount.innerText = "";
+    return;
+  }
+
+  let hits = 0;
+
+  cy.nodes().forEach(node => {
+
+    const label = (node.data("label") || "").toLowerCase();
+    const meta = node.data("meta") || {};
+
+    let match = label.includes(q);
+
+    if (!match) {
+      for (const val of Object.values(meta)) {
+        if (val && val.toString().toLowerCase().includes(q)) {
+          match = true;
+          break;
+        }
+      }
+    }
+
+    if (match) {
+      node.removeClass("faded");
+      node.predecessors().removeClass("faded");
+      node.successors().removeClass("faded");
+      hits++;
+    } else {
+      node.addClass("faded");
+    }
+
+  });
+
+  hitCount.innerText = hits + " resultaat" + (hits === 1 ? "" : "en");
+
+});
+
   cy.edges().forEach(edge => {
     const source = edge.source().position();
     const target = edge.target().position();

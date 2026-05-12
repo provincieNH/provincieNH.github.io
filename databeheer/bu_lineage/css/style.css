@@ -150,3 +150,14 @@ body {
 .legend.brons {
   border: 3px solid #CD7F32;
 }
+
+#searchInput {
+  width: 300px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#hitCount {
+  margin-left: 10px;
+  color: #666;
+}
