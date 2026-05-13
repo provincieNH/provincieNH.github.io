@@ -35,6 +35,10 @@
     "copy_gpbu": {
       "last_run": "2026-05-12 22:09",
       "status": "success"
+    },
+    "bereken_velden": {
+      "last_run": "2026-05-12 15:33",
+      "status": "success"
     }
   }
 }
