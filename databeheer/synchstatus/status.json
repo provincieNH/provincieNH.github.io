@@ -1,11 +1,11 @@
 {
   "scripts": {
     "ad4_naar_pub_prod": {
-      "last_run": "2026-05-30 05:54",
+      "last_run": "2026-06-03 04:41",
       "status": "success"
     },
     "act_ad4_prod": {
-      "last_run": "2026-05-30 06:42",
+      "last_run": "2026-06-03 05:10",
       "status": "success"
     },
     "ad4_naar_pub_stag": {
@@ -33,7 +33,7 @@
       "status": "success"
     },
     "copy_gpbu": {
-      "last_run": "2026-05-29 22:14",
+      "last_run": "2026-06-02 10:24",
       "status": "success"
     },
     "bereken_velden": {
