@@ -6,7 +6,7 @@
     },
     "act_ad4_prod": {
       "last_run": "2026-06-11 10:12",
-      "status": "running"
+      "status": "failed"
     },
     "ad4_naar_pub_stag": {
       "last_run": "2026-05-31 01:40",
