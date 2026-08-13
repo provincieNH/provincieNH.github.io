@@ -25,8 +25,8 @@
       "status": "success"
     },
     "ad5_naar_pub_stag": {
-      "last_run": "2026-08-12 17:46",
-      "status": "success"
+      "last_run": "2026-08-13 14:36",
+      "status": "failed"
     },
     "act_ad5_stag": {
       "last_run": "2026-05-31 20:18",
