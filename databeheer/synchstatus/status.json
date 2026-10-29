@@ -36,6 +36,10 @@
       "last_run": "2026-10-21 15:00",
       "status": "success"
     },
+    "copy_gpbu_delete_copy": {
+      "last_run": "2026-10-29 10:10",
+      "status": "failed"
+    },
     "bereken_velden": {
       "last_run": "2026-10-04 09:12",
       "status": "success"
