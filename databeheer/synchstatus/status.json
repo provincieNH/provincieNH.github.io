@@ -33,8 +33,8 @@
       "status": "failed"
     },
     "copy_gpbu": {
-      "last_run": "2026-11-06 19:15",
-      "status": "running"
+      "last_run": "2026-11-06 21:44",
+      "status": "success"
     },
     "copy_gpbu_delete_copy": {
       "last_run": "2026-11-04 21:32",
