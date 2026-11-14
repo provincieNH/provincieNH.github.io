@@ -17,8 +17,8 @@
       "status": "failed"
     },
     "ad5_naar_pub_prod": {
-      "last_run": "2026-11-06 11:08",
-      "status": "success"
+      "last_run": "2026-11-14 11:00",
+      "status": "running"
     },
     "act_ad5_prod": {
       "last_run": "2026-11-06 12:11",
