@@ -13,8 +13,8 @@
       "status": "success"
     },
     "act_ad4_stag": {
-      "last_run": "2026-11-07 23:22",
-      "status": "failed"
+      "last_run": "2026-11-14 20:42",
+      "status": "running"
     },
     "ad5_naar_pub_prod": {
       "last_run": "2026-11-14 12:22",
